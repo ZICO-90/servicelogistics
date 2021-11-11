@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\EndUser\EndUserHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//
-Route::get('/', function () {
-    return view('welcome');
 
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
+
+    Route::get('/', [AdminHomeController::class, 'index'])->name('index');
 });
 
-Route::get('/admin', function () {
-    return view('Dashboard.Admin.index');
+Route::group(['prefix' => '/', 'as' => 'endUser.'], function() {
+
+    Route::get('/', [EndUserHomeController::class, 'index'])->name('index');
 });
+
+
+
