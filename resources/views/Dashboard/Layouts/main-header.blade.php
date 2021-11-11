@@ -32,8 +32,8 @@
 
                                     <!-- User Info -->
                                     <div class="user-info">
-                                        <h4 class="user-name">{{Auth::user()->name}}</h4>
-                                        <p class="user-email">{{Auth::user()->email}}</p>
+                                        <h4 class="user-name"></h4>
+                                        <p class="user-email"></p>
                                     </div>
                                     <!-- End User Info -->
                                 </div>

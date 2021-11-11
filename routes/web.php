@@ -18,4 +18,6 @@ Route::get('/', function () {
 
 });
 
-//require __DIR__.'/auth.php';
+Route::get('/admin', function () {
+    return view('Dashboard.Admin.index');
+});
