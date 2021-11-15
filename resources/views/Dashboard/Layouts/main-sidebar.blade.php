@@ -45,100 +45,21 @@
                 </a>
             </li>
             <li class="nav-category">apps</li>
-            <li>
-                <a href="#">
-                    <i class="icofont-mail-box"></i>
-                    <span class="link-title">Email</span>
-                </a>
-                <!-- Sub Menu -->
-                <ul class="nav sub-menu">
-                    <li><a href="pages/apps/email/inbox.html">Inbox</a></li>
-                    <li><a href="pages/apps/email/read.html">Read</a></li>
-                    <li><a href="pages/apps/email/compose.html">Compose</a></li>
-                </ul>
-                <!-- End Sub Menu -->
-            </li>
-            <li>
-                <a href="pages/apps/chat.html">
-                    <i class="icofont-wechat"></i>
-                    <span class="link-title">Chat</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="icofont-listing-box"></i>
-                    <span class="link-title">To Do List</span>
-                </a>
 
-                <!-- Sub Menu -->
-                <ul class="nav sub-menu">
-                    <li><a href="pages/apps/todolist/todolist.html">Tasks</a></li>
-                    <li><a href="pages/apps/todolist/add-new.html">add new</a></li>
-                    <li><a href="pages/apps/todolist/task-details.html">details</a></li>
-                </ul>
-                <!-- End Sub Menu -->
-            </li>
-            <li>
-                <a href="pages/apps/calendar.html">
-                    <i class="icofont-calendar"></i>
-                    <span class="link-title">Calendar</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="icofont-file-document"></i>
-                    <span class="link-title">invoice</span>
-                </a>
-
-                <!-- Sub Menu -->
-                <ul class="nav sub-menu">
-                    <li><a href="pages/apps/invoice/invoice-list.html">Invoice List</a></li>
-                    <li><a href="pages/apps/invoice/invoice-details.html">details</a></li>
-                    <li><a href="pages/apps/invoice/invoice-add-new.html">add new</a></li>
-                </ul>
-                <!-- End Sub Menu -->
-            </li>
             <li>
                 <a href="#">
                     <i class="icofont-contact-add"></i>
-                    <span class="link-title">contact</span>
+                    <span class="link-title">InfoSite</span>
                 </a>
 
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
-                    <li><a href="pages/apps/contact/contact-list.html">list view</a></li>
-                    <li><a href="pages/apps/contact/contact-grid.html">grid view</a></li>
+                    <li><a href="{{route('admin.info-site.index')}}">Show All InfoSite</a></li>
+                    <li><a href="{{route('admin.info-site.create')}}">Create InfoSite</a></li>
                 </ul>
                 <!-- End Sub Menu -->
             </li>
-            <li>
-                <a href="#">
-                    <i class="icofont-calendar"></i>
-                    <span class="link-title">project manager</span>
-                </a>
 
-                <!-- Sub Menu -->
-                <ul class="nav sub-menu">
-                    <li><a href="pages/apps/project-manager/project.html">project status</a></li>
-                    <li><a href="pages/apps/project-manager/task-list.html">task list</a></li>
-                    <li><a href="pages/apps/project-manager/create-new.html">create new Board</a></li>
-                </ul>
-                <!-- End Sub Menu -->
-            </li>
-            <li>
-                <a href="#">
-                    <i class="icofont-files-stack"></i>
-                    <span class="link-title">file manager</span>
-                </a>
-
-                <!-- Sub Menu -->
-                <ul class="nav sub-menu">
-                    <li><a href="pages/apps/file-manager/file-info.html">file info</a></li>
-                    <li><a href="pages/apps/file-manager/share.html">share</a></li>
-                    <li><a href="pages/apps/file-manager/upload.html">upload new file</a></li>
-                </ul>
-                <!-- End Sub Menu -->
-            </li>
             <li class="nav-category">UI Elements</li>
             <li>
                 <a href="pages/ui-elements/widget.html">

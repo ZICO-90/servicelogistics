@@ -5,10 +5,16 @@
                 <div class="level-left">
                     <div id="header-logo" class="site-logo ">
                         <div id="logo-inner" class="site-logo-inner">
-                            <a href="./index.html">
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/logo/logo2.png')}}">
-                                <span class="logo-text">خدمات النقل</span>
+                            @isset($infos)
+                                @if(count($infos) > 0)
+                                    @foreach($infos as $info)
+                            <a href="{{route('endUser.index')}}">
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('images/info-site/'.$info['logo'])}}">
+                                <span class="logo-text">{{$info['en_title']}}</span>
                             </a>
+                                    @endforeach
+                                @endif
+                            @endisset
                         </div>
                         <!-- #logo-inner -->
                     </div>

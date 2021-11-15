@@ -10,3 +10,5 @@
 <script src="{{URL::asset('Dashboard/plugins/apex/apexcharts.min.js')}}"></script>
 <script src="{{URL::asset('Dashboard/plugins/apex/custom-apexcharts.js')}}"></script>
 <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+<script src="{{URL::asset('Dashboard/plugins/dropzone/dropzone.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/dropzone/dropzone.custom.js')}}"></script>
