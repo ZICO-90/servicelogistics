@@ -22,7 +22,6 @@ class InfoSite extends Model
         'facebook_url',
         'twitter_url',
         'linkedin_url',
-        'is_active'
     ];
 
     public static function rule()
