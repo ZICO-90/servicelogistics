@@ -64,6 +64,7 @@
                                         <th>Open Time</th>
                                         <th>Close Time</th>
                                         <th>FaceBook</th>
+                                        <th>Twitter</th>
                                         <th>Linkedin</th>
                                         <th>Day Work</th>
                                         <th>Actions</th>
@@ -94,6 +95,7 @@
                                                     <td>{{$value['open_time']}}</td>
                                                     <td>{{$value['close_time']}}</td>
                                                     <td>{{$value['facebook_url']}}</td>
+                                                    <td>{{$value['twitter_url']}}</td>
                                                     <td>{{$value['linkedin_url']}}</td>
                                                     <td>{{$value['en_day']}}</td>
                                                     <td>

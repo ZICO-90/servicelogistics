@@ -27,7 +27,6 @@ class CreateInfoSitesTable extends Migration
             $table->string('facebook_url');
             $table->string('twitter_url');
             $table->string('linkedin_url');
-            $table->boolean('is-active')->default(0);
             $table->timestamps();
         });
     }
