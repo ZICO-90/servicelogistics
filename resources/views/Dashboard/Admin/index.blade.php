@@ -13,6 +13,7 @@
    <meta name="keywords" content="">
 
    @include('Dashboard.Layouts.head')
+   @yield('dilevetyJS')
 
 </head>
 
@@ -39,7 +40,7 @@
          <div class="main-content">
             <div class="container-fluid">
                <div class="row">
-
+               @yield('content')
                </div>
 
 

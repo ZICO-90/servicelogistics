@@ -46,17 +46,25 @@
             </li>
             <li class="nav-category">apps</li>
             <li>
-                <a href="#">
+                <a href="{{route('admin.delivery.index')}}">
                     <i class="icofont-mail-box"></i>
-                    <span class="link-title">Email</span>
+                    <span class="link-title">logistics services</span>
                 </a>
-                <!-- Sub Menu -->
-                <ul class="nav sub-menu">
-                    <li><a href="pages/apps/email/inbox.html">Inbox</a></li>
-                    <li><a href="pages/apps/email/read.html">Read</a></li>
-                    <li><a href="pages/apps/email/compose.html">Compose</a></li>
-                </ul>
-                <!-- End Sub Menu -->
+              
+            </li>
+            <li>
+                <a href="{{route('admin.employe.index')}}">
+                    <i class="icofont-mail-box"></i>
+                    <span class="link-title">employes</span>
+                </a>
+              
+            </li>
+            <li>
+                <a href="{{route('admin.welcome.index')}}">
+                    <i class="icofont-mail-box"></i>
+                    <span class="link-title">Settings welcome section</span>
+                </a>
+              
             </li>
             <li>
                 <a href="pages/apps/chat.html">

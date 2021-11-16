@@ -12,15 +12,60 @@
                 <!-- start adding page content -->
                 <section id="welcome" class="section welcome-section has-background-primary-light is-clearfix">
                     <div class="container">
+
+                         @if($sectionTitle != null)
+                        <p class="heading-title-top has-text-centered">{{$sectionTitle-> ar_title_p }}</p>
+                        <h1 class="heading-title style-3"> {{$sectionTitle-> ar_title_h}}
+                            <br>
+                            <span class="has-text-primary"> {{$sectionTitle-> ar_title_span}}</span>
+                        </h1>
+                        @else
+
                         <p class="heading-title-top has-text-centered">الخدمات اللوجستية</p>
                         <h1 class="heading-title style-3"> شركة الشحن مع الخدمات اللوجستية
                             <br> أمان.
                             <span class="has-text-primary">تطور مستمر</span>
                         </h1>
+
+                        @endif
+
                         <br>
                         <br>
+
+  
+
                         <div class="blog-list style-2 columns is-variable is-4 is-multiline">
-                            <div class="column is-4" data-aos="fade">
+                        @if($employe != null)
+
+                        <div class="column is-4" data-aos="fade">
+                                <article class="blog-post">
+                                    <figure class="post-image">
+                                        <a href="./pages/about.html">
+                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('Dashboard/img/employes/'.$employe-> img_url)}}"> </a>
+                                    </figure>
+                                    <div class="entry-header">
+                                      <h2 class="entry-title">
+                                          موظفينا الخبراء
+                                        </h2>
+                                        <h2 class="entry-title">
+                                            <a href="./pages/about.html">{{$employe -> ar_name}}</a>
+                                        </h2>
+                                    </div>
+                                    <!-- .entry-header -->
+                                    <div class="entry-content">
+                                        <p>{{$employe -> ar_details}}</p>
+                                    </div>
+                                    <!-- .entry-content -->
+                                    <div class="entry-footer">
+                                        <a href="./pages/about.html" class="button">اقرأ المزيد</a>
+                                    </div>
+                                </article>
+                                <!-- .blog-post -->
+                            </div>
+
+                        @else
+
+                        <div class="column is-4" data-aos="fade">
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./pages/about.html">
@@ -42,6 +87,46 @@
                                 </article>
                                 <!-- .blog-post -->
                             </div>
+
+
+                        @endif
+                        
+
+                        @if($Welcome != null)
+
+                        @foreach($Welcome as $model)
+
+                        <div class="column is-4" data-aos="fade">
+                                <article class="blog-post">
+                                    <figure class="post-image">
+                                        <a href="./pages/about.html">
+                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('Dashboard/img/delivery/'.$model-> img_url)}}"> </a>
+                                    </figure>
+                                    <div class="entry-header">
+                                        <h2 class="entry-title">
+                                            <a href="./pages/about.html">{{$model-> ar_name}}</a>
+                                        </h2>
+                                    </div>
+                                    <!-- .entry-header -->
+                                    <div class="entry-content">
+                                        <p>{{$model-> ar_details}}</p>
+                                    </div>
+                                    <!-- .entry-content -->
+                                    <div class="entry-footer">
+                                        <a href="./pages/about.html" class="button">اقرأ المزيد</a>
+                                    </div>
+                                </article>
+                                <!-- .blog-post -->
+                            </div>
+
+
+                        @endforeach
+                        
+
+                        @else
+
+
+
                             <div class="column is-4" data-aos="fade">
                                 <article class="blog-post">
                                     <figure class="post-image">
@@ -86,6 +171,8 @@
                                 </article>
                                 <!-- .blog-post -->
                             </div>
+
+                            @endif
                         </div>
                         <br> </div>
                 </section>
