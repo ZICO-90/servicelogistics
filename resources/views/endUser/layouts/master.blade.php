@@ -20,25 +20,30 @@
         <div id="header-top" class="site-header-top">
             <div id="header-top-inner" class="site-header-top-inner container">
                 <div class="level">
+                    @isset($infos)
+                        @if(count($infos) > 0)
+                            @foreach($infos as $info)
                     <div class="level-left">
                         <ul class="topbar-info ">
+
+
                             <li>
                                 <a href="#">
                       <span class="icon">
                         <i class="icon-clock"></i>
-                      </span> سبت - خميس : 09:00 - 17:00 </a>
+                      </span> {{$info['en_day']}} : {{$info['open_time']}} : {{$info['close_time']}} </a>
                             </li>
                             <li>
-                                <a href="mailto:info@company.com">
+                                <a href="mailto:{{$info['email']}}">
                       <span class="icon">
                         <i class="icon-envelope"></i>
-                      </span> info@company.com </a>
+                      </span> {{$info['email']}} </a>
                             </li>
                             <li>
-                                <a href="tel:+66396847263">
+                                <a href="tel:+{{$info['phone']}}">
                       <span class="icon">
                         <i class="icon-phone"></i>
-                      </span> +800-987-65-43 </a>
+                      </span> {{$info['phone']}} + </a>
                             </li>
                         </ul>
                     </div>
@@ -46,21 +51,21 @@
                     <div class="level-right">
                         <ul class="header-menu-icons social">
                             <li>
-                                <a href="#" target="_blank">
+                                <a href="{{$info['facebook_url']}}" target="_blank">
                       <span class="icon">
                         <i class="fab fa-facebook-f"></i>
                       </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">
+                                <a href="{{$info['twitter_url']}}" target="_blank">
                       <span class="icon">
                         <i class="fab fa-twitter"></i>
                       </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">
+                                <a href="{{$info['linkedin_url']}}" target="_blank">
                       <span class="icon">
                         <i class="fab fa-linkedin-in"></i>
                       </span>
@@ -111,6 +116,9 @@
                         <!-- .header-menu-icons -->
                     </div>
                     <!-- .level-right -->
+                    @endforeach
+                    @endif
+                    @endisset
                 </div>
                 <!-- .level -->
             </div>

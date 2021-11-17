@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\InfoSiteController;
 use App\Http\Controllers\EndUser\EndUserHomeController;
 use App\Http\Controllers\Admin\dileveryController;
 use App\Http\Controllers\Admin\employesController;
@@ -18,49 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-
-/*
-    ahmed abdullah  >  there is a problem In this 
-    1 - Action Steps localization
-        # Installations package mcnamara
-            - routeMiddleware in  Kernel > Validated
-            - config in laravellocalization.php -> Validated  (languages choose: arabic , English)
-            - C:\Users\hp\Desktop\Group2\vendor\mcamara\laravel-localization
-    1 - the problem    
-        # Can not Call route ar , en  > not found  pages
-
-*/
-
-Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){
-
-   
-        Route::get('/', function()
-	{
-		return View::('Dashboard.Admin.index');
-        
-	});
-
-    Route::get('/text', function()
-	{
-		return View::('Dashboard.Admin.index');
-        
-	});
-    
-   
-
-});
-
     
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
 
     Route::get('/', [AdminHomeController::class, 'index'])->name('index');
+
     
 
     //this  group route model delivery 
@@ -111,6 +75,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::get('/display/{id}/{bool}', [WelcomSectionController::class, 'IsDisplayActive'])->name('activated');
         Route::get('/destroy/{id}', [WelcomSectionController::class, 'destroy'])->name('destroy');
 
+    });
+
+
+
+    Route::group(['prefix' => 'info-site', 'as' => 'info-site.'], function () {
+        Route::get('/', [InfoSiteController::class, 'index'])->name('index');
+        Route::get('/create', [InfoSiteController::class, 'create'])->name('create');
+        Route::post('/store', [InfoSiteController::class, 'store'])->name('store');
+        Route::get('/edit/{id}', [InfoSiteController::class, 'edit'])->name('edit')->where(['id' => '[0-9]+']);
+        Route::put('/update', [InfoSiteController::class, 'update'])->name('update');
+        Route::delete('/delete', [InfoSiteController::class, 'delete'])->name('delete');
     });
 
 });

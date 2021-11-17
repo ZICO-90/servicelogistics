@@ -44,6 +44,11 @@ $this->app->bind(
 
         // register  user
         $this->app->bind(
+            'App\Http\Interfaces\Admin\InfoSiteInterface',
+            'App\Http\Repositories\Admin\InfoSiteRepository'
+        );
+
+        $this->app->bind(
             'App\Http\Interfaces\EndUser\EndUserHomeInterface',
             'App\Http\Repositories\EndUser\EndUserHomeRepository'
         );
