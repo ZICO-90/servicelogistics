@@ -13,17 +13,18 @@
     <meta name="keywords" content="">
 
     @include('Dashboard.Layouts.head')
+    @yield('css')
 
 </head>
 
 <body>
 
 <!-- Offcanval Overlay -->
-    <div class="offcanvas-overlay"></div>
+<div class="offcanvas-overlay"></div>
 <!-- Offcanval Overlay -->
 
 <!-- Wrapper -->
-    <div class="wrapper">
+<div class="wrapper">
 
             <!-- Header -->
         @include('Dashboard.Layouts.main-header')
@@ -32,23 +33,20 @@
     <!-- Main Wrapper -->
     <div class="main-wrapper">
         <!-- Sidebar -->
+        <!-- Sidebar -->
         @include('Dashboard.Layouts.main-sidebar')
         <!-- End Sidebar -->
-
-            <!-- Main Content -->
-
-
         @yield('content')
-        <!-- End Main Content -->
-        </div>
-        <!-- End Main Wrapper -->
 
-        <!-- Footer -->
-        @include('Dashboard.Layouts.footer')
-        <!-- End Footer -->
     </div>
-        <!-- End wrapper -->
-        @include('Dashboard.Layouts.footerjs')
+    <!-- End Main Wrapper -->
+
+ @include('Dashboard.Layouts.footer')
+    </div>
+
+
+@include('Dashboard.Layouts.footerjs')
+
 </body>
 
 </html>

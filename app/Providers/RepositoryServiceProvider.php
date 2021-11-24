@@ -22,6 +22,11 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Http\Interfaces\EndUser\EndUserHomeInterface',
             'App\Http\Repositories\EndUser\EndUserHomeRepository'
         );
+
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\PriceInterface',
+            'App\Http\Repositories\Admin\PriceRepository'
+        );
     }
 
     /**
