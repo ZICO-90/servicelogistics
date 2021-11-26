@@ -23,6 +23,52 @@
             </li>
 
 
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
+                    <li><a href="pages/ecommerce/ecommerce.html">Dashboard 1</a></li>
+                    <li><a href="pages/ecommerce/ecommerce2.html">dashboard 2</a></li>
+                    <li><a href="pages/ecommerce/orders.html">orders</a></li>
+                    <li><a href="pages/ecommerce/product-catelog.html">Products Catalog</a></li>
+                    <li><a href="pages/ecommerce/product-details.html">Product Details</a></li>
+                    <li><a href="pages/ecommerce/cartlist.html">cart list</a></li>
+                </ul>
+                <!-- End Sub Menu -->
+            </li>
+            <li>
+                <a href="pages/social-media.html">
+                    <i class="icofont-chart-histogram"></i>
+                    <span class="link-title">Social Media Analytics</span>
+                </a>
+            </li>
+            <li class="nav-category">apps</li>
+            <li>
+                <a href="{{route('admin.delivery.index')}}">
+                    <i class="icofont-mail-box"></i>
+                    <span class="link-title">logistics services</span>
+                </a>
+              
+            </li>
+            <li>
+                <a href="{{route('admin.employe.index')}}">
+                    <i class="icofont-mail-box"></i>
+                    <span class="link-title">employes</span>
+                </a>
+              
+            </li>
+            <li>
+                <a href="{{route('admin.welcome.index')}}">
+                    <i class="icofont-mail-box"></i>
+                    <span class="link-title">Settings welcome section</span>
+                </a>
+              
+            </li>
+            <li>
+                <a href="pages/apps/chat.html">
+                    <i class="icofont-wechat"></i>
+                    <span class="link-title">Chat</span>
+                </a>
+            </li>
+
             <li>
                 <a href="#">
                     <i class="icofont-listing-box"></i>
@@ -38,13 +84,32 @@
                 <!-- End Sub Menu -->
             </li>
 
+
             <li>
                 <a href="#">
                     <i class="icofont-dollar-true"></i>
                     <span class="link-title">{{trans('Dashboard\trans_main_sidebar.prices')}}</span>
+
+            <li>
+                <a href="pages/apps/calendar.html">
+                    <i class="icofont-calendar"></i>
+                    <span class="link-title">Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icofont-file-document"></i>
+                    <span class="link-title">invoice</span>
+                </a>
+            <li>
+                <a href="#">
+                    <i class="icofont-contact-add"></i>
+                    <span class="link-title">InfoSite</span>
+
                 </a>
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
+
                     <li class="icofont-plus"><a href="{{route('prices.index')}}">{{trans('Dashboard\trans_main_sidebar.price_list')}}</a></li>
                     <li class="icofont-plus"><a href="{{route('prices.create')}}">{{trans('Dashboard\trans_main_sidebar.add_price')}}</a></li>
                 </ul>
@@ -82,6 +147,26 @@
                     {{--<i class="icofont-files-stack"></i>--}}
                     {{--<span class="link-title">file manager</span>--}}
                 {{--</a>--}}
+
+                    <li><a href="{{route('admin.info-site.index')}}">Show All InfoSite</a></li>
+                    <li><a href="{{route('admin.info-site.create')}}">Create InfoSite</a></li>
+                </ul>
+                <!-- End Sub Menu -->
+            </li>
+
+            <li class="nav-category">UI Elements</li>
+            <li>
+                <a href="pages/ui-elements/widget.html">
+                    <i class="icofont-magic-alt"></i>
+                    <span class="link-title">widgets</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icofont-brand-icofont"></i>
+                    <span class="link-title">Icons (Aniloan)</span>
+                </a>
+            </li>
 
                 {{--<!-- Sub Menu -->--}}
                 {{--<ul class="nav sub-menu">--}}

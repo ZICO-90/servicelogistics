@@ -16,6 +16,7 @@ class Shipment extends Model implements TranslatableContract
         ['shipment_name',];
     protected $fillable = ['amount', 'unit_id','whieght','price',
         'currency_id', 'address_address','sender_date','expected_recived_date','service_type_id',
+        'currency_id', 'address_address','sender_date','expected_recived_date',
         'address_latitude',
         'address_longitude',
 
@@ -28,6 +29,7 @@ public function customers(){
     return $this->belongsTo(Customer::class,'costumer_id');
 
 }
+
 
 
 }

@@ -15,9 +15,14 @@
 <link rel="stylesheet" href="{{asset('Dashboard/fonts/fontawsome/font-awsome.css')}}">
 <link rel="stylesheet" href="{{asset('Dashboard/bootstrap/css/bootstrap.min.css')}}">
 
+
 {{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ5mBAaaij69pG1mWGzMwA1FJuHLW05E4&libraries=places&callback=initAutocomplete" async defer></script>--}}
 {{--<script src="{{URL::asset('Dashboard/js/mapInput.js')}}"></script>--}}
 {{--<link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.min.css.css')}}">--}}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ5mBAaaij69pG1mWGzMwA1FJuHLW05E4&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="{{URL::asset('Dashboard/js/mapInput.js')}}"></script>
+
 <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
 

@@ -5,7 +5,6 @@
             <div class="col-md-12">
                 <br>
 
-
                 <div class="form-row">
                     <div class="col col-3 mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.shipment_name')}}</label>
@@ -19,6 +18,7 @@
                     <div class="col col-3 mb-2">
                         <label for="title">{{trans('Dashboard\trans_ship.type_id')}}</label>
                         <select class=" p-1 my-1 mr-sm-2 form-control" wire:model="type_id">
+                        <select class=" p-1 my-1 mr-sm-2" wire:model="type_id">
                             <option selected>{{trans('Dashboard\trans_ship.Choose')}}...</option>
                             @foreach($material_types as $type)
                                 <option value="{{$type->id}}">{{$type->material_type}}</option>
@@ -40,6 +40,7 @@
                     <div class="col col-3 mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.unit_id')}}</label>
                         <select class="my-1 mr-sm-2 form-control" wire:model="unit_id">
+                        <select class="my-1 mr-sm-2" wire:model="unit_id">
                             <option selected>{{trans('Dashboard\trans_ship.Choose')}}...</option>
 
                             @foreach($units_types as $unit)
@@ -66,6 +67,8 @@
                     <div class="col col-2 mb-2">
                         <label for="title">{{trans('Dashboard\trans_ship.price')}}</label>
                         <input type="text" wire:model="price" class="form-control"  disabled="disabled">
+
+                        <input type="text" wire:model="price" class="form-control" >
                         @error('price')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -74,6 +77,7 @@
                     <div class="col col-2 mb-2">
                         <label for="title">{{trans('Dashboard\trans_ship.currency_id')}}</label>
                         <select class=" my-1 mr-sm-2 form-control" wire:model="currency_id">
+                        <select class=" my-1 mr-sm-2" wire:model="currency_id">
                             <option selected>{{trans('Dashboard\trans_ship.Choose')}}...</option>
                             @foreach($currencies as $curency)
                             <option value="{{$curency->id}}">{{$curency->curency_name}}</option>
@@ -137,6 +141,20 @@
                 {{--<div id="address-map-container" style="width:100%;height:400px; ">--}}
                     {{--<div style="width: 100%; height: 100%" id="address-map"></div>--}}
                 {{--</div>--}}
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="address_address">{{trans('Dashboard\trans_ship.Address')}}</label>
+                        <input type="text" id="address-input" wire:model="address_address" class="form-control map-input">
+                        <input type="hidden" wire:model="address_latitude" id="address-latitude" value="0" />
+                        <input type="hidden" wire:model="address_longitude" id="address-longitude" value="0" />
+                    </div>
+                    {{--<div id="address-map-container" style="width:100%;height:400px; ">--}}
+                        {{--<div style="width: 100%; height: 100%" id="address-map"></div>--}}
+                    {{--</div>--}}
+
+
+                </div>
 
 
 
@@ -155,4 +173,5 @@
                 <br>
             </div>
         </div>
+    </div>
     </div>

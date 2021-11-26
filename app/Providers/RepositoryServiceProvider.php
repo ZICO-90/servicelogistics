@@ -13,9 +13,39 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        //register admin 
         $this->app->bind(
             'App\Http\Interfaces\Admin\AdminHomeInterface',
             'App\Http\Repositories\Admin\AdminHomeRepository'
+        );
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\dileveryInterface',
+            'App\Http\Repositories\Admin\dileveryRepository'
+        );
+
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\employessInterface',
+            'App\Http\Repositories\Admin\employesRepository'
+        );
+      
+//settings control html start
+
+$this->app->bind(
+    'App\Http\Interfaces\Admin\SectionTags\WelcomeInterface',
+    'App\Http\Repositories\Admin\SectionTags\WelocmeRepository'
+);
+
+//settings control html end
+
+
+
+//register admin end
+
+
+        // register  user
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\InfoSiteInterface',
+            'App\Http\Repositories\Admin\InfoSiteRepository'
         );
 
         $this->app->bind(
@@ -23,11 +53,12 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Http\Repositories\EndUser\EndUserHomeRepository'
         );
 
+
         $this->app->bind(
             'App\Http\Interfaces\Admin\PriceInterface',
             'App\Http\Repositories\Admin\PriceRepository'
         );
-    }
+  }
 
     /**
      * Bootstrap services.

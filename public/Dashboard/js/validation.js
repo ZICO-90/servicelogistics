@@ -4,7 +4,11 @@ Template:  Webmin - Bootstrap 4 & Angular 5 Admin Dashboard Template
 Author: potenzaglobalsolutions.com
 Design and Developed by: potenzaglobalsolutions.com
 
+<<<<<<< HEAD
 NOTE: 
+=======
+NOTE:
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
 
 */
 
@@ -216,4 +220,8 @@ NOTE:
 
     });
 
+<<<<<<< HEAD
  })(jQuery);
+=======
+ })(jQuery);
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1

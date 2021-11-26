@@ -37,6 +37,12 @@ Route::group(
         return view('Dashboard.Admin.empty_page');
     });
 
+
+    Route::view('Add_shipment','Livewire.show_form');
+
+
+
+
     Route::view('Add_shipment','Livewire.show_form');
 
 //    ////////Price route///////

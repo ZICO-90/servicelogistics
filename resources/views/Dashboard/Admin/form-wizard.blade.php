@@ -17,13 +17,15 @@
 
    <!-- Web Fonts -->
    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
    
+
    <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" href="../../assets/fonts/icofont/icofont.min.css">
    <link rel="stylesheet" href="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css">
    <!-- ======= END BEGIN GLOBAL MANDATORY STYLES ======= -->
-   
+
    <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
    <link href="../../assets/plugins/jquery-smartwizard/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
    <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
@@ -212,9 +214,10 @@
                                                     <div class="d-flex align-items-center mb-2">
                                                         <h6 class="name">Sender Name</h6>
                                                         <p class="time">2 min ago</p>
-                                                    </div>	
+                                                    </div>
+                                                    </div>
+
                                                     <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
                                             </a>
                                             <!-- End Item Single -->
 
@@ -228,9 +231,12 @@
                                                     <div class="d-flex align-items-center mb-2">
                                                         <h6 class="name">Tonya Lee</h6>
                                                         <p class="time">2 min ago</p>
+
                                                     </div>	
+
+                                                    </div>
+
                                                     <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
                                             </a>
                                             <!-- End Item Single -->
 
@@ -244,9 +250,12 @@
                                                     <div class="d-flex align-items-center mb-2">
                                                         <h6 class="name">Cathy Nichols</h6>
                                                         <p class="time">2 min ago</p>
+
                                                     </div>	
+
+                                                    </div>
+
                                                     <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
                                             </a>
                                             <!-- End Item Single -->
 
@@ -260,9 +269,12 @@
                                                     <div class="d-flex align-items-center mb-2">
                                                         <h6 class="name">Hubert Griffith</h6>
                                                         <p class="time">2 min ago</p>
+
                                                     </div>	
+
+                                                    </div>
+
                                                     <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
                                             </a>
                                             <!-- End Item Single -->
                                             </div>
@@ -293,9 +305,12 @@
                                                 <div class="content">
                                                     <div class="mb-2">
                                                         <p class="time">2 min ago</p>
+
                                                     </div>	
+
+                                                    </div>
+
                                                     <p class="main-text">Donec dapibus mauris id odio ornare tempus amet.</p>
-                                                </div>
                                             </a>
                                             <!-- End Item Single -->
 
@@ -304,9 +319,12 @@
                                                 <div class="content">
                                                     <div class="mb-2">
                                                         <p class="time">2 min ago</p>
+
                                                     </div>	
+
+                                                    </div>
+
                                                     <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
                                             </a>
                                             <!-- End Item Single -->
 
@@ -315,9 +333,12 @@
                                                 <div class="content">
                                                     <div class="mb-2">
                                                         <p class="time">2 min ago</p>
+
                                                     </div>	
+
+                                                    </div>
+
                                                     <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
                                             </a>
                                             <!-- End Item Single -->
 
@@ -326,9 +347,12 @@
                                                 <div class="content">
                                                     <div class="mb-2">
                                                         <p class="time">2 min ago</p>
+
                                                     </div>	
+
+                                                    </div>
+
                                                     <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
                                             </a>
                                             <!-- End Item Single -->
                                             </div>
@@ -596,7 +620,11 @@
                             <ul class="nav sub-menu">
                                 <li><a href="../pages/user-profile/news-feed.html">News Feed</a></li>
                                 <li><a href="../pages/user-profile/about.html">about</a></li>
+
                                 <li><a href="../pages/user-profile/gallery.html">gallery</a></li>                        
+
+                                <li><a href="../pages/user-profile/gallery.html">gallery</a></li>
+
                                 <li><a href="../pages/user-profile/connection.html">Connections</a></li>
                                 <li><a href="../pages/user-profile/profile-chat.html">Chat</a></li>
                                 <li><a href="../pages/user-profile/edit-profile.html">Edit Profile</a></li>
@@ -814,7 +842,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    
+
                                         <div class="tab-content">
                                             <div id="step-1" class="tab-pane" role="tabpanel">
                                                 <!-- User Details -->
@@ -829,14 +857,14 @@
                                                                 <input type="text" class="theme-input-style" placeholder="Type Your First Name" required>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Email</label>
                                                                 <input type="email" class="theme-input-style" placeholder="Your Email Address">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Age</label>
@@ -851,19 +879,23 @@
                                                                 <label class="font-14 bold mb-2">Last Name</label>
                                                                 <input type="text" class="theme-input-style" placeholder="Type Your Last Name">
                                                             </div>
-                                                            <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Phone</label>
                                                                 <input type="text" class="theme-input-style" placeholder="Phone">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Gender</label>
                                                                 
+
+                                                            <!-- Form Group -->
+                                                            <div class="form-group">
+                                                                <label class="font-14 bold mb-2">Gender</label>
+
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="d-flex align-items-center ml-5">
                                                                         <!-- Custom Radio -->
@@ -872,7 +904,7 @@
                                                                             <label for="male"></label>
                                                                         </div>
                                                                         <!-- End Custom Radio -->
-                                                                        
+
                                                                         <label for="male">Male</label>
                                                                     </div>
 
@@ -883,7 +915,7 @@
                                                                             <label for="female"></label>
                                                                         </div>
                                                                         <!-- End Custom Radio -->
-                                                                        
+
                                                                         <label for="female">Female</label>
                                                                     </div>
                                                                 </div>
@@ -908,14 +940,14 @@
                                                                 <input type="text" class="theme-input-style" placeholder="Melbourne 3000, VIC, Australia">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">City</label>
                                                                 <input type="text" class="theme-input-style" placeholder="Dhaka">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Postcode</label>
@@ -931,14 +963,14 @@
                                                                 <input type="text" class="theme-input-style" placeholder="Melbourne 3000, VIC, Australia">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">State</label>
                                                                 <input type="text" class="theme-input-style" placeholder="VICA">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Country</label>
@@ -956,7 +988,9 @@
 
                                                 </div>
                                                 <!-- End Address -->
-                                            </div> 
+                                            </div>
+
+                                            </div>
                                             <div id="step-3" class="tab-pane" role="tabpanel">
                                                 <!-- Review-->
                                                 <div class="card-body">
@@ -970,14 +1004,14 @@
                                                                 <span class="black">Abrilay Khatun</span>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="review-list mb-20">
                                                                 <span class="font-14 bold c4 ml-4">Email</span>
                                                                 <span class="black">username@email.com</span>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="review-list mb-20 mb-md-0">
                                                                 <span class="font-14 bold c4 ml-4">Phone</span>
@@ -993,14 +1027,14 @@
                                                                 <span class="black">24</span>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="review-list mb-20">
                                                                 <span class="font-14 bold c4 ml-4">Gender</span>
                                                                 <span class="black">Male</span>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="review-list mb-20">
                                                                 <span class="font-14 bold c4 ml-4">Address</span>
@@ -1055,7 +1089,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    
+
                                         <div class="tab-content">
                                             <div id="stepp-1" class="tab-pane p-0" role="tabpanel">
                                                 <!-- User Details -->
@@ -1070,14 +1104,14 @@
                                                                 <input type="text" class="theme-input-style" placeholder="Type Your First Name" required>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Email</label>
                                                                 <input type="email" class="theme-input-style" placeholder="Your Email Address">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Age</label>
@@ -1093,18 +1127,24 @@
                                                                 <input type="text" class="theme-input-style" placeholder="Type Your Last Name">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Phone</label>
                                                                 <input type="text" class="theme-input-style" placeholder="Phone">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Gender</label>
                                                                 
+
+                                                            <!-- Form Group -->
+                                                            <div class="form-group">
+                                                                <label class="font-14 bold mb-2">Gender</label>
+
+
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="d-flex align-items-center ml-5">
                                                                         <!-- Custom Radio -->
@@ -1113,7 +1153,7 @@
                                                                             <label for="male2"></label>
                                                                         </div>
                                                                         <!-- End Custom Radio -->
-                                                                        
+
                                                                         <label for="male">Male</label>
                                                                     </div>
 
@@ -1124,7 +1164,7 @@
                                                                             <label for="female2"></label>
                                                                         </div>
                                                                         <!-- End Custom Radio -->
-                                                                        
+
                                                                         <label for="female">Female</label>
                                                                     </div>
                                                                 </div>
@@ -1149,14 +1189,14 @@
                                                                 <input type="text" class="theme-input-style" placeholder="Melbourne 3000, VIC, Australia">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">City</label>
                                                                 <input type="text" class="theme-input-style" placeholder="Dhaka">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Postcode</label>
@@ -1172,14 +1212,14 @@
                                                                 <input type="text" class="theme-input-style" placeholder="Melbourne 3000, VIC, Australia">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">State</label>
                                                                 <input type="text" class="theme-input-style" placeholder="VICA">
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="form-group">
                                                                 <label class="font-14 bold mb-2">Country</label>
@@ -1197,7 +1237,9 @@
 
                                                 </div>
                                                 <!-- End Address -->
-                                            </div> 
+                                            </div>
+
+                                            </div>
                                             <div id="stepp-3" class="tab-pane p-0" role="tabpanel">
                                                 <!-- Review-->
                                                 <div class="card-body p-0">
@@ -1211,14 +1253,14 @@
                                                                 <span class="black">Abrilay Khatun</span>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="review-list mb-20">
                                                                 <span class="font-14 bold c4 ml-4">Email</span>
                                                                 <span class="black">username@email.com</span>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="review-list mb-20">
                                                                 <span class="font-14 bold c4 ml-4">Phone</span>
@@ -1234,14 +1276,14 @@
                                                                 <span class="black">24</span>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="review-list mb-20">
                                                                 <span class="font-14 bold c4 ml-4">Gender</span>
                                                                 <span class="black">Male</span>
                                                             </div>
                                                             <!-- End Form Group -->
-                                                            
+
                                                             <!-- Form Group -->
                                                             <div class="review-list mb-20">
                                                                 <span class="font-14 bold c4 ml-4">Address</span>
@@ -1271,7 +1313,7 @@
                                 <!-- Form -->
                                 <form action="#">
                                     <h4 class="font-20 mb-30 mt-30 mx-3 mx-sm-4">Vertical Form Wizard</h4>
-                                   
+
                                     <div id="example-vertical">
                                         <h3>User Details</h3>
                                         <section>
@@ -1287,14 +1329,14 @@
                                                             <input type="text" class="theme-input-style" placeholder="Type Your First Name" required>
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="form-group">
                                                             <label class="font-14 bold mb-2">Email</label>
                                                             <input type="email" class="theme-input-style" placeholder="Your Email Address">
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="form-group">
                                                             <label class="font-14 bold mb-2">Age</label>
@@ -1310,18 +1352,24 @@
                                                             <input type="text" class="theme-input-style" placeholder="Type Your Last Name">
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="form-group">
                                                             <label class="font-14 bold mb-2">Phone</label>
                                                             <input type="text" class="theme-input-style" placeholder="Phone">
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="form-group">
                                                             <label class="font-14 bold mb-2">Gender</label>
                                                             
+
+
+                                                        <!-- Form Group -->
+                                                        <div class="form-group">
+                                                            <label class="font-14 bold mb-2">Gender</label>
+
                                                             <div class="d-flex align-items-center">
                                                                 <div class="d-flex align-items-center ml-5">
                                                                     <!-- Custom Radio -->
@@ -1330,9 +1378,11 @@
                                                                         <label for="male3"></label>
                                                                     </div>
                                                                     <!-- End Custom Radio -->
-                                                                    
+
                                                                     <label for="male">Male</label>
                                                                 </div>
+
+
 
                                                                 <div class="d-flex align-items-center">
                                                                     <!-- Custom Radio -->
@@ -1341,7 +1391,7 @@
                                                                         <label for="female3"></label>
                                                                     </div>
                                                                     <!-- End Custom Radio -->
-                                                                    
+
                                                                     <label for="female">Female</label>
                                                                 </div>
                                                             </div>
@@ -1350,14 +1400,16 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
+                                                </div>
                                             <!-- End User Details -->
+                                            </div>
                                         </section>
                                         <h3>Address</h3>
                                         <section>
                                             <!-- Address-->
                                             <div class="card-body pt-0">
                                                 <h4 class="font-20 mb-20">Address</h4>
+
 
                                                 <div class="row">
                                                     <div class="col-lg-6">
@@ -1367,14 +1419,14 @@
                                                             <input type="text" class="theme-input-style" placeholder="Melbourne 3000, VIC, Australia">
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="form-group">
                                                             <label class="font-14 bold mb-2">City</label>
                                                             <input type="text" class="theme-input-style" placeholder="Dhaka">
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="form-group">
                                                             <label class="font-14 bold mb-2">Postcode</label>
@@ -1390,14 +1442,14 @@
                                                             <input type="text" class="theme-input-style" placeholder="Melbourne 3000, VIC, Australia">
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="form-group">
                                                             <label class="font-14 bold mb-2">State</label>
                                                             <input type="text" class="theme-input-style" placeholder="VICA">
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="form-group">
                                                             <label class="font-14 bold mb-2">Country</label>
@@ -1430,14 +1482,14 @@
                                                             <span class="black">Abrilay Khatun</span>
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="review-list mb-20">
                                                             <span class="font-14 bold c4 ml-4">Email</span>
                                                             <span class="black">username@email.com</span>
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="review-list mb-20">
                                                             <span class="font-14 bold c4 ml-4">Phone</span>
@@ -1453,14 +1505,14 @@
                                                             <span class="black">24</span>
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="review-list mb-20">
                                                             <span class="font-14 bold c4 ml-4">Gender</span>
                                                             <span class="black">Male</span>
                                                         </div>
                                                         <!-- End Form Group -->
-                                                        
+
                                                         <!-- Form Group -->
                                                         <div class="review-list mb-20">
                                                             <span class="font-14 bold c4 ml-4">Address</span>
@@ -1488,7 +1540,7 @@
                                 </form>
                                 <!-- End Form -->
                             </div>
-                                    
+
                         </div>
                     </div>
                 </div>

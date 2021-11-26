@@ -62,4 +62,9 @@
 
     <script src="{{URL::asset('js/mapInupt.js')}}"></script>
 
+@parent
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ5mBAaaij69pG1mWGzMwA1FJuHLW05E4&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="{{URL::asset('Dashboard/js/mapInput.js')}}"></script>
+
 @endsection

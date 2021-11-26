@@ -4,7 +4,11 @@ Template:  Webmin - Bootstrap 4 & Angular 5 Admin Dashboard Template
 Author: potenzaglobalsolutions.com
 Design and Developed by: potenzaglobalsolutions.com
 
+<<<<<<< HEAD
 NOTE: 
+=======
+NOTE:
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
 
 */
 
@@ -19,7 +23,11 @@ NOTE:
 
 /*************************
   Line Chart
+<<<<<<< HEAD
 *************************/ 
+=======
+*************************/
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
     var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
      var config = {
         type: 'line',
@@ -112,7 +120,11 @@ NOTE:
 
 /*************************
      Line Styles
+<<<<<<< HEAD
 *************************/ 
+=======
+*************************/
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
 var config2 = {
             type: 'line',
             data: {
@@ -198,7 +210,11 @@ var config2 = {
 
 /*************************
      doughnut
+<<<<<<< HEAD
 *************************/ 
+=======
+*************************/
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
         var config3 = {
         type: 'doughnut',
         data: {
@@ -243,11 +259,19 @@ var config2 = {
             }
         }
      };
+<<<<<<< HEAD
  
 
 /*************************
         combo
 *************************/ 
+=======
+
+
+/*************************
+        combo
+*************************/
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
     var timeFormat = 'MM/DD/YYYY HH:mm';
     function newDateString(days) {
       return moment().add(days, 'd').format(timeFormat);
@@ -257,12 +281,21 @@ var config2 = {
       type: 'bar',
       data: {
         labels: [
+<<<<<<< HEAD
           newDateString(0), 
           newDateString(1), 
           newDateString(2), 
           newDateString(3), 
           newDateString(4), 
           newDateString(5), 
+=======
+          newDateString(0),
+          newDateString(1),
+          newDateString(2),
+          newDateString(3),
+          newDateString(4),
+          newDateString(5),
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
           newDateString(6)
         ],
         datasets: [{
@@ -271,12 +304,21 @@ var config2 = {
           backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
           borderColor: window.chartColors.red,
           data: [
+<<<<<<< HEAD
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
+=======
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
             randomScalingFactor()
           ],
         }, {
@@ -285,12 +327,21 @@ var config2 = {
           backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
           borderColor: window.chartColors.blue,
           data: [
+<<<<<<< HEAD
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
+=======
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
             randomScalingFactor()
           ],
         }, {
@@ -300,12 +351,21 @@ var config2 = {
           borderColor: window.chartColors.green,
           fill: false,
           data: [
+<<<<<<< HEAD
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
             randomScalingFactor(), 
+=======
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
             randomScalingFactor()
           ],
         }, ]
@@ -327,10 +387,17 @@ var config2 = {
         },
       }
     };
+<<<<<<< HEAD
  
  /*************************
         Custom Points
 *************************/ 
+=======
+
+ /*************************
+        Custom Points
+*************************/
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
  var customTooltips = function (tooltip) {
       $(this._chart.canvas).css("cursor", "pointer");
       var positionY = this._chart.canvas.offsetTop;
@@ -364,12 +431,21 @@ var config2 = {
         borderColor: window.chartColors.red,
         pointBackgroundColor: window.chartColors.red,
         data: [
+<<<<<<< HEAD
           randomScalingFactor(), 
           randomScalingFactor(), 
           randomScalingFactor(), 
           randomScalingFactor(), 
           randomScalingFactor(), 
           randomScalingFactor(), 
+=======
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
           randomScalingFactor()
         ]
       }, {
@@ -378,12 +454,21 @@ var config2 = {
         borderColor: window.chartColors.blue,
         pointBackgroundColor: window.chartColors.blue,
         data: [
+<<<<<<< HEAD
           randomScalingFactor(), 
           randomScalingFactor(), 
           randomScalingFactor(), 
           randomScalingFactor(), 
           randomScalingFactor(), 
           randomScalingFactor(), 
+=======
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+          randomScalingFactor(),
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
           randomScalingFactor()
         ]
       }]
@@ -391,7 +476,11 @@ var config2 = {
 
  /*************************
       Chart Basic
+<<<<<<< HEAD
 *************************/ 
+=======
+*************************/
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
     var config6 = {
       type: 'line',
       data: {
@@ -562,7 +651,11 @@ var config2 = {
                 text: 'Line Chart - Different point sizes'
             }
         }
+<<<<<<< HEAD
     };   
+=======
+    };
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
 
 /*************************
     Chart Stacked
@@ -606,7 +699,11 @@ var config2 = {
                     randomScalingFactor()
                 ]
             }]
+<<<<<<< HEAD
         };       
+=======
+        };
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
 
  /*************************
     window onload
@@ -650,7 +747,11 @@ var config2 = {
               });
             };
           }
+<<<<<<< HEAD
            if ($('#canvas6').exists()) {   
+=======
+           if ($('#canvas6').exists()) {
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
             var ctx6 = document.getElementById("canvas6").getContext("2d");
             window.myLine6 = new Chart(ctx6, config6);
           }

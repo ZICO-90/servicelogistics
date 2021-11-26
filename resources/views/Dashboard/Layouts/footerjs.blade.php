@@ -12,8 +12,12 @@
 
 <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 @yield('js')
+
 <script src="{{URL::asset('Dashboard/plugins/jquery-repeater/custom-repeater.js')}}"></script>
 <script src="{{URL::asset('Dashboard/plugins/jquery-repeater/repeater.min.js')}}"></script>
+
+
+
 
 <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
 <script src="{{URL::asset('Dashboard/plugins/apex/apexcharts.min.js')}}"></script>
@@ -28,5 +32,12 @@
 <script src="{{ URL::asset('Dashboard/js/lobilist.js') }}"></script>
 <!-- custom -->
 <script src="{{ URL::asset('Dashboard/js/custom.js') }}"></script>
+
 <script src="{{ URL::asset('Dashboard/js/bootstrap-datatable/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ URL::asset('Dashboard/js/bootstrap-datatables/jquery.dataTables.min.js') }}"></script>
+
+<script src="{{ URL::asset('Dashboard/js/bootstrap-datatable/bootstrap-datatables.js') }}"></script>
+<script src="{{ URL::asset('Dashboard/js/bootstrap-datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{URL::asset('Dashboard/plugins/dropzone/dropzone.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/dropzone/dropzone.custom.js')}}"></script>
+

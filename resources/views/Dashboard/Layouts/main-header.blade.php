@@ -75,7 +75,15 @@
                             <a href="#" data-toggle="dropdown">
                             <img src="{{asset('Dashboard/img/svg/globe-icon.svg')}}" alt="">
                             </a>
-
+                            <ul>
+    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+        <li>
+            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                {{ $properties['native'] }}
+            </a>
+        </li>
+    @endforeach
+</ul>
 
                             <div class="dropdown-menu style--three">
                             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
