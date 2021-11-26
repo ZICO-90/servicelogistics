@@ -12,6 +12,7 @@
 
 <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
 <link rel="stylesheet" href="{{asset('Dashboard/plugins/apex/apexcharts.css')}}">
+<link rel="stylesheet" href="/dashboard/fonts/elegant_icons/elegant-icons.css">
 <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
 
 @if(App::getLocale() =='ar')

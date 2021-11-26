@@ -38,12 +38,38 @@
                 </ul>
                 <!-- End Sub Menu -->
             </li>
+
             <li>
-                <a href="pages/social-media.html">
-                    <i class="icofont-chart-histogram"></i>
-                    <span class="link-title">Social Media Analytics</span>
+                <a href="#">
+                    <i class="icon_document_alt"></i>
+                    <span class="link-title">news</span>
                 </a>
-            </li>
+
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
+                    <li><a href="{{route('news.index')}}">latest news</a></li>
+                    <li><a href="{{route('news.create')}}">add news</a></li>
+
+
+                </ul>
+
+                <li>
+                    <a href="#">
+                        <i class="icon_pencil"></i>
+                        <span class="link-title">convention</span>
+                    </a>
+
+                    <!-- Sub Menu -->
+                    <ul class="nav sub-menu">
+                        <li><a href="{{route('convention.index')}}">conventions</a></li>
+                        <li><a href="{{route('convention.create')}}">add convention</a></li>
+                    </ul>
+
+
+
+
+                <!-- End Sub Menu -->
+
             <li class="nav-category">apps</li>
             <li>
                 <a href="#">

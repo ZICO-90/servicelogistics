@@ -319,16 +319,17 @@
                         </div>
                     </div>
                 </section>
+
                 <section id="news" class="section news-section is-clearfix">
                     <div class="container">
                         <div class="blog-list style-2 columns is-variable is-4 is-multiline">
                             <div class="column is-4" data-aos="fade">
                                 <div class="blog-post-heading">
                                     <p class="heading-title-top">أخر الاخبار</p>
-                                    <h1 class="heading-title style-3 has-text-left"> اتم نقل الباضائع
-                                        <span class="has-text-primary">بسهولة</span>
+                                    <h1 class="heading-title style-3 has-text-left"{{--$news->en_title--}}>
+                                        <span class="has-text-primary"></span>
                                     </h1>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد.</p>
+                                    <p>{{--$news->en_content--}}</p>
                                     <a href="./blog/index.html" class="button">أخبارنا
                                         <span class="icon">
                           <i class="ion-ios-arrow-round-forward"></i>
@@ -337,6 +338,14 @@
                                 </div>
                                 <!-- .blog-post -->
                             </div>
+
+
+
+
+
+
+
+
                             <div class="column is-4" data-aos="fade">
                                 <article class="blog-post">
                                     <figure class="post-image">
@@ -354,7 +363,7 @@
                                             </ul>
                                         </div>
                                         <h2 class="entry-title">
-                                            <a href="./blog/single.html">اتفاقية عمل مشترك لنقل البضائع</a>
+                                            <a href="./blog/single.html"></a>
                                         </h2>
                                     </div>
                                     <div class="entry-footer">
@@ -363,6 +372,7 @@
                                 </article>
                                 <!-- .blog-post -->
                             </div>
+
                             <div class="column is-4" data-aos="fade">
                                 <article class="blog-post">
                                     <figure class="post-image">
