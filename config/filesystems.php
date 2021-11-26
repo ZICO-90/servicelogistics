@@ -34,6 +34,10 @@ return [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
+        'shipment_attachement' => [
+            'driver' => 'local',
+            'root' => storage_path('app/shipment_attachement'),
+        ],
 
         'public' => [
             'driver' => 'local',

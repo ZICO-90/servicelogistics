@@ -75,7 +75,15 @@
                             <a href="#" data-toggle="dropdown">
                             <img src="{{asset('Dashboard/img/svg/globe-icon.svg')}}" alt="">
                             </a>
-
+                            <ul>
+    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+        <li>
+            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                {{ $properties['native'] }}
+            </a>
+        </li>
+    @endforeach
+</ul>
 
                             <div class="dropdown-menu style--three">
                             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -97,15 +105,15 @@
                             </div>
                             <!-- End Main Header Language -->
                             </li>
-                            <li class="ml-0 d-none d-lg-flex">
-                                <!-- Main Header Print -->
-                                <div class="main-header-print">
-                                    <a href="#">
-                                        <img src="{{URL::asset('Dashboard/img/svg/print-icon.svg')}}" alt="">
-                                    </a>
-                                </div>
-                                <!-- End Main Header Print -->
-                            </li>
+                            {{--<li class="ml-0 d-none d-lg-flex">--}}
+                                {{--<!-- Main Header Print -->--}}
+                                {{--<div class="main-header-print">--}}
+                                    {{--<a href="#">--}}
+                                        {{--<img src="{{URL::asset('Dashboard/img/svg/print-icon.svg')}}" alt="">--}}
+                                    {{--</a>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Main Header Print -->--}}
+                            {{--</li>--}}
                             <li class="d-none d-lg-flex">
                                 <!-- Main Header Time -->
                                 <div class="main-header-date-time text-right">
@@ -120,9 +128,9 @@
                             </li>
                             <li class="d-none d-lg-flex">
                                 <!-- Main Header Button -->
-                                <div class="main-header-btn ml-md-1">
-                                    <a href="#" class="btn">Pending Tasks</a>
-                                </div>
+                                {{--<div class="main-header-btn ml-md-1">--}}
+                                    {{--<a href="#" class="btn">Pending Tasks</a>--}}
+                                {{--</div>--}}
                                 <!-- End Main Header Button -->
                             </li>
                             <li class="order-2 order-sm-0">

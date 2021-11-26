@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Admin\PriceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use App\Http\Controllers\Dashboard\DashboardController;
 */
 
 Route::get('/Dashboard_Admin', [DashboardController::class,'index']);
+Route::get('/empty_page', [DashboardController::class,'index']);
 
 Route::group(
     [
@@ -31,7 +33,29 @@ Route::group(
         return view('Dashboard.Admin.index');
     })->middleware(['auth:admin'])->name('dashboard.admin');
 
+    Route::get('/empty_page', function () {
+        return view('Dashboard.Admin.empty_page');
+    });
 
+
+    Route::view('Add_shipment','Livewire.show_form');
+
+
+
+
+    Route::view('Add_shipment','Livewire.show_form');
+
+//    ////////Price route///////
+
+    Route::resources([
+        'prices' => PriceController::class,
+    ]);
+
+
+
+
+
+    ///////////////
     require __DIR__.'/auth.php';
 });
 

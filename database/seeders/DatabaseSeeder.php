@@ -16,6 +16,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserTableSeeder::class,
             AdminTableSeeder::class,
+            CountrySeeder::class,
+            CurrencySeeder::class,
+            SeriesSeeder::class,
+            UnitSeeder::class,
+            ServiceTypeSeeder::class,
+            ShippingMaterialTypeSeeder::class,
         ]);
     }
 }
