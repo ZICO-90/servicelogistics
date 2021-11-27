@@ -48,14 +48,27 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Http\Interfaces\Admin\TestimonialInterface',
             'App\Http\Repositories\Admin\TestimonialRepository'
         );
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\newsInterface',
+            'App\Http\Repositories\Admin\newsRepository'
+        );
+
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\conventionInterface',
+            'App\Http\Repositories\Admin\conventionRepository'
+        );
 
         $this->app->bind(
             'App\Http\Interfaces\EndUser\EndUserHomeInterface',
             'App\Http\Repositories\EndUser\EndUserHomeRepository'
         );
 
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\PriceInterface',
+            'App\Http\Repositories\Admin\PriceRepository'
+        );
+  }
 
-    }
 
     /**
      * Bootstrap services.

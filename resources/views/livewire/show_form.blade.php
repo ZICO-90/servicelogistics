@@ -1,6 +1,14 @@
 @extends('Dashboard.Layouts.master')
 @section('css')
     @livewireStyles
+    @toastr_css
+    <style>
+        .dataTables_filter{
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            float: right;
+        }
+    </style>
 
 @endsection
 
@@ -38,6 +46,21 @@
 @endsection
 @section('js')
     @livewireScripts
+    @toastr_js
+
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
+    <script  type="text/javascript">
+        $(document).ready( function () {
+            $('#example').DataTable();
+        } );
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATSYIXpf6pFBXuHiqRfjhIEIKYRAhTiw0&libraries=places&callback=initialize" async defer></script>
+
+    <script src="{{URL::asset('js/mapInupt.js')}}"></script>
 
 @parent
 

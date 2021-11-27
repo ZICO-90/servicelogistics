@@ -17,6 +17,7 @@ class CreateShipmentsTable extends Migration
             $table->id();
             $table->string('amount');
             $table->string('whieght');
+            $table->string('price');
             $table->decimal('price');
 
 
@@ -36,6 +37,11 @@ class CreateShipmentsTable extends Migration
             $table->unsignedBigInteger('type_id');
             $table->foreign('type_id')->references('id')
                 ->on('shipping_material_types')->cascadeOnDelete()->cascadeOnUpdate();
+
+
+            $table->unsignedBigInteger('service_type_id');
+            $table->foreign('service_type_id')->references('id')
+                ->on('service_types')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->unsignedBigInteger('costumer_id');
             $table->foreign('costumer_id')->references('id')

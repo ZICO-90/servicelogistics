@@ -1,13 +1,15 @@
 <?php
-
+namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\InfoSiteController;
 use App\Http\Controllers\Admin\PriceOrderController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\EndUser\EndUserHomeController;
+
 use App\Http\Controllers\Admin\dileveryController;
 use App\Http\Controllers\Admin\employesController;
 use App\Http\Controllers\Admin\WelcomSectionController;
+
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -132,6 +134,44 @@ Route::group(
         Route::get('/testimonial', [EndUserHomeController::class, 'testimonial'])->name('testimonial');
     });
     });
+
+
+
+
+
+
+/////////najat route////////////
+
+//
+//Route::group(
+//    [
+//        'prefix' => LaravelLocalization::setLocale(),
+//        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+//    ], function(){
+//
+//    Route::get('/dashboard/user', function () {
+//        return view('Dashboard.User.index');
+//    })->middleware(['auth'])->name('dashboard.user');
+//
+//
+//    Route::get('/dashboard/admin', function () {
+//        return view('Dashboard.Admin.index');
+//    })->middleware(['auth:admin'])->name('dashboard.admin');
+//
+//    Route::get('/empty_page', function () {
+//        return view('Dashboard.Admin.empty_page');
+//    });
+//
+//    Route::view('Add_shipment','Livewire.show_form');
+//
+////    ////////Price route///////
+////
+//    Route::resources([
+//        'prices' => PriceController::class,
+//    ]);
+
+
+////////end najat route/////
 
 
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Admin\PriceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,10 +37,26 @@ Route::group(
         return view('Dashboard.Admin.empty_page');
     });
 
+
     Route::view('Add_shipment','Livewire.show_form');
 
 
 
+
+    Route::view('Add_shipment','Livewire.show_form');
+
+//    ////////Price route///////
+
+    Route::resources([
+        'prices' => PriceController::class,
+    ]);
+
+    //route news and convention//////////
+        Route::resource('news', 'newsController');
+        Route::resource('convention', 'conventionController');
+
+
+    ///////////////
     require __DIR__.'/auth.php';
 });
 

@@ -73,4 +73,8 @@ $(document).ready(function(){
         return false;
     })
 
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1

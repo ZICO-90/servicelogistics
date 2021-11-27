@@ -13,6 +13,10 @@ return [
     'New Messages' => 'New Messages',
     'Testimonials' => 'Testimonials',
     'Show All Testimonials' => 'Show All Testimonials',
-    'UnRead Testimonials' => 'UnRead Testimonials'
+    'UnRead Testimonials' => 'UnRead Testimonials',
+    'price_list'=>'Price List',
+    'add_price'=>'Add Price',
+    'prices'=>'Prices'
+
 
 ];
