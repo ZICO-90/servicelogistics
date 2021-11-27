@@ -51,8 +51,9 @@ Route::group(
         'prices' => PriceController::class,
     ]);
 
-
-
+    //route news and convention//////////
+        Route::resource('news', 'newsController');
+        Route::resource('convention', 'conventionController');
 
 
     ///////////////
