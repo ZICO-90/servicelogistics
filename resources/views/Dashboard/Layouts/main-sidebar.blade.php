@@ -16,7 +16,7 @@
         <ul class="nav">
             <li class="nav-category">{{trans('Dashboard\trans_main_sidebar.Main')}}</li>
             <li class="active">
-                <a href="index.blade.php">
+                <a href="{{route('admin.index')}}">
                     <i class="icofont-pie-chart"></i>
                     <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Main')}}</span>
                 </a>
@@ -50,27 +50,33 @@
                     <i class="icofont-mail-box"></i>
                     <span class="link-title">logistics services</span>
                 </a>
-              
+
             </li>
             <li>
                 <a href="{{route('admin.employe.index')}}">
                     <i class="icofont-mail-box"></i>
                     <span class="link-title">employes</span>
                 </a>
-              
+
             </li>
             <li>
                 <a href="{{route('admin.welcome.index')}}">
                     <i class="icofont-mail-box"></i>
                     <span class="link-title">Settings welcome section</span>
                 </a>
-              
+
             </li>
             <li>
-                <a href="pages/apps/chat.html">
+                <a href="">
                     <i class="icofont-wechat"></i>
-                    <span class="link-title">Chat</span>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Price Order')}}</span>
                 </a>
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
+                    <li><a href="{{route('admin.priceOrder.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Messages')}}</a></li>
+                    <li><a href="">{{trans('Dashboard\trans_main_sidebar.New Messages')}}</a></li>
+                </ul>
+                <!-- End Sub Menu -->
             </li>
             <li>
                 <a href="#">
@@ -100,13 +106,27 @@
             <li>
                 <a href="#">
                     <i class="icofont-contact-add"></i>
-                    <span class="link-title">InfoSite</span>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.InfoSite')}}</span>
                 </a>
 
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
-                    <li><a href="{{route('admin.info-site.index')}}">Show All InfoSite</a></li>
-                    <li><a href="{{route('admin.info-site.create')}}">Create InfoSite</a></li>
+                    <li><a href="{{route('admin.info-site.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All InfoSite')}}</a></li>
+                    <li><a href="{{route('admin.info-site.create')}}">{{trans('Dashboard\trans_main_sidebar.Create InfoSite')}}</a></li>
+                </ul>
+                <!-- End Sub Menu -->
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="icofont-contact-add"></i>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Testimonials')}}</span>
+                </a>
+
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
+                    <li><a href="{{route('admin.testimonial.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Testimonials')}}</a></li>
+                    <li><a href="{{route('admin.testimonial.unread')}}">{{trans('Dashboard\trans_main_sidebar.UnRead Testimonials')}}</a></li>
                 </ul>
                 <!-- End Sub Menu -->
             </li>

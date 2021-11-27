@@ -37,9 +37,13 @@ class EndUserHomeRepository implements EndUserHomeInterface
     }
 
 
-   public function masterPage(){
+    public function priceOrder()
+    {
+        return view('endUser.price-order');
+    }
 
-      
-        return view('endUser.layouts.master',compact('logistics')) ;
+    public function testimonial()
+    {
+        return view('endUser.testimonial');
     }
 }

@@ -10,7 +10,7 @@
   font-size: 18px;
   font-size: 1.125rem;
   margin-bottom: 5px;
-  font-family: 'sky-bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0;
   text-align: center;
   font-weight: 600;
@@ -27,7 +27,7 @@
   right: 0;
   position: absolute;
   color: #4b505d !important;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-size: 0.9375rem;
 }

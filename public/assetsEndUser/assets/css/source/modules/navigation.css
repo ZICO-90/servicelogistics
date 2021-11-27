@@ -211,7 +211,7 @@ body.header-background-primary header .main-navigation > ul > li.active > a, bod
 }
 
 header .main-navigation {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 header .main-navigation .icon {
@@ -489,7 +489,7 @@ header .site-logo img {
 }
 
 .nav-menu-dropdown {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-menu-dropdown > li {
@@ -1030,7 +1030,7 @@ body.header-hamburger-menu.slide-left header .level:last-child .footer-copyright
   font-size: 12px;
   font-size: 0.75rem;
   display: inline-block;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #999999;
 }
 
@@ -1373,7 +1373,7 @@ body .header-menu-icons li > ul {
   background: white;
   min-width: 250px;
   border: 1px solid #f5f5f5;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-top: 29px;
   max-height: 310px;
   overflow-y: auto;
@@ -1866,7 +1866,7 @@ body.header-side-navigation header .footer-copyright {
   font-size: 13px;
   font-size: 0.8125rem;
   display: inline-block;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #999999;
 }
 

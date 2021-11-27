@@ -8,7 +8,7 @@
 
 .content,
 .entry-content {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .content figure,
@@ -49,7 +49,7 @@
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-  font-family: 'sky-bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .content pre,
@@ -76,7 +76,7 @@
   color: white;
   font-size: 45px;
   font-size: 2.8125rem;
-  font-family: 'sky-bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 5px 12px 10px;
   float: left;
   margin: 6px 15px 0 0;

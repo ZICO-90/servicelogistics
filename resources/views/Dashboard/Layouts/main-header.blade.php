@@ -75,31 +75,23 @@
                             <a href="#" data-toggle="dropdown">
                             <img src="{{asset('Dashboard/img/svg/globe-icon.svg')}}" alt="">
                             </a>
-                            <ul>
-    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-        <li>
-            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                {{ $properties['native'] }}
-            </a>
-        </li>
-    @endforeach
-</ul>
+                                <!--- Start DropMenu Language --->
+                                <div class="dropdown-menu style--three">
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 
-                            <div class="dropdown-menu style--three">
-                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-
-                            <a rel="alternate" hreflang="{{ $localeCode }}"
-                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                @if($properties['native']=="English")
-                                    <span><img src="{{asset('Dashboard/img/flag/f1.png')}}" alt=""></span>
-                                    <strong>{{trans('Dashboard\trans_main_header.English')}}</strong>
-                                @elseif($properties['native']=="العربية")
-                                    <span><img src="{{asset('Dashboard/img/flag/f2.png')}}" alt=""></span>
-                                    <strong>{{trans('Dashboard\trans_main_header.Arabic')}}</strong>
-                                 @endif
-                            </a>
-                            @endforeach
-                            </div>
+                                        <a rel="alternate" hreflang="{{ $localeCode }}"
+                                           href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            @if($properties['native']=="English")
+                                                <span><img src="{{asset('Dashboard/img/flag/f1.png')}}" alt=""></span>
+                                                <strong>{{trans('Dashboard\trans_main_header.English')}}</strong>
+                                            @elseif($properties['native']=="العربية")
+                                                <span><img src="{{asset('Dashboard/img/flag/f2.png')}}" alt=""></span>
+                                                <strong>{{trans('Dashboard\trans_main_header.Arabic')}}</strong>
+                                            @endif
+                                        </a>
+                                    @endforeach
+                                </div>
+                                <!--- End DropMenu Language --->
 
 
                             </div>

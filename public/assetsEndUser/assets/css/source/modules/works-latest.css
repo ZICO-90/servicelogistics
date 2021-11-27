@@ -226,7 +226,7 @@
   transition: all 0.4s ease;
   color: white;
   opacity: .7;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .works-latest .works-latest-item .works-latest-item-meta h5:hover {

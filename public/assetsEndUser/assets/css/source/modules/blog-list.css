@@ -192,7 +192,7 @@
   letter-spacing: 1.1px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding-right: 12px;
   padding-bottom: 5px;
   font-weight: 600;
@@ -240,7 +240,7 @@
   transition: all 0.5s ease;
   font-size: 13.3px;
   font-size: 0.83125rem;
-  font-family: 'sky-bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: transparent;
   height: 2.25em;
 }
@@ -488,7 +488,7 @@
 }
 
 .blog-list.style-3 .blog-post .entry-footer .button {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   font-weight: 600;
   color: #0063dd;

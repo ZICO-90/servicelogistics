@@ -241,14 +241,14 @@ a.tag:hover, .widget-tags .tagcloud a:hover {
   font-size: 19px;
   font-size: 1.1875rem;
   margin-bottom: 1.6rem;
-  font-family: 'sky-bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
 
 /* widget section */
 .widget {
   margin-bottom: 2.6rem;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .widget:first-child .widget-title {
@@ -437,7 +437,7 @@ a.tag:hover, .widget-tags .tagcloud a:hover {
   color: #4b505d;
   font-size: 15px;
   font-size: 0.9375rem;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: .5px;
 }
 

@@ -2,11 +2,11 @@
  * ::::::::::: Calendar Styles :::::::::::
  */
 .calendar {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .calendar button {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .calendar button.button.is-text {
