@@ -14,10 +14,9 @@ class AddcolumnDileveryTypesTable extends Migration
     public function up()
     {
         Schema::table('delivery_types', function (Blueprint $table) {
-            $table->string('ar_title_Up');
-            $table->string('en_title_Up');
-            $table->string('ar_title_down');
-            $table->string('en_title_down');
+            $table->longText('title_main');
+            $table->longText('title_sup');
+           
         });
     }
 
@@ -29,10 +28,9 @@ class AddcolumnDileveryTypesTable extends Migration
     public function down()
     {
         Schema::table('delivery_types', function (Blueprint $table) {
-            $table->dropColumn('ar_title_Up');
-            $table->dropColumn('en_title_Up');
-            $table->dropColumn('ar_title_down');
-            $table->dropColumn('en_title_down');
+            $table->dropColumn('title_main');
+            $table->dropColumn('title_sup');
+          
         });
     }
 }

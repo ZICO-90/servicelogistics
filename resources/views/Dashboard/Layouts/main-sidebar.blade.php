@@ -48,21 +48,21 @@
             <li>
                 <a href="{{route('admin.delivery.index')}}">
                     <i class="icofont-mail-box"></i>
-                    <span class="link-title">logistics services</span>
+                    <span class="link-title">{{trans('Dashboard\delivery.logisticeServices')}}</span>
                 </a>
               
             </li>
             <li>
                 <a href="{{route('admin.employe.index')}}">
                     <i class="icofont-mail-box"></i>
-                    <span class="link-title">employes</span>
+                    <span class="link-title">{{trans('Dashboard\employe.linkTitle')}}</span>
                 </a>
               
             </li>
             <li>
                 <a href="{{route('admin.welcome.index')}}">
                     <i class="icofont-mail-box"></i>
-                    <span class="link-title">Settings welcome section</span>
+                    <span class="link-title">{{trans('Dashboard\WelcomeSection.linkTitle')}}</span>
                 </a>
               
             </li>

@@ -4,24 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Spatie\Translatable\HasTranslations;
 class DeliveryType extends Model
 {
+ 
     use HasFactory;
 
+    use HasTranslations ;
+    public $translatable = ['name' , 'details' , 'title_main','title_sup'];
     protected $fillable = [
-        'ar_name',
-        'en_name',
-        'ar_details',
-        'en_details',
+        'name',
+        
+        'details',
+        
         'icon_url',
         'img_url',
-        'ar_title_Up',
-        'en_title_Up',
-        'ar_title_down',
-        'en_title_down'
-
-
-       
+        'title_main',
+        
+        'title_sup'
+           
     ];
 }

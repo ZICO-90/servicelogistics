@@ -4,31 +4,26 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Spatie\Translatable\HasTranslations;
 class employe extends Model
 {
+
+
     use HasFactory;
-      protected $fillable = [
-       'ar_name',
-        'en_name',
-
-        'ar_Country',
-        'en_Country',
-
-        'ar_details',
-        'en_details',
-
-        'ar_city',
-        'en_city',
-
+    use HasTranslations ;
+    public $translatable = ['name' , 'Country' , 'details','city'];
+      protected $fillable =
+       [
+        'name',
+        'Country',
+        'details',
+        'city',
         'birth_date',
         'phone',
         'email',
         'is_active',
         'img_url'
-
-
-    ];
+        ];
 
 
     protected $appends = ['age']; // return just age in column >  birth_date

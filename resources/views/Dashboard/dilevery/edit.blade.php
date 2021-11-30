@@ -36,7 +36,7 @@
 <div class="col-lg-12">
                             <!-- Base Horizontal Form With Icons -->
                             <div class="form-element py-30 multiple-column">
-                                <h4 class="font-20 mb-20">New Create</h4>
+                                <h4 class="font-20 mb-20">{{trans('Dashboard\delivery.updateTitle')}}</h4>
                                 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -66,36 +66,37 @@
                                         
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Name Arabic</label>
-                                                <input type="text" name="ar_name" value="{{$shipments->ar_name}}" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.arname')}}</label>
+                                                
+                                                <input type="text" name="name[ar]" value="{{ $shipments->getTranslation('name', 'ar') }}" class="theme-input-style" placeholder="Text Arabic">
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Other Details Arabic</label>
-                                                <input type="text" name="ar_details" value="{{$shipments->ar_details}}" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.arDetails')}}</label>
+                                                <input type="text" name="details[ar]" value="{{ $shipments->getTranslation('details', 'ar') }}" class="theme-input-style" placeholder="Text Arabic">
                                             </div>
                                             <!-- End Form Group -->
                                             
                                          
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">title Up Arabic</label>
-                                                <input type="text" name="ar_title_Up" value="{{$shipments-> ar_title_Up}}"  class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.arTitleUp')}}</label>
+                                                <input type="text" name="title_main[ar]" value="{{ $shipments->getTranslation('title_main', 'ar') }}"  class="theme-input-style" placeholder="Text Arabic">
                                             </div>
                                             <!-- End Form Group -->
 
                                               <!-- Form Group -->
                                               <div class="form-group">
-                                                <label class="font-14 bold mb-2">title down Arabic</label>
-                                                <input type="text" name="ar_title_down" value="{{$shipments-> ar_title_down}}" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.arTitleSup')}}</label>
+                                                <input type="text" name="title_sup[ar]" value="{{ $shipments->getTranslation('title_sup', 'ar') }}" class="theme-input-style" placeholder="Text Arabic">
                                             </div>
                                             <!-- End Form Group -->
 
                                               <!-- Form Group -->
                                             <div class="form-group">
-                                            <label for="inputEmail4"> icon Preview</label>
+                                            <label for="inputEmail4"> {{trans('Dashboard\delivery.Fileicon')}}</label>
                                             <img id="icons" style="height:200;"   src="{{asset('Dashboard/img/delivery/'.$shipments-> icon_url)}}"  >
 
                                             </div>
@@ -104,7 +105,7 @@
                                                <!-- Form Group -->
                                         <div class="form-group">
                                         
-                                                <label for="inputEmail4">Upload icon</label>
+                                               
                                                 <input name="icons" type="file" id="image-File" onchange="iconsFile()" accept="image/*" />
                                                 <input type="hidden" value="{{$shipments-> icon_url}}"  name="icon_url">
 
@@ -118,35 +119,36 @@
                                         <div class="col-lg-6">
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Name English</label>
-                                                <input type="text" name="en_name" value="{{$shipments->en_name}}"   class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.enname')}}</label>
+                                                
+                                                <input type="text" name="name[en]" value="{{ $shipments->getTranslation('name', 'en') }}"   class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Other Details English</label>
-                                                <input type="text" name="en_details" value="{{$shipments->en_details}}"  class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.enDetails')}}</label>
+                                                <input type="text" name="details[en]" value="{{ $shipments->getTranslation('details', 'en') }}"  class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
                                             
                                       <!-- Form Group -->
                                       <div class="form-group">
-                                                <label class="font-14 bold mb-2">title Up English</label>
-                                                <input type="text" name="en_title_Up" value="{{$shipments->en_title_Up}}" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.enTitleUp')}}</label>
+                                                <input type="text" name="title_main[en]" value="{{ $shipments->getTranslation('title_main', 'en') }}" class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
 
                                              <!-- Form Group -->
                                              <div class="form-group">
-                                                <label class="font-14 bold mb-2">etitle down English</label>
-                                                <input type="text" name="en_title_down" value="{{$shipments-> en_title_down}}" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.enTitleSup')}}</label>
+                                                <input type="text" name="title_sup[en]" value="{{ $shipments->getTranslation('title_sup', 'en') }}" class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
 
                                               <!-- Form Group -->
                                               <div class="form-group">
-                                            <label for="inputEmail4"> images Preview</label>
+                                            <label for="inputEmail4"> {{trans('Dashboard\delivery.Fileimages')}}</label>
                                            
 
                                             <img id="imgs"  style="height: 200px;" src="{{asset('Dashboard/img/delivery/'.$shipments-> img_url)}}" >
@@ -157,7 +159,7 @@
                                                <!-- Form Group -->
                                         <div class="form-group">
                                         
-                                                <label for="inputEmail4">Upload images</label>
+                                                
                                                 <input name="imgs" type="file" id="image-File" onchange="imgaesFile()" accept="image/*" />
                                                 <input name="img_url" value="{{$shipments-> img_url}}" type="hidden" />
     
@@ -169,25 +171,12 @@
                                         
                                     </div>
 
-                                    <!-- Form Row -->
-                                    <div class="form-group pt-1">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <!-- Custom Checkbox -->
-                                            <label class="custom-checkbox position-relative mr-2">
-                                                <input type="checkbox" id="check5">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <!-- End Custom Checkbox -->
-                                            
-                                            <label for="check5">Remember me</label>
-                                        </div>
-                                    </div>
-                                    <!-- End Form Row -->
+                                    
 
                                     <!-- Form Row -->
                                     <div class="form-row">
                                         <div class="col-12 text-right">
-                                            <button type="submit" class="btn long">Submit</button>
+                                            <button type="submit" class="btn long">{{trans('Dashboard\delivery.SubmitEdit')}}</button>
                                         </div>
                                     </div>
                                     <!-- End Form Row -->

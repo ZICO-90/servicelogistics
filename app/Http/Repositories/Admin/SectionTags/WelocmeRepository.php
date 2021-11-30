@@ -89,7 +89,7 @@ class WelocmeRepository implements WelcomeInterface
         
 
        
-        return redirect()->back()->with('errors' ,'It\'s already activatedt'); 
+        return redirect()->back()->with('errors' ,trans('Dashboard\WelcomeSection.IsDisplayActiveErrors')); 
 
     }
 

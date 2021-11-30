@@ -26,7 +26,7 @@
 <div class="col-lg-12">
                             <!-- Base Horizontal Form With Icons -->
                             <div class="form-element py-30 multiple-column">
-                                <h4 class="font-20 mb-20">New Create employe</h4>
+                                <h4 class="font-20 mb-20">{{trans('Dashboard\employe.linkCreate')}}</h4>
                                 <!----------------------------->
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -54,41 +54,41 @@
                                         @csrf
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Name Arabic</label>
-                                                <input type="text" name="ar_name" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.ar_name')}}</label>
+                                                <input type="text" name="name[ar]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Other Details Arabic</label>
-                                                <input type="text" name="ar_details" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.ar_Details')}}</label>
+                                                <input type="text" name="details[ar]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
                                              <!-- Form Group -->
                                              <div class="form-group">
-                                                <label class="font-14 bold mb-2">Country Arabic</label>
-                                                <input type="text" name="ar_Country" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.ar_Country')}}</label>
+                                                <input type="text" name="Country[ar]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
 
                                                 <!-- Form Group -->
                                                 <div class="form-group">
-                                                <label class="font-14 bold mb-2">City Arabic</label>
-                                                <input type="text" name="ar_city" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.ar_City')}}</label>
+                                                <input type="text" name="city[ar]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
 
                                              <!-- Form Group -->
                                              <div class="form-group">
-                                                <label class="font-14 bold mb-2">birth date</label>
-                                                <input type="date"   name="birth_date" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.birth_date')}}</label>
+                                                <input type="date"   name="birth_date" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
 
                                              <!-- Form Group -->
                                              <div class="form-group">
-                                                <label class="font-14 bold mb-2">emial</label>
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.emial')}}</label>
                                                 <input type="email" name="email" class="theme-input-style" placeholder="emial">
                                             </div>
                                             <!-- End Form Group -->
@@ -106,41 +106,41 @@
                                         <div class="col-lg-6">
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Name English</label>
-                                                <input type="text" name="en_name" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.en_name')}}</label>
+                                                <input type="text" name="name[en]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Other Details English</label>
-                                                <input type="text" name="en_details" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.en_Details')}}</label>
+                                                <input type="text" name="details[en]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Country Arabic</label>
-                                                <input type="text" name="en_Country" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.en_Country')}}</label>
+                                                <input type="text" name="Country[en]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
 
                                                 <!-- Form Group -->
                                                 <div class="form-group">
-                                                <label class="font-14 bold mb-2">City Arabic</label>
-                                                <input type="text" name="en_city" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.en_City')}}</label>
+                                                <input type="text" name="city[en]" class="theme-input-style" >
                                                 </div>
                                             <!-- End Form Group -->
 
                                               <!-- Form Group -->
                                               <div class="form-group">
-                                                <label class="font-14 bold mb-2">phone</label>
-                                                <input type="number" name="phone" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\employe.phone')}}</label>
+                                                <input type="number" name="phone" class="theme-input-style" >
                                                 </div>
                                             <!-- End Form Group -->
 
                                               <!-- Form Group -->
                                               <div class="form-group">
-                                            <label class="font-14 bold mb-2"> images Preview</label>
+                                            <label class="font-14 bold mb-2"> {{trans('Dashboard\employe.images')}}</label>
                                             <img id="imgs" style="height:200;"   >
 
                                             </div>
@@ -167,7 +167,7 @@
                                     <!-- Form Row -->
                                     <div class="form-row">
                                         <div class="col-12 text-right">
-                                            <button type="submit" class="btn long">Submit</button>
+                                            <button type="submit" class="btn long">{{trans('Dashboard\employe.submitCreate')}}</button>
                                         </div>
                                     </div>
                                     <!-- End Form Row -->
