@@ -18,7 +18,6 @@ class CreateShipmentsTable extends Migration
             $table->string('amount');
             $table->string('whieght');
             $table->string('price');
-            $table->decimal('price');
 
 
             $table->unsignedBigInteger('unit_id');
@@ -46,6 +45,12 @@ class CreateShipmentsTable extends Migration
             $table->unsignedBigInteger('costumer_id');
             $table->foreign('costumer_id')->references('id')
                 ->on('customers')->cascadeOnDelete()->cascadeOnUpdate();
+
+            $table->unsignedBigInteger('tracking_stage_id');
+            $table->foreign('tracking_stage_id')->references('id')
+                ->on('tracking_stages')->cascadeOnDelete()->cascadeOnUpdate();
+
+
 
 //            $table->string('sender_address_address')->nullable();
 //            $table->double('sender_address_latitude')->nullable();

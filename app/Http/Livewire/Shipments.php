@@ -7,6 +7,7 @@ use App\Models\Customer;
 use App\Models\Price;
 use App\Models\Series;
 use App\Models\ShipmentAttachment;
+use App\Models\TrackingStage;
 use Livewire\Component;
 use App\Models\Curency;
 use App\Models\Unit;
@@ -33,7 +34,7 @@ class Shipments extends Component
     public $shipment_num, $shipment_name, $amount, $curencie_types, $price, $sender_date, $expected_recived_date, $type_id, $unit_id,
         $costumer_id, $whieght, $sender_address_address, $sender_address_latitude, $sender_address_longitude, $reciver_address_address,
         $reciver_address_latitude, $reciver_address_longitude, $unit, $address_address, $address_latitude, $address_longitude;
-    public $materia_types, $customer_id, $series_id, $currency_id, $service_type_id;
+    public $materia_types, $customer_id, $series_id, $currency_id, $service_type_id,$tracking_stage_id;
     public $SecondStepEdit, $secondStepSubmit;
 
     public $photos;
@@ -44,16 +45,16 @@ class Shipments extends Component
     }
 
 
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName, [
-            'email' => 'required|email',
-            'sender_national_id' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
-            'sender_phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'reciver_national_id' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
-            'reciver_phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10'
-        ]);
-    }
+//    public function updated($propertyName)
+//    {
+////        $this->validateOnly($propertyName, [
+////            'email' => 'required|email',
+////            'sender_national_id' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
+////            'sender_phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+////            'reciver_national_id' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
+////            'reciver_phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10'
+////        ]);
+//    }
 
 
     public function render()
@@ -67,6 +68,7 @@ class Shipments extends Component
                 'currencies' => Curency::all(),
                 'units_types' => Unit::all(),
                 'service_types' => ServiceType::all(),
+                'tracking_stages'=>TrackingStage::all(),
 
 
             ]);
@@ -77,24 +79,24 @@ class Shipments extends Component
     {
 
 
-        $this->validate([
-            'email' => 'required|unique:customers,email,' . $this->id,
-            'password' => 'required',
-            'sender_mother_name' => 'required',
-            'sender_full_name' => 'required',
-            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
-            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
-            'sender_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-
-            'reciver_full_name' => 'required',
-            'reciver_mother_name' => 'required',
-            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
-            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
-            'reciver_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'address_reciver' => 'required',
-            'address_sender' => 'required'
-
-        ]);
+//        $this->validate([
+//            'email' => 'required|unique:customers,email,' . $this->id,
+//            'password' => 'required',
+//            'sender_mother_name' => 'required',
+//            'sender_full_name' => 'required',
+//            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
+//            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
+//            'sender_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+//
+//            'reciver_full_name' => 'required',
+//            'reciver_mother_name' => 'required',
+//            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
+//            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
+//            'reciver_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+//            'address_reciver' => 'required',
+//            'address_sender' => 'required'
+//
+//        ]);
 
         $this->currentStep = 2;
 
@@ -103,21 +105,21 @@ class Shipments extends Component
     public function secondStepSubmit()
     {
 
-        $this->validate([
-            'shipment_name' => 'required',
-            'amount' => 'required',
-            'price' => 'required',
-            'sender_date' => 'required',
-            'whieght' => 'required',
-            'type_id' => 'required',
-            'unit_id' => 'required',
-            'currency_id' => 'required',
-            'service_type_id' => 'required',
-
-            'expected_recived_date' => 'required',
-            'address_address' => 'required'
-
-        ]);
+//        $this->validate([
+//            'shipment_name' => 'required',
+//            'amount' => 'required',
+//            'price' => 'required',
+//            'sender_date' => 'required',
+//            'whieght' => 'required',
+//            'type_id' => 'required',
+//            'unit_id' => 'required',
+//            'currency_id' => 'required',
+//            'service_type_id' => 'required',
+//
+//            'expected_recived_date' => 'required',
+//            'address_address' => 'required'
+//
+//        ]);
 
         $this->currentStep = 3;
 
@@ -230,6 +232,8 @@ class Shipments extends Component
 
 
     }
+
+
 
     public function firstStepSubmit_edit()
     {

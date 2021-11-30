@@ -14,7 +14,7 @@ class Shipment extends Model implements TranslatableContract
     // 3. To define which attributes needs to be translated
     public $translatedAttributes =
         ['shipment_name',];
-    protected $fillable = ['amount', 'unit_id','whieght','price',
+    protected $fillable = ['amount', 'unit_id','whieght','price','tracking_stage_id',
         'currency_id', 'address_address','sender_date','expected_recived_date','service_type_id',
         'currency_id', 'address_address','sender_date','expected_recived_date',
         'address_latitude',

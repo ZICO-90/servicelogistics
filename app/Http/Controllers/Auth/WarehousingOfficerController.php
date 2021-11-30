@@ -3,14 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\AdminLoginRequest;
+use App\Http\Requests\Auth\WarehouseLoginRequest;
 use Illuminate\Http\Request;
-use App\providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Auth;
 
 
-
-class AdminController extends Controller
+class WarehousingOfficerController extends Controller
 {
 
     public function index()
@@ -25,13 +23,13 @@ class AdminController extends Controller
     }
 
 
-    public function store(AdminLoginRequest $request)
+    public function store(warehouseLoginRequest $request)
     {
         if($request->authenticate()){
 
             $request->session()->regenerate();
 
-            return redirect()->intended(RouteServiceProvider::ADMIN);
+            return redirect()->intended(RouteServiceProvider::WAREHOUSE);
         }
         else{
             return redirect()->back()->withErrors(['name'=>(trans('Dashboard\auth.failed'))]);        }
@@ -39,30 +37,43 @@ class AdminController extends Controller
 
     }
 
-
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function show($id)
     {
         //
     }
 
-
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function edit($id)
     {
         //
     }
 
-
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function update(Request $request, $id)
     {
         //
     }
 
-
-
-
-        public function destroy(Request $request)
+    public function destroy(Request $request)
     {
-        Auth::guard('admin')->logout();
+        Auth::guard('warehousing_officer')->logout();
 
         $request->session()->invalidate();
 

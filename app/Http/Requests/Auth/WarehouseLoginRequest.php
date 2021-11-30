@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
-class AdminLoginRequest extends FormRequest
+class WarehouseLoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,7 +21,11 @@ class AdminLoginRequest extends FormRequest
         return true;
     }
 
-
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
     public function rules()
     {
         return [
@@ -30,12 +34,18 @@ class AdminLoginRequest extends FormRequest
         ];
     }
 
-
+    /**
+     * Attempt to authenticate the request's credentials.
+     *
+     * @return void
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
     public function authenticate()
     {
         $this->ensureIsNotRateLimited();
 
-        if(auth('admin')->attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        if(auth('warehousing_officer')->attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([

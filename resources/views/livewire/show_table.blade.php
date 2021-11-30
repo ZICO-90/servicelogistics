@@ -1,9 +1,6 @@
 
 <button class="btn btn-success btn-sm btn-md pull-right" wire:click="showformadd" type="button">{{ trans('Dashboard\trans_ship.add_shipment') }}</button><br><br><br>
-{{--<div class="container">--}}
-    {{--<div class="row">--}}
-<div class="container">
-    <div class="row">
+
         <table id="example" class="table table-striped table-bordered table-condensed table-responsive" style="width:100%">
             <thead>
             <tr>
@@ -62,5 +59,4 @@
             </tfoot>
         </table>
 
-    </div>
-</div>
+

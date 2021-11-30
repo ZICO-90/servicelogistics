@@ -112,8 +112,7 @@
                     <div class="col mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.series_id')}}</label>
                         <select class=" p-1 my-1 mr-SM-2 form-control" wire:model="series_id">
-                        <select class=" p-1 my-1 mr-SM-2" wire:model="series_id">
-                            <option selected>{{trans('Dashboard/trans_ship.Choose')}}...</option>
+                            <option selected>{{trans('Dashboard/trans_ship.Choose')}}</option>
                             @foreach($seriess as $series)
 
                                 <option value="{{$series->id}}">{{$series->prefix}}</option>

@@ -3,14 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\AdminLoginRequest;
 use Illuminate\Http\Request;
-use App\providers\RouteServiceProvider;
+use App\Http\Requests\Auth\DriverLoginRequest;
 use Illuminate\Support\Facades\Auth;
 
 
-
-class AdminController extends Controller
+class DriverController extends Controller
 {
 
     public function index()
@@ -18,23 +16,24 @@ class AdminController extends Controller
         //
     }
 
-
     public function create()
     {
         //
     }
 
 
-    public function store(AdminLoginRequest $request)
+    public function store(DriverLoginRequest $request)
     {
-        if($request->authenticate()){
+            if($request->authenticate()){
 
-            $request->session()->regenerate();
+                $request->session()->regenerate();
 
-            return redirect()->intended(RouteServiceProvider::ADMIN);
-        }
-        else{
-            return redirect()->back()->withErrors(['name'=>(trans('Dashboard\auth.failed'))]);        }
+                return redirect()->intended(RouteServiceProvider::DRIVER);
+            }
+            else{
+
+                return redirect()->back()->withErrors(['name'=>(trans('Dashboard\auth.failed'))]);
+            }
 
 
     }
@@ -58,11 +57,9 @@ class AdminController extends Controller
     }
 
 
-
-
-        public function destroy(Request $request)
+    public function destroy(Request $request)
     {
-        Auth::guard('admin')->logout();
+        Auth::guard('driver')->logout();
 
         $request->session()->invalidate();
 

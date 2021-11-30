@@ -16,7 +16,7 @@ class PriceController extends Controller
     }
     public function index()
     {
-        return$this->price->all_prices();
+        return $this->price->all_prices();
     }
 
 

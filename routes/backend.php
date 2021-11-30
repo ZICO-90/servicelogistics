@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -16,7 +17,7 @@ use App\Http\Controllers\Admin\PriceController;
 */
 
 Route::get('/Dashboard_Admin', [DashboardController::class,'index']);
-Route::get('/empty_page', [DashboardController::class,'index']);
+//Route::get('/empty_page', [DashboardController::class,'index']);
 
 Route::group(
     [
@@ -29,6 +30,20 @@ Route::group(
     })->middleware(['auth'])->name('dashboard.user');
 
 
+    Route::get('/dashboard/scanner', function () {
+        return view('Dashboard.Scanner.index');
+    })->middleware(['auth:scanner'])->name('dashboard.scanner');
+
+
+    Route::get('/dashboard/driver', function () {
+        return view('Dashboard.Driver.index');
+    })->middleware(['auth:driver'])->name('dashboard.driver');
+
+    Route::get('/dashboard/warehouse', function () {
+        return view('Dashboard.WarehousingOfficer.index');
+    })->middleware(['auth:warehousing_officer'])->name('dashboard.warehouse');
+
+
     Route::get('/dashboard/admin', function () {
         return view('Dashboard.Admin.index');
     })->middleware(['auth:admin'])->name('dashboard.admin');
@@ -37,27 +52,27 @@ Route::group(
         return view('Dashboard.Admin.empty_page');
     });
 
-
-    Route::view('Add_shipment','Livewire.show_form');
-
-
-
-
     Route::view('Add_shipment','Livewire.show_form');
 
 //    ////////Price route///////
 
-    Route::resources([
-        'prices' => PriceController::class,
-    ]);
 
-    //route news and convention//////////
-        Route::resource('news', 'newsController');
-        Route::resource('convention', 'conventionController');
+    Route::get('/users', [UserController::class, 'index']);
+
+//    Route::resource('prices', PriceController::class);
+    Route::resource(
+        'prices' , 'PriceController');
+
+
+//route news and convention//////////
+    Route::resource('news', 'newsController');
+    Route::resource('convention', 'conventionController');
+
 
 
     ///////////////
     require __DIR__.'/auth.php';
 });
+
 
 

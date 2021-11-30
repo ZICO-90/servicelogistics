@@ -42,12 +42,42 @@
                                 <a href="#">My Profile</a>
                                 <a href="#">task</a>
                                 <a href="#">Settings</a>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <a href="route('logout')"
-                                       onclick="event.preventDefault();
-                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
 
+                                @if(Auth::guard('admin')->check())
+                                    <form method="POST" action="{{ route('logout.admin') }}">
+                                        @csrf
+                                        <a href="route('logout.admin')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+                                    </form>
+
+                                        @elseif(auth::guard('web')->check())
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <a href="route('logout')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+                                            </form>
+
+                                                @elseif(Auth::guard('driver')->check())
+                                                    <form method="POST" action="{{ route('logout.driver') }}">
+                                                        @csrf
+                                                        <a href="route('logout.driver')" onclick="event.preventDefault();
+
+                                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+
+                                                    </form>
+                                                        @elseif(Auth::guard('scanner')->check())
+                                                            <form method="POST" action="{{ route('logout.scanner') }}">
+                                                                @csrf
+                                                                <a href="route('logout.scanner')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+                                                            </form>
+
+                                                                @elseif(Auth::guard('warehousing_officer')->check())
+                                                                    <form method="POST" action="{{ route('logout.warehousing_officer') }}">
+                                                                        @csrf
+                                                                        <a href="route('logout.warehousing_officer')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+                                                @endif
                                 </form>
 
                             </div>

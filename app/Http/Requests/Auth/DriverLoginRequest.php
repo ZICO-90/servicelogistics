@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
-class AdminLoginRequest extends FormRequest
+class DriverLoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -35,7 +35,7 @@ class AdminLoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        if(auth('admin')->attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        if (auth('driver')->attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
@@ -46,13 +46,6 @@ class AdminLoginRequest extends FormRequest
         RateLimiter::clear($this->throttleKey());
     }
 
-    /**
-     * Ensure the login request is not rate limited.
-     *
-     * @return void
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
     public function ensureIsNotRateLimited()
     {
         if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {

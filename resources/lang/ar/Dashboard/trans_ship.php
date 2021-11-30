@@ -44,12 +44,12 @@ return [
     'shipment_process'=>'عمليات الشحن',
     'add_shipment'=>'إضافة شحنة',
     'attachement'=>'المرفقات',
-<<<<<<< HEAD
+
     'series_id'=>'الدليل',
     'service_type_id'=>'نوع الخدمة',
-    'attachement'=>'المرفقات'
-=======
-    'series_id'=>'الدليل'
+    'attachement'=>'المرفقات',
 
->>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
+    'series_id'=>'الدليل',
+
+
 ];
