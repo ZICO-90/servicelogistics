@@ -42,7 +42,7 @@
                     <div class="col-12">
                         <div class="card mb-30">
                             <div class="card-body pt-30">
-                                <h4 class="font-20 ">View ALl UnRead Testimonials</h4>
+                                <h4 class="font-20 ">{{ucwords(trans('Dashboard/trans_testimonials.UnRead'))}}</h4>
                             </div>
                             <div class="table-responsive">
                             @include('partials.session')
@@ -50,10 +50,10 @@
                                 <table class="text-nowrap table-bordered dh-table">
                                     <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>View</th>
-                                        <th>Action</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_testimonials.Name'))}}</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_testimonials.email'))}}</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_testimonials.view'))}}</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_testimonials.actions'))}}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -65,18 +65,18 @@
                                                     <td>{{$testimonial->email}}</td>
                                                     <td class="text-center">
                                                         @if($testimonial->status == 0)
-                                                            <button type="button" class="status-btn on_hold">OnHold</button>
+                                                            <button type="button" class="status-btn on_hold">{{ucwords(trans('Dashboard/trans_testimonials.OnHold'))}}</button>
                                                         @else
-                                                            <button type="button" class="status-btn completed">Approved</button>
+                                                            <button type="button" class="status-btn completed">{{ucwords(trans('Dashboard/trans_testimonials.Approved'))}}</button>
                                                         @endif
                                                     </td>
-                                                    <td><a href="{{route('admin.testimonial.show', $testimonial->id)}}" class="details-btn">View Details <i class="icofont-arrow-right"></i></a></td>
+                                                    <td><a href="{{route('admin.testimonial.show', $testimonial->id)}}" class="details-btn">{{ucwords(trans('Dashboard/trans_testimonials.View Details'))}}<i class="icofont-arrow-right"></i></a></td>
                                                     <td>
                                                         <form method="post" action="{{route('admin.testimonial.destroy')}}">
                                                             @csrf
                                                             @method('DELETE')
                                                             <input type="hidden" name="testimonial_id" value="{{$testimonial->id}}">
-                                                            <a href="#"><button type="submit" class="status-btn un_paid">Delete</button></a>
+                                                            <a href="#"><button type="submit" class="status-btn un_paid">{{ucwords(trans('Dashboard/trans_testimonials.delete'))}}</button></a>
                                                         </form>
                                                     </td>
 

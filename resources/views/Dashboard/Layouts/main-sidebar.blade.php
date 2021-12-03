@@ -42,7 +42,7 @@
 
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
-                {{-- 
+                {{--
                       <li><a href="{{route('news.index')}}">latest news</a></li>
                     <li><a href="{{route('news.create')}}">add news</a></li>
  --}}
@@ -57,10 +57,10 @@
 
                     <!-- Sub Menu -->
                     <ul class="nav sub-menu">
-                      
+
                         <li><a href="{{route('convention.index')}}">conventions</a></li>
                         <li><a href="{{route('convention.create')}}">add convention</a></li>
-                      
+
                     </ul>
 
 
@@ -90,7 +90,7 @@
                 </a>
 
             </li>
-        
+
             <li>
                 <a href="">
                     <i class="icofont-wechat"></i>
@@ -124,26 +124,20 @@
                 <a href="#">
                     <i class="icofont-dollar-true"></i>
                     <span class="link-title">{{trans('Dashboard\trans_main_sidebar.prices')}}</span>
-
-            <li>
-                <a href="pages/apps/calendar.html">
-                    <i class="icofont-calendar"></i>
-                    <span class="link-title">Calendar</span>
                 </a>
-            </li>
+
             <li>
                 <a href="#">
                     <i class="icofont-file-document"></i>
                     <span class="link-title">invoice</span>
                 </a>
             <li>
-              
+
                 <a href="#">
                     <i class="icofont-contact-add"></i>
 
                     <span class="link-title">{{trans('Dashboard\trans_main_sidebar.InfoSite')}}</span>
                 </a>
-
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
                     <li><a href="{{route('admin.info-site.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All InfoSite')}}</a></li>
@@ -157,21 +151,12 @@
                     <i class="icofont-contact-add"></i>
                     <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Testimonials')}}</span>
                 </a>
-
-                    <span class="link-title">InfoSite</span>
-
-
-                </a>
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
-{{--
+
                     <li><a href="{{route('admin.testimonial.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Testimonials')}}</a></li>
                     <li><a href="{{route('admin.testimonial.unread')}}">{{trans('Dashboard\trans_main_sidebar.UnRead Testimonials')}}</a></li>
 
-
-                    <li class="icofont-plus"><a href="{{route('prices.index')}}">{{trans('Dashboard\trans_main_sidebar.price_list')}}</a></li>
-                    <li class="icofont-plus"><a href="{{route('prices.create')}}">{{trans('Dashboard\trans_main_sidebar.add_price')}}</a></li>
-                --}}
                 </ul>
                 <!-- End Sub Menu -->
             </li>
@@ -207,14 +192,6 @@
                     {{--<i class="icofont-files-stack"></i>--}}
                     {{--<span class="link-title">file manager</span>--}}
                 {{--</a>--}}
-
-                    <li><a href="{{route('admin.info-site.index')}}">Show All InfoSite</a></li>
-                    <li><a href="{{route('admin.info-site.create')}}">Create InfoSite</a></li>
-
-                </ul>
-                <!-- End Sub Menu -->
-            </li>
-
             <li class="nav-category">UI Elements</li>
             <li>
                 <a href="pages/ui-elements/widget.html">

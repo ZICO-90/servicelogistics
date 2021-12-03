@@ -42,7 +42,7 @@
                     <div class="col-lg-6">
                         <!-- Base Horizontal Form -->
                         <div class="form-element py-30 mb-30">
-                            <h4 class="font-20 mb-30">InfoSite</h4>
+                            <h4 class="font-20 mb-30">{{ucwords(trans('Dashboard/trans_info_site.info site'))}}</h4>
                             @include('partials.session')
                             <!-- Form -->
                             <form action="{{route('admin.info-site.store')}}" method="POST" enctype="multipart/form-data">
@@ -50,10 +50,10 @@
                                 <!-- Form Row -->
                                 <div class="form-row mb-20">
                                     <div class="col-sm-4">
-                                        <label class="font-14 bold">Title En</label>
+                                        <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.Title En'))}}</label>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input type="text" class="theme-input-style" placeholder="English Title" name="en_title" value="{{old('en_title')}}">
+                                        <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.Title En'))}}" name="en_title" value="{{old('en_title')}}">
                                         @error('en_title')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -64,10 +64,10 @@
                                 <!-- Form Row -->
                                 <div class="form-row mb-20">
                                     <div class="col-sm-4">
-                                        <label class="font-14 bold">Title Ar</label>
+                                        <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.Title Ar'))}}</label>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input type="text" class="theme-input-style" placeholder="Arabic Title" name="ar_title" value="{{old('ar_title')}}">
+                                        <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.Title Ar'))}}" name="ar_title" value="{{old('ar_title')}}">
                                         @error('ar_title')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -78,10 +78,10 @@
                                 <!-- Form Row -->
                                 <div class="form-row mb-20">
                                     <div class="col-sm-4">
-                                        <label class="font-14 bold">Your Email</label>
+                                        <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.email'))}}</label>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input type="email" class="theme-input-style" placeholder="Type Email Address" name="email" value="{{old('email')}}">
+                                        <input type="email" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.email'))}}" name="email" value="{{old('email')}}">
                                         @error('email')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -92,7 +92,7 @@
                                 <!-- Form Row -->
                                     <div class="form-row mb-20">
                                         <div class="col-sm-4">
-                                            <label class="font-14 bold">Upload</label>
+                                            <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.upload'))}}</label>
                                         </div>
                                         <div class="col-sm-8">
                                             <input type="file" class="theme-input-style" name="logo">
@@ -106,10 +106,10 @@
                                 <!-- Form Row -->
                                 <div class="form-row mb-20">
                                     <div class="col-sm-4">
-                                        <label class="font-14 bold">Mobile</label>
+                                        <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.phone'))}}</label>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input type="number" class="theme-input-style" placeholder="Contact Number" name="phone" value="{{old('phone')}}">
+                                        <input type="number" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.phone'))}}" name="phone" value="{{old('phone')}}">
                                         @error('phone')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -120,10 +120,10 @@
                                 <!-- Form Row -->
                                 <div class="form-row mb-20">
                                     <div class="col-sm-4">
-                                        <label class="font-14 bold">Day En</label>
+                                        <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.Day En'))}}</label>
                                     </div>
                                     <div class="col-sm-8">
-                                        <input type="text" class="theme-input-style" placeholder="Day En" name="en_day" value="{{old('en_day')}}">
+                                        <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.Day En'))}}" name="en_day" value="{{old('en_day')}}">
                                         @error('en_day')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -134,10 +134,10 @@
                                     <!-- Form Row -->
                                     <div class="form-row mb-20">
                                         <div class="col-sm-4">
-                                            <label class="font-14 bold">Day Ar</label>
+                                            <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.Day Ar'))}}</label>
                                         </div>
                                         <div class="col-sm-8">
-                                            <input type="text" class="theme-input-style" placeholder="Day Ar" name="ar_day" value="{{old('ar_day')}}">
+                                            <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.Day Ar'))}}" name="ar_day" value="{{old('ar_day')}}">
                                             @error('ar_day')
                                             <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                             @enderror
@@ -148,10 +148,10 @@
                                     <!-- Form Row -->
                                     <div class="form-row mb-20">
                                         <div class="col-sm-4">
-                                            <label class="font-14 bold">Open Time</label>
+                                            <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.open_time'))}}</label>
                                         </div>
                                         <div class="col-sm-8">
-                                            <input type="text" class="theme-input-style" placeholder="Open Time" name="open_time" value="{{old('open_time')}}">
+                                            <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.open_time'))}}" name="open_time" value="{{old('open_time')}}">
                                             @error('open_time')
                                             <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                             @enderror
@@ -162,10 +162,10 @@
                                     <!-- Form Row -->
                                     <div class="form-row mb-20">
                                         <div class="col-sm-4">
-                                            <label class="font-14 bold">Close Time</label>
+                                            <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.close_time'))}}</label>
                                         </div>
                                         <div class="col-sm-8">
-                                            <input type="text" class="theme-input-style" placeholder="Close Time" name="close_time" value="{{old('close_time')}}">
+                                            <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.close_time'))}}" name="close_time" value="{{old('close_time')}}">
                                             @error('close_time')
                                             <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                             @enderror
@@ -176,10 +176,10 @@
                                     <!-- Form Row -->
                                     <div class="form-row mb-20">
                                         <div class="col-sm-4">
-                                            <label class="font-14 bold">FaceBook URL</label>
+                                            <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.facebook_url'))}}</label>
                                         </div>
                                         <div class="col-sm-8">
-                                            <input type="text" class="theme-input-style" placeholder="FaceBook Link" name="facebook_url" value="{{old('facebook_url')}}">
+                                            <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.facebook_url'))}}" name="facebook_url" value="{{old('facebook_url')}}">
                                             @error('facebook_url')
                                             <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                             @enderror
@@ -190,10 +190,10 @@
                                     <!-- Form Row -->
                                     <div class="form-row mb-20">
                                         <div class="col-sm-4">
-                                            <label class="font-14 bold">Twitter URL</label>
+                                            <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.twitter_url'))}}</label>
                                         </div>
                                         <div class="col-sm-8">
-                                            <input type="text" class="theme-input-style" placeholder="Twitter Link" name="twitter_url" value="{{old('twitter_url')}}">
+                                            <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.twitter_url'))}}" name="twitter_url" value="{{old('twitter_url')}}">
                                             @error('twitter_url')
                                             <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                             @enderror
@@ -205,10 +205,10 @@
                                     <!-- Form Row -->
                                     <div class="form-row mb-20">
                                         <div class="col-sm-4">
-                                            <label class="font-14 bold">Linkedin URL</label>
+                                            <label class="font-14 bold">{{ucwords(trans('Dashboard/trans_info_site.linkedin_url'))}}</label>
                                         </div>
                                         <div class="col-sm-8">
-                                            <input type="text" class="theme-input-style" placeholder="Linkedin Link" name="linkedin_url" value="{{old('linkedin_url')}}">
+                                            <input type="text" class="theme-input-style" placeholder="{{ucwords(trans('Dashboard/trans_info_site.linkedin_url'))}}" name="linkedin_url" value="{{old('linkedin_url')}}">
                                             @error('linkedin_url')
                                             <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                             @enderror
@@ -222,7 +222,7 @@
                                 <!-- Form Row -->
                                 <div class="form-row">
                                     <div class="col-12 text-right">
-                                        <button type="submit" class="btn long">Submit</button>
+                                        <button type="submit" class="btn long">{{ucwords(trans('Dashboard/trans_info_site.create'))}}</button>
                                     </div>
                                 </div>
                                 <!-- End Form Row -->

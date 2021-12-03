@@ -4,19 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class InfoSite extends Model
 {
     use HasFactory;
+    use HasTranslations;
+
+    public $translatable = ['title', 'day'];
 
     protected $fillable= [
-        'en_title',
-        'ar_title',
+        'title',
         'email',
         'logo',
         'phone',
-        'ar_day',
-        'en_day',
+        'day',
         'open_time',
         'close_time',
         'facebook_url',

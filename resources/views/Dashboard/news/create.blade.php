@@ -64,7 +64,7 @@
             @endif
                 <!-- Form Row -->
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">اname at arabic</label>
+                    <label class="font-14 bold">name at arabic</label>
                     <input type="text" name="ar_title" class="theme-input-style is-invalid" placeholder="Type Your Name">
 
                 </div>

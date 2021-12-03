@@ -56,18 +56,18 @@
                                                 <span class="checkmark"></span>
                                             </label>
                                             <!-- End Custom Checkbox -->
-                                            Title <img src="assets/img/svg/table-up-arrow.svg" alt="" class="svg">
+                                            {{ucfirst(trans('Dashboard/trans_info_site.title'))}} <img src="assets/img/svg/table-up-arrow.svg" alt="" class="svg">
                                         </th>
-                                        <th>Logo <img src="assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Open Time</th>
-                                        <th>Close Time</th>
-                                        <th>FaceBook</th>
-                                        <th>Twitter</th>
-                                        <th>Linkedin</th>
-                                        <th>Day Work</th>
-                                        <th>Actions</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.logo'))}} <img src="assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.email'))}}</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.phone'))}}</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.day'))}}</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.open_time'))}}</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.close_time'))}}</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.facebook_url'))}}</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.twitter_url'))}}</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.linkedin_url'))}}</th>
+                                        <th>{{ucfirst(trans('Dashboard/trans_info_site.actions'))}}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -82,7 +82,7 @@
                                                             <span class="checkmark"></span>
                                                         </label>
                                                         <!-- End Custom Checkbox -->
-                                                        {{$value['en_title']}}
+                                                        {{$value['title']}}
                                                     </td>
                                                     <td>
                                                         <div class="member">
@@ -92,12 +92,12 @@
                                                     <td>{{$value['email']}}</td>
 
                                                     <td>{{$value['phone']}}</td>
+                                                    <td>{{$value['day']}}</td>
                                                     <td>{{$value['open_time']}}</td>
                                                     <td>{{$value['close_time']}}</td>
                                                     <td>{{$value['facebook_url']}}</td>
                                                     <td>{{$value['twitter_url']}}</td>
                                                     <td>{{$value['linkedin_url']}}</td>
-                                                    <td>{{$value['en_day']}}</td>
                                                     <td>
                                                         <!-- Dropdown Button -->
                                                         <div class="dropdown-button">
@@ -109,12 +109,12 @@
                                                                 </div>
                                                             </a>
                                                             <div class="dropdown-menu">
-                                                                <a href="{{route('admin.info-site.edit',$value->id)}}">edit</a>
+                                                                <a href="{{route('admin.info-site.edit',$value->id)}}">{{ucfirst(trans('Dashboard/trans_info_site.edit'))}}</a>
                                                                 <form method="post" action="{{route('admin.info-site.delete')}}">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <input type="hidden" name="info_id" value="{{$value->id}}">
-                                                                    <a href="#"><button type="submit" class="btn-dark">Delete</button></a>
+                                                                    <a href="#"><button type="submit" class="btn-dark">{{ucfirst(trans('Dashboard/trans_info_site.delete'))}}</button></a>
                                                                 </form>
 
                                                             </div>

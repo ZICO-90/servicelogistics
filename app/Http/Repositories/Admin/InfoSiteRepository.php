@@ -36,13 +36,11 @@ class InfoSiteRepository implements InfoSiteInterface
         $imageName = time(). '_' . '.' . $image->getClientOriginalExtension();
         $this->uploadImage($image, $imageName, 'info-site'); //ImagesTrait
         $this->infoSiteModel::create([
-            'en_title' => $request->en_title,
-            'ar_title' => $request->ar_title,
+            'title' => ['en' =>$request->en_title, 'ar' => $request->ar_title],
             'logo' => $imageName,
             'email' => $request->email,
             'phone' => $request->phone,
-            'ar_day' => $request->ar_day,
-            'en_day' => $request->en_day,
+            'day' => ['en' => $request->en_day,'ar' =>$request->ar_day],
             'open_time' => $request->open_time,
             'close_time' => $request->close_time,
             'facebook_url' => $request->facebook_url,
@@ -67,18 +65,13 @@ class InfoSiteRepository implements InfoSiteInterface
             $imageName = time(). '_' . '.' . $image->getClientOriginalExtension();
             $oldPath = 'images/info-site/'. $info->logo;
             $this->uploadImage($image,$imageName, 'info-site', $oldPath); //ImagesTrait
-//            if ($info->logo) {
-//                unlink('images/info-site/'.$info->logo);
-//            }
         }
 
         $info->update([
-            'en_title' => $request->en_title,
-            'ar_title' => $request->ar_title,
+            'title' => ['en' =>$request->en_title, 'ar' => $request->ar_title],
             'email' => $request->email,
             'phone' => $request->phone,
-            'ar_day' => $request->ar_day,
-            'en_day' => $request->en_day,
+            'day' => ['en' => $request->en_day,'ar' =>$request->ar_day],
             'open_time' => $request->open_time,
             'close_time' => $request->close_time,
             'facebook_url' => $request->facebook_url,
