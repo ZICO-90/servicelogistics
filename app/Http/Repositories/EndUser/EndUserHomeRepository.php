@@ -29,6 +29,7 @@ class EndUserHomeRepository implements EndUserHomeInterface
     {
         $infos = $this->show_all_info();
         $logistics =  $this->dileveryModel::where('is_active_limit' , 1)->get();
+      //  dd($logistics );
         $Welcome =  $this->dileveryModel::where('is_active_section' , 1)->get();
         $sectionTitle =   $this->sectionModel::where('is_active' , 1)->first();
         $employe =   $this->employeModel::where('is_active' , 1)->first();
@@ -37,9 +38,13 @@ class EndUserHomeRepository implements EndUserHomeInterface
     }
 
 
-   public function masterPage(){
+    public function priceOrder()
+    {
+        return view('endUser.price-order');
+    }
 
-      
-        return view('endUser.layouts.master',compact('logistics')) ;
+    public function testimonial()
+    {
+        return view('endUser.testimonial');
     }
 }

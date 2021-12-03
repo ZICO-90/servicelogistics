@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             CurrencySeeder::class,
             SeriesSeeder::class,
             UnitSeeder::class,
+            ServiceTypeSeeder::class,
             ShippingMaterialTypeSeeder::class,
         ]);
     }

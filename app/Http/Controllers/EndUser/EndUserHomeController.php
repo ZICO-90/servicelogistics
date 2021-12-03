@@ -19,4 +19,14 @@ class EndUserHomeController extends Controller
     {
         return $this->homeInterface->homePage();
     }
+
+    public function priceOrder()
+    {
+        return $this->homeInterface->priceOrder();
+    }
+
+    public function testimonial()
+    {
+        return $this->homeInterface->testimonial();
+    }
 }

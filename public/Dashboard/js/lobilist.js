@@ -4,7 +4,11 @@ Template:  Webmin - Bootstrap 4 & Angular 5 Admin Dashboard Template
 Author: potenzaglobalsolutions.com
 Design and Developed by: potenzaglobalsolutions.com
 
+<<<<<<< HEAD
+NOTE: 
+=======
 NOTE:
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
 
 */
 
@@ -12,7 +16,11 @@ NOTE:
   "use strict";
   $(function () {
       $('#lobilist-demo').lobiList({
+<<<<<<< HEAD
+          
+=======
 
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
           lists: [
         {
             title: 'TODO',
@@ -59,7 +67,11 @@ NOTE:
         }
     ]
   });
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
  $('#lobilist-demo-02').lobiList({
     lists: [
         {
@@ -79,7 +91,11 @@ NOTE:
         $dueDateInput.datepicker();
     }
    });
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
   $('#lobilist-demo-03').lobiList({
    lists: [
         {
@@ -136,7 +152,11 @@ NOTE:
 
 
    });
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
   $('#lobilist-demo-04').lobiList({
   sortable: false,
     lists: [
@@ -166,4 +186,8 @@ NOTE:
    });
  });
 
+<<<<<<< HEAD
  })(jQuery);
+=======
+ })(jQuery);
+>>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1

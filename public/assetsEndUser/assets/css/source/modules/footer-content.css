@@ -60,7 +60,7 @@ footer .site-logo img {
 }
 
 footer .footer-navigation {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 37px;
 }
 
@@ -120,7 +120,7 @@ footer .widget-title {
 }
 
 footer .widget-links {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 footer .widget-links ul li {
@@ -220,7 +220,7 @@ body.footer-widgets footer {
 }
 
 body.footer-widgets footer .site-logo {
-  font-family: 'sky-bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 0;
   margin-top: -17px;
 }
@@ -520,7 +520,7 @@ body.footer-reveal #footer-bottom-wrap {
  * ::::::::::: Footer Bottom Content Styles :::::::::::
  */
 .footer-bottom-content {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   color: #999999;
 }
@@ -533,7 +533,7 @@ body.footer-reveal #footer-bottom-wrap {
   font-size: 14px;
   font-size: 0.875rem;
   display: inline-block;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
   letter-spacing: 1px;
 }

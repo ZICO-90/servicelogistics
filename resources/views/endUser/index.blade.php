@@ -5,6 +5,51 @@
 @endsection
 
 @section('content')
+    <!-- #header-wrap -->
+    <div id="header-bottom-wrap" class="is-clearfix">
+        <div id="header-bottom" class="site-header-bottom">
+            <div id="header-bottom-inner" class="site-header-bottom-inner ">
+                <section class="hero slider is-clearfix ">
+                    <h2 class="display-none">slider</h2>
+                    <div class="rev_slider_wrapper fullscreen-container ">
+                        <div id="rev_slider_1" class="rev_slider tp-overflow-hidden fullscreenbanner" data-version="5.4.7" style="display:none">
+                            <a href="#welcome" class="slider-scroll-down">scroll down</a>
+                            <ul>
+                                @foreach($logistics as $model)
+                                C:\Users\hp\Desktop\Group2\public\Dashboard\img\delivery
+                                <li data-transition="fade" data-thumb="{{asset('Dashboard/img/delivery/'.$model-> icon_url)}}" data-title="{{$model-> name}}" data-param1="{{$model-> details}}" data-param2="{{asset('Dashboard/img/delivery/'.$model->icon_url)}}">
+                                    <img alt="Joo - Niche Multi-Purpose HTML Template" class="rev-slidebg" src="{{asset('Dashboard/img/delivery/'.$model-> img_url)}}" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="off" data-duration="30000" data-ease="Linear.easeNone"
+                                         data-scalestart="100" data-scaleend="115" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="15">
+                                    <div class="tp-caption tp-resizeme small_text top" data-x="left" data-hoffset="['-105','-105','0','0']" data-y="center" data-voffset="['-152','-152','-152','-152']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+                                         data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                                         data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"> {{$model-> name }}</div>
+                                    <div class="tp-caption tp-resizeme large_text" data-x="left" data-hoffset="['-105','-105','0','0']" data-y="center" data-voffset="['-56','-56','-56','-56']" data-width="none" data-height="none" data-whitespace="nowrap"
+                                         data-type="text" data-responsive-offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1600,"to":"o:1;","delay":1200,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                                         data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"> {{$model-> title_main}}
+                                        <br>{{$model-> title_sup }} </div>
+                                    <a class="tp-caption tp-resizeme button is-primary" href="#" data-frames='[{"delay":1600,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                       data-x="left" data-hoffset="['-102','-102','0','0']" data-y="center" data-voffset="['82','82','0','0']" data-type="button">
+                                        <span>learn More</span>
+                                        <span class="icon is-small">
+                          <i class="ion-ios-arrow-round-forward"></i>
+                        </span>
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <!-- .rev_slider -->
+                    </div>
+                    <!-- .rev_slider_wrapper -->
+                </section>
+                <!-- .slider -->
+            </div>
+            <!-- #header-bottom-inner -->
+        </div>
+        <!-- #header-bottom -->
+    </div>
+    <!-- #header-bottom-wrap -->
+    <!-- import content layouts and modules -->
     <div id="content-main-wrap" class="is-clearfix">
         <div id="content-area" class="site-content-area">
             <div id="content-area-inner" class="site-content-area-inner">
@@ -12,184 +57,87 @@
                 <!-- start adding page content -->
                 <section id="welcome" class="section welcome-section has-background-primary-light is-clearfix">
                     <div class="container">
-
-                         @if($sectionTitle != null)
-                        <p class="heading-title-top has-text-centered">{{$sectionTitle-> ar_title_p }}</p>
-                        <h1 class="heading-title style-3"> {{$sectionTitle-> ar_title_h}}
-                            <br>
-                            <span class="has-text-primary"> {{$sectionTitle-> ar_title_span}}</span>
-                        </h1>
-                        @else
-
-                        <p class="heading-title-top has-text-centered">الخدمات اللوجستية</p>
-                        <h1 class="heading-title style-3"> شركة الشحن مع الخدمات اللوجستية
-                            <br> أمان.
-                            <span class="has-text-primary">تطور مستمر</span>
-                        </h1>
-
+                        @isset( $sectionTitle )
+                        <p class="heading-title-top has-text-centered">{{$sectionTitle->title_p}}</p>
+                        <h1 class="heading-title style-3"> {{$sectionTitle->title_p}} <br> 
+                           @if(!empty($sectionTitle->title_span))
+                        <span class="has-text-primary">{{$sectionTitle->title_span}}</span>
                         @endif
-
+                        </h1>
+                        @endisset
                         <br>
                         <br>
-
-  
-
                         <div class="blog-list style-2 columns is-variable is-4 is-multiline">
-                        @if($employe != null)
-
-                        <div class="column is-4" data-aos="fade">
-                                <article class="blog-post">
-                                    <figure class="post-image">
-                                        <a href="./pages/about.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('Dashboard/img/employes/'.$employe-> img_url)}}"> </a>
-                                    </figure>
-                                    <div class="entry-header">
-                                      <h2 class="entry-title">
-                                          موظفينا الخبراء
-                                        </h2>
-                                        <h2 class="entry-title">
-                                            <a href="./pages/about.html">{{$employe -> ar_name}}</a>
-                                        </h2>
-                                    </div>
-                                    <!-- .entry-header -->
-                                    <div class="entry-content">
-                                        <p>{{$employe -> ar_details}}</p>
-                                    </div>
-                                    <!-- .entry-content -->
-                                    <div class="entry-footer">
-                                        <a href="./pages/about.html" class="button">اقرأ المزيد</a>
-                                    </div>
-                                </article>
-                                <!-- .blog-post -->
-                            </div>
-
-                        @else
-
-                        <div class="column is-4" data-aos="fade">
-                                <article class="blog-post">
-                                    <figure class="post-image">
-                                        <a href="./pages/about.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/blog/1.png')}}"> </a>
-                                    </figure>
-                                    <div class="entry-header">
-                                        <h2 class="entry-title">
-                                            <a href="./pages/about.html">موظفينا الخبراء</a>
-                                        </h2>
-                                    </div>
-                                    <!-- .entry-header -->
-                                    <div class="entry-content">
-                                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً..</p>
-                                    </div>
-                                    <!-- .entry-content -->
-                                    <div class="entry-footer">
-                                        <a href="./pages/about.html" class="button">اقرأ المزيد</a>
-                                    </div>
-                                </article>
-                                <!-- .blog-post -->
-                            </div>
-
-
-                        @endif
-                        
-
-                        @if($Welcome != null)
-
-                        @foreach($Welcome as $model)
-
-                        <div class="column is-4" data-aos="fade">
-                                <article class="blog-post">
-                                    <figure class="post-image">
-                                        <a href="./pages/about.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('Dashboard/img/delivery/'.$model-> img_url)}}"> </a>
-                                    </figure>
-                                    <div class="entry-header">
-                                        <h2 class="entry-title">
-                                            <a href="./pages/about.html">{{$model-> ar_name}}</a>
-                                        </h2>
-                                    </div>
-                                    <!-- .entry-header -->
-                                    <div class="entry-content">
-                                        <p>{{$model-> ar_details}}</p>
-                                    </div>
-                                    <!-- .entry-content -->
-                                    <div class="entry-footer">
-                                        <a href="./pages/about.html" class="button">اقرأ المزيد</a>
-                                    </div>
-                                </article>
-                                <!-- .blog-post -->
-                            </div>
-
-
-                        @endforeach
-                        
-
-                        @else
-
-
-
                             <div class="column is-4" data-aos="fade">
+                            @isset( $employe )
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./pages/about.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/blog/2.png')}}"> </a>
+                                 
+                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('Dashboard/img/employes/'.$employe ->img_url)}}"> </a>
                                     </figure>
+                                    
                                     <div class="entry-header">
                                         <h2 class="entry-title">
-                                            <a href="./pages/about.html">الخدمات اللوجستية</a>
+                                            <a href="./pages/about.html">{{$employe-> name}}</a>
                                         </h2>
                                     </div>
+                                   
                                     <!-- .entry-header -->
                                     <div class="entry-content">
-                                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً..</p>
+                                        <p>{{$employe-> details}}</p>
                                     </div>
                                     <!-- .entry-content -->
                                     <div class="entry-footer">
-                                        <a href="./pages/about.html" class="button">اقرأ المزيد</a>
+                                        <a href="./pages/about.html" class="button">Read More</a>
                                     </div>
                                 </article>
                                 <!-- .blog-post -->
+                                @endisset
                             </div>
+                            @foreach($Welcome as $model)
                             <div class="column is-4" data-aos="fade">
+                             
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./pages/about.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/blog/3.png')}}"> </a>
+                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('Dashboard/img/delivery/'.$model ->img_url)}}"> </a>
                                     </figure>
                                     <div class="entry-header">
                                         <h2 class="entry-title">
-                                            <a href="./pages/about.html">الشحن البري</a>
+                                            <a href="./pages/about.html">{{$model->details}}</a>
                                         </h2>
                                     </div>
                                     <!-- .entry-header -->
                                     <div class="entry-content">
-                                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً..</p>
+                                        <p>{{$model->name}}</p>
                                     </div>
                                     <!-- .entry-content -->
                                     <div class="entry-footer">
-                                        <a href="./pages/about.html" class="button">اقرأ المزيد</a>
+                                        <a href="./pages/about.html" class="button">Read More</a>
                                     </div>
                                 </article>
                                 <!-- .blog-post -->
+                               
                             </div>
-
-                            @endif
+                            @endforeach
                         </div>
                         <br> </div>
                 </section>
                 <section id="tracking" class="section tracking-section is-clearfix">
                     <div class="container">
-                        <p class="heading-title-top has-text-centered">المتابعة</p>
-                        <h1 class="heading-title style-3">متابعة شحنتك</h1>
+                        <p class="heading-title-top has-text-centered">tracking</p>
+                        <h1 class="heading-title style-3">track your shipment</h1>
                         <div class="columns is-mobile is-centered">
                             <div class="column is-10" data-aos="fade-up">
                                 <div class="subscribe-form style-1">
                                     <form>
                                         <div class="field has-addons has-addons-centered is-grouped">
                                             <div class="control">
-                                                <input class="input" type="text" placeholder="ادخل رقم متابعة شحنتك"> </div>
+                                                <input class="input" type="text" placeholder="Type your tracking number"> </div>
                                             <div class="control">
                                                 <a href="#" class="button">
-                                                    <span>تتبع الشحنة</span>
+                                                    <span>Track it</span>
                                                     <span class="icon is-small">
                                 <i class="icon-target"></i>
                               </span>
@@ -198,8 +146,8 @@
                                         </div>
                                     </form>
                                 </div>
-                                <p class="help"> افصل أرقام التتبع المتعددة بمسافة أو فاصلة.
-                                    <a href="#">تتبع متقدم</a>
+                                <p class="help"> separate multiple tracking numbers with a space or comma.
+                                    <a href="#">Advanced Tracking</a>
                                 </p>
                             </div>
                         </div>
@@ -209,11 +157,11 @@
                     <div class="container">
                         <div class="columns is-variable is-multiline is-4">
                             <div class="column is-5-desktop is-12-tablet">
-                                <p class="heading-title-top">الخدمات اللوجستية</p>
-                                <h1 class="heading-title style-3 has-text-left">خدماتنا الخاصة</h1>
+                                <p class="heading-title-top">logistics services</p>
+                                <h1 class="heading-title style-3 has-text-left">our special services</h1>
                             </div>
                             <div class="column is-7-desktop is-12-tablet">
-                                <p class="heading-title-bottom">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد. هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.</p>
+                                <p class="heading-title-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla chronocrator accumsan, metus ultrices eleifend gravi.</p>
                             </div>
                         </div>
                         <br>
@@ -221,11 +169,11 @@
                             <div class="column is-4" data-aos="fade">
                                 <div class="box-item">
                                     <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/icons/4.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/4.png"> </a>
                                     <h3>
-                                        <a href="./pages/services.html">النقل البري</a>
+                                        <a href="./pages/services.html">land transport</a>
                                     </h3>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
+                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
                                     <a href="./pages/services.html" class="button"></a>
                                 </div>
                                 <!-- .box-item -->
@@ -233,11 +181,11 @@
                             <div class="column is-4" data-aos="fade">
                                 <div class="box-item">
                                     <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/icons/3.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/3.png"> </a>
                                     <h3>
-                                        <a href="./pages/services.html">الشحن البحري</a>
+                                        <a href="./pages/services.html">ocean freight</a>
                                     </h3>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
+                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
                                     <a href="./pages/services.html" class="button"></a>
                                 </div>
                                 <!-- .box-item -->
@@ -245,11 +193,11 @@
                             <div class="column is-4" data-aos="fade">
                                 <div class="box-item">
                                     <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/icons/1.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/1.png"> </a>
                                     <h3>
-                                        <a href="./pages/services.html">التخزين</a>
+                                        <a href="./pages/services.html">warehousing</a>
                                     </h3>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
+                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
                                     <a href="./pages/services.html" class="button"></a>
                                 </div>
                                 <!-- .box-item -->
@@ -257,11 +205,11 @@
                             <div class="column is-4" data-aos="fade">
                                 <div class="box-item">
                                     <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/icons/3.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/3.png"> </a>
                                     <h3>
-                                        <a href="./pages/services.html">الشحن البحري</a>
+                                        <a href="./pages/services.html">ocean freight</a>
                                     </h3>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
+                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
                                     <a href="./pages/services.html" class="button"></a>
                                 </div>
                                 <!-- .box-item -->
@@ -269,11 +217,11 @@
                             <div class="column is-4" data-aos="fade">
                                 <div class="box-item">
                                     <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/icons/4.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/4.png"> </a>
                                     <h3>
-                                        <a href="./pages/services.html">النقل البري</a>
+                                        <a href="./pages/services.html">land transport</a>
                                     </h3>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
+                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
                                     <a href="./pages/services.html" class="button"></a>
                                 </div>
                                 <!-- .box-item -->
@@ -281,11 +229,11 @@
                             <div class="column is-4" data-aos="fade">
                                 <div class="box-item">
                                     <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/icons/2.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/2.png"> </a>
                                     <h3>
-                                        <a href="./pages/services.html">الشحن الجوي</a>
+                                        <a href="./pages/services.html">air freight</a>
                                     </h3>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
+                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
                                     <a href="./pages/services.html" class="button"></a>
                                 </div>
                                 <!-- .box-item -->
@@ -301,7 +249,7 @@
                             <div class="column is-6-desktop is-12-tablet has-text-centered" data-aos="fade-up">
                                 <div class="works-latest">
                                     <div class="works-latest-item">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/global/introduction.png')}}">
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/introduction.png">
                                         <div class="works-latest-item-icon style-2">
                                             <a href="https://www.youtube.com/watch?v=jc4y2Xqerj0" class="mfp-lightbox mfp-iframe">
                             <span class="icon ripple-effect">
@@ -316,22 +264,22 @@
                             </div>
                             <div class="column is-6-desktop is-12-tablet" data-aos="fade">
                                 <br>
-                                <h1 class="heading-title style-3 has-text-left"> خدمات النقل المحلية اللوجستية
-                                    <br> لانواع الشحن
-                                    <span class="has-text-primary">والنقل.</span>
+                                <h1 class="heading-title style-3 has-text-left"> local pickup with logistics
+                                    <br> services of any
+                                    <span class="has-text-primary">cargo.</span>
                                 </h1>
-                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد.</p>
-                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى أنه مازال نصاً.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravi, nulla nunc varius lectus, nec rutrum justo nibh eu lectus metus ultrices.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravi.</p>
                                 <br>
                                 <div class="level">
                                     <div class="level-left">
-                                        <h4>محمد سعد
+                                        <h4>Mohamed Saad
                                             <br>
-                                            <span>المدير التنفيذى</span>
+                                            <span>CEO & Founder</span>
                                         </h4>
                                     </div>
                                     <div class="level-right">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/global/mark.png')}}"> </div>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/mark.png"> </div>
                                 </div>
                             </div>
                         </div>
@@ -344,25 +292,25 @@
                             <div class="level-item has-text-centered">
                                 <div>
                                     <p class="title counter">340</p>
-                                    <p class="heading">سنوات من الخبرة</p>
+                                    <p class="heading">years of experience</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
                                     <p class="title counter">120</p>
-                                    <p class="heading">فروع حول العالم</p>
+                                    <p class="heading">branches over world</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
                                     <p class="title counter">230</p>
-                                    <p class="heading">طن نقل</p>
+                                    <p class="heading">tonnes transported</p>
                                 </div>
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
                                     <p class="title counter">110</p>
-                                    <p class="heading">البلدان المغطاة</p>
+                                    <p class="heading">countries covered</p>
                                 </div>
                             </div>
                         </nav>
@@ -370,37 +318,37 @@
                 </section>
                 <section id="tracking-steps" class="section tracking-steps-section is-clearfix">
                     <div class="container">
-                        <p class="heading-title-top has-text-centered">متابعة الشحنات</p>
-                        <h1 class="heading-title style-3">كيف يتم النقل</h1>
+                        <p class="heading-title-top has-text-centered">tracking</p>
+                        <h1 class="heading-title style-3">how we work</h1>
                         <br>
                         <br>
                         <div class="steps" data-aos="fade-right">
                             <div class="step-item" data-step-id="0">
                                 <div class="step-marker"> 1 </div>
                                 <div class="step-details">
-                                    <p class="step-title">نقل البضائع</p>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.</p>
+                                    <p class="step-title">lorem ipsum dolor</p>
+                                    <p>Lorem ipsum dolor sit amet nulla varius lectus.</p>
                                 </div>
                             </div>
                             <div class="step-item active" data-step-id="1">
                                 <div class="step-marker">2</div>
                                 <div class="step-details">
-                                    <p class="step-title">التجهيز للنقل</p>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.</p>
+                                    <p class="step-title">lorem ipsum dolor</p>
+                                    <p>Lorem ipsum dolor sit amet nulla varius lectus.</p>
                                 </div>
                             </div>
                             <div class="step-item" data-step-id="2">
                                 <div class="step-marker">3</div>
                                 <div class="step-details">
-                                    <p class="step-title">عملية المتابعة</p>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.</p>
+                                    <p class="step-title">lorem ipsum dolor</p>
+                                    <p>Lorem ipsum dolor sit amet nulla varius lectus.</p>
                                 </div>
                             </div>
                             <div class="step-item" data-step-id="3">
                                 <div class="step-marker"> 4 </div>
                                 <div class="step-details">
-                                    <p class="step-title">التسليم النهائى</p>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.</p>
+                                    <p class="step-title">lorem ipsum dolor</p>
+                                    <p>Lorem ipsum dolor sit amet nulla varius lectus.</p>
                                 </div>
                             </div>
                         </div>
@@ -411,12 +359,12 @@
                         <div class="blog-list style-2 columns is-variable is-4 is-multiline">
                             <div class="column is-4" data-aos="fade">
                                 <div class="blog-post-heading">
-                                    <p class="heading-title-top">أخر الاخبار</p>
-                                    <h1 class="heading-title style-3 has-text-left"> اتم نقل الباضائع
-                                        <span class="has-text-primary">بسهولة</span>
+                                    <p class="heading-title-top">latest news</p>
+                                    <h1 class="heading-title style-3 has-text-left"> Lorem ipsum is
+                                        <span class="has-text-primary">simply</span>
                                     </h1>
-                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد.</p>
-                                    <a href="./blog/index.html" class="button">أخبارنا
+                                    <p>Lorem ipsum dolor sit amet is, consectetur adipiscing. Nulla accumsan, metus ultrices ele gravi, nulla nunc varius.</p>
+                                    <a href="./blog/index.html" class="button">Our blog
                                         <span class="icon">
                           <i class="ion-ios-arrow-round-forward"></i>
                         </span>
@@ -428,24 +376,24 @@
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./blog/single.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/blog/4.png')}}"> </a>
+                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/blog/4.png"> </a>
                                     </figure>
                                     <div class="entry-header">
                                         <div class="post-meta">
                                             <ul>
                                                 <li>
                                                     <a href="#">
-                                                        <span>أبريل 5 ، 2018</span>
+                                                        <span>APRIL 5, 2018</span>
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <h2 class="entry-title">
-                                            <a href="./blog/single.html">اتفاقية عمل مشترك لنقل البضائع</a>
+                                            <a href="./blog/single.html">Self Motivation How To Keep Land Transport</a>
                                         </h2>
                                     </div>
                                     <div class="entry-footer">
-                                        <a href="./blog/single.html" class="button">اقرأ المزيد</a>
+                                        <a href="./blog/single.html" class="button">Read More</a>
                                     </div>
                                 </article>
                                 <!-- .blog-post -->
@@ -454,24 +402,24 @@
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./blog/single.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/blog/5.png')}}"> </a>
+                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/blog/5.png"> </a>
                                     </figure>
                                     <div class="entry-header">
                                         <div class="post-meta">
                                             <ul>
                                                 <li>
                                                     <a href="#">
-                                                        <span>أبريل 5 ، 2018</span>
+                                                        <span>APRIL 5, 2018</span>
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <h2 class="entry-title">
-                                            <a href="./blog/single.html">كمية كبيرة للنقل الجوى المستمر</a>
+                                            <a href="./blog/single.html">Self Motivation How To Keep Land Transport</a>
                                         </h2>
                                     </div>
                                     <div class="entry-footer">
-                                        <a href="./blog/single.html" class="button">اقرأ المزيد</a>
+                                        <a href="./blog/single.html" class="button">Read More</a>
                                     </div>
                                 </article>
                                 <!-- .blog-post -->
@@ -481,76 +429,76 @@
                 </section>
                 <section id="testimonials" class="section testimonials-section has-background-primary-light is-clearfix">
                     <div class="container">
-                        <p class="heading-title-top has-text-centered">آراء العملاء</p>
-                        <h1 class="heading-title style-3">قالوا عنا</h1>
+                        <p class="heading-title-top has-text-centered">testimonial</p>
+                        <h1 class="heading-title style-3">clients feedback</h1>
                         <div class="testimonials  owl-carousel dots carousel-items-3 columns-style-1 ">
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/1.png')}}">
-                                <h3>محمد أحمد
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
+                                <h3>mohamed ahmed
                                     <br>
                                     <span>CEO & stylist</span>
                                 </h3>
                             </div>
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/2.png')}}">
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
                                 <h3>olivia allison
                                     <br>
                                     <span>CEO & stylist</span>
                                 </h3>
                             </div>
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/3.png')}}">
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
                                 <h3>olivia allison
                                     <br>
                                     <span>CEO & stylist</span>
                                 </h3>
                             </div>
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/1.png')}}">
-                                <h3>محمد أحمد
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
+                                <h3>mohamed ahmed
                                     <br>
                                     <span>CEO & stylist</span>
                                 </h3>
                             </div>
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/2.png')}}">
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
                                 <h3>olivia allison
                                     <br>
                                     <span>CEO & stylist</span>
                                 </h3>
                             </div>
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/3.png')}}">
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
                                 <h3>olivia allison
                                     <br>
                                     <span>CEO & stylist</span>
                                 </h3>
                             </div>
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/1.png')}}">
-                                <h3>محمد أحمد
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
+                                <h3>mohamed ahmed
                                     <br>
                                     <span>CEO & stylist</span>
                                 </h3>
                             </div>
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/2.png')}}">
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
                                 <h3>olivia allison
                                     <br>
                                     <span>CEO & stylist</span>
                                 </h3>
                             </div>
                             <div class="testimonials-item">
-                                <p>هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/testimonials/3.png')}}">
+                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
                                 <h3>olivia allison
                                     <br>
                                     <span>CEO & stylist</span>
@@ -563,32 +511,32 @@
                     <div class="container">
                         <div class="columns is-variable is-2 is-multiline">
                             <div class="column is-6-desktop is-12-tablet" data-aos="fade">
-                                <h1 class="heading-title style-3 has-text-left"> طلب
-                                    <span class="has-text-primary">عرض أسعار</span>
+                                <h1 class="heading-title style-3 has-text-left"> request a
+                                    <span class="has-text-primary">quote</span>
                                 </h1>
-                                <p class="heading-title-bottom">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد.</p>
+                                <p class="heading-title-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla chronocrator accumsan, metus ultrices eleifend gravi.</p>
                                 <!-- successful form message -->
                                 <div class="overhang-message-content is-hidden success">
                       <span class="icon">
                         <i class="ion-md-notifications"></i>
-                      </span> شكرا جزيلا! لقد تم ارسال رسالتك بنجاح. </div>
+                      </span> Thank You! Your message was sent successfully. </div>
                                 <!-- error form message -->
                                 <div class="overhang-message-content is-hidden error">
                       <span class="icon">
                         <i class="ion-md-notifications"></i>
-                      </span> ! حدث خطأ ما ، لم نتمكن من إرسال رسالتك. </div>
+                      </span> Oops! Something went wrong, we couldn't send your message. </div>
                                 <!-- ajax contact form -->
                                 <form accept-charset="UTF-8" class="ajax-contact-form" action="https://usebasin.com/f/3587049dbc33.json" method="POST">
                                     <div class="field is-horizontal">
                                         <div class="field-body">
                                             <div class="field">
                                                 <div class="control is-expanded">
-                                                    <input class="input" type="text" name="name" placeholder="الإسم" required> </div>
+                                                    <input class="input" type="text" name="name" placeholder="Name" required> </div>
                                             </div>
                                             <!-- .field -->
                                             <div class="field">
                                                 <div class="control is-expanded">
-                                                    <input class="input" type="email" name="email" placeholder="الإيميل" required=""> </div>
+                                                    <input class="input" type="email" name="email" placeholder="Email" required=""> </div>
                                             </div>
                                             <!-- .field -->
                                         </div>
@@ -598,17 +546,17 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <div class="control is-expanded">
-                                                    <input class="input" type="text" name="subject" placeholder="العنوان" required=""> </div>
+                                                    <input class="input" type="text" name="subject" placeholder="Subject" required=""> </div>
                                             </div>
                                             <!-- .field -->
                                             <div class="field">
                                                 <div class="control is-expanded">
                                                     <div class="select">
                                                         <select>
-                                                            <option>الشحن الجوي</option>
-                                                            <option> النقل البري</option>
-                                                            <option>  الشحن البحري</option>
-                                                            <option>التخزين</option>
+                                                            <option>Air Freight</option>
+                                                            <option>Land Transport</option>
+                                                            <option>Ocean Freight</option>
+                                                            <option>Warehousing</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -619,12 +567,12 @@
                                     </div>
                                     <div class="field ">
                                         <div class="control is-expanded">
-                                            <textarea class="textarea" name="textarea" placeholder="رسالتك" required=""></textarea>
+                                            <textarea class="textarea" name="textarea" placeholder="Message" required=""></textarea>
                                         </div>
                                     </div>
                                     <div class="field ">
                                         <div class="control">
-                                            <button class="button" type="submit">اطلب الآن</button>
+                                            <button class="button" type="submit">request a quote</button>
                                         </div>
                                     </div>
                                 </form>
@@ -634,7 +582,7 @@
                                 <br>
                                 <br>
                                 <br>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/global/man.png')}}"> </div>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/man.png"> </div>
                         </div>
                     </div>
                 </section>
@@ -643,4 +591,5 @@
         </div>
         <!-- #content-area -->
     </div>
+    <!-- #content-main-wrap -->
 @endsection

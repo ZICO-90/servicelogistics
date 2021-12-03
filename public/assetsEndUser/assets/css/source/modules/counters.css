@@ -2,7 +2,7 @@
  * ::::::::::: Counters and Countdown Styles :::::::::::
  */
 .countdown-time {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0px;
   font-size: 0rem;
 }
@@ -102,7 +102,7 @@
   color: #393e4b;
   font-size: 60px;
   font-size: 3.75rem;
-  font-family: 'sky-bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   max-height: 100px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -147,7 +147,7 @@
 .counterup.with-icons .level-item > div .title {
   font-size: 36px;
   font-size: 2.25rem;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: .6rem;
 }
 
@@ -237,7 +237,7 @@
 .counterup.style-3 .level-item .title {
   font-size: 54px;
   font-size: 3.375rem;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-right: 14px;
 }
 
@@ -336,7 +336,7 @@
 }
 
 .counterup.style-5 .level-item > div .title {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 54px;
   font-size: 3.375rem;
   margin-top: 0;

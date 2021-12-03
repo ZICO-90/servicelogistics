@@ -243,7 +243,7 @@
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   color: #0063dd;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .works .work-item .work-item-meta h5:hover {
@@ -269,7 +269,7 @@
 
 .works.isotope .isotope-filter {
   text-align: center;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
   margin-bottom: 3.5rem;
 }

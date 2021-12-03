@@ -14,7 +14,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: 0 !important;
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #0063dd !important;
 }
 
@@ -90,7 +90,7 @@ body.overhang-danger .overhang {
 }
 
 .noty_layout .noty_body {
-  font-family: 'sky', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   line-height: 24px;

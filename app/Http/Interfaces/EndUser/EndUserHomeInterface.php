@@ -5,5 +5,7 @@ interface EndUserHomeInterface
 {
     public function homePage();
 
-    public function masterPage();
+    public function priceOrder();
+
+    public function testimonial();
 }

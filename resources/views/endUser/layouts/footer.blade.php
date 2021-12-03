@@ -1,8 +1,6 @@
-<!-- #content-main-wrap -->
 <div id="footer-top-wrap" class="is-clearfix">
     <div id="footer-top" class="site-footer-top">
         <div id="footer-top-inner" class="site-footer-top-inner ">
-            <!-- Section Partner Start --->
             <section class="hero clients-section is-clearfix">
                 <div class="container">
                     <div class="columns is-variable is-4 is-multiline">
@@ -13,50 +11,49 @@
                             <nav class="clients-list level  owl-carousel no-dots carousel-items-5">
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/7.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/8.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/9.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/7.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/8.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/9.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/7.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/8.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/9.png"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/7.png"> </a>
                                 </div>
                             </nav>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Section Partner End --->
         </div>
         <!-- #footer-top-inner -->
     </div>
@@ -72,13 +69,13 @@
                         <div class="textwidget">
                             <div id="footer-logo" class="site-logo ">
                                 <a href="./index.html">
-                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/logo/logo2.png')}}">
-                                    <span class="logo-text">خدمات النقل</span>
+                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/logo/logo2.png">
+                                    <span class="logo-text">Logistics</span>
                                 </a>
                             </div>
                             <!-- #footer-logo -->
                             <br>
-                            <p>لوريم إيبسوم هو ببساطة نص شكلي بمعنى أن الغاية هي الشكل وليس المحتوى ويُستخدم في صناعات المطابع ودور النشر.</p>
+                            <p>The main component of a healthy environment for self esteem is that it needs be nurturing. It should provide unconditional warmth.</p>
                             <div class="footer-social-links ">
                                 <ul>
                                     <li>
@@ -111,22 +108,22 @@
                 <!-- .column -->
                 <div class="column">
                     <div class="widget widget-links">
-                        <h3 class="widget-title ">الخدمات</h3>
+                        <h3 class="widget-title ">services</h3>
                         <ul>
                             <li>
-                                <a href="./index.html">الشحن الجوى</a>
+                                <a href="./index.html">Air freight</a>
                             </li>
                             <li>
-                                <a href="./index.html">النقل البحرى</a>
+                                <a href="./index.html">sea freight</a>
                             </li>
                             <li>
-                                <a href="./index.html">النقل البرلى</a>
+                                <a href="./index.html">land transport</a>
                             </li>
                             <li>
-                                <a href="./index.html">البضائع</a>
+                                <a href="./index.html">groupage</a>
                             </li>
                             <li>
-                                <a href="./index.html">الاستشارات</a>
+                                <a href="./index.html">consultancy</a>
                             </li>
                         </ul>
                     </div>
@@ -135,48 +132,28 @@
                 <!-- .column -->
                 <div class="column">
                     <div class="widget widget-links">
-                        <h3 class="widget-title ">معلومات</h3>
+                        <h3 class="widget-title ">information</h3>
                         <ul>
                             <li>
-                                <a href="./index.html">التخزين</a>
+                                <a href="./index.html">Warehousing</a>
                             </li>
                             <li>
-                                <a href="./index.html">الشحن البحري</a>
+                                <a href="./index.html">Ocean Freight</a>
                             </li>
                             <li>
-                                <a href="./index.html">الشحن الجوي</a>
+                                <a href="./index.html">Air freight</a>
                             </li>
                             <li>
-                                <a href="./index.html">النقل البري</a>
+                                <a href="./index.html">land transport</a>
                             </li>
                             <li>
-                                <a href="./index.html"> بضائع وحدات</a>
+                                <a href="./index.html">groupage</a>
                             </li>
                         </ul>
                     </div>
                     <!-- .widget -->
                 </div>
-                <!-- .column -->
-                <div class="column is-4">
-                    <div class="widget widget-form">
-                        <h3 class="widget-title ">القائمة البريدية</h3>
-                        <p>لوريم إيبسوم هو ببساطة نص شكلي بمعنى أن الغاية هي الشكل وليس المحتوى.</p>
-                        <br>
-                        <form>
-                            <div class="field">
-                                <div class="control is-expanded">
-                                    <input class="input" type="text" placeholder="your@email.com">
-                                    <button type="submit" class="button is-radiusless">
-                          <span class="icon">
-                            <i class="ion-ios-arrow-round-forward-outline"></i>
-                          </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- .column -->
+
             </div>
             <!-- .columns -->
         </div>
@@ -194,8 +171,8 @@
                     <div class="level">
                         <div class="level-left">
                     <span class="footer-copyright">
-                      <a href='/'>Joo</a> ©
-                      <span class='current-year'></span>. جميع الحقوق محفوظة. </span>
+                      <a href='/'>JOO</a> ©
+                      <span class='current-year'></span> Logistics. All Rights Reserved. </span>
                         </div>
                         <!-- .level-left -->
                         <div class="level-right">
@@ -203,19 +180,19 @@
                                 <nav class="main-navigation right">
                                     <ul class="menu">
                                         <li>
-                                            <a href="./pages/about.html">من نحن</a>
+                                            <a href="./pages/about.html">about</a>
                                         </li>
                                         <li>
-                                            <a href="./pages/services.html">الخدمات</a>
+                                            <a href="./pages/services.html">services</a>
                                         </li>
                                         <li>
-                                            <a href="./pages/pricing.html">الأسعار</a>
+                                            <a href="./pages/pricing.html">pricing</a>
                                         </li>
                                         <li>
-                                            <a href="./pages/sitemap.html">خريطة الموقع</a>
+                                            <a href="./pages/sitemap.html">sitemap</a>
                                         </li>
                                         <li>
-                                            <a href="./pages/contact.html">اتصل بنا</a>
+                                            <a href="./pages/contact.html">contact</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -244,28 +221,28 @@
     </a>
     <ul>
         <li>
-            <a href="https://1.envato.market/Jozoor" target="_blank" class="tooltip is-tooltip-right" data-tooltip="شراء الآن">
+            <a href="https://1.envato.market/Jozoor" target="_blank" class="tooltip is-tooltip-left" data-tooltip="BUY NOW">
               <span class="icon">
                 <i class="icon-bag"></i>
               </span>
             </a>
         </li>
         <li>
-            <a href="javascript:void(0);" class="tooltip is-tooltip-right" data-tooltip="القوالب المتاحة" data-show="quickview" data-target="quickviewDemos">
+            <a href="javascript:void(0);" class="tooltip is-tooltip-left" data-tooltip="MORE TEMPLATES" data-show="quickview" data-target="quickviewDemos">
               <span class="icon">
                 <i class="icon-screen-desktop"></i>
               </span>
             </a>
         </li>
         <li>
-            <a href="https://themes.jozoor.com/html/joo/corporate/03/" target="_blank" class="tooltip is-tooltip-right" data-tooltip="النسخة الإنجليزية">
+            <a href="https://themes.jozoor.com/html/joo/corporate/03/rtl/" target="_blank" class="tooltip is-tooltip-left" data-tooltip="RTL VERSION">
               <span class="icon">
                 <i class="icon-refresh"></i>
               </span>
             </a>
         </li>
         <li>
-            <a href="https://t.me/jozor" target="_blank" class="tooltip is-tooltip-right" data-tooltip="دردشة مباشرة">
+            <a href="https://t.me/jozor" target="_blank" class="tooltip is-tooltip-left" data-tooltip="LIVE CHAT">
               <span class="icon">
                 <i class="icon-paper-plane"></i>
               </span>
@@ -275,7 +252,7 @@
 </div>
 <div id="quickviewDemos" class="quickview">
     <div class="quickview-header">
-        <p class="title">القوالب المتاحة</p>
+        <p class="title">Niche Templates</p>
         <span class="delete" data-dismiss="quickview"></span>
     </div>
     <div class="quickview-body">
@@ -284,127 +261,127 @@
                 <div class="columns is-variable is-multiline is-2">
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/creative-1.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-1.png">
                             <figcaption>
-                                <h5>إبداعى 01</h5>
-                                <a href="https://themes.jozoor.com/html/joo/creative/01/rtl/" target="_blank">View more</a>
+                                <h5>Creative 01</h5>
+                                <a href="https://themes.jozoor.com/html/joo/creative/01/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/corporate-1.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-1.png">
                             <figcaption>
-                                <h5>شركات 01</h5>
-                                <a href="https://themes.jozoor.com/html/joo/corporate/01/rtl/" target="_blank">View more</a>
+                                <h5>Corporate 01</h5>
+                                <a href="https://themes.jozoor.com/html/joo/corporate/01/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/entertainment-2.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-2.png">
                             <figcaption>
-                                <h5>مطعم برجر</h5>
-                                <a href="https://themes.jozoor.com/html/joo/entertainment/02/rtl/" target="_blank">View more</a>
+                                <h5>Burger Restaurant</h5>
+                                <a href="https://themes.jozoor.com/html/joo/entertainment/02/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/wedding-1.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-1.png">
                             <figcaption>
-                                <h5>حفل زفاف</h5>
-                                <a href="https://themes.jozoor.com/html/joo/wedding/01/rtl/" target="_blank">View more</a>
+                                <h5>Wedding</h5>
+                                <a href="https://themes.jozoor.com/html/joo/wedding/01/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/corporate-2.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-2.png">
                             <figcaption>
-                                <h5>شركات 02</h5>
-                                <a href="https://themes.jozoor.com/html/joo/corporate/02/rtl/" target="_blank">View more</a>
+                                <h5>Corporate 02</h5>
+                                <a href="https://themes.jozoor.com/html/joo/corporate/02/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/entertainment-3.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-3.png">
                             <figcaption>
-                                <h5>صالون حلاقة</h5>
-                                <a href="https://themes.jozoor.com/html/joo/entertainment/03/rtl/" target="_blank">View more</a>
+                                <h5>Barber Shop</h5>
+                                <a href="https://themes.jozoor.com/html/joo/entertainment/03/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6 is-active">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/corporate-3.png')}}">
-                            <span class="tag menu-mark is-primary">مفعل</span>
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-3.png">
+                            <span class="tag menu-mark is-primary">active</span>
                             <figcaption>
-                                <h5>شركة شحن</h5>
+                                <h5>Logistics Cargo</h5>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/entertainment-1.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-1.png">
                             <figcaption>
-                                <h5>مطعم 01</h5>
-                                <a href="https://themes.jozoor.com/html/joo/entertainment/01/rtl/" target="_blank">View more</a>
+                                <h5>Restaurant 01</h5>
+                                <a href="https://themes.jozoor.com/html/joo/entertainment/01/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/wedding-2.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-2.png">
                             <figcaption>
-                                <h5>منظم حفلات</h5>
-                                <a href="https://themes.jozoor.com/html/joo/wedding/02/rtl/" target="_blank">View more</a>
+                                <h5>Wedding Planner</h5>
+                                <a href="https://themes.jozoor.com/html/joo/wedding/02/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/corporate-4.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-4.png">
                             <figcaption>
-                                <h5>شركة شحن 02</h5>
-                                <a href="https://themes.jozoor.com/html/joo/corporate/04/rtl/" target="_blank">View more</a>
+                                <h5>Logistics Cargo 02</h5>
+                                <a href="https://themes.jozoor.com/html/joo/corporate/04/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/creative-2.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-2.png">
                             <figcaption>
-                                <h5>إبداعى 02</h5>
-                                <a href="https://themes.jozoor.com/html/joo/creative/02/rtl/" target="_blank">View more</a>
+                                <h5>Creative 02</h5>
+                                <a href="https://themes.jozoor.com/html/joo/creative/02/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/wedding-3.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-3.png">
                             <figcaption>
-                                <h5>فساتين الزفاف</h5>
-                                <a href="https://themes.jozoor.com/html/joo/wedding/03/rtl/" target="_blank">View more</a>
+                                <h5>Bridal Dresses</h5>
+                                <a href="https://themes.jozoor.com/html/joo/wedding/03/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/specialty-1.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/specialty-1.png">
                             <figcaption>
-                                <h5>تحت الإنشاء</h5>
-                                <a href="https://themes.jozoor.com/html/joo/specialty/01/rtl/" target="_blank">View more</a>
+                                <h5>Coming Soon </h5>
+                                <a href="https://themes.jozoor.com/html/joo/specialty/01/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="column is-6">
                         <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/creative-3.png')}}">
+                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-3.png">
                             <figcaption>
-                                <h5>إبداعى 03</h5>
-                                <a href="https://themes.jozoor.com/html/joo/creative/03/rtl/" target="_blank">View more</a>
+                                <h5>Creative 03</h5>
+                                <a href="https://themes.jozoor.com/html/joo/creative/03/" target="_blank">View more</a>
                             </figcaption>
                         </figure>
                     </div>
@@ -415,6 +392,7 @@
 </div>
 </div>
 <!-- #site-wrap -->
-<script src="{{asset('assetsEndUser/assets/js/vendor.min.js?v=1557447064956')}}"></script>
-<script src="{{asset('assetsEndUser/assets/js/scripts.min.js?v=1557447064956')}}"></script>
-<script src="{{asset('assetsEndUser/assets/js/custom.js?v=1557447064956')}}"></script>
+<script src="{{URL::asset('assetsEndUser/assets/js/vendor.min.js?v=1557446391092')}}"></script>
+<script src="{{URL::asset('assetsEndUser/assets/js/scripts.min.js?v=1557446391092')}}"></script>
+<script src="{{URL::asset('assetsEndUser/assets/js/custom.js?v=1557446391092')}}"></script>
+@yield('js')

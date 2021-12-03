@@ -1,3 +1,106 @@
+<div id="header-top-wrap" class="is-clearfix">
+    <div id="header-top" class="site-header-top">
+        <div id="header-top-inner" class="site-header-top-inner container">
+            <div class="level">
+                <div class="level-left">
+                    <ul class="topbar-info ">
+                        <li>
+                            <a href="#">
+                      <span class="icon">
+                        <i class="icon-clock"></i>
+                      </span> Mon - Fri : 09:00 - 17:00 </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@company.com">
+                      <span class="icon">
+                        <i class="icon-envelope"></i>
+                      </span> info@company.com </a>
+                        </li>
+                        <li>
+                            <a href="tel:+66396847263">
+                      <span class="icon">
+                        <i class="icon-phone"></i>
+                      </span> +800-987-65-43 </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .level-left -->
+                <div class="level-right">
+                    <ul class="header-menu-icons social">
+                        <li>
+                            <a href="#" target="_blank">
+                      <span class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                      </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                      <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                      </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                      <span class="icon">
+                        <i class="fab fa-linkedin-in"></i>
+                      </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- .header-menu-icons -->
+                    <ul class="nav-menu-dropdown style-2 global-style on-click">
+                        <li>
+                            <a href="javascript:void(0);">
+                      <span class="icon">
+                        <i class="icon-globe"></i>
+                      </span>global</a>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">Africa</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">europe</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">America</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- .header-menu-icons -->
+                    <ul class="nav-menu-dropdown style-2 on-click">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="flag-icon flag-icon-gb"></span>En</a>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="flag-icon flag-icon-es"></span>Es</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="flag-icon flag-icon-tr"></span>tr</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="flag-icon flag-icon-eg"></span>ع</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- .header-menu-icons -->
+                </div>
+                <!-- .level-right -->
+            </div>
+            <!-- .level -->
+        </div>
+        <!-- #header-top-inner -->
+    </div>
+    <!-- #header-top -->
+</div>
+<!-- #header-top-wrap -->
 <div id="header-wrap" class="is-clearfix">
     <header id="header" class="site-header">
         <div id="header-inner" class="site-header-inner container">
@@ -5,16 +108,10 @@
                 <div class="level-left">
                     <div id="header-logo" class="site-logo ">
                         <div id="logo-inner" class="site-logo-inner">
-                            @isset($infos)
-                                @if(count($infos) > 0)
-                                    @foreach($infos as $info)
-                            <a href="{{route('endUser.index')}}">
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('images/info-site/'.$info['logo'])}}">
-                                <span class="logo-text">{{$info['en_title']}}</span>
+                            <a href="./index.html">
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/logo/logo2.png">
+                                <span class="logo-text">Logistics</span>
                             </a>
-                                    @endforeach
-                                @endif
-                            @endisset
                         </div>
                         <!-- #logo-inner -->
                     </div>
@@ -25,16 +122,16 @@
                     <div class="nav-wrap">
                         <nav class="main-navigation right">
                             <ul class="menu">
-                                <li class="mega-menu niche-templates">
-                                    <a href="./index.html">الرئيسية</a>
+                                <li class="mega-menu niche-templates active">
+                                    <a href="./index.html">home</a>
                                     <ul>
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/creative-1.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-1.png">
                                                     <figcaption>
-                                                        <h5>إبداعى 01</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/creative/01/rtl/" target="_blank">View more</a>
+                                                        <h5>Creative 01</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/creative/01/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -42,10 +139,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/corporate-1.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-1.png">
                                                     <figcaption>
-                                                        <h5>شركات 01</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/corporate/01/rtl/" target="_blank">View more</a>
+                                                        <h5>Corporate 01</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/corporate/01/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -53,10 +150,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/entertainment-2.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-2.png">
                                                     <figcaption>
-                                                        <h5>مطعم برجر</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/entertainment/02/rtl/" target="_blank">View more</a>
+                                                        <h5>Burger Restaurant</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/entertainment/02/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -64,10 +161,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/wedding-1.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-1.png">
                                                     <figcaption>
-                                                        <h5>حفل زفاف</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/wedding/01/rtl/" target="_blank">View more</a>
+                                                        <h5>Wedding</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/wedding/01/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -75,10 +172,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/corporate-2.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-2.png">
                                                     <figcaption>
-                                                        <h5>شركات 02</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/corporate/02/rtl/" target="_blank">View more</a>
+                                                        <h5>Corporate 02</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/corporate/02/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -86,10 +183,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/entertainment-3.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-3.png">
                                                     <figcaption>
-                                                        <h5>صالون حلاقة</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/entertainment/03/rtl/" target="_blank">View more</a>
+                                                        <h5>Barber Shop</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/entertainment/03/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -97,10 +194,10 @@
                                         <li>
                                             <div class="image-hover effect-5 is-active">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/corporate-3.png')}}">
-                                                    <span class="tag menu-mark is-primary">مفعل</span>
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-3.png">
+                                                    <span class="tag menu-mark is-primary">active</span>
                                                     <figcaption>
-                                                        <h5>شركة شحن</h5>
+                                                        <h5>Logistics Cargo</h5>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -108,10 +205,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/entertainment-1.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-1.png">
                                                     <figcaption>
-                                                        <h5>مطعم 01</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/entertainment/01/rtl/" target="_blank">View more</a>
+                                                        <h5>Restaurant 01</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/entertainment/01/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -119,10 +216,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/wedding-2.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-2.png">
                                                     <figcaption>
-                                                        <h5>منظم حفلات</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/wedding/02/rtl/" target="_blank">View more</a>
+                                                        <h5>Wedding Planner</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/wedding/02/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -130,10 +227,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/corporate-4.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-4.png">
                                                     <figcaption>
-                                                        <h5>شركة شحن 02</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/corporate/04/rtl/" target="_blank">View more</a>
+                                                        <h5>Logistics Cargo 02</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/corporate/04/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -141,10 +238,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/creative-2.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-2.png">
                                                     <figcaption>
-                                                        <h5>إبداعى 02</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/creative/02/rtl/" target="_blank">View more</a>
+                                                        <h5>Creative 02</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/creative/02/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -152,10 +249,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/wedding-3.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-3.png">
                                                     <figcaption>
-                                                        <h5>فساتين الزفاف</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/wedding/03/rtl/" target="_blank">View more</a>
+                                                        <h5>Bridal Dresses</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/wedding/03/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -163,10 +260,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/creative-3.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-3.png">
                                                     <figcaption>
-                                                        <h5>إبداعى 03</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/creative/03/rtl/" target="_blank">View more</a>
+                                                        <h5>Creative 03</h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/creative/03/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -174,10 +271,10 @@
                                         <li>
                                             <div class="image-hover effect-5">
                                                 <figure>
-                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/portfolio//demos/specialty-1.png')}}">
+                                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/specialty-1.png">
                                                     <figcaption>
-                                                        <h5>تحت الإنشاء</h5>
-                                                        <a href="https://themes.jozoor.com/html/joo/specialty/01/rtl/" target="_blank">View more</a>
+                                                        <h5>Coming Soon </h5>
+                                                        <a href="https://themes.jozoor.com/html/joo/specialty/01/" target="_blank">View more</a>
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -185,7 +282,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="./features/index.html">المميزات</a>
+                                    <a href="./features/index.html">features</a>
                                     <ul>
                                         <li>
                                             <a href="javascript:void(0);">header
@@ -918,10 +1015,10 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="./pages/index.html">الصفحات</a>
+                                    <a href="./pages/index.html">pages</a>
                                     <ul>
                                         <li>
-                                            <a href="/index-2.html">home 2</a>
+                                            <a href="./index-2.html">home 2</a>
                                         </li>
                                         <li>
                                             <a href="./pages/about.html">about</a>
@@ -1032,7 +1129,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="./portfolio/index.html">المشاريع</a>
+                                    <a href="./portfolio/index.html">portfolio</a>
                                     <ul>
                                         <li>
                                             <a href="javascript:void(0);">grid</a>
@@ -1175,7 +1272,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="./blog/index.html">الاخبار</a>
+                                    <a href="./blog/index.html">blog</a>
                                     <ul>
                                         <li>
                                             <a href="javascript:void(0);">default</a>
@@ -1244,10 +1341,10 @@
                                     </ul>
                                 </li>
                                 <li class="mega-menu">
-                                    <a href="./elements/index.html">العناصر</a>
+                                    <a href="./elements/index.html">elements</a>
                                     <ul>
                                         <li>
-                                            <a href="./elements/index.html">العناصر</a>
+                                            <a href="./elements/index.html">elements</a>
                                             <ul>
                                                 <li>
                                                     <a href="./elements/latest-news.html">latest news</a>
@@ -1282,7 +1379,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="./elements/index.html">العناصر</a>
+                                            <a href="./elements/index.html">elements</a>
                                             <ul>
                                                 <li>
                                                     <a href="./elements/team.html">team</a>
@@ -1317,7 +1414,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="./elements/index.html">العناصر</a>
+                                            <a href="./elements/index.html">elements</a>
                                             <ul>
                                                 <li>
                                                     <a href="./elements/recent-work.html">recent work</a>
@@ -1352,7 +1449,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="./elements/index.html">العناصر</a>
+                                            <a href="./elements/index.html">elements</a>
                                             <ul>
                                                 <li>
                                                     <a href="./elements/lightboxes.html">lightboxes</a>
@@ -1387,7 +1484,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="./elements/index.html">العناصر</a>
+                                            <a href="./elements/index.html">elements</a>
                                             <ul>
                                                 <li>
                                                     <a href="./elements/instagram.html">instagram</a>
@@ -1440,7 +1537,7 @@
                                     <form>
                                         <div class="field">
                                             <div class="control is-expanded">
-                                                <input class="input" type="text" placeholder="إبحث...">
+                                                <input class="input" type="text" placeholder="Search...">
                                                 <button type="submit" class="button">
                                 <span class="icon">
                                   <i class="icon-magnifier"></i>
@@ -1454,14 +1551,14 @@
                         </li>
                     </ul>
                     <!-- .header-menu-icons -->
-                    <a href="#quote" class="button is-white">عرض أسعار</a>
+                    <a href="#quote" class="button is-white">get a quote</a>
                     <div class="modal search-form-overlay">
                         <div class="modal-background"></div>
                         <div class="modal-content">
                             <form class="widget-form">
                                 <div class="field">
                                     <div class="control is-expanded">
-                                        <input class="input" type="text" placeholder="إبحث...">
+                                        <input class="input" type="text" placeholder="Search...">
                                         <button type="submit" class="button">
                             <span class="icon">
                               <i class="icon-magnifier"></i>

@@ -30,10 +30,10 @@ class UpdateEmployesRequest extends FormRequest
             'Country.*'=>'required|string|min:3|max:40',
            
     
-            'details.*'=>'required|string|min:8',
+            'details.*'=>'required|string|min:5',
          
     
-            'city.*' =>'required|string|min:7|max:20',
+            'city.*' =>'required|string|min:3|max:20',
     
             'birth_date'=> [
                 'required',
