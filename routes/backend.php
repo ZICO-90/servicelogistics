@@ -43,7 +43,6 @@ Route::group(
 
 
 
-    Route::view('Add_shipment','Livewire.show_form');
 
 //    ////////Price route///////
 

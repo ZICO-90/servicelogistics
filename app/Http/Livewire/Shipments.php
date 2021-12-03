@@ -83,12 +83,10 @@ class Shipments extends Component
             'sender_mother_name' => 'required',
             'sender_full_name' => 'required',
             'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
-            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
             'sender_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
 
             'reciver_full_name' => 'required',
             'reciver_mother_name' => 'required',
-            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
             'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
             'reciver_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'address_reciver' => 'required',
@@ -113,7 +111,6 @@ class Shipments extends Component
             'unit_id' => 'required',
             'currency_id' => 'required',
             'service_type_id' => 'required',
-
             'expected_recived_date' => 'required',
             'address_address' => 'required'
 

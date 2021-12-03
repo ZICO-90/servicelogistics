@@ -26,7 +26,8 @@
                     <h4 class="mb-4">{{trans('Dashboard\trans_ship.shipment_process')}}</h4>
                     <p>{{trans('Dashboard\trans_ship.add_shipment')}}<br><br><br>
                 </div>
-                    <livewire:shipment/>
+
+                    <livewire:shipment />
 
 
 
@@ -47,8 +48,6 @@
 @section('js')
     @livewireScripts
     @toastr_js
-
-
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
     <script  type="text/javascript">
