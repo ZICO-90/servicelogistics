@@ -125,7 +125,7 @@ Route::group(
                Route::Delete('/delete', [TestimonialController::class, 'destroy'])->name('destroy');
             });
 
-            #========================Testimonials Routes===============================#
+            #========================Partners Routes===============================#
             Route::group(['prefix' => 'partner', 'as' => 'partner.'], function() {
                 Route::get('/', [PartnerController::class, 'index'])->name('index');
                 Route::get('/create', [PartnerController::class, 'create'])->name('create');
