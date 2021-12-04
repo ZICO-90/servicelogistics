@@ -6,10 +6,10 @@
         <div class="container">
             <div class="columns is-variable is-2 is-multiline">
                 <div class="column is-6-desktop is-12-tablet" data-aos="fade">
-                    <h1 class="heading-title style-3 has-text-left"> أترك
-                        <span class="has-text-primary">تقييمك عن خدماتنا</span>
+                    <h1 class="heading-title style-3 has-text-left"> {{ucwords(trans('front/trans_testimonial.testimonial'))}}
+                        <span class="has-text-primary">{{ucwords(trans('front/trans_testimonial.clients feedback'))}}</span>
                     </h1>
-                    <p class="heading-title-bottom">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد.</p>
+                    <p class="heading-title-bottom">Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
                     <!-- successful form message -->
                     @include('partials.session')
 
@@ -19,7 +19,7 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control is-expanded">
-                                        <input class="input" type="text" name="name" placeholder="الإسم" required value="{{old('name')}}">
+                                        <input class="input" type="text" name="name" placeholder="{{ucwords(trans('front/trans_testimonial.Name'))}}" required value="{{old('name')}}">
                                         @error('name')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -28,7 +28,7 @@
                                 <!-- .field -->
                                 <div class="field">
                                     <div class="control is-expanded">
-                                        <input class="input" type="email" name="email" placeholder="الإيميل" required="" value="{{old('email')}}">
+                                        <input class="input" type="email" name="email" placeholder="{{ucwords(trans('front/trans_testimonial.Email'))}}" required="" value="{{old('email')}}">
                                         @error('email')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -40,7 +40,7 @@
                         </div>
                         <div class="field ">
                             <div class="control is-expanded">
-                                <textarea class="textarea" name="description" placeholder="رسالتك" >{{old('description')}}</textarea>
+                                <textarea class="textarea" name="description" placeholder="{{ucwords(trans('front/trans_testimonial.Message'))}}" >{{old('description')}}</textarea>
                                 @error('description')
                                 <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                 @enderror
@@ -48,7 +48,7 @@
                         </div>
                         <div class="field ">
                             <div class="control">
-                                <button class="button" type="submit">أضف رأيك</button>
+                                <button class="button" type="submit">{{ucwords(trans('front/trans_testimonial.Add'))}}</button>
                             </div>
                         </div>
                     </form>

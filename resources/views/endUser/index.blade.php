@@ -59,7 +59,7 @@
                     <div class="container">
                         @isset( $sectionTitle )
                         <p class="heading-title-top has-text-centered">{{$sectionTitle->title_p}}</p>
-                        <h1 class="heading-title style-3"> {{$sectionTitle->title_p}} <br> 
+                        <h1 class="heading-title style-3"> {{$sectionTitle->title_p}} <br>
                            @if(!empty($sectionTitle->title_span))
                         <span class="has-text-primary">{{$sectionTitle->title_span}}</span>
                         @endif
@@ -73,16 +73,16 @@
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./pages/about.html">
-                                 
+
                                             <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('Dashboard/img/employes/'.$employe ->img_url)}}"> </a>
                                     </figure>
-                                    
+
                                     <div class="entry-header">
                                         <h2 class="entry-title">
                                             <a href="./pages/about.html">{{$employe-> name}}</a>
                                         </h2>
                                     </div>
-                                   
+
                                     <!-- .entry-header -->
                                     <div class="entry-content">
                                         <p>{{$employe-> details}}</p>
@@ -97,7 +97,7 @@
                             </div>
                             @foreach($Welcome as $model)
                             <div class="column is-4" data-aos="fade">
-                             
+
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./pages/about.html">
@@ -118,7 +118,7 @@
                                     </div>
                                 </article>
                                 <!-- .blog-post -->
-                               
+
                             </div>
                             @endforeach
                         </div>
@@ -241,50 +241,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="section watch-video is-clearfix">
-                    <div class="container">
-                        <br>
-                        <br>
-                        <div class="columns is-variable is-8 is-multiline">
-                            <div class="column is-6-desktop is-12-tablet has-text-centered" data-aos="fade-up">
-                                <div class="works-latest">
-                                    <div class="works-latest-item">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/introduction.png">
-                                        <div class="works-latest-item-icon style-2">
-                                            <a href="https://www.youtube.com/watch?v=jc4y2Xqerj0" class="mfp-lightbox mfp-iframe">
-                            <span class="icon ripple-effect">
-                              <i class="ion-ios-play"></i>
-                            </span>
-                                            </a>
-                                        </div>
-                                        <!-- .works-latest-icon -->
-                                    </div>
-                                    <!-- .works-latest-item -->
-                                </div>
-                            </div>
-                            <div class="column is-6-desktop is-12-tablet" data-aos="fade">
-                                <br>
-                                <h1 class="heading-title style-3 has-text-left"> local pickup with logistics
-                                    <br> services of any
-                                    <span class="has-text-primary">cargo.</span>
-                                </h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravi, nulla nunc varius lectus, nec rutrum justo nibh eu lectus metus ultrices.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravi.</p>
-                                <br>
-                                <div class="level">
-                                    <div class="level-left">
-                                        <h4>Mohamed Saad
-                                            <br>
-                                            <span>CEO & Founder</span>
-                                        </h4>
-                                    </div>
-                                    <div class="level-right">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/mark.png"> </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br> </div>
-                </section>
+
                 <section class="hero fun-facts is-clearfix">
                     <div class="hero-body">
                         <h2 class="display-none">funfacts</h2>
@@ -429,81 +386,21 @@
                 </section>
                 <section id="testimonials" class="section testimonials-section has-background-primary-light is-clearfix">
                     <div class="container">
-                        <p class="heading-title-top has-text-centered">testimonial</p>
-                        <h1 class="heading-title style-3">clients feedback</h1>
+                        <p class="heading-title-top has-text-centered">{{ucwords(trans('front/trans_testimonial.testimonial'))}}</p>
+                        <h1 class="heading-title style-3">{{ucwords(trans('front/trans_testimonial.clients feedback'))}}</h1>
+                        <a href="{{route('endUser.testimonial')}}" class="has-text-centered"><h3 class="text-center">{{ucwords(trans('front/trans_testimonial.Add feedback'))}}</h3></a>
                         <div class="testimonials  owl-carousel dots carousel-items-3 columns-style-1 ">
+                            @isset($testimonials)
+                                @foreach($testimonials as $item)
                             <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
-                                <h3>mohamed ahmed
-                                    <br>
-                                    <span>CEO & stylist</span>
+                                <p>{{$item['description']}}</p>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/testimonials/1.png')}}">
+                                <h3>{{$item['name']}}
                                 </h3>
                             </div>
-                            <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
-                                <h3>olivia allison
-                                    <br>
-                                    <span>CEO & stylist</span>
-                                </h3>
-                            </div>
-                            <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
-                                <h3>olivia allison
-                                    <br>
-                                    <span>CEO & stylist</span>
-                                </h3>
-                            </div>
-                            <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
-                                <h3>mohamed ahmed
-                                    <br>
-                                    <span>CEO & stylist</span>
-                                </h3>
-                            </div>
-                            <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
-                                <h3>olivia allison
-                                    <br>
-                                    <span>CEO & stylist</span>
-                                </h3>
-                            </div>
-                            <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
-                                <h3>olivia allison
-                                    <br>
-                                    <span>CEO & stylist</span>
-                                </h3>
-                            </div>
-                            <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/1.png">
-                                <h3>mohamed ahmed
-                                    <br>
-                                    <span>CEO & stylist</span>
-                                </h3>
-                            </div>
-                            <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/2.png">
-                                <h3>olivia allison
-                                    <br>
-                                    <span>CEO & stylist</span>
-                                </h3>
-                            </div>
-                            <div class="testimonials-item">
-                                <p>Any time we start something new it is exciting and we are very motivated and committed. As time goes by</p>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/testimonials/3.png">
-                                <h3>olivia allison
-                                    <br>
-                                    <span>CEO & stylist</span>
-                                </h3>
-                            </div>
+                                @endforeach
+                            @endisset
+
                         </div>
                     </div>
                 </section>
@@ -511,8 +408,8 @@
                     <div class="container">
                         <div class="columns is-variable is-2 is-multiline">
                             <div class="column is-6-desktop is-12-tablet" data-aos="fade">
-                                <h1 class="heading-title style-3 has-text-left"> request a
-                                    <span class="has-text-primary">quote</span>
+                                <h1 class="heading-title style-3 has-text-left"> {{ucwords(trans('front/trans_price-order.request a'))}}
+                                    <span class="has-text-primary">{{ucwords(trans('front/trans_price-order.quote'))}}</span>
                                 </h1>
                                 <p class="heading-title-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla chronocrator accumsan, metus ultrices eleifend gravi.</p>
                                 <!-- successful form message -->
@@ -526,17 +423,26 @@
                         <i class="ion-md-notifications"></i>
                       </span> Oops! Something went wrong, we couldn't send your message. </div>
                                 <!-- ajax contact form -->
-                                <form accept-charset="UTF-8" class="ajax-contact-form" action="https://usebasin.com/f/3587049dbc33.json" method="POST">
+                                <form accept-charset="UTF-8" action="{{route('admin.priceOrder.store')}}" method="POST">
+                                    @csrf
                                     <div class="field is-horizontal">
                                         <div class="field-body">
                                             <div class="field">
                                                 <div class="control is-expanded">
-                                                    <input class="input" type="text" name="name" placeholder="Name" required> </div>
+                                                    <input class="input" type="text" name="name" placeholder="{{ucwords(trans('front/trans_price-order.Name'))}}" required value="{{old('name')}}">
+                                                    @error('name')
+                                                    <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+                                                    @enderror
+                                                </div>
                                             </div>
                                             <!-- .field -->
                                             <div class="field">
                                                 <div class="control is-expanded">
-                                                    <input class="input" type="email" name="email" placeholder="Email" required=""> </div>
+                                                    <input class="input" type="email" name="email" placeholder="{{ucwords(trans('front/trans_price-order.Email'))}}" required="" value="{{old('email')}}">
+                                                    @error('email')
+                                                    <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+                                                    @enderror
+                                                </div>
                                             </div>
                                             <!-- .field -->
                                         </div>
@@ -546,18 +452,25 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <div class="control is-expanded">
-                                                    <input class="input" type="text" name="subject" placeholder="Subject" required=""> </div>
+                                                    <input class="input" type="text" name="address" placeholder="{{ucwords(trans('front/trans_price-order.Address'))}}" required="" value="{{old('address')}}">
+                                                    @error('address')
+                                                    <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+                                                    @enderror
+                                                </div>
                                             </div>
                                             <!-- .field -->
                                             <div class="field">
                                                 <div class="control is-expanded">
                                                     <div class="select">
-                                                        <select>
-                                                            <option>Air Freight</option>
-                                                            <option>Land Transport</option>
-                                                            <option>Ocean Freight</option>
-                                                            <option>Warehousing</option>
+                                                        <select name="select">
+                                                            <option value="air">{{ucwords(trans('front/trans_price-order.Air Freight'))}}</option>
+                                                            <option value="land">{{ucwords(trans('front/trans_price-order.Land Transport'))}}</option>
+                                                            <option value="sea">{{ucwords(trans('front/trans_price-order.Ocean Freight'))}}</option>
+                                                            <option value="storage">{{ucwords(trans('front/trans_price-order.Warehousing'))}}</option>
                                                         </select>
+                                                        @error('select')
+                                                        <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                                 <!-- .field -->
@@ -567,12 +480,15 @@
                                     </div>
                                     <div class="field ">
                                         <div class="control is-expanded">
-                                            <textarea class="textarea" name="textarea" placeholder="Message" required=""></textarea>
+                                            <textarea class="textarea" name="message" placeholder="{{ucwords(trans('front/trans_price-order.Message'))}}" required="">{{old('message')}}</textarea>
+                                            @error('message')
+                                            <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="field ">
                                         <div class="control">
-                                            <button class="button" type="submit">request a quote</button>
+                                            <button class="button" type="submit">{{ucwords(trans('front/trans_price-order.request a quote'))}}</button>
                                         </div>
                                     </div>
                                 </form>
@@ -582,7 +498,7 @@
                                 <br>
                                 <br>
                                 <br>
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/global/man.png"> </div>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('assetsEndUser/assets/images/global/man.png')}}"> </div>
                         </div>
                     </div>
                 </section>

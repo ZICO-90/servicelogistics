@@ -11,43 +11,43 @@
                             <nav class="clients-list level  owl-carousel no-dots carousel-items-5">
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/7.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/8.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/9.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/7.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/8.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/9.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/7.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/8.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/9.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
                                 </div>
                                 <div class="client-item has-text-centered level-item">
                                     <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/clients/7.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
                                 </div>
                             </nav>
                         </div>
@@ -68,37 +68,45 @@
                     <div class="widget widget-html">
                         <div class="textwidget">
                             <div id="footer-logo" class="site-logo ">
-                                <a href="./index.html">
-                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/logo/logo2.png">
-                                    <span class="logo-text">Logistics</span>
+                                @isset($infos)
+                                    @foreach($infos as $info)
+                                <a href="{{route('endUser.index')}}">
+                                    <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('images/info-site/'.$info['logo'])}}">
+                                    <span class="logo-text">{{$info['title']}}</span>
                                 </a>
+                                    @endforeach
+                                @endisset
                             </div>
                             <!-- #footer-logo -->
                             <br>
                             <p>The main component of a healthy environment for self esteem is that it needs be nurturing. It should provide unconditional warmth.</p>
                             <div class="footer-social-links ">
                                 <ul>
+                                    @isset($infos)
+                                        @foreach($infos as $info)
                                     <li>
-                                        <a href="#" target="_blank">
+                                        <a href="{{$info['facebook_url']}}" target="_blank">
                             <span class="icon">
                               <i class="fab fa-facebook-f"></i>
                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank">
+                                        <a href="{{$info['twitter_url']}}" target="_blank">
                             <span class="icon">
                               <i class="fab fa-twitter"></i>
                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank">
+                                        <a href="{{$info['linkedin_url']}}" target="_blank">
                             <span class="icon">
                               <i class="fab fa-linkedin-in"></i>
                             </span>
                                         </a>
                                     </li>
+                                        @endforeach
+                                    @endisset
                                 </ul>
                             </div>
                         </div>
