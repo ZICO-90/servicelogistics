@@ -160,6 +160,21 @@
                 </ul>
                 <!-- End Sub Menu -->
             </li>
+
+            <li>
+                <a href="#">
+                    <i class="icofont-contact-add"></i>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Partners')}}</span>
+                </a>
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
+
+                    <li><a href="{{route('admin.partner.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Partners')}}</a></li>
+                    <li><a href="{{route('admin.partner.create')}}">{{trans('Dashboard\trans_main_sidebar.Add New Partner')}}</a></li>
+
+                </ul>
+                <!-- End Sub Menu -->
+            </li>
             {{--<li>--}}
                 {{--<a href="#">--}}
                     {{--<i class="icofont-contact-add"></i>--}}

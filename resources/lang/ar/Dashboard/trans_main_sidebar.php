@@ -18,7 +18,10 @@ return [
     'UnRead Testimonials' => 'عرض الرسائل الغير مقرؤة',
     'price_list'=>'قائمة الأسعار ',
     'add_price'=>'إضافة سعر ',
-    'prices'=>'الأسعار'
+    'prices'=>'الأسعار',
+    'Partners' => 'شركائنا',
+    'Show All Partners' => 'عرض جميع الشركاء',
+    'Add New Partner' => 'إضافة راعي جديد',
 
 
 ];

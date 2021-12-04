@@ -125,6 +125,16 @@ Route::group(
                Route::Delete('/delete', [TestimonialController::class, 'destroy'])->name('destroy');
             });
 
+            #========================Testimonials Routes===============================#
+            Route::group(['prefix' => 'partner', 'as' => 'partner.'], function() {
+                Route::get('/', [PartnerController::class, 'index'])->name('index');
+                Route::get('/create', [PartnerController::class, 'create'])->name('create');
+                Route::post('/store', [PartnerController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [PartnerController::class, 'edit'])->name('edit')->where(['id' => '[0-9]+']);
+                Route::put('/update', [PartnerController::class, 'update'])->name('update');
+                Route::Delete('/delete', [PartnerController::class, 'destroy'])->name('destroy');
+            });
+
         });
     });
 

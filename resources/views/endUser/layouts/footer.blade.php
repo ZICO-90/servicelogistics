@@ -5,50 +5,18 @@
                 <div class="container">
                     <div class="columns is-variable is-4 is-multiline">
                         <div class="column is-2-desktop is-12-tablet">
-                            <h1 class="heading-title style-3 has-text-left">our partners</h1>
+                            <h1 class="heading-title style-3 has-text-left">{{ucwords(trans('Dashboard/trans_partner.partner'))}}</h1>
                         </div>
                         <div class="column is-10-desktop is-12-tablet">
                             <nav class="clients-list level  owl-carousel no-dots carousel-items-5">
+                                @isset($partners)
+                                    @foreach($partners as $item)
                                 <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
+                                    <a href="{{$item['link']}}" target="_blank">
+                                        <img alt="{{$item['name']}}" src="{{URL::asset('images/partners/'.$item['image'])}}"> </a>
                                 </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
-                                </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
-                                </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
-                                </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
-                                </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
-                                </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
-                                </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/8.png')}}"> </a>
-                                </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/9.png')}}"> </a>
-                                </div>
-                                <div class="client-item has-text-centered level-item">
-                                    <a href="#" target="_blank">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/clients/7.png')}}"> </a>
-                                </div>
+                                    @endforeach
+                                @endisset
                             </nav>
                         </div>
                     </div>
@@ -229,28 +197,14 @@
     </a>
     <ul>
         <li>
-            <a href="https://1.envato.market/Jozoor" target="_blank" class="tooltip is-tooltip-left" data-tooltip="BUY NOW">
-              <span class="icon">
-                <i class="icon-bag"></i>
-              </span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" class="tooltip is-tooltip-left" data-tooltip="MORE TEMPLATES" data-show="quickview" data-target="quickviewDemos">
-              <span class="icon">
-                <i class="icon-screen-desktop"></i>
-              </span>
-            </a>
-        </li>
-        <li>
-            <a href="https://themes.jozoor.com/html/joo/corporate/03/rtl/" target="_blank" class="tooltip is-tooltip-left" data-tooltip="RTL VERSION">
+            <a href="{{url('/ar')}}" target="_blank" class="tooltip is-tooltip-left" data-tooltip="RTL VERSION">
               <span class="icon">
                 <i class="icon-refresh"></i>
               </span>
             </a>
         </li>
         <li>
-            <a href="https://t.me/jozor" target="_blank" class="tooltip is-tooltip-left" data-tooltip="LIVE CHAT">
+            <a href="https://t.me/" target="_blank" class="tooltip is-tooltip-left" data-tooltip="LIVE CHAT">
               <span class="icon">
                 <i class="icon-paper-plane"></i>
               </span>

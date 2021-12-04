@@ -3,8 +3,10 @@ namespace App\Http\Repositories\EndUser;
 
 use App\Http\Interfaces\EndUser\EndUserHomeInterface;
 
+use App\Http\Traits\PartnerTrait;
 use App\Http\Traits\TestimonialsTrait;
 use App\Models\DeliveryType;
+use App\Models\Partner;
 use App\Models\SWelcomeTitle;
 use App\Models\employe;
 use App\Http\Traits\InfoSiteTrait;
@@ -15,20 +17,23 @@ class EndUserHomeRepository implements EndUserHomeInterface
 {
     use InfoSiteTrait;
     use TestimonialsTrait;
+    use PartnerTrait;
     private
             $infoSiteModel,
             $dileveryModel,
             $employeModel,
             $sectionModel,
-            $testimonialModel;
+            $testimonialModel,
+            $partnerModel;
 
-    public function __construct(InfoSite $infoSite, DeliveryType $delivery , SWelcomeTitle $section , employe $employe, Testimonial $testimonial)
+    public function __construct(InfoSite $infoSite, DeliveryType $delivery , SWelcomeTitle $section , employe $employe, Testimonial $testimonial, Partner $partner)
     {
         $this->infoSiteModel = $infoSite;
         $this->dileveryModel  =  $delivery ;
         $this->sectionModel  =  $section ;
         $this->employeModel  =  $employe ;
         $this->testimonialModel = $testimonial;
+        $this->partnerModel = $partner;
     }
 
     public function homePage()
@@ -39,7 +44,8 @@ class EndUserHomeRepository implements EndUserHomeInterface
         $sectionTitle =   $this->sectionModel::where('is_active' , 1)->first();
         $employe =   $this->employeModel::where('is_active' , 1)->first();
         $testimonials = $this->show_all_testimonials()->where('status', 1);
-        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe', 'testimonials'));
+        $partners = $this->show_all_partners();
+        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe', 'testimonials', 'partners'));
 
     }
 

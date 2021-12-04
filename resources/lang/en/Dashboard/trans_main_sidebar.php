@@ -16,7 +16,10 @@ return [
     'UnRead Testimonials' => 'UnRead Testimonials',
     'price_list'=>'Price List',
     'add_price'=>'Add Price',
-    'prices'=>'Prices'
+    'prices'=>'Prices',
+    'Partners' => 'Partners',
+    'Show All Partners' => 'Show All Partners',
+    'Add New Partner' => 'Add New Partner',
 
 
 ];
