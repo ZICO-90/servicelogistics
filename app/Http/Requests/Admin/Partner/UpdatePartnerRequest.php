@@ -25,10 +25,15 @@ class UpdatePartnerRequest extends FormRequest
     {
         return [
             'partner_id' => 'required|exists:partners,id',
-            'en_name' => 'required|string|alpha',
-            'ar_name' => 'required|string|alpha',
+            'en_name' => 'required|min:3',
+            'ar_name' => 'required|min:3',
             'link' => 'required|url',
             'logo' => 'file:image|mimes:png,jpg,webp,jpeg'
         ];
+    }
+
+    public function messages()
+    {
+        return (new AddPartnerRequest)->messages();
     }
 }

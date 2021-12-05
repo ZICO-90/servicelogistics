@@ -24,10 +24,24 @@ class AddPartnerRequest extends FormRequest
     public function rules()
     {
         return [
-            'en_name' => 'required|string|alpha',
-            'ar_name' => 'required|string|alpha',
+            'en_name' => 'required|min:3',
+            'ar_name' => 'required|min:3',
             'link' => 'required|url',
-            'logo' => 'required|file:image|mimes:png,jpg,webp,jpeg'
+            'logo' => 'required|mimes:png,jpg,webp,jpeg'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'en_name.required' => trans('Dashboard/messages.en_name.required'),
+            'en_name.min' => trans('Dashboard/messages.en_name.min'),
+            'ar_name.required' => trans('Dashboard/messages.ar_name.required'),
+            'ar_name.min' => trans('Dashboard/messages.ar_name.min'),
+            'link.required' => trans('Dashboard/messages.link.required'),
+            'link.url' => trans('Dashboard/messages.link.url'),
+            'logo.required' => trans('Dashboard/messages.logo.required'),
+            'logo.mimes' => trans('Dashboard/messages.logo.mimes'),
         ];
     }
 }

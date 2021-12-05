@@ -29,12 +29,12 @@ class InfoSite extends Model
     public static function rule()
     {
         return [
-            'en_title' => 'required|string:min:3',
-            'ar_title' => 'required|string:min:3',
-            'phone' =>  'required|min:11',
+            'en_title' => 'required|min:3',
+            'ar_title' => 'required|min:3',
+            'phone' =>  'required|min:10',
             'email' => 'required|email',
-            'ar_day' => 'required|string|min:3',
-            'en_day' => 'required|string|min:3',
+            'ar_day' => 'required|min:3',
+            'en_day' => 'required|min:3',
             'open_time' => 'required',
             'close_time' => 'required',
             'facebook_url' => 'required|url',
