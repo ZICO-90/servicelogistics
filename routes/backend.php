@@ -52,16 +52,45 @@ Route::group(
         return view('Dashboard.Admin.empty_page');
     });
 
-    Route::view('Add_shipment','Livewire.show_form');
 
-//    ////////Price route///////
 
 
     Route::get('/users', [UserController::class, 'index']);
 
-//    Route::resource('prices', PriceController::class);
-    Route::resource(
-        'prices' , 'PriceController');
+        Route::group(['middleware' => 'auth:web'], function() {
+            Route::view('Add_shipment','Livewire.show_shipping_form');
+
+            Route::view('show_tracking','Livewire.show_tracking_form');
+
+    });
+
+
+
+    Route::group(['middleware' => 'auth:admin'], function() {
+
+        Route::resource('admins_tracks', 'AdminTrackController');
+
+        Route::resource('prices' , 'PriceController');
+
+    });
+
+
+    Route::group(['middleware' => 'auth:scanner'], function() {
+
+        Route::resource('scanner_tracks', 'ScannerTrackController');
+    });
+
+    Route::group(['middleware' => 'auth:driver'], function() {
+
+        Route::resource('drivers_tracks', 'DriverTrackController');
+    });
+
+
+    Route::group(['middleware' => 'auth:warehousing_officer'], function() {
+
+        Route::resource('warehouse_tracks', 'WarehouseTrackController');
+    });
+
 
 
 //route news and convention//////////

@@ -2,18 +2,19 @@
 
 namespace App\Models;
 
-//use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
-use Astrotomic\Translatable\Translatable;
+use Spatie\Translatable\HasTranslations;
 
-class Customer extends Model implements TranslatableContract
+class Customer extends Model
 {
-    use Translatable;
+
+
+    use HasTranslations;
+
 
     // 3. To define which attributes needs to be translated
-    public $translatedAttributes =
+    public $translatable =
         ['sender_full_name', 'sender_mother_name',
         'reciver_full_name','reciver_mother_name'];
     protected $fillable = [ 'email','password', 'sender_national_id','sender_phone','address_sender',

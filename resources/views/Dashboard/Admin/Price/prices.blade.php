@@ -51,7 +51,7 @@
                                     <td>
                                         <button type="button" class="btn btn-warning" data-toggle="modal"
                                                 data-target="#Edit{{$price->id}}"
-                                                title=" {{trans('Dashboard\trans_price.Edit')}}">{{trans('Dashboard\trans_price.Edit')}}</i>
+                                                title=" {{trans('Dashboard\trans_price.Edit')}}"><i class="icofont-edit icofont-1x"></i>
                                         </button>
 
                                         <div class="modal fade" id="Edit{{$price->id}}" tabindex="-1" role="dialog"
@@ -75,7 +75,7 @@
 
                                                                         <div class="form-group">
                                                                             <label for="material_type_id">{{trans('Dashboard\trans_price.material_type_id')}}</label>
-                                                                            <select class="form-control" name="material_type_id">
+                                                                            <select  name="material_type_id">
                                                                                 <option  value="{{$price->material_type_id}}">{{$price->shipping_material_types->material_type}}</option>
                                                                                 @foreach($material_types as $type)
                                                                                     <option value="{{$type->id}}">{{$type->material_type}}</option>
@@ -184,7 +184,7 @@
                                         </div>
 
                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{$price->id}}"
-                                                title=" {{trans('Dashboard\trans_price.Delete')}}">{{trans('Dashboard\trans_price.Delete')}}
+                                                title=" {{trans('Dashboard\trans_price.Delete')}}"><i class="icofont-trash icofont-1x "></i>
                                         </button>
                                         <div class="modal fade" id="delete{{$price->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -200,7 +200,7 @@
                                                             {{method_field('Delete')}}
                                                             @csrf
                                                             <input type="hidden" name="id" value="{{$price->id}}"  >
-                                                            <h2>are u sure u want to delete this {{$price->shipping_material_types->material_type}}</h2>
+                                                            <p>are u sure u want to delete this {{$price->shipping_material_types->material_type}}</p>
 
 
 

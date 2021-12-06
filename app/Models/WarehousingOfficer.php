@@ -19,6 +19,7 @@ class WarehousingOfficer extends Authenticatable
         'name',
         'email',
         'password',
+        'tracking_shipment_id'
     ];
 
 
@@ -31,5 +32,10 @@ class WarehousingOfficer extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function tracks()
+    {
+        return $this->morphMany(TrackingShipment::class, 'tranckable');
+    }
 
 }

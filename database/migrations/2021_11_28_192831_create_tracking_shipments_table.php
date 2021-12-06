@@ -16,6 +16,7 @@ class CreateTrackingShipmentsTable extends Migration
         Schema::create('tracking_shipments', function (Blueprint $table) {
             $table->id();
             $table->text('desc');
+
             $table->unsignedBigInteger('tracking_stage_id');
             $table->foreign('tracking_stage_id')->references('id')
                 ->on('tracking_stages')->cascadeOnDelete()->cascadeOnUpdate();
@@ -23,9 +24,17 @@ class CreateTrackingShipmentsTable extends Migration
             $table->unsignedBigInteger('customer_id');
             $table->foreign('customer_id')->references('id')
                 ->on('customers')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->date('entering_date');
+
+
+            $table->string('full_number');
             $table->date('outcomming_date');
             $table->string('location_now');
+
+
+            $table->integer('tracking_id');
+            $table->string('tracking_type');
+
+
             $table->timestamps();
 
 

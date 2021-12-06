@@ -5,14 +5,19 @@ return [
 
     'Email' => 'البريد الإلكتروني',
     'password'=>'كلمة السر',
-    'sender_mother_name'=>'اسم والدةالمرسل',
-    'sender_full_name'=>'اسم المرسل الثلاثي',
+    'sender_mother_name_ar'=>'اسم والدةالمرسل بالعربي',
+    'sender_full_name_ar'=>'اسم المرسل الثلاثي بالعربي',
+    'sender_mother_name_en'=>'اسم والدةالمرسل بالإنكليزي',
+    'sender_full_name_en'=>'اسم المرسل الثلاثي بالإنكليزي',
     'sender_national_id'=>'الرقم الوطني للمرسل ',
     'sender_phone'=>'هاتف المرسل',
     'address_sender'=>'عنوان المرسل',
 
-    'reciver_full_name'=>'اسم المستقبل الثلاثي',
-    'reciver_mother_name'=>'اسم والدة المستقبل',
+    'reciver_full_name_en'=>'اسم المستقبل الثلاثي بالإنكليزي',
+    'reciver_mother_name_en'=>'اسم والدة المستقبل بالإنكليزي',
+    'reciver_full_name_ar'=>'اسم المستقبل الثلاثي بالعربي',
+    'reciver_mother_name_ar'=>' اسم والدة المستقبل بالعربي',
+
 
     'reciver_national_id'=>'الرقم الوطني للمستقبل',
     'reciver_phone'=>'هاتف المستقبل',
@@ -25,7 +30,9 @@ return [
     'back'=>'السابق',
 
     'shipment_num'=>'رقم الشحنة',
-    'shipment_name'=>'اسم الشحنة',
+    'shipment_name_en'=>'اسم الشحنة بالإنكليزي',
+    'shipment_name_ar'=>'اسم الشحنة بالعربي',
+
     'amount'=>'الكمية',
     'price'=>'السعر',
     'sender_date'=>'تاريخ الإرسال',

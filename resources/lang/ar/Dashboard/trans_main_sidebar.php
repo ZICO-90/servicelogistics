@@ -6,7 +6,7 @@ return [
     'Main' => 'الرئيسية',
     'Dashboard' => 'لوحة التحكم',
     'Shipping_list'=>'قائمة الشحنات',
-    'Shipments'=>'الشحن',
+    'Shipments'=>'الشحنات',
     'InfoSite' => 'إعدادات الموقع',
     'Show All InfoSite' => 'إعدادات الموقع الرئيسية',
     'Create InfoSite' => 'إضافة بيانات الموقع ',
@@ -18,7 +18,17 @@ return [
     'UnRead Testimonials' => 'عرض الرسائل الغير مقرؤة',
     'price_list'=>'قائمة الأسعار ',
     'add_price'=>'إضافة سعر ',
-    'prices'=>'الأسعار'
+    'prices'=>'الأسعار',
+    'users_main'=>'قائمة المستخدمين الرئيسية ',
+    'scanner_main'=>'قائمة المساحين الرئيسية',
+    'Scanning'=>'مرحلة المسح الضوئي',
+    'scanner_track'=>'تعقب المسح الضوئي',
+    'driver_main'=>'قائمة النقل الرئيسية',
+    'driver_track'=>'تعقب نقل الشحنة',
+    'driver_stage'=>'مرحلة النقل',
+    'warehouse_main'=>'قائمة المخازن الرئيسية',
+    'warehouse_stage'=>'مرحلة التخزين',
+    'warehouse_track'=>'تعقب تخزين الشحنة'
 
 
 ];

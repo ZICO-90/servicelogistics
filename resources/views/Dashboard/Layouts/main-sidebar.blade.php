@@ -100,21 +100,7 @@
                 <!-- End Sub Menu -->
             </li>
 
-            <li>
-                <a href="#">
-                    <i class="icofont-listing-box"></i>
-                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Shipments')}}</span>
-                </a>
 
-                <!-- Sub Menu -->
-                <ul class="nav sub-menu">
-                    <li><a href="{{url('Add_shipment')}}">{{trans('Dashboard\trans_main_sidebar.Shipping_list')}}</a>
-                    </li>
-                    {{--<li><a href="{{url('Add_shipment')}}">add_new_shipment</a></li>--}}
-                    {{--<li><a href="{{url('Add_shipment')}}">details</a></li>--}}
-                </ul>
-                <!-- End Sub Menu -->
-            </li>
 
 
             <li>
@@ -157,8 +143,29 @@
                 </ul>
                 <!-- End Sub Menu -->
             </li>
+                       {{--najat urls--}}
+            @if(Auth::guard('web')->check())
+                <li class="nav-category">{{trans('Dashboard\trans_main_sidebar.users_main')}}</li>
+                <li>
+                    <a href="#">
+                        <i class="icofont-users-alt-5"></i>
+                        <span class="link-title">{{trans('Shipments')}}</span>
+                    </a>
 
-            @if(Auth::guard('admin')->check())
+                    <!-- Sub Menu -->
+                    <ul class="nav sub-menu">
+                        <li><a href="{{url('Add_shipment')}}">{{trans('Dashboard\trans_main_sidebar.Shipping_list')}}</a></li>
+
+
+
+                        <li><a href="{{url('show_tracking')}}">{{trans('Dashboard\trans_main_sidebar.shipping_track')}}</a>
+                        </li>
+
+                    </ul>
+                    <!-- End Sub Menu -->
+                </li>
+
+            @elseif(Auth::guard('admin')->check())
                 <li class="nav-category">Admin Main</li>
                 <li>
                     <a href="#">
@@ -168,44 +175,86 @@
 
                     <!-- Sub Menu -->
                     <ul class="nav sub-menu">
-                        <li><a href="#">list Adding shipment</a></li>
-                        <li><a href="#">Add shipping to schedual</a></li>
+                        <li><a href="{{route('admins_tracks.index')}}">list Adding shipment</a></li>
                     </ul>
                     <!-- End Sub Menu -->
                 </li>
 
-
-            @elseif(Auth::guard('web')->check())
-
                 <li>
                     <a href="#">
-                        <i class="icofont-listing-box"></i>
-                        <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Shipments')}}</span>
+                        <i class="icofont-price"></i>
+                        <span class="link-title">Admin Prices</span>
                     </a>
 
                     <!-- Sub Menu -->
                     <ul class="nav sub-menu">
-                        <li><a href="{{url('Add_shipment')}}">{{trans('Dashboard\trans_main_sidebar.Shipping_list')}}</a>
-                        </li>
-                        {{--<li><a href="{{url('Add_shipment')}}">add_new_shipment</a></li>--}}
-                        {{--<li><a href="{{url('Add_shipment')}}">details</a></li>--}}
+                        <li><a href="{{route('prices.index')}}">List Prices</a></li>
+                        <li><a href="{{route('prices.create')}}">Add Price Shipment</a></li>
                     </ul>
                     <!-- End Sub Menu -->
                 </li>
 
-
-
-
-            @elseif(Auth::guard('driver')->check())
 
 
 
             @elseif(Auth::guard('scanner')->check())
 
+                <li class="nav-category">{{trans('Dashboard\trans_main_sidebar.scanner_main')}}</li>
+                <li>
+                    <a href="#">
+                        <i class="icofont-picture"></i>
+                        <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Scanning')}}</span>
+                    </a>
+
+                    <!-- Sub Menu -->
+                    <ul class="nav sub-menu">
+
+                        <li><a href="{{url('scanner_tracks')}}">{{trans('Dashboard\trans_main_sidebar.scanner_track')}}</a>
+                        </li>
+
+                    </ul>
+                    <!-- End Sub Menu -->
+                </li>
+
+            @elseif(Auth::guard('driver')->check())
+                <li class="nav-category">{{trans('Dashboard\trans_main_sidebar.driver_main')}}</li>
+
+                <li>
+                    <a href="#">
+                        <i class="icofont-taxi"></i>
+                        <span class="link-title">{{trans('Dashboard\trans_main_sidebar.driver_stage')}}</span>
+                    </a>
+
+                    <!-- Sub Menu -->
+                    <ul class="nav sub-menu">
+                        <li><a href="{{route('drivers_tracks.index')}}">{{trans('Dashboard\trans_main_sidebar.driver_track')}}</a>
+                        </li>
+
+                    </ul>
+                    <!-- End Sub Menu -->
+                </li>
+
+
+
 
 
             @elseif(Auth::guard('warehousing_officer')->check())
+                <li class="nav-category">{{trans('Dashboard\trans_main_sidebar.warehouse_main')}}</li>
 
+                <li>
+                    <a href="#">
+                        <i class="icofont-brand-appstore"></i>
+                        <span class="link-title">{{trans('Dashboard\trans_main_sidebar.warehouse_stage')}}</span>
+                    </a>
+
+                    <!-- Sub Menu -->
+                    <ul class="nav sub-menu">
+                        <li><a href="{{url('warehouse_tracks')}}">{{trans('Dashboard\trans_main_sidebar.warehouse_track')}}</a>
+                        </li>
+
+                    </ul>
+                    <!-- End Sub Menu -->
+                </li>
 
             @endif
 

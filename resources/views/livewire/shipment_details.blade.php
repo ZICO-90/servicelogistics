@@ -1,59 +1,63 @@
-@if($currentStep != 2)
-    <div style="display: none" class="row setup-content" id="step-2">
-        @endif
+@if($currentStep == 2)
         <div class="col-xs-12">
             <div class="col-md-12">
                 <br>
 
                 <div class="form-row">
-                    <div class="col col-3 mb-2">
-                        <label for="title">{{trans('Dashboard/trans_ship.shipment_name')}}</label>
-                        <input type="text" wire:model="shipment_name" class="form-control" >
-                        <input type="hidden" wire:model="customer_id" class="form-control" >
-                        @error('shipment_name')
+                    <div class="col col-6 mb-2">
+                        <label for="title">{{trans('Dashboard/trans_ship.shipment_name_ar')}}</label>
+                        <input type="text" wire:model="shipment_name_ar" class="form-control">
+                        @error('shipment_name_ar')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
 
-                    <div class="col col-3 mb-2">
+                    <div class="col col-6 mb-2">
+                        <label for="title">{{trans('Dashboard/trans_ship.shipment_name_en')}}</label>
+                        <input type="text" wire:model="shipment_name_en" class="form-control">
+                        <input type="hidden" wire:model="customer_id" class="form-control">
+                        @error('shipment_name_en')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col col-4 mb-2">
                         <label for="title">{{trans('Dashboard\trans_ship.type_id')}}</label>
                         <select class=" p-1 my-1 mr-sm-2 form-control" wire:model="type_id">
-                        <select class=" p-1 my-1 mr-sm-2" wire:model="type_id">
-                            <option selected>{{trans('Dashboard\trans_ship.Choose')}}...</option>
-                            @foreach($material_types as $type)
-                                <option value="{{$type->id}}">{{$type->material_type}}</option>
-                            @endforeach
+                                <option selected>{{trans('Dashboard\trans_ship.Choose')}}</option>
+                                @foreach($material_types as $type)
+                                    <option value="{{$type->id}}">{{$type->material_type}}</option>
+                                @endforeach
                         </select>
-                        @error('type_id')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
+                            @error('type_id')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                     </div>
 
-                    <div class="col col-3 mb-2">
+                    <div class="col col-4 mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.whieght')}}</label>
-                        <input type="text" wire:model="whieght" class="form-control" >
+                        <input type="text" wire:model="whieght" class="form-control">
                         @error('whieght')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
 
-                    <div class="col col-3 mb-2">
+                    <div class="col col-4 mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.unit_id')}}</label>
                         <select class="my-1 mr-sm-2 form-control" wire:model="unit_id">
-                        <select class="my-1 mr-sm-2" wire:model="unit_id">
-                            <option selected>{{trans('Dashboard\trans_ship.Choose')}}...</option>
+                                <option selected>{{trans('Dashboard\trans_ship.Choose')}}...</option>
 
-                            @foreach($units_types as $unit)
-                                <option value="{{$unit->id}}">{{$unit->unit_name}}</option>
-                            @endforeach
-                        </select>
-                        @error('unit_id')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
+                                @foreach($units_types as $unit)
+                                    <option value="{{$unit->id}}">{{$unit->unit_name}}</option>
+                                @endforeach
+                            </select>
+                            @error('unit_id')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                     </div>
-
-
                 </div>
+
 
                 <div class="form-row">
                     <div class="col col-2 mb-2">
@@ -66,9 +70,8 @@
 
                     <div class="col col-2 mb-2">
                         <label for="title">{{trans('Dashboard\trans_ship.price')}}</label>
-                        <input type="text" wire:model="price" class="form-control"  disabled="disabled">
+                        <input type="text" wire:model="price" class="form-control" disabled="disabled">
 
-                        <input type="text" wire:model="price" class="form-control" >
                         @error('price')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -77,17 +80,18 @@
                     <div class="col col-2 mb-2">
                         <label for="title">{{trans('Dashboard\trans_ship.currency_id')}}</label>
                         <select class=" my-1 mr-sm-2 form-control" wire:model="currency_id">
-                        <select class=" my-1 mr-sm-2" wire:model="currency_id">
-                            <option selected>{{trans('Dashboard\trans_ship.Choose')}}...</option>
-                            @foreach($currencies as $curency)
-                            <option value="{{$curency->id}}">{{$curency->curency_name}}</option>
-                            @endforeach
+                                <option selected>{{trans('Dashboard\trans_ship.Choose')}}...</option>
+                                @foreach($currencies as $curency)
+                                    <option value="{{$curency->id}}">{{$curency->curency_name}}</option>
+                                @endforeach
 
-                        </select>
-                        @error('currency_id')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
+                            </select>
+                            @error('currency_id')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                     </div>
+                </div>
+                <div class="form-row">
 
                     <div class="col col-3 mb-2">
                         <label for="inputState">{{trans('Dashboard/trans_ship.sender_date')}}</label>
@@ -108,10 +112,9 @@
                 </div>
 
 
-
                 <div class="form-row">
 
-                    <div class="col col-3 mb-2">
+                    <div class="col col-4 mb-2">
                         <label for="title">{{trans('Dashboard\trans_ship.service_type_id')}}</label>
                         <select class=" p-1 my-1 mr-sm-2 form-control" wire:model="service_type_id">
                             <option selected></option>
@@ -124,26 +127,34 @@
                         @enderror
                     </div>
 
+                    <div class="col col-4 mb-2">
+
+                        <label for="title">{{trans('Dashboard/trans_ship.tracking_stage_id')}}</label>
+                        <select class="my-1 mr-sm-2 form-control" wire:model="tracking_stage_id">
+                            <option selected>{{trans('Dashboard\trans_ship.Choose')}}</option>
+
+                            @foreach($tracking_stages as $tracking_stage)
+                                <option value="{{$tracking_stage->id}}">{{$tracking_stage->stage_name}}</option>
+                            @endforeach
+                        </select>
+                        @error('unit_id')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="col col-4 mb-2">
+                        <div class="form-group">
+                            <label for="address_address">Address</label>
+                            <input type="text" id="address-input" wire:model="address_address"
+                                   class="form-control map-input">
+                            <input type="hidden" wire:model="address_latitude" id="address-latitude" value="0"/>
+                            <input type="hidden" wire:model="address_longitude" id="address-longitude" value="0"/>
+                        </div>
+                    </div>
 
 
 
                 </div>
-
-
-
-
-                <div class="form-group">
-                    <label for="address_address">Address</label>
-                    <input type="text" id="address-input" wire:model="address_address" class="form-control map-input">
-                    <input type="hidden" wire:model="address_latitude" id="address-latitude" value="0" />
-                    <input type="hidden" wire:model="address_longitude" id="address-longitude" value="0" />
-                </div>
-                {{--<div id="address-map-container" style="width:100%;height:400px; ">--}}
-                    {{--<div style="width: 100%; height: 100%" id="address-map"></div>--}}
-                {{--</div>--}}
-
-
-
 
 
                 @if($updateMode)
@@ -161,4 +172,4 @@
             </div>
         </div>
     </div>
-    </div>
+@endif

@@ -23,10 +23,9 @@
 
             <div class="card-body">
                 <div class="title-content mb-4 mb-sm-0">
-                    <h4 class="mb-4">{{trans('Dashboard\trans_ship.shipment_process')}}</h4>
-                    <p>{{trans('Dashboard\trans_ship.add_shipment')}}<br><br><br>
+                    <h4 class="mb-4">{{trans('Dashboard/trans_track.shipment_track')}}</h4>
                 </div>
-                    <livewire:shipment/>
+                    <livewire:tracking/>
 
 
 
@@ -57,14 +56,5 @@
         } );
 
     </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATSYIXpf6pFBXuHiqRfjhIEIKYRAhTiw0&libraries=places&callback=initialize" async defer></script>
-
-    <script src="{{URL::asset('js/mapInupt.js')}}"></script>
-
-@parent
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ5mBAaaij69pG1mWGzMwA1FJuHLW05E4&libraries=places&callback=initAutocomplete" async defer></script>
-    <script src="{{URL::asset('Dashboard/js/mapInput.js')}}"></script>
 
 @endsection

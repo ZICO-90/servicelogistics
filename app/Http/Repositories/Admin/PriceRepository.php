@@ -38,13 +38,13 @@ class PriceRepository implements PriceInterface
         ));
     }
 
-    public function store_price(PriceRequest $request)
+    public function store_price(Request $request)
     {
         $List_Prices = $request->List_Classes;
 
 
-        try {
-            $validated = $request->validated();
+//        try {
+//            $validated = $request->validated();
 
             foreach ($List_Prices as $List_Price) {
 
@@ -61,15 +61,16 @@ class PriceRepository implements PriceInterface
 
                 $My_Price->save();
 
-            }
+//            }
 
 
             toastr()->success(trans('messages.success'));
             return redirect()->route('prices.index');
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-        }
+//        } catch (\Exception $e) {
+//            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+//        }
 
+    }
     }
 
 
@@ -84,7 +85,7 @@ class PriceRepository implements PriceInterface
         //
     }
 
-    public function update_price(PriceRequest $request)
+    public function update_price(Request $request)
     {
 
         try {
