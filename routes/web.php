@@ -31,6 +31,13 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
 
+
+
+
+
+//    Route::view('Add_shipment','Livewire.show_form');
+
+
         Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
 
             Route::get('/', [AdminHomeController::class, 'index'])->name('index');
@@ -118,6 +125,16 @@ Route::group(
                Route::Delete('/delete', [TestimonialController::class, 'destroy'])->name('destroy');
             });
 
+            #========================Partners Routes===============================#
+            Route::group(['prefix' => 'partner', 'as' => 'partner.'], function() {
+                Route::get('/', [PartnerController::class, 'index'])->name('index');
+                Route::get('/create', [PartnerController::class, 'create'])->name('create');
+                Route::post('/store', [PartnerController::class, 'store'])->name('store');
+                Route::get('/edit/{id}', [PartnerController::class, 'edit'])->name('edit')->where(['id' => '[0-9]+']);
+                Route::put('/update', [PartnerController::class, 'update'])->name('update');
+                Route::Delete('/delete', [PartnerController::class, 'destroy'])->name('destroy');
+            });
+
         });
     });
 
@@ -133,11 +150,15 @@ Route::group(
         Route::get('/', [EndUserHomeController::class, 'index'])->name('index');
         Route::get('/testimonial', [EndUserHomeController::class, 'testimonial'])->name('testimonial');
     });
-    });
 
 
 
 
+
+
+
+   require __DIR__.'/auth.php';
+});
 
 
 /////////najat route////////////
@@ -169,6 +190,7 @@ Route::group(
 //    Route::resources([
 //        'prices' => PriceController::class,
 //    ]);
+
 
 
 ////////end najat route/////

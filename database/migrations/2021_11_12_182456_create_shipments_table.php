@@ -19,6 +19,8 @@ class CreateShipmentsTable extends Migration
             $table->string('whieght');
             $table->string('price');
             $table->string('shipment_name');
+            $table->string('weight');
+            $table->decimal('price');
 
 
             $table->unsignedBigInteger('unit_id');

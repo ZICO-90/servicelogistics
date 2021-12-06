@@ -2,8 +2,6 @@
 
 return [
 
-
-
     'email' => 'Email',
     'password'=>' Password',
     'sender_mother_name_en'=>'Sender Mother Name English',
@@ -54,8 +52,12 @@ return [
     'currency_id'=>'Currency',
     'series_id'=>'Prefix',
 
+
 'service_type_id'=>'Service Typeٍ',
-    ''
+
+
+    'service_type_id'=>'Service Typeٍ',
+
 
 
 

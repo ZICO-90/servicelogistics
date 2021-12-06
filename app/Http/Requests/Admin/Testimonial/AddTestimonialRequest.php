@@ -29,4 +29,15 @@ class AddTestimonialRequest extends FormRequest
             'description' => 'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => trans('Dashboard/messages.name.required'),
+            'name.min' => trans('Dashboard/messages.name.min'),
+            'email.required' => trans('Dashboard/messages.email.required'),
+            'email.email' => trans('Dashboard/messages.email.email'),
+            'description.required' => trans('Dashboard/messages.description.required'),
+        ];
+    }
 }

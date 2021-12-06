@@ -97,6 +97,22 @@ class Shipping extends Component
 //            'address_sender' => 'required'
 //
 //        ]);
+        $this->validate([
+            'email' => 'required|unique:customers,email,' . $this->id,
+            'password' => 'required',
+            'sender_mother_name' => 'required',
+            'sender_full_name' => 'required',
+            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
+            'sender_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+
+            'reciver_full_name' => 'required',
+            'reciver_mother_name' => 'required',
+            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
+            'reciver_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'address_reciver' => 'required',
+            'address_sender' => 'required'
+
+        ]);
 
         $this->currentStep = 2;
 
@@ -105,6 +121,19 @@ class Shipping extends Component
     public function secondStepSubmit()
     {
 
+
+        $this->validate([
+            'shipment_name' => 'required',
+            'amount' => 'required',
+            'price' => 'required',
+            'sender_date' => 'required',
+            'whieght' => 'required',
+            'type_id' => 'required',
+            'unit_id' => 'required',
+            'currency_id' => 'required',
+            'service_type_id' => 'required',
+            'expected_recived_date' => 'required',
+            'address_address' => 'required',
 
 //        $this->validate([
 //            'shipment_name' => 'required',

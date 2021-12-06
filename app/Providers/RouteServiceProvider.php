@@ -8,8 +8,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 
+
 class RouteServiceProvider extends ServiceProvider
 {
+
+   use \Mcamara\LaravelLocalization\Traits\LoadsTranslatedCachedRoutes;
     /**
      * The path to the "home" route for your application.
      *
@@ -40,6 +43,11 @@ class RouteServiceProvider extends ServiceProvider
      protected $admin_namespace = 'App\\Http\\Controllers\\Admin';
 
      protected $namespace = 'App\\Http\\Controllers';
+
+
+
+
+
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -53,7 +61,6 @@ class RouteServiceProvider extends ServiceProvider
             Route::prefix('api')
                 ->middleware('api')
                 ->namespace($this->namespace)
-
                 ->group(base_path('routes/api.php'));
 
             Route::middleware('web')

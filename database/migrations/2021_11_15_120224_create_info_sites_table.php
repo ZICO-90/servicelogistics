@@ -15,13 +15,11 @@ class CreateInfoSitesTable extends Migration
     {
         Schema::create('info_sites', function (Blueprint $table) {
             $table->id();
-            $table->string('en_title');
-            $table->string('ar_title');
+            $table->string('title');
             $table->string('logo');
             $table->string('email');
             $table->string('phone');
-            $table->string('en_day');
-            $table->string('ar_day');
+            $table->string('day');
             $table->string('open_time');
             $table->string('close_time');
             $table->string('facebook_url');

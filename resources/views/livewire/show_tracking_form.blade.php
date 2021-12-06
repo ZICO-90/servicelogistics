@@ -25,7 +25,11 @@
                 <div class="title-content mb-4 mb-sm-0">
                     <h4 class="mb-4">{{trans('Dashboard/trans_track.shipment_track')}}</h4>
                 </div>
+
                     <livewire:tracking/>
+
+                    <livewire:shipment />
+
 
 
 
@@ -46,8 +50,6 @@
 @section('js')
     @livewireScripts
     @toastr_js
-
-
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
     <script  type="text/javascript">

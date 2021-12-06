@@ -4,50 +4,58 @@
             <div class="level">
                 <div class="level-left">
                     <ul class="topbar-info ">
+                        @isset($infos)
+                            @foreach($infos as $info)
                         <li>
                             <a href="#">
                       <span class="icon">
                         <i class="icon-clock"></i>
-                      </span> Mon - Fri : 09:00 - 17:00 </a>
+                      </span> {{$info['day']}} | {{$info['open_time']}} - {{$info['close_time']}} </a>
                         </li>
                         <li>
-                            <a href="mailto:info@company.com">
+                            <a href="mailto:{{$info['email']}}">
                       <span class="icon">
                         <i class="icon-envelope"></i>
-                      </span> info@company.com </a>
+                      </span> {{$info['email']}} </a>
                         </li>
                         <li>
-                            <a href="tel:+66396847263">
+                            <a href="tel:{{$info['phone']}}">
                       <span class="icon">
                         <i class="icon-phone"></i>
-                      </span> +800-987-65-43 </a>
+                      </span> {{$info['phone']}} </a>
                         </li>
+                            @endforeach
+                        @endisset
                     </ul>
                 </div>
                 <!-- .level-left -->
                 <div class="level-right">
                     <ul class="header-menu-icons social">
+                        @isset($infos)
+                            @foreach($infos as $info)
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{$info['facebook_url']}}" target="_blank">
                       <span class="icon">
                         <i class="fab fa-facebook-f"></i>
                       </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{$info['twitter_url']}}" target="_blank">
                       <span class="icon">
                         <i class="fab fa-twitter"></i>
                       </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{$info['linkedin_url']}}" target="_blank">
                       <span class="icon">
                         <i class="fab fa-linkedin-in"></i>
                       </span>
                             </a>
                         </li>
+                            @endforeach
+                        @endisset
                     </ul>
                     <!-- .header-menu-icons -->
                     <!--- Start DropMenu Language --->
@@ -82,10 +90,14 @@
                 <div class="level-left">
                     <div id="header-logo" class="site-logo ">
                         <div id="logo-inner" class="site-logo-inner">
+                            @isset($infos)
+                                @foreach($infos as $info)
                             <a href="{{route('endUser.index')}}">
-                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('assetsEndUser/assets/images/logo/logo2.png')}}">
-                                <span class="logo-text">Logistics</span>
+                                <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{URL::asset('images/info-site/'.$info['logo'])}}">
+                                <span class="logo-text">{{$info['title']}}</span>
                             </a>
+                                @endforeach
+                            @endisset
                         </div>
                         <!-- #logo-inner -->
                     </div>

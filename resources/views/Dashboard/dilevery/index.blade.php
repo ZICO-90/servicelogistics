@@ -16,15 +16,15 @@
                         <div class="card mb-30">
                                 <div class="card-body">
                                     <div class="d-sm-flex justify-content-between align-items-center">
-                                        <h4 class="font-20">Extended Table</h4>
+                                        <h4 class="font-20"> {{trans('Dashboard\delivery.h4title')}} </h4>
 
                                        
                                     
                                             <!-- Dropdown Button -->
                                           <div class="dropdown-button mt-3 mt-sm-0">
-                                          <a href="{{ route('admin.delivery.create')}}" type="button" class="btn s_alert bg-warning-light text-warning mr-3 mr-sm-4 mb-10" id="type-warning">Add New</a>
+                                          <a href="{{ route('admin.delivery.create')}}" type="button" class="btn s_alert bg-warning-light text-warning mr-3 mr-sm-4 mb-10" id="type-warning"> {{trans('Dashboard\delivery.linkCreate')}}</a>
 
-                                          <a href="{{route('admin.delivery.record')}}" class="btn s_alert bg-info-light text-info mr-3 mr-sm-4 mb-10" id="type-info">View Record</a>
+                                          <a href="{{route('admin.delivery.record')}}" class="btn s_alert bg-info-light text-info mr-3 mr-sm-4 mb-10" id="type-info">{{trans('Dashboard\delivery.linkViewRecord')}}</a>
                                             </div>
                                          </div>
                                          <!-- End Dropdown Button  -->
@@ -35,7 +35,6 @@
                                  <div class="alert alert-success alert-block">
                                  <button type="button" class="close" data-dismiss="alert">×</button>
                                    <strong>{{ $message }}</strong>
-                                   <a href="{{route('admin.delivery.record')}}" >Click here to increase the display area</a>
 
                                  </div>
                                        @endif
@@ -54,15 +53,15 @@
                                     <table class="text-nowrap bg-white dh-table">
                                         <thead>
                                             <tr>
-                                                <th>icon</th>
-                                                <th>images </th>
-                                                <th>name </th>
-                                                <th>details  </th>
-                                                <th>title up  </th>
-                                                <th>title down  </th>
-                                                <th>active up </th>
-                                                <th>active down  </th>
-                                                <th>Actions</th>
+                                                <th>{{trans('Dashboard\delivery.icon')}}</th>
+                                                <th> {{trans('Dashboard\delivery.imgaes')}}</th>
+                                                <th>{{trans('Dashboard\delivery.nameServices')}}</th>
+                                                <th>{{trans('Dashboard\delivery.details')}}</th>
+                                                <th>{{trans('Dashboard\delivery.titleUp')}}</th>
+                                                <th>{{trans('Dashboard\delivery.titleSup')}}  </th>
+                                                <th>{{trans('Dashboard\delivery.activeUp')}} </th>
+                                                <th>{{trans('Dashboard\delivery.activeSup')}} </th>
+                                                <th>{{trans('Dashboard\delivery.actions')}}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -78,33 +77,21 @@
 
                                                 <td>
                                                     
-                                                    <ul>
-                                                        <li>{{$model-> ar_name}}<il>
-                                                        <li>{{$model-> en_name}}<il>
-                                                    </ul>
+                                                {{$model-> name}}
 
                                                 </td>
                                                 
                                         
                                                 <td>
-                                                     <ul>
-                                                        <li>{{$model-> ar_details}}<il>
-                                                        <li>{{$model-> en_details}}<il>
-                                                    </ul>
+                                                {{$model-> details}}
                                                 </td>
 
                                                 <td>
-                                                     <ul>
-                                                        <li>{{$model-> ar_title_Up}}<il>
-                                                        <li>{{$model-> en_title_Up}}<il>
-                                                    </ul>
+                                                {{$model-> title_main}}
                                                 </td>
 
                                                 <td>
-                                                     <ul>
-                                                        <li>{{$model-> ar_title_down}}<il>
-                                                        <li>{{$model-> en_title_down}}<il>
-                                                    </ul>
+                                                {{$model-> title_sup}}
                                                 </td>
 
                                               <td>
@@ -114,11 +101,11 @@
                                           
                                                <select style="width:100%" onchange="this.form.submit()" name="is_active">
                                                 
-                                                <option value="1" {{$model->is_active_limit == 1 ? 'disabled selected' : ''}} >enable</option>
-                                                <option value="0" {{$model->is_active_limit == 0 ? 'disabled selected' : ''}}>disbale</option>
+                                                <option value="1" {{$model->is_active_limit == 1 ? 'disabled selected' : ''}} >{{trans('Dashboard\delivery.Enable')}}</option>
+                                                <option value="0" {{$model->is_active_limit == 0 ? 'disabled selected' : ''}}>{{trans('Dashboard\delivery.Disbale')}}</option>
                                                 </select>
                                                   <br>
-                                                 <label class="{{$model->is_active_limit == 1 ? 'status-btn completed' :'status-btn un_paid' }}">{{ $model->is_active_limit == 1 ? "is active" :"un active" }}</label>
+                                                 <label class="{{$model->is_active_limit == 1 ? 'status-btn completed' :'status-btn un_paid' }}">{{ $model->is_active_limit == 1 ? trans('Dashboard\delivery.IsActive') : trans('Dashboard\delivery.UnActive') }}</label>
                                             </form>
                                                 </td>
 
@@ -131,17 +118,17 @@
                                           
                                                <select style="width:100%" onchange="this.form.submit()" name="is_active_section">
                                                 
-                                                <option value="1" {{$model->	is_active_section == 1 ? 'disabled selected' : ''}}>enable</option>
-                                                <option value="0" {{$model->	is_active_section == 0 ? 'disabled selected' : ''}}>disbale</option>
+                                                <option value="1" {{$model->	is_active_section == 1 ? 'disabled selected' : ''}}>{{trans('Dashboard\delivery.Enable')}}</option>
+                                                <option value="0" {{$model->	is_active_section == 0 ? 'disabled selected' : ''}}>{{trans('Dashboard\delivery.Disbale')}}</option>
                                                 </select>
                                                <br>
-                                               <label class="{{$model->is_active_section == 1 ? 'status-btn completed' :'status-btn un_paid' }}">{{ $model->is_active_section == 1 ? "is active" :"un active" }}</label>
+                                               <label class="{{$model->is_active_section == 1 ? 'status-btn completed' :'status-btn un_paid' }}">{{ $model->is_active_section == 1 ? trans('Dashboard\delivery.IsActive') : trans('Dashboard\delivery.UnActive') }}</label>
                                              </form>                                                
                                                 </td>
                                                 <td>
                                                                                 
-                        <a href="{{route('admin.delivery.edit',$model->id)}}" style="color: #FFC107;" class="Edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                        <a href="{{route('admin.delivery.destroy',$model->id)}}"  style="color: #E34724;" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        <a href="{{route('admin.delivery.edit',$model->id)}}" style="color: #FFC107;" class="Edit" title="{{trans('Dashboard\delivery.actionsEdit')}}" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        <a href="{{route('admin.delivery.destroy',$model->id)}}"  style="color: #E34724;" class="delete" title="{{trans('Dashboard\delivery.actionsDelete')}}" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                     
                                                 
                                                 </td>

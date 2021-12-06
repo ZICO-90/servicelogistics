@@ -42,17 +42,34 @@
 
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
-                    <li><a href="{{route('news.index')}}">latest news</a></li>
+                {{--
+                      <li><a href="{{route('news.index')}}">latest news</a></li>
                     <li><a href="{{route('news.create')}}">add news</a></li>
-
+ --}}
 
                 </ul>
+
 
             <li>
                 <a href="#">
                     <i class="icon_pencil"></i>
                     <span class="link-title">convention</span>
                 </a>
+
+                <li>
+                    <a href="#">
+                        <i class="icon_pencil"></i>
+                        <span class="link-title">convention</span>
+                    </a>
+
+                    <!-- Sub Menu -->
+                    <ul class="nav sub-menu">
+
+                        <li><a href="{{route('convention.index')}}">conventions</a></li>
+                        <li><a href="{{route('convention.create')}}">add convention</a></li>
+
+                    </ul>
+
 
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
@@ -67,24 +84,25 @@
             <li>
                 <a href="{{route('admin.delivery.index')}}">
                     <i class="icofont-mail-box"></i>
-                    <span class="link-title">logistics services</span>
+                    <span class="link-title">{{trans('Dashboard\delivery.logisticeServices')}}</span>
                 </a>
 
             </li>
             <li>
                 <a href="{{route('admin.employe.index')}}">
                     <i class="icofont-mail-box"></i>
-                    <span class="link-title">employes</span>
+                    <span class="link-title">{{trans('Dashboard\employe.linkTitle')}}</span>
                 </a>
 
             </li>
             <li>
                 <a href="{{route('admin.welcome.index')}}">
                     <i class="icofont-mail-box"></i>
-                    <span class="link-title">Settings welcome section</span>
+                    <span class="link-title">{{trans('Dashboard\WelcomeSection.linkTitle')}}</span>
                 </a>
 
             </li>
+
             <li>
                 <a href="">
                     <i class="icofont-wechat"></i>
@@ -105,11 +123,23 @@
 
             <li>
                 <a href="#">
+
+                    <i class="icofont-dollar-true"></i>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.prices')}}</span>
+                </a>
+
+            <li>
+                <a href="#">
+                    <i class="icofont-file-document"></i>
+                    <span class="link-title">invoice</span>
+                </a>
+            <li>
+
+                <a href="#">
                     <i class="icofont-contact-add"></i>
 
                     <span class="link-title">{{trans('Dashboard\trans_main_sidebar.InfoSite')}}</span>
                 </a>
-
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
                     <li>
@@ -127,6 +157,8 @@
                     <i class="icofont-contact-add"></i>
                     <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Testimonials')}}</span>
                 </a>
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
 
 
                 <!-- Sub Menu -->
@@ -139,6 +171,23 @@
                         <a href="{{route('admin.testimonial.unread')}}">{{trans('Dashboard\trans_main_sidebar.UnRead Testimonials')}}</a>
                     </li>
 
+                    <li><a href="{{route('admin.testimonial.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Testimonials')}}</a></li>
+                    <li><a href="{{route('admin.testimonial.unread')}}">{{trans('Dashboard\trans_main_sidebar.UnRead Testimonials')}}</a></li>
+
+                </ul>
+                <!-- End Sub Menu -->
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="icofont-contact-add"></i>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Partners')}}</span>
+                </a>
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
+
+                    <li><a href="{{route('admin.partner.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Partners')}}</a></li>
+                    <li><a href="{{route('admin.partner.create')}}">{{trans('Dashboard\trans_main_sidebar.Add New Partner')}}</a></li>
 
                 </ul>
                 <!-- End Sub Menu -->
@@ -276,6 +325,32 @@
             {{--<span class="link-title">Icons (Aniloan)</span>--}}
             {{--</a>--}}
             {{--</li>--}}
+                {{--<!-- Sub Menu -->--}}
+                {{--<ul class="nav sub-menu">--}}
+                    {{--<li><a href="pages/apps/project-manager/project.html">project status</a></li>--}}
+                    {{--<li><a href="pages/apps/project-manager/task-list.html">task list</a></li>--}}
+                    {{--<li><a href="pages/apps/project-manager/create-new.html">create new Board</a></li>--}}
+                {{--</ul>--}}
+                {{--<!-- End Sub Menu -->--}}
+            {{--</li>--}}
+            {{--<li>--}}
+                {{--<a href="#">--}}
+                    {{--<i class="icofont-files-stack"></i>--}}
+                    {{--<span class="link-title">file manager</span>--}}
+                {{--</a>--}}
+            <li class="nav-category">UI Elements</li>
+            <li>
+                <a href="pages/ui-elements/widget.html">
+                    <i class="icofont-magic-alt"></i>
+                    <span class="link-title">widgets</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icofont-brand-icofont"></i>
+                    <span class="link-title">Icons (Aniloan)</span>
+                </a>
+            </li>
 
             {{--<!-- Sub Menu -->--}}
             {{--<ul class="nav sub-menu">--}}

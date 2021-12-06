@@ -23,25 +23,25 @@
 <div class="col-12">
                             <div class="card mb-30">
                                 <div class="card-body pt-30">
-                                    <h4 class="font-20 ">Border Table</h4>
-                                    <a  href="{{route('admin.employe.create') }}" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</a>
+                                    <h4 class="font-20 ">{{trans('Dashboard\employe.h4title')}}</h4>
+                                    <a  href="{{route('admin.employe.create') }}" class="btn btn-info add-new"><i class="fa fa-plus"></i> {{trans('Dashboard\employe.linkCreate')}}</a>
                                 </div>
                                 <div class="table-responsive">
                                     <!-- Invoice List Table -->
                                     <table class="text-nowrap table-bordered dh-table">
                                         <thead>
                                             <tr>
-                                            <th>picture</th>
-                                                <th >Name</th>
+                                            <th>{{trans('Dashboard\employe.imgaes')}}</th>
+                                                <th >{{trans('Dashboard\employe.name')}}</th>
                                                 
-                                                <th>Country</th>
-                                                <th>city</th>
+                                                <th>{{trans('Dashboard\employe.Country')}}</th>
+                                                <th>{{trans('Dashboard\employe.city')}}</th>
                                                 
-                                                <th>Year</th>
-                                                <th>email</th>
-                                                <th>phone</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
+                                                <th>{{trans('Dashboard\employe.Year')}}</th>
+                                                <th>{{trans('Dashboard\employe.email')}}</th>
+                                                <th>{{trans('Dashboard\employe.phone')}}</th>
+                                                <th>{{trans('Dashboard\employe.Status')}}</th>
+                                                <th>{{trans('Dashboard\employe.Actions')}}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -54,30 +54,21 @@
 
                                                 <td>
                                                     
+                                                {{$model-> name}}
                                                 
-                                                    <ul>
-                                                        <li>{{$model-> ar_name}}<il>
-                                                        <li>{{$model-> en_name}}<il>
-                                                    </ul>
-                                            
                                             
                                             </td>
                                             
                                              
                                                 <td>
-                                                   
+                                                {{$model-> Country}}
 
-                                                    <ul>
-                                                        <li> {{$model-> ar_Country}}<il>
-                                                        <li>{{$model-> en_Country}}<il>
-                                                    </ul>
+                                                
                                                 
                                                 </td>
                                                 <td>
-                                                     <ul>
-                                                        <li> {{$model-> ar_city}}<il>
-                                                        <li>{{$model-> en_city}}<il>
-                                                     </ul>
+                                                {{$model-> city}}
+                         
                                                 </td>
                                                 
                                                 <td>{{$model-> age}}</td>
@@ -88,17 +79,17 @@
                                                 <a href="{{ route('admin.employe.activated' , ['id' => $model->id , 'bool' => $model-> is_active ])}}" 
                                                 class="btn btn-danger">
                                                 @if($model-> is_active == 1)
-                                                is active
+                                                {{trans('Dashboard\employe.Statusactviated')}}
                                                 @else
-                                                un active
+                                                {{trans('Dashboard\employe.StatusUnactviated')}}
                                                 @endif
 
                                                 </a>
                                                 </td>
                                                 <td>
                                                                                                            
-                        <a href="{{route('admin.employe.edit', $model-> id )}}" style="color: #FFC107;" class="Edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                        <a href="{{route('admin.employe.destroy', $model-> id )}}"  style="color: #E34724;" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        <a href="{{route('admin.employe.edit', $model-> id )}}" style="color: #FFC107;" class="Edit" title="{{trans('Dashboard\employe.actionsEdit')}}" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        <a href="{{route('admin.employe.destroy', $model-> id )}}"  style="color: #E34724;" class="delete" title="{{trans('Dashboard\employe.actionsDelete')}}" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
 
                                                 </td>
                                             </tr>

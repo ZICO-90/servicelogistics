@@ -12,7 +12,7 @@
 <div class="col-lg-12">
                             <!-- Base Horizontal Form With Icons -->
                             <div class="form-element py-30 multiple-column">
-                                <h4 class="font-20 mb-20">New Create</h4>
+                                <h4 class="font-20 mb-20">   {{trans('Dashboard\WelcomeSection.linkCreate')}}</h4>
                                 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -30,22 +30,22 @@
                                         @csrf
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">title (p) Arabic</label>
-                                                <input type="text" name="ar_title_p" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\WelcomeSection.ar_name_P')}}</label>
+                                                <input type="text" name="title_p[ar]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">title (h) Arabic</label>
-                                                <input type="text" name="ar_title_h" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\WelcomeSection.ar_name_h')}}</label>
+                                                <input type="text" name="title_h[ar]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
                                             
                                              <!-- Form Group -->
                                              <div class="form-group">
-                                                <label class="font-14 bold mb-2">title (span) Arabic</label>
-                                                <input type="text" name="ar_title_span" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\WelcomeSection.ar_name_span')}}</label>
+                                                <input type="text" name="title_span[ar]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
                                             
@@ -61,29 +61,25 @@
                                         <div class="col-lg-6">
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">title (p) English</label>
-                                                <input type="text" name="en_title_p" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">   {{trans('Dashboard\WelcomeSection.en_name_P')}}</label>
+                                                <input type="text" name="title_p[en]" class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">title (h) English</label>
-                                                <input type="text" name="en_title_h" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\WelcomeSection.en_name_h')}}</label>
+                                                <input type="text" name="title_h[en]" class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
 
                                               <!-- Form Group -->
                                               <div class="form-group">
-                                                <label class="font-14 bold mb-2">title (Span) English</label>
-                                                <input type="text" name="en_title_span" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\WelcomeSection.en_name_span')}}</label>
+                                                <input type="text" name="title_span[en]" class="theme-input-style" >
                                             </div>
                                             <!-- End Form Group -->
                                             
-                     
-
-                                       
-
                                         </div>
 
                                         
@@ -94,7 +90,7 @@
                                     <!-- Form Row -->
                                     <div class="form-row">
                                         <div class="col-12 text-right">
-                                            <button type="submit" class="btn long">Submit</button>
+                                            <button type="submit" class="btn long">{{trans('Dashboard\WelcomeSection.submitCreate')}}</button>
                                         </div>
                                     </div>
                                     <!-- End Form Row -->

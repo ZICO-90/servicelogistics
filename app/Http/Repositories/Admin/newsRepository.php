@@ -27,13 +27,15 @@ class newsRepository implements newsInterface
     }
     public function store($request)
     {
-        $data = $request->validated();
         if($request->photo != null)
         {
             $path = Storage::disk('public')->putFile('/news',$request->photo);
-            $data['photo']= $path;
         }
-            latest_news::create($data);
+            latest_news::create([
+                'title' => ['en' => $request->en_title, 'ar' => $request->ar_title],
+                'content' => ['en' => $request->en_content, 'ar' => $request->ar_content],
+                'photo' => $path
+            ]);
 
         return redirect()->route('news.index');
     }

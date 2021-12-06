@@ -14,9 +14,9 @@
         output.src = URL.createObjectURL(event.target.files[0]);
         output.onload = function () {
             URL.revokeObjectURL(output.src) // free memory
-        }
+        };
 
-    }
+    };
 
     function imgaesFile() {
 // Change Images in Choose File
@@ -25,10 +25,12 @@
       output.src = URL.createObjectURL(event.target.files[0]);
       output.onload = function () {
       URL.revokeObjectURL(output.src) // free memory
-     }
+     };
    
-    }
- </script>
+    };
+
+
+    </script>
 @endsection
 
 
@@ -36,7 +38,7 @@
 <div class="col-lg-12">
                             <!-- Base Horizontal Form With Icons -->
                             <div class="form-element py-30 multiple-column">
-                                <h4 class="font-20 mb-20">New Create</h4>
+                                <h4 class="font-20 mb-20">{{trans('Dashboard\delivery.linkCreate')}}</h4>
                                 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -54,29 +56,29 @@
                                         @csrf
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Name Arabic</label>
-                                                <input type="text" name="ar_name" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2"> {{trans('Dashboard\delivery.arname')}}</label>
+                                                <input type="text" name="name[ar]" class="theme-input-style" placeholder="Text Arabic">
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Other Details Arabic</label>
-                                                <input type="text" name="ar_details" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2"> {{trans('Dashboard\delivery.arDetails')}}</label>
+                                                <input type="text" name="details[ar]" class="theme-input-style" placeholder="Text Arabic">
                                             </div>
                                             <!-- End Form Group -->
 
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">title Up Arabic</label>
-                                                <input type="text" name="ar_title_Up" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.arTitleUp')}}</label>
+                                                <input type="text" name="title_main[ar]" class="theme-input-style" placeholder="Text Arabic">
                                             </div>
                                             <!-- End Form Group -->
 
                                               <!-- Form Group -->
                                               <div class="form-group">
-                                                <label class="font-14 bold mb-2">title down Arabic</label>
-                                                <input type="text" name="ar_title_down" class="theme-input-style" placeholder="Text Arabic">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.arTitleSup')}}</label>
+                                                <input type="text" name="title_sup[ar]" class="theme-input-style" placeholder="Text Arabic">
                                             </div>
                                             <!-- End Form Group -->
                                             
@@ -84,20 +86,15 @@
 
                                               <!-- Form Group -->
                                             <div class="form-group">
-                                            <label for="inputEmail4"> icon Preview</label>
+                                            <label for="inputEmail4"> {{trans('Dashboard\delivery.Fileicon')}}</label>
                                             <img id="icons" style="height:200;"   >
 
                                             </div>
                                                <!-- End Form Group -->
                                             
                                                <!-- Form Group -->
-                                        <div class="form-group">
-                                        
-                                                <label for="inputEmail4">Upload icon</label>
-                                                <input name="icons" type="file" id="image-File" onchange="iconsFile()" accept="image/*" />
-                                               
-
-    
+                                        <div class="form-group">      
+                                                <input name="icons" type="file" id="image-File" onchange="iconsFile()" accept="image/*" />     
                                         </div>
                                    <!-- End Form Group -->
 
@@ -107,29 +104,29 @@
                                         <div class="col-lg-6">
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Name English</label>
-                                                <input type="text" name="en_name" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.enname')}}</label>
+                                                <input type="text" name="name[en]" class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
                                             
                                             <!-- Form Group -->
                                             <div class="form-group">
-                                                <label class="font-14 bold mb-2">Other Details English</label>
-                                                <input type="text" name="en_details" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.enDetails')}}</label>
+                                                <input type="text" name="details[en]" class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
 
                                              <!-- Form Group -->
                                              <div class="form-group">
-                                                <label class="font-14 bold mb-2">title Up English</label>
-                                                <input type="text" name="en_title_Up" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.enTitleUp')}}</label>
+                                                <input type="text" name="title_main[en]" class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
 
                                              <!-- Form Group -->
                                              <div class="form-group">
-                                                <label class="font-14 bold mb-2">etitle down English</label>
-                                                <input type="text" name="en_title_down" class="theme-input-style" placeholder="Text English">
+                                                <label class="font-14 bold mb-2">{{trans('Dashboard\delivery.enTitleSup')}}</label>
+                                                <input type="text" name="title_sup[en]" class="theme-input-style" placeholder="Text English">
                                             </div>
                                             <!-- End Form Group -->
                                             
@@ -137,7 +134,7 @@
 
                                               <!-- Form Group -->
                                               <div class="form-group">
-                                            <label for="inputEmail4"> images Preview</label>
+                                            <label for="inputEmail4"> {{trans('Dashboard\delivery.Fileimages')}}</label>
                                             <img id="imgs" style="height:200;"   >
 
                                             </div>
@@ -145,9 +142,8 @@
                                             
                                                <!-- Form Group -->
                                         <div class="form-group">
-                                        
-                                                <label for="inputEmail4">Upload images</label>
-                                                <input name="imgs" type="file" id="image-File" onchange="imgaesFile()" accept="image/*" />
+                                               
+                                                <input name="imgs" type="file" id="image-File" title="ffffffffffffffff" onchange="imgaesFile()" accept="image/*" />
                                                 
     
                                         </div>
@@ -163,7 +159,7 @@
                                     <!-- Form Row -->
                                     <div class="form-row">
                                         <div class="col-12 text-right">
-                                            <button type="submit" class="btn long">Submit</button>
+                                            <button type="submit" class="btn long">{{trans('Dashboard\delivery.Supmit')}}</button>
                                         </div>
                                     </div>
                                     <!-- End Form Row -->

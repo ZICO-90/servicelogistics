@@ -42,7 +42,7 @@
                     <div class="col-12">
                         <div class="card mb-30">
                             <div class="card-body pt-30">
-                                <h4 class="font-20 ">View ALl Messages</h4>
+                                <h4 class="font-20 ">{{ucwords(trans('Dashboard/trans_price_order.View ALl Messages'))}}</h4>
                             </div>
                             <div class="table-responsive">
                                 @include('partials.session')
@@ -50,11 +50,11 @@
                                 <table class="text-nowrap table-bordered dh-table">
                                     <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Status</th>
-                                        <th>View</th>
-                                        <th>Action</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_price_order.Name'))}}</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_price_order.email'))}}</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_price_order.status'))}}</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_price_order.view'))}}</th>
+                                        <th>{{ucwords(trans('Dashboard/trans_price_order.actions'))}}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -66,18 +66,18 @@
                                                     <td>{{$message->email}}</td>
                                                     <td class="text-center">
                                                         @if($message->is_read == 0)
-                                                            <button type="button" class="status-btn on_hold">OnHold</button>
+                                                            <button type="button" class="status-btn on_hold">{{ucwords(trans('Dashboard/trans_price_order.OnHold'))}}</button>
                                                         @else
-                                                            <button type="button" class="status-btn completed">Approved</button>
+                                                            <button type="button" class="status-btn completed">{{ucwords(trans('Dashboard/trans_price_order.Approved'))}}</button>
                                                         @endif
                                                     </td>
-                                                    <td><a href="{{route('admin.priceOrder.show', $message->id)}}" class="details-btn">View Details <i class="icofont-arrow-right"></i></a></td>
+                                                    <td><a href="{{route('admin.priceOrder.show', $message->id)}}" class="details-btn">{{ucwords(trans('Dashboard/trans_price_order.View Details'))}} <i class="icofont-arrow-right"></i></a></td>
                                                     <td>
                                                         <form method="post" action="{{route('admin.priceOrder.destroy')}}">
                                                             @csrf
                                                             @method('DELETE')
                                                             <input type="hidden" name="message_id" value="{{$message->id}}">
-                                                            <a href="#"><button type="submit" class="status-btn un_paid">Delete</button></a>
+                                                            <a href="#"><button type="submit" class="status-btn un_paid">{{ucwords(trans('Dashboard/trans_price_order.delete'))}}</button></a>
                                                         </form>
                                                     </td>
 

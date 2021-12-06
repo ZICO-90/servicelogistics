@@ -26,6 +26,10 @@ return [
     'driver_stage'=>'Driver Stage',
     'warehouse_main'=>'Warehouse Officer Main',
     'warehouse_stage'=>'Warehouse Officer Stage',
-    'warehouse_track'=>'Warehouse Officer Track'
+    'warehouse_track'=>'Warehouse Officer Track',
+    'Partners' => 'Partners',
+    'Show All Partners' => 'Show All Partners',
+    'Add New Partner' => 'Add New Partner',
+
 
 ];
