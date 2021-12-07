@@ -82,10 +82,11 @@
                         <table class="text-nowrap bg-white dh-table">
                             <thead>
                                 <tr>
-                                    <th>{{trans('Dashboard/news.Title News')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                    <th>Content News <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                    <th>photo <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                    <th>Actions</th>
+                                    <th>{{trans('Dashboard\news.Title news')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th>{{trans('Dashboard\news.content news')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th>{{trans('Dashboard\news.photo')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th>{{trans('Dashboard\news.time news')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th>{{trans('Dashboard\news.actions')}}</th>
 
                                 </tr>
                             </thead>
@@ -94,10 +95,10 @@
 
 
                                 <tr>
-                                    <td>{{$news->en_title}}</td>
-                                    <td>{{$news->en_content}}</td>
+                                    <td>{{$news->title}}</td>
+                                    <td>{{$news->content}}</td>
                                     <td ><img src="{{('/storage/'.$news->photo)}}" style="width: 50px;height: 50px"></td>
-
+                                    <td>{{$news->created_at->diffForhumans()}}</td>
                                     <td>
 
                                         <!-- Icon edit-->

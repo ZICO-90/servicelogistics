@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "53e56769951e0a9bb4ffec1610e14355",
+=======
+    "content-hash": "ffdacf1e07ff765f289bd75859894619",
+>>>>>>> a66013b (edit)
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1519,6 +1523,7 @@
             "time": "2021-08-14T14:06:04+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "league/config",
             "version": "v1.1.1",
             "source": {
@@ -1610,6 +1615,17 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "league/flysystem",
+            "version": "1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "3ca8f158ee21efa4bbd4f74bea5730c9b9261e2d"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> a66013b (edit)
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3ca8f158ee21efa4bbd4f74bea5730c9b9261e2d",
                 "reference": "3ca8f158ee21efa4bbd4f74bea5730c9b9261e2d",
                 "shasum": ""

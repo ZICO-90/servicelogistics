@@ -4,6 +4,10 @@ return [
 
 
     'Main' => 'الرئيسية',
+    'news' => 'الاخبار',
+    'convention' => 'الاتفاقيات',
+    'add news' => 'اضافة خبر',
+    'add convention' => 'اضافه اتفاقيه',
     'Dashboard' => 'لوحة التحكم',
     'Shipping_list'=>'قائمة الشحنات',
     'Shipments'=>'الشحن',
@@ -18,7 +22,7 @@ return [
     'UnRead Testimonials' => 'عرض الرسائل الغير مقرؤة',
     'price_list'=>'قائمة الأسعار ',
     'add_price'=>'إضافة سعر ',
-    'prices'=>'الأسعار'
-
+    'prices'=>'الأسعار',
+    'message' => 'الرسائل',
 
 ];

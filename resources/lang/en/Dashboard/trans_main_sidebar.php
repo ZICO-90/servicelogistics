@@ -2,6 +2,10 @@
 
 return [
     'Main' => 'Main',
+    'news' => 'news',
+    'add news' => 'add news',
+    'convention' => 'convention',
+    'add convention' => 'add convention',
     'Dashboard' => 'Dashboard',
     'Shipping_list'=>'Shipping List',
     'Shipments'=>'Shipments',
@@ -16,7 +20,7 @@ return [
     'UnRead Testimonials' => 'UnRead Testimonials',
     'price_list'=>'Price List',
     'add_price'=>'Add Price',
-    'prices'=>'Prices'
-
+    'prices'=>'Prices',
+    'message' => 'message',
 
 ];

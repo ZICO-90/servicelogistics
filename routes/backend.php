@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Dashboard\DashboardController;
+
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\PriceController;
 
 /*
@@ -15,8 +17,8 @@ use App\Http\Controllers\Admin\PriceController;
 |
 */
 
-Route::get('/Dashboard_Admin', [DashboardController::class,'index']);
-Route::get('/empty_page', [DashboardController::class,'index']);
+Route::get('/Dashboard_Admin', [AdminHomeController::class,'index']);
+Route::get('/empty_page', [AdminHomeController::class,'index']);
 
 Route::group(
     [
@@ -51,9 +53,13 @@ Route::group(
         'prices' => PriceController::class,
     ]);
 
-    //route news and convention//////////
+    //route news , convention and contact//////////
         Route::resource('news', 'newsController');
         Route::resource('convention', 'conventionController');
+
+        Route::get('contacts','contactController@index')->name('contact.index');
+        Route::get('contact/{id}','contactController@show')->name('contact.show');
+        Route::get('contacts/{id}','contactController@destroy')->name('contact.destroy');
 
 
     ///////////////

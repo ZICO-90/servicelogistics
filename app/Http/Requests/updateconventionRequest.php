@@ -24,13 +24,11 @@ class updateconventionRequest extends FormRequest
     public function rules()
     {
         return [
-            'ar_title'=>'required|string|max:191',
-            'en_title'=>'required|string|max:191',
-            'ar_content'=>'required',
-            'en_content'=>'required',
+            'title.*'=>'required|string',
+            'content.*'=>'required',
             'customer'=>'required|string|max:191',
             'company'=>'required|string|max:191',
-            'photo'=>'nullable|',
+            'photo'=>'nullable',
         ];
     }
 }

@@ -34,31 +34,6 @@
                 <!-- End Sub Menu -->
             </li>
 
-            <li>
-                <a href="#">
-                    <i class="icon_document_alt"></i>
-                    <span class="link-title">news</span>
-                </a>
-
-                <!-- Sub Menu -->
-                <ul class="nav sub-menu">
-                    <li><a href="{{route('news.index')}}">latest news</a></li>
-                    <li><a href="{{route('news.create')}}">add news</a></li>
-
-
-                </ul>
-
-                <li>
-                    <a href="#">
-                        <i class="icon_pencil"></i>
-                        <span class="link-title">convention</span>
-                    </a>
-
-                    <!-- Sub Menu -->
-                    <ul class="nav sub-menu">
-                        <li><a href="{{route('convention.index')}}">conventions</a></li>
-                        <li><a href="{{route('convention.create')}}">add convention</a></li>
-                    </ul>
 
 
 
@@ -66,6 +41,39 @@
                 <!-- End Sub Menu -->
 
             <li class="nav-category">apps</li>
+
+            <li>
+                <a href="#">
+                    <i class="icon_document_alt"></i>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.news')}}</span>
+                </a>
+
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
+                    <li><a href="{{route('news.index')}}">{{trans('Dashboard\trans_main_sidebar.news')}}</a></li>
+                    <li><a href="{{route('news.create')}}">{{trans('Dashboard\trans_main_sidebar.add news')}}</a></li>
+
+
+                </ul>
+
+            <li>
+                <a href="#">
+                    <i class="icon_pencil"></i>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.convention')}}</span>
+                </a>
+
+                <!-- Sub Menu -->
+                <ul class="nav sub-menu">
+                    <li><a href="{{route('convention.index')}}">{{trans('Dashboard\trans_main_sidebar.convention')}}</a></li>
+                    <li><a href="{{route('convention.create')}}">{{trans('Dashboard\trans_main_sidebar.add convention')}}</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{route('contact.index')}}">
+                    <i class="icofont-wechat"></i>
+                    <span class="link-title">{{trans('Dashboard\trans_main_sidebar.message')}}</span>
+                </a>
+
             <li>
                 <a href="{{route('admin.delivery.index')}}">
                     <i class="icofont-mail-box"></i>

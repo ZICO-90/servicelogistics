@@ -9,8 +9,12 @@ return[
     'create'=> 'create',
     'Title news' => 'Title news',
     'content news' => 'content news',
-    'action' => 'action',
+    'actions' => 'actions',
     'news' => 'news',
     'news Table' => 'news Table',
+    'Add news' =>'Add news',
+    'edit news' => 'edit news',
+    'update' => 'update',
+    'time news' => 'time news',
 
 ];

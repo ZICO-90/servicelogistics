@@ -8,6 +8,8 @@ use App\Models\SWelcomeTitle;
 use App\Models\employe;
 use App\Http\Traits\InfoSiteTrait;
 use App\Models\InfoSite;
+use App\Models\latest_news;
+use App\models\convention;
 
 class EndUserHomeRepository implements EndUserHomeInterface
 {
@@ -16,13 +18,18 @@ class EndUserHomeRepository implements EndUserHomeInterface
     private $dileveryModel;
     private $employeModel;
     private $sectionModel;
+    private $latest_newsModel;
+    private $convention;
 
-    public function __construct(InfoSite $infoSite, DeliveryType $delivery , SWelcomeTitle $section , employe $employe)
+    public function __construct(InfoSite $infoSite, DeliveryType $delivery , SWelcomeTitle $section ,
+            employe $employe ,latest_news $latest_news ,convention $convention)
     {
         $this->infoSiteModel = $infoSite;
         $this->dileveryModel  =  $delivery ;
         $this->sectionModel  =  $section ;
         $this->employeModel  =  $employe ;
+        $this->latest_newsModel = $latest_news;
+        $this->convention = $convention;
     }
 
     public function homePage()
@@ -32,7 +39,9 @@ class EndUserHomeRepository implements EndUserHomeInterface
         $Welcome =  $this->dileveryModel::where('is_active_section' , 1)->get();
         $sectionTitle =   $this->sectionModel::where('is_active' , 1)->first();
         $employe =   $this->employeModel::where('is_active' , 1)->first();
-        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe'));
+        $news = $this->latest_newsModel::Where('is_active' , 1)->latest()->first();
+        $convention =$this->convention::Where('is_active' , 1)->latest()->first();
+        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe' ,'news' ,'convention'));
 
     }
 

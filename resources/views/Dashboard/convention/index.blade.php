@@ -49,7 +49,7 @@
                 <div class="card mb-30">
                     <div class="card-body">
                         <div class="d-sm-flex justify-content-between align-items-center">
-                            <h4 class="font-20">conventions Table</h4>
+                            <h4 class="font-20">{{trans('Dashboard\convention.conventions Table')}}</h4>
 
                             <div class="d-flex flex-wrap">
                                 <!-- Date Picker -->
@@ -82,12 +82,13 @@
                         <table class="text-nowrap bg-white dh-table">
                             <thead>
                                 <tr>
-                                    <th>Title convention <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                    <th>Content convention <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                    <th>customer <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                    <th>company<img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                     <th>photo convetion <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                                    <th>Actions</th>
+                                    <th> {{trans('Dashboard\convention.Title convention')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th style="width: 300 px;">{{trans('Dashboard\convention.Content convention')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th>{{trans('Dashboard\convention.customer')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th>{{trans('Dashboard\convention.company')}}<img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                     <th>{{trans('Dashboard\convention.photo convention')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th>{{trans('Dashboard\convention.time convention')}} <img src="/dashboard/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                                    <th>{{trans('Dashboard\convention.Actions')}}</th>
 
                                 </tr>
                             </thead>
@@ -96,14 +97,14 @@
 
 
                                 <tr>
-                                    <td>{{$conv->en_title}}</td>
-                                    <td>{{$conv->en_content}} </td>
+                                    <td>{{$conv->title}}</td>
+                                    <td>{{$conv->content}} </td>
                                     <td>{{$conv->customer}}</td>
-                                    <td>{{$conv->company}}</td>
+                                    <td style="width: 300 px;">{{$conv->company}}</td>
                                     <td >
                                     <img  style="width: 70px; height: 70px;"src="{{('/storage/'.$conv->photo)}}" >
                                     </td>
-
+                                    <td>{{$conv->created_at->diffForhumans()}}</td>
                                     <td>
 
                                         <!-- Icon edit-->
