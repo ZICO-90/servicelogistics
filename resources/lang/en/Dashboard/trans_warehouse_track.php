@@ -15,8 +15,7 @@ return [
     'close'=>' Cancel',
     'delete'=>'Delete',
     'notes'=>'Notes',
-    'submit'=>'Save',
-    'close'=>' Close'
+
 
 
 

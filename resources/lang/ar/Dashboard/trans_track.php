@@ -12,7 +12,7 @@ return [
     'full_number'=>'رقم الشحنة',
     'location_now'=>'مكان الشحنة',
     'outcomming_date'=>'تاريخ التخريخ',
-    'submit'=>'حفظ',
+
     'close'=>'إلغاء الأمر',
     'delete'=>'حذف',
     'desc'=>'وصف الحالة',

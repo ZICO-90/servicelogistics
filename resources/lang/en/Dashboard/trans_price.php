@@ -17,10 +17,8 @@ return [
     'wheight'=>'Wheight',
     'Delete'=>'Delete',
     'Edit'=>'Edit',
-    'submit'=>'Submit',
-    'close'=>'Close',
     'delete_price'=>' Delete Price',
     'update_price'=>' Update Price',
-    'price'=>'Price'
+
 
 ];

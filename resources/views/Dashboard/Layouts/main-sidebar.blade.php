@@ -675,8 +675,10 @@
             {{--</a>--}}
             {{--</li>--}}
             {{--<li class="nav-category">Support</li>--}}
+
         </ul>
         <!-- End Nav -->
+
     </div>
     <!-- End Sidebar Body -->
 </nav>

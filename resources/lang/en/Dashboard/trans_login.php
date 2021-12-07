@@ -17,7 +17,7 @@ return [
     'SignUp'=>'Sign Up',
     'If_you_have_no_account'=>'If you have no account',
     ''=>'',
-    ''=>'',
+
 
 
 

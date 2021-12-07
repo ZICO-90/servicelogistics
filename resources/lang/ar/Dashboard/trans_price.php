@@ -9,10 +9,7 @@ return [
     'unit_id'=>'الوحدة القياسية',
     'service_type_id'=>'نوع الخدمة',
     'currency_id'=>'العملة',
-    'distance'=>'المسافة',
-    'price'=>'السعر',
-    'close'=>'اغلاق',
-    'submit'=>'حفظ',
+
     'Processes'=>'العمليات',
     'wheight'=>'الوزن',
     'Delete'=>'حذف',
