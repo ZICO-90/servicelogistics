@@ -21,11 +21,7 @@ class AdminLoginRequest extends FormRequest
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
+
     public function rules()
     {
         return [
@@ -34,13 +30,7 @@ class AdminLoginRequest extends FormRequest
         ];
     }
 
-    /**
-     * Attempt to authenticate the request's credentials.
-     *
-     * @return void
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
+
     public function authenticate()
     {
         $this->ensureIsNotRateLimited();

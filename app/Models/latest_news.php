@@ -10,7 +10,12 @@ class latest_news extends Model
 {
     use HasFactory;
     use HasTranslations;
+
     public $translatable = ['title','content'];
+
+
+    public $translatable = ['title', 'content'];
+
     protected $fillable = [
         'title',
         'content',

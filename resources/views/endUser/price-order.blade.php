@@ -6,20 +6,20 @@
         <div class="container">
             <div class="columns is-variable is-2 is-multiline">
                 <div class="column is-6-desktop is-12-tablet" data-aos="fade">
-                    <h1 class="heading-title style-3 has-text-left"> طلب
-                        <span class="has-text-primary">عرض أسعار</span>
+                    <h1 class="heading-title style-3 has-text-left"> {{ucwords(trans('front/trans_price-order.request a'))}}
+                        <span class="has-text-primary">{{ucwords(trans('front/trans_price-order.quote'))}}</span>
                     </h1>
-                    <p class="heading-title-bottom">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى حيث يمكنك أن تولد.</p>
+                    <p class="heading-title-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla chronocrator accumsan, metus ultrices eleifend gravi.</p>
                     <!-- successful form message -->
                     <div class="overhang-message-content is-hidden success">
                       <span class="icon">
                         <i class="ion-md-notifications"></i>
-                      </span> شكرا جزيلا! لقد تم ارسال رسالتك بنجاح. </div>
+                      </span> Thank You! Your message was sent successfully. </div>
                     <!-- error form message -->
                     <div class="overhang-message-content is-hidden error">
                       <span class="icon">
                         <i class="ion-md-notifications"></i>
-                      </span> ! حدث خطأ ما ، لم نتمكن من إرسال رسالتك. </div>
+                      </span> Oops! Something went wrong, we couldn't send your message. </div>
                     <!-- ajax contact form -->
                     <form accept-charset="UTF-8" action="{{route('admin.priceOrder.store')}}" method="POST">
                         @csrf
@@ -27,7 +27,7 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control is-expanded">
-                                        <input class="input" type="text" name="name" placeholder="الإسم" required value="{{old('name')}}">
+                                        <input class="input" type="text" name="name" placeholder="{{ucwords(trans('front/trans_price-order.Name'))}}" required value="{{old('name')}}">
                                         @error('name')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -36,7 +36,7 @@
                                 <!-- .field -->
                                 <div class="field">
                                     <div class="control is-expanded">
-                                        <input class="input" type="email" name="email" placeholder="الإيميل" required="" value="{{old('email')}}">
+                                        <input class="input" type="email" name="email" placeholder="{{ucwords(trans('front/trans_price-order.Email'))}}" required="" value="{{old('email')}}">
                                         @error('email')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -50,7 +50,7 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control is-expanded">
-                                        <input class="input" type="text" name="address" placeholder="العنوان" required="" value="{{old('address')}}">
+                                        <input class="input" type="text" name="address" placeholder="{{ucwords(trans('front/trans_price-order.Address'))}}" required="" value="{{old('address')}}">
                                         @error('address')
                                         <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                         @enderror
@@ -61,10 +61,10 @@
                                     <div class="control is-expanded">
                                         <div class="select">
                                             <select name="select">
-                                                <option value="air">الشحن الجوي</option>
-                                                <option value="land"> النقل البري</option>
-                                                <option value="sea">  الشحن البحري</option>
-                                                <option value="storage">التخزين</option>
+                                                <option value="air">{{ucwords(trans('front/trans_price-order.Air Freight'))}}</option>
+                                                <option value="land">{{ucwords(trans('front/trans_price-order.Land Transport'))}}</option>
+                                                <option value="sea">{{ucwords(trans('front/trans_price-order.Ocean Freight'))}}</option>
+                                                <option value="storage">{{ucwords(trans('front/trans_price-order.Warehousing'))}}</option>
                                             </select>
                                             @error('select')
                                             <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="field ">
                             <div class="control is-expanded">
-                                <textarea class="textarea" name="message" placeholder="رسالتك" required="">{{old('message')}}</textarea>
+                                <textarea class="textarea" name="message" placeholder="{{ucwords(trans('front/trans_price-order.Message'))}}" required="">{{old('message')}}</textarea>
                                 @error('message')
                                 <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
                                 @enderror
@@ -86,7 +86,7 @@
                         </div>
                         <div class="field ">
                             <div class="control">
-                                <button class="button" type="submit">اطلب الآن</button>
+                                <button class="button" type="submit">{{ucwords(trans('front/trans_price-order.request a quote'))}}</button>
                             </div>
                         </div>
                     </form>

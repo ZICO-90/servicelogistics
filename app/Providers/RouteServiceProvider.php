@@ -8,8 +8,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 
+
 class RouteServiceProvider extends ServiceProvider
 {
+
+   use \Mcamara\LaravelLocalization\Traits\LoadsTranslatedCachedRoutes;
     /**
      * The path to the "home" route for your application.
      *
@@ -20,6 +23,11 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/dashboard/user';
 
     public const ADMIN = '/dashboard/admin';
+    public const DRIVER = '/dashboard/driver';
+
+    public const SCANNER = '/dashboard/scanner';
+    public const WAREHOUSE = '/dashboard/warehouse';
+
 
 
 
@@ -31,8 +39,13 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string|null
      */
+//     protected $namespace = 'App\\Http\\Controllers';
+     protected $admin_namespace = 'App\\Http\\Controllers\\Admin';
+
      protected $namespace = 'App\\Http\\Controllers';
-     protected $admin_namespace = 'App\\Http\\Controllers\\admin';
+
+
+
 
 
     /**

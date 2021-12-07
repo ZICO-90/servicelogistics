@@ -41,5 +41,10 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function tracks()
+    {
+        return $this->morphMany(TrackingShipment::class, 'tranckable');
+    }
     
 }

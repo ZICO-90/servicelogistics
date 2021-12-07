@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Interfaces\Admin\PriceInterface;
 use Illuminate\Http\Request;
+use App\Http\Requests\PriceRequest;
 
 class PriceController extends Controller
 {
@@ -16,7 +17,7 @@ class PriceController extends Controller
     }
     public function index()
     {
-        return$this->price->all_prices();
+        return $this->price->all_prices();
     }
 
 
@@ -26,7 +27,7 @@ class PriceController extends Controller
     }
 
 
-    public function store(PriceRequest $request)
+    public function store(Request $request)
     {
         return $this->price->store_price($request);
     }
@@ -50,7 +51,7 @@ class PriceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(PriceRequest $request)
+    public function update(Request $request)
     {
         return $this->price->update_price($request);
     }

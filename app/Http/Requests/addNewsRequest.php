@@ -25,8 +25,14 @@ class addNewsRequest extends FormRequest
     public function rules()
     {
         return [
+
             'title.*'=>'required|string',
             'content.*'=>'required',
+
+            'ar_title'=>'required|string',
+            'en_title'=>'required|string',
+            'ar_content'=>'required',
+            'en_content'=>'required',
             'photo'=>'required|image|mimes:jpeg,png,jpg,gif,svg'
 
         ];

@@ -26,4 +26,10 @@ class UpdateInfoSiteRequest extends FormRequest
     {
         return array_merge(InfoSite::rule(), ['info_id' => 'required|exists:info_sites,id', 'logo' => 'mimes:png,jpg,jpeg,webp']);
     }
+
+    public function messages()
+    {
+        return (new AddInfoSiteRequest)->messages();
+    }
+
 }

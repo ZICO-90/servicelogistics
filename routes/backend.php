@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -17,8 +18,12 @@ use App\Http\Controllers\Admin\PriceController;
 |
 */
 
+
 Route::get('/Dashboard_Admin', [AdminHomeController::class,'index']);
 Route::get('/empty_page', [AdminHomeController::class,'index']);
+
+Route::get('/Dashboard_Admin', [DashboardController::class,'index']);
+//Route::get('/empty_page', [DashboardController::class,'index']);
 
 Route::group(
     [
@@ -31,6 +36,20 @@ Route::group(
     })->middleware(['auth'])->name('dashboard.user');
 
 
+    Route::get('/dashboard/scanner', function () {
+        return view('Dashboard.Scanner.index');
+    })->middleware(['auth:scanner'])->name('dashboard.scanner');
+
+
+    Route::get('/dashboard/driver', function () {
+        return view('Dashboard.Driver.index');
+    })->middleware(['auth:driver'])->name('dashboard.driver');
+
+    Route::get('/dashboard/warehouse', function () {
+        return view('Dashboard.WarehousingOfficer.index');
+    })->middleware(['auth:warehousing_officer'])->name('dashboard.warehouse');
+
+
     Route::get('/dashboard/admin', function () {
         return view('Dashboard.Admin.index');
     })->middleware(['auth:admin'])->name('dashboard.admin');
@@ -40,22 +59,55 @@ Route::group(
     });
 
 
-    Route::view('Add_shipment','Livewire.show_form');
+
+
+    Route::get('/users', [UserController::class, 'index']);
+
+        Route::group(['middleware' => 'auth:web'], function() {
+            Route::view('Add_shipment','Livewire.show_shipping_form');
+
+            Route::view('show_tracking','Livewire.show_tracking_form');
+
+    });
 
 
 
+    Route::group(['middleware' => 'auth:admin'], function() {
 
-    Route::view('Add_shipment','Livewire.show_form');
+        Route::resource('admins_tracks', 'AdminTrackController');
 
-//    ////////Price route///////
+        Route::resource('prices' , 'PriceController');
 
-    Route::resources([
-        'prices' => PriceController::class,
-    ]);
+    });
+
+
+    Route::group(['middleware' => 'auth:scanner'], function() {
+
+        Route::resource('scanner_tracks', 'ScannerTrackController');
+    });
+
+    Route::group(['middleware' => 'auth:driver'], function() {
+
+        Route::resource('drivers_tracks', 'DriverTrackController');
+    });
+
+
+    Route::group(['middleware' => 'auth:warehousing_officer'], function() {
+
+        Route::resource('warehouse_tracks', 'WarehouseTrackController');
+    });
+
+
+
+//route news and convention//////////
+    Route::resource('news', 'newsController');
+    Route::resource('convention', 'conventionController');
+
 
     //route news , convention and contact//////////
         Route::resource('news', 'newsController');
         Route::resource('convention', 'conventionController');
+
 
         Route::get('contacts','contactController@index')->name('contact.index');
         Route::get('contact/{id}','contactController@show')->name('contact.show');
@@ -65,5 +117,6 @@ Route::group(
     ///////////////
     require __DIR__.'/auth.php';
 });
+
 
 

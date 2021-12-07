@@ -24,13 +24,9 @@ class UpdateWelcomeSectionRequest extends FormRequest
     public function rules()
     {
         return [
-            'ar_title_p' =>'required|string|min:5|max:60' ,
-            'en_title_p'=>'required|string|min:5|max:60',
- 
-            'ar_title_h'=>'required|string|max:150',
-            'en_title_h'=>'required|string|max:150',
-            'ar_title_span' => 'nullable|string|max:60',
-            'en_title_span' => 'nullable|string|max:60'
+            'title_p.*' =>'required|string|min:5|max:100' ,
+            'title_h.*'=>'required|string|max:150',
+            'title_span.*' => 'nullable|string|max:60'
         ];
     }
 }

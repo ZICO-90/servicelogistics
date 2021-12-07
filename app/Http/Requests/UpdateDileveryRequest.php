@@ -24,14 +24,13 @@ class UpdateDileveryRequest extends FormRequest
     public function rules()
     {
         return [
-            'ar_name'=>'required|string|min:7|max:30|unique:delivery_types,ar_name,'.$this->get('shipmentId'),
-            'en_name'=>'required|string|min:7|max:40|unique:delivery_types,en_name,'.$this->get('shipmentId'),
-            'ar_details'=>'required|string|min:30',
-            'en_details'=>'required|string|min:30',
-            'ar_title_Up'=>'required|string|min:5|max:20',
-            'en_title_Up'=>'required|string|min:5|max:20',
-            'ar_title_down'=>'required|string||min:10|max:100',
-            'en_title_down'=>'required|string||min:10|max:100',
+            'name.*'=>'required|string|unique_translation:delivery_types,name,'.$this->get('shipmentId'),
+           
+             'details.*'=>'required|string|min:10',
+    
+            'title_main.*'=>'required|string|min:5',
+       
+            'title_sup.*'=>'required|string|min:5',
     
             'icons'=>'nullable',
             'omgs'=>'nullable',

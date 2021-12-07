@@ -43,7 +43,7 @@
                         <div class="card mb-30">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
-                                    <h4 class="font-20">Testimonials</h4>
+                                    <h4 class="font-20">{{ucwords(trans('Dashboard/trans_testimonials.Message'))}}</h4>
 
                                     <div class="d-flex flex-wrap">
                                         <!-- Date Picker -->
@@ -64,10 +64,10 @@
                                 <table class="text-nowrap bg-white dh-table">
                                     <thead>
                                     <tr>
-                                        <th>Name <img src="{{URL::asset('assetsEndUser/assets/img/svg/table-down-arrow.svg')}}" alt="" class="svg"></th>
-                                        <th>Email <img src="{{URL::asset('assetsEndUser/assets/img/svg/table-down-arrow.svg')}}" alt="" class="svg"></th>
-                                        <th>Message <img src="{{URL::asset('assetsEndUser/assets/img/svg/table-down-arrow.svg')}}" alt="" class="svg"></th>
-                                        <th>Approve <img src="{{URL::asset('assetsEndUser/assets/img/svg/table-down-arrow.svg')}}" alt="" class="svg"></th>
+                                        <th>{{ucwords(trans('Dashboard/trans_testimonials.Name'))}} <img src="{{URL::asset('assetsEndUser/assets/img/svg/table-down-arrow.svg')}}" alt="" class="svg"></th>
+                                        <th>{{ucwords(trans('Dashboard/trans_testimonials.email'))}} <img src="{{URL::asset('assetsEndUser/assets/img/svg/table-down-arrow.svg')}}" alt="" class="svg"></th>
+                                        <th>{{ucwords(trans('Dashboard/trans_testimonials.Message'))}} <img src="{{URL::asset('assetsEndUser/assets/img/svg/table-down-arrow.svg')}}" alt="" class="svg"></th>
+                                        <th>{{ucwords(trans('Dashboard/trans_testimonials.Approve'))}} <img src="{{URL::asset('assetsEndUser/assets/img/svg/table-down-arrow.svg')}}" alt="" class="svg"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -80,7 +80,7 @@
                                                 @csrf
                                                 @method('PUT')
                                                 <input type="hidden" name="testimonial_id" value="{{$testimonial->id}}">
-                                                <button type="submit" class="status-btn completed">Approve</button>
+                                                <button type="submit" class="status-btn completed">{{ucwords(trans('Dashboard/trans_testimonials.Approve'))}}</button>
                                             </form>
 
                                         </td>

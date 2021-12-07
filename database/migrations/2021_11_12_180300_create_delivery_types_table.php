@@ -16,10 +16,9 @@ class CreateDeliveryTypesTable extends Migration
         Schema::create('delivery_types', function (Blueprint $table) {
             $table->id();
             //standard attribute
-            $table->string('ar_name')->unique();
-            $table->string('en_name')->unique();
-            $table->text('ar_details');
-            $table->text('en_details');
+            $table->string('name')->unique();          
+            $table->longText('details');
+
             $table->string('icon_url');
             //settings attribute
             $table->string('img_url');

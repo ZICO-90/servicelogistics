@@ -20,8 +20,12 @@ class DatabaseSeeder extends Seeder
             CurrencySeeder::class,
             SeriesSeeder::class,
             UnitSeeder::class,
+            DriverSeeder::class,
+            ScannerSeeder::class,
+            WarehouseSeeder::class,
             ServiceTypeSeeder::class,
             ShippingMaterialTypeSeeder::class,
+            TrackingStageSeeder::class,
         ]);
     }
 }

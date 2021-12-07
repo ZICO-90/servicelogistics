@@ -31,13 +31,12 @@
 <!-- lobilist -->
 <script src="{{ URL::asset('Dashboard/js/lobilist.js') }}"></script>
 <!-- custom -->
-<script src="{{ URL::asset('Dashboard/js/custom.js') }}"></script>
+<script src="{{ URL::asset('Dashboard/js/custom.project.management.js') }}"></script>
 
 <script src="{{ URL::asset('Dashboard/js/bootstrap-datatable/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ URL::asset('Dashboard/js/bootstrap-datatables/jquery.dataTables.min.js') }}"></script>
 
-<script src="{{ URL::asset('Dashboard/js/bootstrap-datatable/bootstrap-datatables.js') }}"></script>
-<script src="{{ URL::asset('Dashboard/js/bootstrap-datatables/jquery.dataTables.min.js') }}"></script>
+
 <script src="{{URL::asset('Dashboard/plugins/dropzone/dropzone.min.js')}}"></script>
 <script src="{{URL::asset('Dashboard/plugins/dropzone/dropzone.custom.js')}}"></script>
 

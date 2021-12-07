@@ -16,12 +16,12 @@ class CreateSWelcomeTitlesTable extends Migration
         Schema::create('s_welcome_titles', function (Blueprint $table) {
             $table->id();
             //name for tags
-            $table->string('ar_title_p'); // <p>   
-            $table->string('en_title_p');     
-            $table->string('ar_title_h');  // <h1> 
-            $table->string('en_title_h');   
-            $table->string('ar_title_span'); // <span> 
-            $table->string('en_title_span');  
+            $table->string('title_p'); // <p>   
+             
+            $table->string('title_h');  // <h1> 
+               
+            $table->string('title_span'); // <span> 
+            
             $table->boolean('is_active')->default(0); // control in disblay
             $table->timestamps();
         });

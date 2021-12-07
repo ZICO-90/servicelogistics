@@ -15,6 +15,7 @@ class CreatePricesTable extends Migration
     {
         Schema::create('prices', function (Blueprint $table) {
             $table->id();
+
             $table->unsignedBigInteger('material_type_id');
             $table->foreign('material_type_id')->references('id')
                 ->on('shipping_material_types')->cascadeOnDelete()->cascadeOnUpdate();
@@ -25,15 +26,18 @@ class CreatePricesTable extends Migration
                 ->on('service_types')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->decimal('distance');
+
             $table->unsignedBigInteger('unit_id');
             $table->foreign('unit_id')->references('id')
                 ->on('units');
 
             $table->decimal('wheight');
             $table->decimal('price');
+
             $table->unsignedBigInteger('currency_id');
             $table->foreign('currency_id')->references('id')
                 ->on('curencies');
+
             $table->timestamps();
         });
     }

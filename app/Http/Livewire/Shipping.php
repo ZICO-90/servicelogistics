@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Livewire;
-
-
 use App\Models\Customer;
 use App\Models\Price;
 use App\Models\Series;
 use App\Models\ShipmentAttachment;
+use App\Models\TrackingStage;
 use Livewire\Component;
 use App\Models\Curency;
 use App\Models\Unit;
@@ -17,7 +16,7 @@ use App\Models\ServiceType;
 use Illuminate\Support\Facades\Hash;
 use Livewire\WithFileUploads;
 
-class Shipments extends Component
+class Shipping extends Component
 {
 
     use WithFileUploads;
@@ -25,15 +24,17 @@ class Shipments extends Component
 //customer_details
     public $currentStep = 1;
     public $updateMode = false, $catchError, $successMessage = '',
-        $show_table = true, $shipments, $showformadd, $firstStepSubmit_edit;
+        $show_table = true, $shipments, $showformadd, $firstStepSubmit_edit, $firstStepSubmit;
 
-    public $email, $password, $sender_mother_name, $sender_full_name, $reciver_full_name, $reciver_mother_name;
+    public $email, $password, $sender_mother_name_en, $sender_full_name_en, $reciver_full_name_en, $reciver_mother_name_en;
+    public $sender_mother_name_ar, $sender_full_name_ar, $reciver_full_name_ar, $reciver_mother_name_ar;
+
     public $sender_national_id, $sender_phone, $address_sender, $reciver_national_id, $reciver_phone, $address_reciver;
 //shipment_details
-    public $shipment_num, $shipment_name, $amount, $curencie_types, $price, $sender_date, $expected_recived_date, $type_id, $unit_id,
+    public $shipment_num, $shipment_name_ar, $shipment_name_en, $amount, $curencie_types, $price, $sender_date, $expected_recived_date, $type_id, $unit_id,
         $costumer_id, $whieght, $sender_address_address, $sender_address_latitude, $sender_address_longitude, $reciver_address_address,
         $reciver_address_latitude, $reciver_address_longitude, $unit, $address_address, $address_latitude, $address_longitude;
-    public $materia_types, $customer_id, $series_id, $currency_id, $service_type_id;
+    public $materia_types, $customer_id, $series_id, $currency_id, $service_type_id, $tracking_stage_id;
     public $SecondStepEdit, $secondStepSubmit;
 
     public $photos;
@@ -44,22 +45,22 @@ class Shipments extends Component
     }
 
 
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName, [
-            'email' => 'required|email',
-            'sender_national_id' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
-            'sender_phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'reciver_national_id' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
-            'reciver_phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10'
-        ]);
-    }
+//    public function updated($propertyName)
+//    {
+////        $this->validateOnly($propertyName, [
+////            'email' => 'required|email',
+////            'sender_national_id' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
+////            'sender_phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+////            'reciver_national_id' => 'required|string|min:10|max:10|regex:/[0-9]{9}/',
+////            'reciver_phone' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10'
+////        ]);
+//    }
 
 
     public function render()
 
     {
-        return view('livewire.shipment',
+        return view('livewire.shipping',
             [
                 'seriess' => Series::all(),
                 'material_types' => ShippingMaterialType::all(),
@@ -67,6 +68,7 @@ class Shipments extends Component
                 'currencies' => Curency::all(),
                 'units_types' => Unit::all(),
                 'service_types' => ServiceType::all(),
+                'tracking_stages' => TrackingStage::all(),
 
 
             ]);
@@ -77,18 +79,34 @@ class Shipments extends Component
     {
 
 
+//        $this->validate([
+//            'email' => 'required|unique:customers,email,' . $this->id,
+//            'password' => 'required',
+//            'sender_mother_name' => 'required',
+//            'sender_full_name' => 'required',
+//            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
+//            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
+//            'sender_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+//
+//            'reciver_full_name' => 'required',
+//            'reciver_mother_name' => 'required',
+//            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
+//            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
+//            'reciver_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+//            'address_reciver' => 'required',
+//            'address_sender' => 'required'
+//
+//        ]);
         $this->validate([
             'email' => 'required|unique:customers,email,' . $this->id,
             'password' => 'required',
             'sender_mother_name' => 'required',
             'sender_full_name' => 'required',
             'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
-            'sender_national_id' => 'required|unique:customers,sender_national_id,' . $this->id,
             'sender_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
 
             'reciver_full_name' => 'required',
             'reciver_mother_name' => 'required',
-            'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
             'reciver_national_id' => 'required|unique:customers,reciver_national_id,' . $this->id,
             'reciver_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'address_reciver' => 'required',
@@ -103,6 +121,7 @@ class Shipments extends Component
     public function secondStepSubmit()
     {
 
+
         $this->validate([
             'shipment_name' => 'required',
             'amount' => 'required',
@@ -113,11 +132,24 @@ class Shipments extends Component
             'unit_id' => 'required',
             'currency_id' => 'required',
             'service_type_id' => 'required',
-
             'expected_recived_date' => 'required',
-            'address_address' => 'required'
+            'address_address' => 'required',
 
-        ]);
+//        $this->validate([
+//            'shipment_name' => 'required',
+//            'amount' => 'required',
+//            'price' => 'required',
+//            'sender_date' => 'required',
+//            'whieght' => 'required',
+//            'type_id' => 'required',
+//            'unit_id' => 'required',
+//            'currency_id' => 'required',
+//            'service_type_id' => 'required',
+//
+//            'expected_recived_date' => 'required',
+//            'address_address' => 'required'
+//
+//        ]);
 
         $this->currentStep = 3;
 
@@ -139,50 +171,56 @@ class Shipments extends Component
             // Father_INPUTS
             $Customers->email = $this->email;
             $Customers->password = Hash::make($this->password);
-            $Customers->sender_mother_name = $this->sender_mother_name;
-            $Customers->sender_full_name = $this->sender_full_name;
+            $Customers->sender_mother_name = ['en' => $this->sender_mother_name_en, 'ar' => $this->sender_mother_name_ar];
+            $Customers->sender_full_name = ['en' => $this->sender_full_name_en, 'ar' => $this->sender_full_name_ar];
+
             $Customers->sender_national_id = $this->sender_national_id;
             $Customers->sender_phone = $this->sender_phone;
-            $Customers->reciver_mother_name = $this->reciver_mother_name;
+            $Customers->reciver_mother_name = ['en' => $this->reciver_mother_name_en, 'ar' => $this->reciver_mother_name_ar];
+            $Customers->reciver_full_name = ['en' => $this->reciver_full_name_en, 'ar' => $this->reciver_full_name_ar];
+
             $Customers->reciver_national_id = $this->reciver_national_id;
-            $Customers->reciver_full_name = $this->reciver_full_name;
             $Customers->reciver_phone = $this->reciver_phone;
             $Customers->address_sender = $this->address_sender;
             $Customers->address_reciver = $this->address_reciver;
             $Customers->series_id = $this->series_id;
 
             $Customers->save();
-            if (!empty($this->shipment_name)) {
+            if (!empty($this->shipment_name_ar) OR !empty($this->shipment_name_en)) {
 
 
                 $price = Price::where('material_type_id', '=', $this->type_id)
                     ->where('service_type_id', '=', $this->service_type_id)
                     ->where('wheight', '<=', $this->whieght)->pluck('price');
+                $Shipment = new Shipments();
 
-                    Shipment::create([
-                        'shipment_name' => $this->shipment_name,
-                        'amount' => $this->amount,
-                        'price' => $this->price,
+                $Shipment->shipment_name = ['en' => $this->shipment_name_en, 'ar' => $this->shipment_name_ar];
 
-                        'sender_date' => $this->sender_date,
-                        'whieght' => $this->whieght,
-                        'type_id' => $this->type_id,
-                        'costumer_id' => Customer::latest()->first()->id,
-                        'expected_recived_date' => $this->expected_recived_date,
-                        'unit_id' => $this->unit_id,
-                        'currency_id' => $this->currency_id,
-                        'address_address' => $this->address_address,
-                        'service_type_id' => $this->service_type_id,
+                $Shipment->amount = $this->amount;
+                $Shipment->price = $price;
+
+                $Shipment->sender_date = $this->sender_date;
+                $Shipment->whieght = $this->whieght;
+                $Shipment->type_id = $this->type_id;
+                $Shipment->costumer_id = Customer::latest()->first()->id;
+                $Shipment->expected_recived_date = $this->expected_recived_date;
+                $Shipment->unit_id = $this->unit_id;
+                $Shipment->currency_id = $this->currency_id;
+                $Shipment->address_address = $this->address_address;
+                $Shipment->service_type_id = $this->service_type_id;
+                $Shipment->tracking_stage_id = $this->tracking_stage_id;
 
 
-                    ]);
+                $Shipment->save();
             }
+
+
 
             if (!empty($this->photos)) {
                 foreach ($this->photos as $photo) {
-                    $photo->storeAs($this->sender_national_id, $photo->getClientOriginalName(), $disk = "shipping_attachment");
+                    $photo->storeAs($this->sender_national_id, $photo->getClientOriginalName(), $disk="shipping_attachment");
                     ShipmentAttachment::create([
-                        'shipment_id' => Shipment::latest()->first()->id,
+                        'shipment_id' => Shipments::latest()->first()->id,
                         'file_name' => $photo->getClientOriginalName(),
                     ]);
                 }
@@ -199,7 +237,7 @@ class Shipments extends Component
     {
         $this->show_table = false;
         $this->updateMode = true;
-        $shipments = Shipment::where('id', $id)->first();
+        $shipments = Shipments::where('id', $id)->first();
         $customers = Customer::where('id', $shipments->costumer_id)->first();
 
         $this->email = $customers->email;
@@ -230,6 +268,7 @@ class Shipments extends Component
 
 
     }
+
 
     public function firstStepSubmit_edit()
     {
@@ -288,7 +327,7 @@ class Shipments extends Component
                     'sender_full_name' => $this->sender_full_name,
                 ]);
                 if (!empty($this->shipment_name)) {
-                    $shipment = Shipment::where('customer_id', $this->costumer_id);
+                    $shipment = Shipments::where('customer_id', $this->costumer_id);
                     $shipment->update([
                         'shipment_name' => $this->shipment_name,
                         'amount' => $this->amount,
@@ -356,7 +395,7 @@ class Shipments extends Component
     public function deleteForm($id)
     {
 
-        $shipments = Shipment::where('id', $id)->first();
+        $shipments = Shipments::where('id', $id)->first();
         $customers = Customer::where('id', $shipments->customer_id)->first();
         $shipments->delete();
         $customers->delete();

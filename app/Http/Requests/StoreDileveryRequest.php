@@ -24,15 +24,16 @@ class StoreDileveryRequest extends FormRequest
     public function rules()
     {
         return [
-        'ar_name'=>'required|string|unique:delivery_types|min:7|max:30',
-        'en_name'=>'required|string|unique:delivery_types|min:7|max:40',
-        'ar_details'=>'required|string|min:30',
-        'en_details'=>'required|string|min:30',
+        'name.*'=>'required|string|unique_translation:delivery_types',
+      
+  
+        'details.*'=>'required|string|min:10',
+       
 
-        'ar_title_Up'=>'required|string|min:5|max:20',
-        'en_title_Up'=>'required|string|min:5|max:20',
-        'ar_title_down'=>'required|string||min:10|max:100',
-        'en_title_down'=>'required|string||min:10|max:100',
+        'title_main.*'=>'required|string|min:5',
+       
+        'title_sup.*'=>'required|string||min:5',
+        
 
         'icons'=>'required',
         'imgs'=>'required',

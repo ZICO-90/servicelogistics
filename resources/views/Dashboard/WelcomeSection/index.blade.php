@@ -23,21 +23,21 @@
 <div class="col-12">
                             <div class="card mb-30">
                                 <div class="card-body pt-30">
-                                    <h4 class="font-20 ">section welcome</h4>
-                                    <a  href="{{route('admin.welcome.create')}}" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</a>
+                                    <h4 class="font-20 ">{{trans('Dashboard\WelcomeSection.h4title')}}</h4>
+                                    <a  href="{{route('admin.welcome.create')}}" class="btn btn-info add-new"><i class="fa fa-plus"></i> {{trans('Dashboard\WelcomeSection.linkCreate')}}</a>
                                 </div>
                                 <div class="table-responsive">
                                     <!-- Invoice List Table -->
                                     <table class="text-nowrap table-bordered dh-table">
                                         <thead>
                                             <tr>
-                                            <th>name (P)</th>
+                                            <th>{{trans('Dashboard\WelcomeSection.name_P')}}</th>
                                    
                                             
-                                                <th>title (h)</th>
-                                                <th>sub name (span)</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
+                                                <th>{{trans('Dashboard\WelcomeSection.name_h')}}</th>
+                                                <th>{{trans('Dashboard\WelcomeSection.name_span')}}</th>
+                                                <th>{{trans('Dashboard\WelcomeSection.status')}}</th>
+                                                <th>{{trans('Dashboard\WelcomeSection.Actions')}}</th>
                                                 
                                             </tr>
                                         </thead>
@@ -46,41 +46,33 @@
                                       @foreach($welcome as $model)
                                             <tr>
                                                 <td>
-                                                    <ul>
-                                                   
-                                                        <li>{{$model->en_title_p}}</il>
-                                                        <li>{{$model->ar_title_p}}</il>
-                                                    </ul>
+                                                {{$model->title_p}}
+                                               
                                                 </td>
                                                 <td>
-                                                <ul>
-                                                    <li>{{$model->en_title_h}}</il>
-                                                    <li>{{$model->ar_title_h}}</il>
-                                                </ul>
+                                                {{$model->title_h}}
+                                              
                                                 </td>
                                              
                                                 <td>
-
-                                                    <ul>
-                                                       <li>{{$model->en_title_span}}</il>
-                                                        <li>{{$model->ar_title_span}}</il>
-                                                    </ul>
+                                                {{$model->title_span}}
+                                                 
                                                 </td>
                                                 <td>
                                                 <a href="{{ route('admin.welcome.activated' , ['id' => $model->id , 'bool' => $model-> is_active ])}}" 
                                                 class="btn btn-danger">
                                              
                                              @if($model-> is_active == 1)
-                                                is active
+                                             {{trans('Dashboard\WelcomeSection.Statusactivated')}}
                                                 @else
-                                                un active
+                                                {{trans('Dashboard\WelcomeSection.StatusUnactviated')}}
                                                 @endif
                                                 </a>
                                                 </td>
                                                 <td>
                                                                                                            
-                        <a href="{{route('admin.welcome.edit' , $model-> id)}}" style="color: #FFC107;" class="Edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                        <a href="{{route('admin.welcome.destroy' , $model-> id)}}"  style="color: #E34724;" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        <a href="{{route('admin.welcome.edit' , $model-> id)}}" style="color: #FFC107;" class="Edit" title="{{trans('Dashboard\WelcomeSection.actionsEdit')}}" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        <a href="{{route('admin.welcome.destroy' , $model-> id)}}"  style="color: #E34724;" class="delete" title="{{trans('Dashboard\WelcomeSection.actionsDelete')}}" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
 
                                                 </td>
                                             </tr>

@@ -24,17 +24,17 @@ class StoreEmployesRequest extends FormRequest
     public function rules()
     {
         return [
-            'ar_name' =>'required|string|min:7|max:40' ,
-            'en_name'=>'required|string|min:7|max:40',
+            'name.*' =>'required|string|min:7|max:70' ,
+           
     
-            'ar_Country'=>'required|string|max:20',
-            'en_Country'=>'required|string|max:20',
+            'Country.*'=>'required|string|min:3|max:40',
+           
     
-            'ar_details'=>'required|string|min:10',
-            'en_details'=>'required|string|min:10',
+            'details.*'=>'required|string|min:5',
+         
     
-            'ar_city' =>'required|string|max:20',
-            'en_city'=>'required|string|max:20',
+            'city.*' =>'required|string|min:3|max:20',
+           
     
             'birth_date'=> [
                 'required',

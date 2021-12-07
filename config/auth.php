@@ -45,6 +45,18 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
+        'driver' => [
+            'driver' => 'session',
+            'provider' => 'drivers',
+        ],
+        'scanner' => [
+            'driver' => 'session',
+            'provider' => 'scanners',
+        ],
+        'warehousing_officer' => [
+            'driver' => 'session',
+            'provider' => 'warehousing_officers',
+        ],
     ],
 
     /*
@@ -73,6 +85,21 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
+        ],
+
+        'scanners' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Scanner::class,
+        ],
+
+        'drivers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Driver::class,
+        ],
+
+        'warehousing_officers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\WarehousingOfficer::class,
         ],
     ],
 

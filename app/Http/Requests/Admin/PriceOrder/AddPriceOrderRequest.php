@@ -26,10 +26,25 @@ class AddPriceOrderRequest extends FormRequest
         return [
             'name' => 'required|min:3',
             'email' => 'required|email|regex:/^.+@.+$/i',
-            'address' => 'required|min:3',
+            'address' => 'required|min:10',
             'select' => 'required',
-            'message' => 'required|min:3',
+            'message' => 'required|min:10',
 
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => trans('Dashboard/messages.name.required'),
+            'name.min' => trans('Dashboard/messages.name.min'),
+            'email.required' => trans('Dashboard/messages.email.required'),
+            'email.email' => trans('Dashboard/messages.email.email'),
+            'address.required' => trans('Dashboard/messages.address.required'),
+            'address.min' => trans('Dashboard/messages.address.min'),
+            'select.required' => trans('Dashboard/messages.select.required'),
+            'message.required' => trans('Dashboard/messages.message.required'),
+            'message.min' => trans('Dashboard/messages.message.min'),
         ];
     }
 }
