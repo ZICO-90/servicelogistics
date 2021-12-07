@@ -53,10 +53,15 @@ return [
     'series_id'=>'Prefix',
 
 
+'service_type_id'=>'servicetype',
+
+
+
 'service_type_id'=>'Service Typeٍ',
 
 
     'service_type_id'=>'Service Typeٍ',
+
 
 
 

@@ -2,6 +2,10 @@
 
 return [
     'Main' => 'Main',
+    'news' => 'news',
+    'add news' => 'add news',
+    'convention' => 'convention',
+    'add convention' => 'add convention',
     'Dashboard' => 'Dashboard',
     'Shipping_list'=>'Shipping List',
     'Shipments'=>'Shipments',
@@ -17,6 +21,9 @@ return [
     'price_list'=>'Price List',
     'add_price'=>'Add Price',
     'prices'=>'Prices',
+
+    'message' => 'message',
+
     'users_main'=>'Users Main',
     'scanner_main'=>'Scanners Main',
     'Scanning'=>'Scanning Stage',
@@ -30,6 +37,7 @@ return [
     'Partners' => 'Partners',
     'Show All Partners' => 'Show All Partners',
     'Add New Partner' => 'Add New Partner',
+
 
 
 ];

@@ -317,10 +317,10 @@
                             <div class="column is-4" data-aos="fade">
                                 <div class="blog-post-heading">
                                     <p class="heading-title-top">latest news</p>
-                                    <h1 class="heading-title style-3 has-text-left"> Lorem ipsum is
-                                        <span class="has-text-primary">simply</span>
+                                    <h1 class="heading-title style-3 has-text-left"> {{$news->title}}
+                                        <span class="has-text-primary"></span>
                                     </h1>
-                                    <p>Lorem ipsum dolor sit amet is, consectetur adipiscing. Nulla accumsan, metus ultrices ele gravi, nulla nunc varius.</p>
+                                    <p>{{$news->content}}</p>
                                     <a href="./blog/index.html" class="button">Our blog
                                         <span class="icon">
                           <i class="ion-ios-arrow-round-forward"></i>
@@ -333,7 +333,7 @@
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./blog/single.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/blog/4.png"> </a>
+                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{('/storage/'.$convention->photo)}}"> </a>
                                     </figure>
                                     <div class="entry-header">
                                         <div class="post-meta">
@@ -346,8 +346,11 @@
                                             </ul>
                                         </div>
                                         <h2 class="entry-title">
-                                            <a href="./blog/single.html">Self Motivation How To Keep Land Transport</a>
+                                            <a href="./blog/single.html">{{$convention->title}}</a>
                                         </h2>
+                                        <h4>
+                                            <a href="./blog/single.html">{{$convention->content}}</a>
+                                        </h4>
                                     </div>
                                     <div class="entry-footer">
                                         <a href="./blog/single.html" class="button">Read More</a>
