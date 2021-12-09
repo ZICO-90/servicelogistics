@@ -33,6 +33,17 @@
                                 <h4 class="font-20 mb-4"> {{trans('dashboard\trans_price.adding_price')}} ِ</h4>
                             </div>
 
+
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                            @endif
+
                             <!-- Repeater Html Start -->
                             <div data-repeater-list="List_Classes">
 
@@ -95,7 +106,7 @@
                                         <!-- Form Group -->
                                         <div class="form-group col-lg-2">
                                             <label for="inputCompany" class="bold mb-2">{{trans('Dashboard/trans_price.price')}}</label>
-                                            <input type="text" class="form-control" id="price" name="price"placeholder="Company Name">
+                                            <input type="text" class="form-control" id="price" name="price"placeholder="">
                                         </div>
                                         <!-- End Form Group -->
                                         <div class="form-group col-lg-1">
@@ -116,6 +127,8 @@
                                                 <img src="{{URL::asset('Dashboard/img/svg/remove.svg')}}" alt="" class="svg">
                                             </button>
                                         </div>
+
+
 
                                     </div>
                                     <hr/>

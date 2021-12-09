@@ -18,6 +18,9 @@ return [
     'delete'=>'حذف',
     'notes'=>'ملاحظات',
     'submit'=>'حفظ',
+   'transmit_stage'=>'مرحلة النقل',
+
+
 
 
 

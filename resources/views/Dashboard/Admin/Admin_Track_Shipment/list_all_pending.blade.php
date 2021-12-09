@@ -79,7 +79,6 @@
                                                                             <option value="{{$tracking_stage->id}}">{{$tracking_stage->stage_name}}</option>
                                                                         @endforeach
 
-
                                                                     </select>
                                                                 </div>
 

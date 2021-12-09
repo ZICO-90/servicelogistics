@@ -16,11 +16,9 @@ class CreateShipmentsTable extends Migration
         Schema::create('shipments', function (Blueprint $table) {
             $table->id();
             $table->string('amount');
-            $table->string('whieght');
             $table->string('price');
             $table->string('shipment_name');
-            $table->string('weight');
-            $table->decimal('price');
+            $table->string('whieght');
 
 
             $table->unsignedBigInteger('unit_id');

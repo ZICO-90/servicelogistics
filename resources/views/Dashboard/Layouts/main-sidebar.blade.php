@@ -506,7 +506,7 @@
             {{--<!-- Sub Menu -->--}}
             {{--<ul class="nav sub-menu">--}}
             {{--<li><a href="pages/pages/authentication/login.html">Log In</a></li>--}}
-            {{--<li><a href="pages/pages/authentication/register.html">Register</a></li>--}}
+            {{--<li><a href="pages/pages/authentication/register.blade.php">Register</a></li>--}}
             {{--<li><a href="pages/pages/authentication/forget-pass.html">Forget Password</a></li>--}}
             {{--<li><a href="pages/pages/authentication/reset-pass.html">Reset Password</a></li>--}}
             {{--</ul>--}}

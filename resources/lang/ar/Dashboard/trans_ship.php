@@ -12,7 +12,8 @@ return [
     'sender_national_id'=>'الرقم الوطني للمرسل ',
     'sender_phone'=>'هاتف المرسل',
     'address_sender'=>'عنوان المرسل',
-
+    'shipment_name'=>'اسم الشحنة',
+'sender_full_name'=>'اسم المرسل الثلاثي',
     'reciver_full_name_en'=>'اسم المستقبل الثلاثي بالإنكليزي',
     'reciver_mother_name_en'=>'اسم والدة المستقبل بالإنكليزي',
     'reciver_full_name_ar'=>'اسم المستقبل الثلاثي بالعربي',
@@ -22,6 +23,7 @@ return [
     'reciver_national_id'=>'الرقم الوطني للمستقبل',
     'reciver_phone'=>'هاتف المستقبل',
     'address_reciver'=>' عنوان المستقبل',
+    'waiting_to_initial_approve'=>'إنتظار للحصول على الموافقة المبدئية',
 
     'Next'=>'التالي',
     'Step1'=>'معلومات عن صاحب الشحنة',
@@ -30,8 +32,13 @@ return [
     'back'=>'السابق',
 
     'shipment_num'=>'رقم الشحنة',
+
     'shipment_name_en'=>'اسم الشحنة بالإنكليزي',
     'shipment_name_ar'=>'اسم الشحنة بالعربي',
+    'tracking_stage_id'=>'مراحل التعقب',
+    'attachement'=>'المرفقات',
+    'Address'=>'العنوان',
+
 
     'amount'=>'الكمية',
     'price'=>'السعر',

@@ -19,7 +19,7 @@ interface PriceInterface
 
     public function create_price();
 
-    public function store_price(Request $request);
+    public function store_price(PriceRequest $request);
 
 
 
@@ -29,7 +29,7 @@ interface PriceInterface
     public function edit_price($id);
 
 
-    public function update_price( Request $request);
+    public function update_price( PriceRequest $request);
 
 
 

@@ -18,7 +18,7 @@ return [
     'delete'=>'حذف',
     'notes'=>'ملاحظات',
     'submit'=>'حفظ',
-
+    'scaning_parcel_for_final_approve'=>' مسح الطرد للحصول على الموافقة النهائية للشحن'
 
 
 ];

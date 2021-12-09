@@ -75,9 +75,7 @@
                                                                     <label for="exampleFormControlSelect1">{{trans('Dashboard\trans_warehouse_track.tracking_stage_id')}}</label>
                                                                     <select class="mdb-select md-form colorful-select " name="tracking_stage_id" id="exampleFormControlSelect1">
                                                                         <option  value="{{$shipment->tracking_stage_id}}" selected>{{$shipment->tracking_stages->stage_name}}</option>
-                                                                        @foreach($tracking_stages as $tracking_stage)
-                                                                            <option value="{{$tracking_stage->id}}">{{$tracking_stage->stage_name}}</option>
-                                                                        @endforeach
+                                                                            <option value="5">{{trans('Dashboard\trans_warehouse_track.repository_stage')}}</option>
 
 
                                                                     </select>

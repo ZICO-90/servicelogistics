@@ -18,6 +18,8 @@ return [
     'delete'=>'حذف',
     'notes'=>'ملاحظات',
     'submit'=>'حفظ',
+    'getting_initial_approve'=>'الحصول على الموافقة المبدئية',
+
 
 
 

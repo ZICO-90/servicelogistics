@@ -51,10 +51,14 @@ return [
     'attachement'=>'Attachement',
     'currency_id'=>'Currency',
     'series_id'=>'Prefix',
+    'waiting_to_initial_approve'=>'waiting to initial approve',
 
-
+    'shipment_name'=>'Shipment Nmae ',
+    'sender_full_name'=>'Sender Full Name',
+    'tracking_stage_id'=>'Tracking Stage',
 'service_type_id'=>'Service Typeٍ',
-
+    'attachement'=>'Attachements',
+    'Address'=>'Addressِ',
 
     'service_type_id'=>'Service Typeٍ',
 

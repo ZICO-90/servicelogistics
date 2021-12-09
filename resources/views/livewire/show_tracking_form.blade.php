@@ -28,12 +28,6 @@
 
                     <livewire:tracking/>
 
-                    <livewire:shipment />
-
-
-
-
-
             </div>
 
             </div>

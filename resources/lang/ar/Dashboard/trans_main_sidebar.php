@@ -19,7 +19,7 @@ return [
     'price_list'=>'قائمة الأسعار ',
     'add_price'=>'إضافة سعر ',
     'prices'=>'الأسعار',
-<<<<<<< HEAD
+
     'users_main'=>'قائمة المستخدمين الرئيسية ',
     'scanner_main'=>'قائمة المساحين الرئيسية',
     'Scanning'=>'مرحلة المسح الضوئي',
@@ -29,12 +29,12 @@ return [
     'driver_stage'=>'مرحلة النقل',
     'warehouse_main'=>'قائمة المخازن الرئيسية',
     'warehouse_stage'=>'مرحلة التخزين',
-    'warehouse_track'=>'تعقب تخزين الشحنة'
-=======
+    'warehouse_track'=>'تعقب تخزين الشحنة',
+
     'Partners' => 'شركائنا',
     'Show All Partners' => 'عرض جميع الشركاء',
     'Add New Partner' => 'إضافة راعي جديد',
->>>>>>> 16bb3313a0b09a543af428f6b74324ff2b927786
+
 
 
 ];

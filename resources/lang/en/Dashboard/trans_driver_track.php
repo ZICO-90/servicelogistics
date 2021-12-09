@@ -16,7 +16,8 @@ return [
     'delete'=>'Delete',
     'notes'=>'Notes',
     'submit'=>'Save',
-    'close'=>' Close'
+    'close'=>' Close',
+    'transmit_stage'=>'Transmit Stage',
 
 
 

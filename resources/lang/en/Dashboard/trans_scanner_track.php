@@ -16,7 +16,8 @@ return [
     'delete'=>'Delete',
     'notes'=>'Notes',
     'submit'=>'Save',
-    'close'=>' Close'
+    'close'=>' Close',
+    'scaning_parcel_for_final_approve'=>'scanning parcel for final approve',
 
 
 

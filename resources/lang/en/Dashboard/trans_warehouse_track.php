@@ -16,7 +16,9 @@ return [
     'delete'=>'Delete',
     'notes'=>'Notes',
     'submit'=>'Save',
-    'close'=>' Close'
+    'close'=>' Close',
+    'repository_stage'=>'Repository Stageٌ',
+
 
 
 

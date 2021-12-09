@@ -18,6 +18,8 @@ return [
     'delete'=>'حذف',
     'notes'=>'ملاحظات',
     'submit'=>'حفظ',
+    'repository_stage'=>'مرحلة التخزين',
+
 
 
 

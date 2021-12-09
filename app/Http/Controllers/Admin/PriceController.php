@@ -27,7 +27,7 @@ class PriceController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(PriceRequest $request)
     {
         return $this->price->store_price($request);
     }
@@ -44,25 +44,13 @@ class PriceController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request)
+
+    public function update(PriceRequest $request)
     {
         return $this->price->update_price($request);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Request $request)
+    public function destroy(PriceRequest $request)
     {
         return $this->price->destroy_price($request);
 
