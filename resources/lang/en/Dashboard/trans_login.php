@@ -21,7 +21,6 @@ return [
     'If_you_have_no_account'=>'If you have no account',
     'LoginAsUser'=>'Log In As User',
     'LoginAsAdmin'=>'Log In As Admin',
-
     'LoginAsScanner'=>'Log In As Scanner',
     'LoginAsDriver'=>'Log In As Driver',
     'LoginAsWarehouse'=>'Log In As Warehous',

@@ -28,8 +28,14 @@ return [
      'update_price'=>'تعديل السعر',
     'delete_price'=>'حذف السعر ',
     'Delete'=>'حذف',
-
-
+    'close'=>'Close',
+    'submit'=>'Save',
+    'Processes'=>'Processes',
+    'wheight'=>'Wheight',
+    'Delete'=>'Delete',
+    'Edit'=>'Edit',
+    'delete_price'=>' Delete Price',
+    'update_price'=>' Update Price',
 
 
 ];

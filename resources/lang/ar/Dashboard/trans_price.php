@@ -24,6 +24,7 @@ return [
     'whieght'=>'الوزن',
     'currency_id'=>'العملة',
     'submit'=>'إحفظ',
+
     'Processes'=>'العمليات',
     'update_price'=>'تعديل السعر',
     'delete_price'=>'Delete Price',

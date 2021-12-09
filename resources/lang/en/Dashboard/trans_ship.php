@@ -56,11 +56,14 @@ return [
     'shipment_name'=>'Shipment Nmae ',
     'sender_full_name'=>'Sender Full Name',
     'tracking_stage_id'=>'Tracking Stage',
+'service_type_id'=>'servicetype',
+
 'service_type_id'=>'Service Typeٍ',
     'attachement'=>'Attachements',
     'Address'=>'Addressِ',
 
     'service_type_id'=>'Service Typeٍ',
+
 
 
 

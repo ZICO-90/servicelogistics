@@ -3,7 +3,7 @@
 
 <head>
    <!-- Page Title -->
-   <title>edite {{$conv->en_title}}</title>
+   <title>{{trans('Dashboard')}} {{$conv->en_title}}</title>
 
    <!-- Meta Data -->
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,14 +63,15 @@
                 <!-- Form Row -->
                 <div class="form-row mb-20">
                     <label class="font-14 bold">name at english</label>
-                    <input type="text" name="ar_title" class="theme-input-style is-invalid" value="{{$conv->ar_title}}">
+                    <input type="text" name="title[ar]" class="theme-input-style is-invalid"
+                           value="{{$conv->getTranslation('title', 'ar')}}">
 
                 </div>
 
 
                 <div class="form-row mb-20">
                     <label class="font-14 bold">name at english</label>
-                    <input type="text" name="en_title" class="theme-input-style is-invalid" value="{{$conv->en_title}}">
+                    <input type="text" name="title[en]" class="theme-input-style is-invalid" value="{{$conv->getTranslation('title', 'en')}}">
 
                 </div>
                 <!-- End Form Row -->
@@ -90,13 +91,15 @@
 
                 <div class="form-row mb-20">
                     <label class="font-14 bold">convention content at english</label>
-                    <textarea type="long_text" name="ar_content" class="theme-input-style is-valid" >{{$conv->ar_content}}</textarea>
+                    <textarea type="long_text" name="content[en]" class="theme-input-style is-valid" >
+                        {{$conv->getTranslation('content', 'en')}}</textarea>
 
                 </div>
 
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">convention content at english</label>
-                    <textarea type="text" name="en_content" class="theme-input-style is-valid" >{{$conv->en_content}}</textarea>
+                    <label class="font-14 bold">convention content at arabic</label>
+                    <textarea type="text" name="content[ar]" class="theme-input-style is-valid" >
+                        {{$conv->getTranslation('content', 'ar')}}</textarea>
 
                 </div>
                 <!-- End Form Row -->

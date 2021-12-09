@@ -4,6 +4,10 @@ return [
 
 
     'Main' => 'الرئيسية',
+    'news' => 'الاخبار',
+    'convention' => 'الاتفاقيات',
+    'add news' => 'اضافة خبر',
+    'add convention' => 'اضافه اتفاقيه',
     'Dashboard' => 'لوحة التحكم',
     'Shipping_list'=>'قائمة الشحنات',
     'Shipments'=>'الشحنات',
@@ -19,6 +23,7 @@ return [
     'price_list'=>'قائمة الأسعار ',
     'add_price'=>'إضافة سعر ',
     'prices'=>'الأسعار',
+    'message' => 'الرسائل',
 
     'users_main'=>'قائمة المستخدمين الرئيسية ',
     'scanner_main'=>'قائمة المساحين الرئيسية',
@@ -35,6 +40,16 @@ return [
     'Show All Partners' => 'عرض جميع الشركاء',
     'Add New Partner' => 'إضافة راعي جديد',
 
+
+
+    'warehouse_track'=>'تعقب تخزين الشحنة',
+
+    'warehouse_track'=>'تعقب تخزين الشحنة',
+
+
+    'Partners' => 'شركائنا',
+    'Show All Partners' => 'عرض جميع الشركاء',
+    'Add New Partner' => 'إضافة راعي جديد',
 
 
 ];

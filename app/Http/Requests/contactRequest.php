@@ -3,9 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Auth;
 
-class addNewsRequest extends FormRequest
+class contactRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,16 +24,11 @@ class addNewsRequest extends FormRequest
     public function rules()
     {
         return [
-
-            'title.*'=>'required|string',
-            'content.*'=>'required',
-
-            'ar_title'=>'required|string',
-            'en_title'=>'required|string',
-            'ar_content'=>'required',
-            'en_content'=>'required',
-            'photo'=>'required|image|mimes:jpeg,png,jpg,gif,svg'
-
+            'name' => 'required|string',
+            'email' => 'required|string',
+            'phone' => 'required|string',
+            'subject' => 'required|string',
+            'message'=>'required',
         ];
     }
 }

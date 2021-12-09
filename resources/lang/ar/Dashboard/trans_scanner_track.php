@@ -12,8 +12,7 @@ return [
     'Add_to_schedual' =>'إضافة الشحنة الى جدول التعقب',
     'full_number'=>'رقم الشحنة',
     'location_now'=>'مكان الشحنة',
-    'entering_date'=>'تاريخ الإدخال',
-    'submit'=>'حفظ',
+
     'close'=>'إلغاء الأمر',
     'delete'=>'حذف',
     'notes'=>'ملاحظات',

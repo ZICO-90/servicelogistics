@@ -56,12 +56,12 @@ return [
        'Processes'=>'العمليات',
     'Delete'=>'حذف',
     'shipment_process'=>'عمليات الشحن',
-    'add_shipment'=>'إضافة شحنة',
+
     'attachement'=>'المرفقات',
 
-    'series_id'=>'الدليل',
+
     'service_type_id'=>'نوع الخدمة',
-    'attachement'=>'المرفقات',
+
 
     'series_id'=>'الدليل',
 

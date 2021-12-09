@@ -9,6 +9,7 @@ use App\Http\Controllers\EndUser\EndUserHomeController;
 use App\Http\Controllers\Admin\dileveryController;
 use App\Http\Controllers\Admin\employesController;
 use App\Http\Controllers\Admin\WelcomSectionController;
+use App\Http\Controllers\Admin\contactController;
 
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -149,6 +150,9 @@ Route::group(
 
         Route::get('/', [EndUserHomeController::class, 'index'])->name('index');
         Route::get('/testimonial', [EndUserHomeController::class, 'testimonial'])->name('testimonial');
+
+        Route::get('contact/create', 'admin\contactController@create')->name('contact.create');
+        Route::post('contact/store', 'admin\contactController@store')->name('contact.store');
     });
 
 

@@ -13,7 +13,7 @@ return [
     'full_number'=>'رقم الشحنة',
     'location_now'=>'مكان الشحنة',
     'entering_date'=>'تاريخ الإدخال',
-    'submit'=>'حفظ',
+
     'close'=>'إلغاء الأمر',
     'delete'=>'حذف',
     'notes'=>'ملاحظات',

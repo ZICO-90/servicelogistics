@@ -20,6 +20,15 @@ class CreateShipmentsTable extends Migration
             $table->string('shipment_name');
             $table->string('whieght');
 
+            $table->string('whieght');
+            $table->string('shipment_name');
+
+            $table->string('weight');
+
+            $table->string('whieght');
+
+            $table->decimal('price');
+
 
             $table->unsignedBigInteger('unit_id');
             $table->foreign('unit_id')->references('id')

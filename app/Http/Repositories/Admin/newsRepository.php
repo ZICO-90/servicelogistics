@@ -41,8 +41,8 @@ class newsRepository implements newsInterface
     }
 
     public function edit($id){
-        $new= latest_news::findorFail($id);
-        return view('Dashboard.news.edit',compact('new'));
+        $news= latest_news::findorFail($id);
+        return view('Dashboard.news.edit',compact('news'));
     }
     public function update($request, $id){
 
