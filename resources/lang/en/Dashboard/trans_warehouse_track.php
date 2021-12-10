@@ -15,6 +15,10 @@ return [
     'close'=>' Cancel',
     'delete'=>'Delete',
     'notes'=>'Notes',
+    'submit'=>'Save',
+    'close'=>' Close',
+    'repository_stage'=>'Repository Stageٌ',
+
 
 
 

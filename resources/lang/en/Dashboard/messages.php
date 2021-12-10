@@ -62,6 +62,48 @@ return [
     'message.required' => 'Message Is Required',
     'message.min' => 'minimum 3 chars',
     #=================Testimonial================================#
-    'description.required' => 'Description Is Required'
+    'description.required' => 'Description Is Required',
+#==================add-shipment============
+
+
+    'email' => 'email field is required',
+    'password' => 'password is required',
+    'sender_full_name_ar' => 'sender_full_name_ar is required',
+    'sender_full_name_en' => 'sender_full_name_en is required',
+    'sender_mother_name_ar' => 'sender_mother_name_ar is required',
+    'sender_mother_name_en' => 'sender_mother_name_en is required',
+    'sender_national_id' => 'sender_national_id_is_required',
+    'sender_phone' =>  'sender_phone is required',
+
+    'reciver_full_name_en' =>  'reciver_full_name_en is required',
+    'reciver_full_name_ar' => 'reciver_full_name_ar is required',
+    'reciver_mother_name_en' => 'reciver_mother_name_en is required',
+    'reciver_mother_name_ar' =>  'reciver_mother_name_ar is required',
+
+    'reciver_national_id' => 'reciver_national_id is required',
+    'reciver_phone' => 'address_reciver is required',
+    'address_reciver' => 'reciver_phone is required',
+    'address_sender' => 'address_sender is required',
+
+    'shipment_name_ar' =>  'shipment_name_ar is required',
+    'shipment_name_en' => 'shipment_name_en is required',
+    'amount' => 'amount is required',
+    'sender_date' => 'sender_date is required',
+    'whieght' =>'whieght is required',
+    'type_id' => 'type_id is required',
+    'currency_id' => 'currency_id is required' ,
+    'expected_recived_date' => 'expected_recived_date is required',
+
+    'address_address' => 'address_address is required',
+
+    #================
+    'tracking_stage_id.required'=> 'stage name is required',
+    'customer_id.required' => 'customer is required',
+    'desc.required' => 'description is required',
+    'location_now.required' => 'location now is required',
+    'outcomming_date.required' => 'outcomming date is required',
+    'full_number.required' =>'full number is required'
+
+
 
 ];

@@ -29,13 +29,6 @@
                     <livewire:tracking/>
 
 
-
-
-
-
-
-
-
             </div>
 
             </div>

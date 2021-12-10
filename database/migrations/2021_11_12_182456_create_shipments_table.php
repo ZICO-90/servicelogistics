@@ -16,8 +16,14 @@ class CreateShipmentsTable extends Migration
         Schema::create('shipments', function (Blueprint $table) {
             $table->id();
             $table->string('amount');
-            $table->string('whieght');
+
+
             $table->string('shipment_name');
+
+
+
+            $table->string('whieght');
+
             $table->string('price');
 
 
@@ -51,15 +57,6 @@ class CreateShipmentsTable extends Migration
             $table->foreign('tracking_stage_id')->references('id')
                 ->on('tracking_stages')->cascadeOnDelete()->cascadeOnUpdate();
 
-
-
-//            $table->string('sender_address_address')->nullable();
-//            $table->double('sender_address_latitude')->nullable();
-//            $table->double('sender_address_longitude')->nullable();
-
-//            $table->string('reciver_address_address')->nullable();
-//            $table->double('reciver_address_latitude')->nullable();
-//            $table->double('reciver_address_longitude')->nullable();
             $table->string('address_address')->nullable();
             $table->double('address_latitude')->nullable();
             $table->double('address_longitude')->nullable();

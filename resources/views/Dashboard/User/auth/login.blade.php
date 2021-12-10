@@ -4,6 +4,9 @@
         .loginform {
             display: none;
         }
+        .card{
+            margin: auto;
+        }
     </style>
 @endsection
 @section('content')
@@ -84,21 +87,19 @@
                                     @endif
                                 </div>
 
-                                <div class="mb-30">
-                                    <a href="#" class="light-btn ml-3 mb-20">{{trans('Dashboard\trans_login.Log_In_With_Facebook')}}</a>
-                                    <a href="#" class="light-btn style--two mb-20">{{trans('Dashboard\trans_login.Log_In_With_Gmail')}}</a>
-                                </div>
+
 
                                 <div class="d-flex align-items-center">
                                     <button type="submit" class="btn long ml-20">{{trans('Dashboard\trans_login.LogIn')}}</button>
-                                    <span class="font-12 d-block"><a href="register.html" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
+
+                                    <span class="font-12 d-block m-5"><a href="register.blade.php" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
                                 </div>
                             </form>
                         </div>
 
 
                         <div class="loginform" id="admin">
-                            <p class="mb-5 font-20">Login As Admin </p>
+                            <p class="mb-5 font-20">{{trans('Dashboard\trans_login.LoginAsAdmin')}} </p>
                             <form method="POST" action="{{ route('login.admin') }}">
                             @csrf
                             <!-- Form Group -->
@@ -141,21 +142,18 @@
                                     @endif
                                 </div>
 
-                                <div class="mb-30">
-                                    <a href="#" class="light-btn ml-3 mb-20">{{trans('Dashboard\trans_login.Log_In_With_Facebook')}}</a>
-                                    <a href="#" class="light-btn style--two mb-20">{{trans('Dashboard\trans_login.Log_In_With_Gmail')}}</a>
-                                </div>
+
 
                                 <div class="d-flex align-items-center">
                                     <button type="submit" class="btn long ml-20">{{trans('Dashboard\trans_login.LogIn')}}</button>
-                                    <span class="font-12 d-block"><a href="register.html" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
+                                    <span class="font-12 d-block m-5"><a href="register.blade.php" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
                                 </div>
                             </form>
                         </div>
 
 
                         <div class="loginform" id="driver">
-                            <p class="mb-5 font-20">Login As Driver </p>
+                            <p class="mb-5 font-20"> {{trans('Dashboard\trans_login.LoginAsDriver')}} </p>
                             <form method="POST" action="{{ route('login.driver') }}">
                             @csrf
                             <!-- Form Group -->
@@ -199,21 +197,18 @@
                                     @endif
                                 </div>
 
-                                <div class="mb-30">
-                                    <a href="#" class="light-btn ml-3 mb-20">{{trans('Dashboard\trans_login.Log_In_With_Facebook')}}</a>
-                                    <a href="#" class="light-btn style--two mb-20">{{trans('Dashboard\trans_login.Log_In_With_Gmail')}}</a>
-                                </div>
+
 
                                 <div class="d-flex align-items-center">
                                     <button type="submit" class="btn long ml-20">{{trans('Dashboard\trans_login.LogIn')}}</button>
-                                    <span class="font-12 d-block"><a href="register.html" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
+                                    <span class="font-12 d-block m-5"><a href="register.blade.php" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
                                 </div>
                             </form>
                         </div>
 
 
                         <div class="loginform" id="scanner">
-                            <p class="mb-5 font-20">Login As Scanner </p>
+                            <p class="mb-5 font-20">{{trans('Dashboard\trans_login.LoginAsScanner')}}</p>
                             <form method="POST" action="{{ route('login.scanner') }}">
                             @csrf
                             <!-- Form Group -->
@@ -256,20 +251,17 @@
                                     @endif
                                 </div>
 
-                                <div class="mb-30">
-                                    <a href="#" class="light-btn ml-3 mb-20">{{trans('Dashboard\trans_login.Log_In_With_Facebook')}}</a>
-                                    <a href="#" class="light-btn style--two mb-20">{{trans('Dashboard\trans_login.Log_In_With_Gmail')}}</a>
-                                </div>
+
 
                                 <div class="d-flex align-items-center">
                                     <button type="submit" class="btn long ml-20">{{trans('Dashboard\trans_login.LogIn')}}</button>
-                                    <span class="font-12 d-block"><a href="register.html" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
+                                    <span class="font-12 d-block m-5"><a href="register.blade.php" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
                                 </div>
                             </form>
                         </div>
 
                         <div class="loginform" id="warehouse">
-                            <p class="mb-5 font-20">Login As Warehouse </p>
+                            <p class="mb-5 font-20">{{trans('Dashboard\trans_login.LoginAsWarehouse')}} </p>
                             <form method="POST" action="{{ route('login.warehouse') }}">
                             @csrf
                             <!-- Form Group -->
@@ -312,14 +304,11 @@
                                     @endif
                                 </div>
 
-                                <div class="mb-30">
-                                    <a href="#" class="light-btn ml-3 mb-20">{{trans('Dashboard\trans_login.Log_In_With_Facebook')}}</a>
-                                    <a href="#" class="light-btn style--two mb-20">{{trans('Dashboard\trans_login.Log_In_With_Gmail')}}</a>
-                                </div>
+
 
                                 <div class="d-flex align-items-center">
                                     <button type="submit" class="btn long ml-20">{{trans('Dashboard\trans_login.LogIn')}}</button>
-                                    <span class="font-12 d-block"><a href="register.html" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
+                                    <span class="font-12 d-block m-5"><a href="register.blade.php" class="bold">{{trans('Dashboard\trans_login.SignUp')}}</a>,{{trans('Dashboard\trans_login.If_you_have_no_account')}}.</span>
                                 </div>
                             </form>
                         </div>

@@ -73,9 +73,9 @@
                                                             </form>
 
                                                                 @elseif(Auth::guard('warehousing_officer')->check())
-                                                                    <form method="POST" action="{{ route('logout.warehousing_officer') }}">
+                                                                    <form method="POST" action="{{ route('logout.warehouse') }}">
                                                                         @csrf
-                                                                        <a href="route('logout.warehousing_officer')" onclick="event.preventDefault();
+                                                                        <a href="route('logout.warehouse')" onclick="event.preventDefault();
                                         this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
                                                 @endif
                                 </form>

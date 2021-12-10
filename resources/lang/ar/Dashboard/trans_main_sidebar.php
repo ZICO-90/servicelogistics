@@ -23,9 +23,6 @@ return [
     'price_list'=>'قائمة الأسعار ',
     'add_price'=>'إضافة سعر ',
     'prices'=>'الأسعار',
-
-
-
     'message' => 'الرسائل',
 
     'users_main'=>'قائمة المستخدمين الرئيسية ',
@@ -37,6 +34,13 @@ return [
     'driver_stage'=>'مرحلة النقل',
     'warehouse_main'=>'قائمة المخازن الرئيسية',
     'warehouse_stage'=>'مرحلة التخزين',
+    'warehouse_track'=>'تعقب تخزين الشحنة',
+
+    'Partners' => 'شركائنا',
+    'Show All Partners' => 'عرض جميع الشركاء',
+    'Add New Partner' => 'إضافة راعي جديد',
+
+
 
     'warehouse_track'=>'تعقب تخزين الشحنة',
 

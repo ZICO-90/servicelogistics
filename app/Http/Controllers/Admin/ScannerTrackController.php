@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Shipment;
 use App\Models\TrackingStage;
 use App\Models\TrackingShipment;
+use App\Http\Requests\ScannerTrackRequest;
 
 use Illuminate\Http\Request;
 
@@ -23,9 +24,10 @@ class ScannerTrackController extends Controller
     {
         //
     }
-
-    public function store(Request $request)
+    public function store(ScannerTrackRequest $request)
     {
+        try {
+            $validated = $request->validated();
 
         $scanner_track = new TrackingShipment();
         $scanner_track->tracking_stage_id = $request->tracking_stage_id;
@@ -45,6 +47,11 @@ class ScannerTrackController extends Controller
         $shipment->update(
             ['tracking_stage_id'=>$request->tracking_stage_id
                 ,]);
+            toastr()->success(trans('Dashboard\messages.success'));
+            return redirect()->route('scanner_tracks.index');
+        }catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
     }
 
 
@@ -65,20 +72,30 @@ class ScannerTrackController extends Controller
     }
 
 
-    public function destroy(Request $request)
+    public function destroy(ScannerTrackRequest $request)
     {
-        $shipment = Shipment::where('id',$request->id)->first();
+        try{
 
-        $customer_id = $shipment->costumer_id;
-        $customer = Customer::where('id',$customer_id)->first();
-        $images = ShipmentAttachment::where('shipment_id',$request->id);
-        if(!empty($images)){
-            foreach($images as $image){
-                $image->delete();
+            $shipment = Shipment::where('id',$request->id)->first();
+
+            $customer_id = $shipment->costumer_id;
+            $customer = Customer::where('id',$customer_id)->first();
+            $images = ShipmentAttachment::where('shipment_id',$request->id);
+            if(!empty($images)){
+                foreach($images as $image){
+                    $image->delete();
+                }
+
             }
+            $customer->delete();
+            $shipment->delete();
 
+            toastr()->success(trans('Dashboard\messages.Delete'));
+            return redirect()->route('scanners_tracks.index');
+        }catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
-        $shipment->delete();
-        $customer->delete();
+
+
     }
 }

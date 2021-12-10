@@ -5,7 +5,7 @@
                 <br>
                 <div class="form-row">
                     <div class="col mb-2">
-                        <label for="title">{{trans('Dashboard/trans_ship.email')}}</label>
+                        <label for="title">{{trans('Dashboard/trans_ship.Email')}}</label>
                         <input type="email" wire:model="email"  class="form-control" value="{{auth()->user()->email}}">
                         @error('email')
                         <div class="alert alert-danger">{{ $message}}</div>
@@ -14,6 +14,7 @@
                     <div class="col mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.password')}}</label>
                         <input type="password" wire:model="password" class="form-control" >
+                        <input type="hidden" wire:model="customer_id" class="form-control">
                         @error('Password')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror

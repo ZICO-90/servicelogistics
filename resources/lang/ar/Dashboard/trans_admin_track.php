@@ -16,6 +16,10 @@ return [
     'submit'=>'حفظ',
     'close'=>'إلغاء الأمر',
     'delete'=>'حذف',
+    'notes'=>'ملاحظات',
+    'submit'=>'حفظ',
+    'getting_initial_approve'=>'الحصول على الموافقة المبدئية',
+
 
 
 

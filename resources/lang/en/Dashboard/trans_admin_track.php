@@ -15,6 +15,11 @@ return [
     'close'=>' Cancel',
     'delete'=>'Delete',
     'notes'=>'Notes',
+    'submit'=>'Save',
+    'close'=>' Close',
+    'getting_initial_approve'=>'getting initial approve',
+
+
 
 
 

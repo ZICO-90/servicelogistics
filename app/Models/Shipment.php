@@ -15,10 +15,10 @@ class Shipment extends Model
 
 
     // 3. To define which attributes needs to be translated
-    public $translatedAttributes = ['shipment_name',];
+//    public $translatedAttributes = ['shipment_name',];
     protected $fillable = ['amount', 'unit_id','whieght','price','address_address','address_longitude',
                            'address_latitude','sender_date','expected_recived_date',
-                           'currency_id', 'tracking_stage_id','service_type_id','type_id','costumer_id'];
+                           'currency_id', 'tracking_stage_id','service_type_id','type_id','costumer_id','shipment_name'];
 
 
 

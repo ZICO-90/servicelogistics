@@ -63,7 +63,7 @@ Route::group(
     //Route::get('/users', [UserController::class, 'index']); error
 
         Route::group(['middleware' => 'auth:web'], function() {
-            Route::view('Add_shipment','Livewire.show_shipping_form');
+            route::view('Add_shipment','Livewire.show_shipping_form');
 
             Route::view('show_tracking','Livewire.show_tracking_form');
 

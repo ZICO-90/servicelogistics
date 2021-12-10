@@ -52,7 +52,7 @@
                     <div class="col-xs-12">
                         <div class="col-md-12"><br><br>
 
-                            <label style="color: red">{{trans('Dashboard\trans-ship.attachement')}}</label>
+                            <label style="color: red">{{trans('Dashboard\trans_ship.attachement')}}</label>
                             <div class="form-group">
                                 <input type="hidden" wire:models="customer_id">
 

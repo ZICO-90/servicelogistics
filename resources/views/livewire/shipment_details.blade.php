@@ -7,6 +7,7 @@
                     <div class="col col-6 mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.shipment_name_ar')}}</label>
                         <input type="text" wire:model="shipment_name_ar" class="form-control">
+                        <input type="hidden" wire:model="customer_id" class="form-control">
                         @error('shipment_name_ar')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -15,7 +16,6 @@
                     <div class="col col-6 mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.shipment_name_en')}}</label>
                         <input type="text" wire:model="shipment_name_en" class="form-control">
-                        <input type="hidden" wire:model="customer_id" class="form-control">
                         @error('shipment_name_en')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -130,10 +130,13 @@
 
                     <div class="col col-4 mb-2">
 
+
                         <label for="title">{{trans('Dashboard/trans_track.tracking_stage_id')}}</label>
+
+                        <label for="title">{{trans('Dashboard\trans_ship.tracking_stage_id')}}</label>
+
                         <select class="my-1 mr-sm-2 form-control" wire:model="tracking_stage_id">
                             <option selected>{{trans('Dashboard\trans_ship.Choose')}}</option>
-
                             @foreach($tracking_stages as $tracking_stage)
                                 <option value="{{$tracking_stage->id}}">{{$tracking_stage->stage_name}}</option>
                             @endforeach

@@ -7,7 +7,12 @@
 
 
                 <th>#</th>
+
                 <th>{{  trans('Dashboard\trans_ship.email') }}</th>
+
+
+                <th>{{  trans('Dashboard\trans_ship.Email') }}</th>
+                <th>{{ trans('Dashboard\trans_ship.shipment_num') }}</th>
 
                 <th>{{ trans('Dashboard\trans_ship.sender_full_name') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.shipment_name') }}</th>
@@ -48,7 +53,11 @@
             <tfoot>
             <tr>
                 <th>#</th>
+
                 <th>{{  trans('Dashboard\trans_ship.email') }}</th>
+
+                <th>{{  trans('Dashboard\trans_ship.Email') }}</th>
+                <th>{{ trans('Dashboard\trans_ship.shipment_num') }}</th>
 
                 <th>{{ trans('Dashboard\trans_ship.sender_full_name') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.shipment_name') }}</th>
