@@ -1,4 +1,4 @@
 <?php
 return[
-    'message' => 'الرسائل',
-]
+    'message' => 'الرسائل'
+];

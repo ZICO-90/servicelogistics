@@ -5,7 +5,7 @@
                 <br>
                 <div class="form-row">
                     <div class="col mb-2">
-                        <label for="title">{{trans('Dashboard/trans_ship.Email')}}</label>
+                        <label for="title">{{trans('Dashboard/trans_ship.email')}}</label>
                         <input type="email" wire:model="email"  class="form-control" value="{{auth()->user()->email}}">
                         @error('email')
                         <div class="alert alert-danger">{{ $message}}</div>

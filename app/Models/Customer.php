@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Notifications\Notifiable;
 use Spatie\Translatable\HasTranslations;
 
 class Customer extends Model
 {
 
 
-    use HasTranslations;
+    use HasTranslations,Notifiable;
 
 
     // 3. To define which attributes needs to be translated

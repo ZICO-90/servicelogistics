@@ -34,7 +34,7 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                     </div>
-                    weight
+
 
                     <div class="col col-4 mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.whieght')}}</label>

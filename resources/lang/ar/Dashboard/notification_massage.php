@@ -12,6 +12,9 @@ return [
     'accept_Price_Order'=>'تم الموافقه علي طلب عرض الاسعار',
     'Request_Quote'=>'عرض الاسعار',
     'thx'=>'شكر لاستخدامك تطبيقنا',
-    'Hallo'=>'مرحبا'
+    'Hallo'=>'مرحبا',
+    'Track_Your_Shipment'=>'تعقب شحنتك',
+    'title_scanner'=>'مرحله الماسح الضوئي تم بنجاح',
+
 
 ];

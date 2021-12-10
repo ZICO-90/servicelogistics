@@ -158,7 +158,7 @@
                 <li>
                     <a href="#">
                         <i class="icofont-users-alt-5"></i>
-                        <span class="link-title">{{trans('Shipments')}}</span>
+                        <span class="link-title">{{trans('Dashboard\trans_main_sidebar.Shipments')}}</span>
                     </a>
 
                     <!-- Sub Menu -->

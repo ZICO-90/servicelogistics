@@ -34,7 +34,7 @@ class EndUserHomeRepository implements EndUserHomeInterface
     private $partnerModel;
 
     public function __construct(InfoSite $infoSite, DeliveryType $delivery , SWelcomeTitle $section ,
-                                employe $employe ,latest_news $latest_news ,convention $convention , Testimonial $testimonial, Partner $partner )
+                                employe $employe ,latest_news $latest_news ,convention $convention , Testimonial $testimonial, Partner $partner)
 
 
     {
@@ -42,6 +42,7 @@ class EndUserHomeRepository implements EndUserHomeInterface
         $this->dileveryModel  =  $delivery ;
         $this->sectionModel  =  $section ;
         $this->employeModel  =  $employe ;
+
 
         $this->latest_newsModel = $latest_news;
         $this->convention = $convention;
@@ -62,9 +63,12 @@ class EndUserHomeRepository implements EndUserHomeInterface
         $convention =$this->convention::Where('is_active' , 1)->latest()->first();
         $testimonials = $this->show_all_testimonials()->where('status', 1);
         $partners = $this->show_all_partners();
+        $All_delivery=$this->dileveryModel::get();
 
 
-        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe' ,'news' ,'convention','testimonials', 'partners'));
+
+
+        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe' ,'news' ,'convention','testimonials', 'partners','All_delivery'));
 
 
 

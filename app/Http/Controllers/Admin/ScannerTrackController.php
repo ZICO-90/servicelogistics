@@ -3,12 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
+use App\Models\Driver;
+use App\Models\Scanner;
 use App\Models\Shipment;
 use App\Models\TrackingStage;
 use App\Models\TrackingShipment;
 use App\Http\Requests\ScannerTrackRequest;
 
+use App\Notifications\send_driver_users;
+use App\Notifications\send_number_shipment_users;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 
 class ScannerTrackController extends Controller
 {
@@ -26,8 +33,11 @@ class ScannerTrackController extends Controller
     }
     public function store(ScannerTrackRequest $request)
     {
+
         try {
+
             $validated = $request->validated();
+
 
         $scanner_track = new TrackingShipment();
         $scanner_track->tracking_stage_id = $request->tracking_stage_id;
@@ -41,12 +51,26 @@ class ScannerTrackController extends Controller
 
         $scanner_track->save();
 
+
       $shipment = Shipment::where('id',$request->id)->first();
+
 //
 ////
         $shipment->update(
             ['tracking_stage_id'=>$request->tracking_stage_id
                 ,]);
+           $user=Customer::findorFail($request->customer_id);
+            $scanner=TrackingShipment::latest()->first();
+
+
+
+
+
+
+
+
+
+            Notification::send($user,new send_number_shipment_users($scanner));
             toastr()->success(trans('Dashboard\messages.success'));
             return redirect()->route('scanner_tracks.index');
         }catch (\Exception $e) {

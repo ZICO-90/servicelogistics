@@ -9,15 +9,11 @@
                 <th>#</th>
 
                 <th>{{  trans('Dashboard\trans_ship.email') }}</th>
-
-
-                <th>{{  trans('Dashboard\trans_ship.Email') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.shipment_num') }}</th>
-
                 <th>{{ trans('Dashboard\trans_ship.sender_full_name') }}</th>
+
                 <th>{{ trans('Dashboard\trans_ship.shipment_name') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.price') }}</th>
+                <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.Processes') }}</th>
 
 
@@ -37,8 +33,8 @@
 
                     <td>{{ $ship->customers->sender_full_name }}</td>
                     <td>{{ $ship->shipment_name }}</td>
-                    <td>{{ $ship->amount }}</td>
                     <td>{{ $ship->price }}</td>
+                    <td>{{ $ship->amount }}</td>
                     <td>
                         <button wire:click="edit({{ $ship->id }})" title="{{ trans('Dashboard\trans_ship.Edit') }}"
                                 class="btn btn-primary btn-sm">{{ trans('Dashboard\trans_ship.Edit') }}</button>
@@ -56,13 +52,15 @@
 
                 <th>{{  trans('Dashboard\trans_ship.email') }}</th>
 
-                <th>{{  trans('Dashboard\trans_ship.Email') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.shipment_num') }}</th>
 
                 <th>{{ trans('Dashboard\trans_ship.sender_full_name') }}</th>
+
+
+
                 <th>{{ trans('Dashboard\trans_ship.shipment_name') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.price') }}</th>
+                <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
+
                 <th>{{ trans('Dashboard\trans_ship.Processes') }}</th>
             </tr>
             </tfoot>

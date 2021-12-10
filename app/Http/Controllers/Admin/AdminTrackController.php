@@ -4,13 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Customer;
+use App\Models\Scanner;
 use App\Models\Shipment;
 use App\Models\ShipmentAttachment;
 use App\Models\TrackingStage;
 use App\Models\TrackingShipment;
 use App\Http\Requests\AdminTrackRequest;
 
+use App\Notifications\send_scanner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class AdminTrackController extends Controller
 {
@@ -51,6 +54,9 @@ class AdminTrackController extends Controller
                 ['tracking_stage_id'=>$request->tracking_stage_id
                     ,]);
 
+             $scanner_user=Scanner::get();
+             $track=TrackingShipment::latest()->first();
+            Notification::send($scanner_user,new send_scanner($track));
             toastr()->success(trans('Dashboard\messages.success'));
             return redirect()->route('admins_tracks.index');
 
@@ -66,7 +72,9 @@ class AdminTrackController extends Controller
 
     public function show($id)
     {
-        //
+      $admin_track_Shipment= TrackingShipment::findorFail($id);
+      return view('',compact('admin_track_Shipment'));
+
     }
 
 

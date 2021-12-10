@@ -21,6 +21,8 @@ return [
     'price_list'=>'Price List',
     'add_price'=>'Add Price',
     'prices'=>'Prices',
+    'shipping_track'=>'Shipping Track',
+
 
     'message' => 'message',
 

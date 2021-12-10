@@ -136,7 +136,7 @@
                                             <div class="control">
                                                 <input class="input" type="text" placeholder="Type your tracking number"> </div>
                                             <div class="control">
-                                                <a href="#" class="button">
+                                                <a href="{{url('show_tracking')}}" class="button">
                                                     <span>Track it</span>
                                                     <span class="icon is-small">
                                 <i class="icon-target"></i>

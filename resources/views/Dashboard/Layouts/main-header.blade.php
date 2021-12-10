@@ -193,7 +193,7 @@
                                         <div class="dropdown-header d-flex align-items-center justify-content-between">
                                             <h5>
                                                 {{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_contact')->count()}} {{trans('Dashboard\notification_massage.Unread_messages')}}</h5>
-                                            <a href="{{route('mark_read_contact')}}" class="text-mute d-inline-block">Clear all</a>
+                                            <a href="{{route('mark_read_contact')}}" class="text-mute d-inline-block">{{trans('Dashboard\notification_massage.Clear_all')}}</a>
                                         </div>
                                         <!-- End Dropdown Header -->
 
@@ -230,11 +230,6 @@
                             </li>
                             <li>
 
-
-
-
-
-
                                 <!-- Main Header Notification Shipments-->
                             @if(auth()->guard('admin')->user())
 
@@ -251,7 +246,7 @@
                                             <!-- Dropdown Header -->
                                             <div class="dropdown-header d-flex align-items-center justify-content-between">
                                                 <h5>{{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_shipment')->count()}} {{trans('Dashboard\notification_massage.Unread_messages')}}</h5>
-                                                <a href="{{route('mark_read_shipments')}}" class="text-mute d-inline-block">Clear all</a>
+                                                <a href="{{route('mark_read_shipments')}}" class="text-mute d-inline-block">{{trans('Dashboard\notification_massage.Clear_all')}}</a>
                                             </div>
                                             <!-- End Dropdown Header -->
 
@@ -282,12 +277,72 @@
                             @endif
                                 <!-- End Main Header Notification -->
                             </li>
+
+
+
                             <li>
 
+                                <!-- Main Header Notification Shipments-Scanner-->
+                                @if(auth()->guard('scanner')->user())
+
+                                    <div class="main-header-notification">
+                                        <a href="#" class="header-icon notification-icon" data-toggle="dropdown">
+
+                                            <span class="count" data-bg-img="{{URL::asset('Dashboard/img/count-bg.png')}}">
+                                                {{auth()->guard('scanner')->user()->unreadNotifications->where('type','App\Notifications\send_scanner')->count()}}
+                                            </span>
+
+                                            <img src="{{URL::asset('Dashboard/img/svg/notification-icon.svg')}}" alt="" class="svg">
+                                        </a>
+                                        <div class="dropdown-menu style--two">
+                                            <!-- Dropdown Header -->
+                                            <div class="dropdown-header d-flex align-items-center justify-content-between">
+                                                <h5>{{auth()->guard('scanner')->user()->unreadNotifications->where('type','App\Notifications\send_scanner')->count()}} {{trans('Dashboard\notification_massage.Unread_messages')}}</h5>
+                                                <a href="{{route('mark_read_scanner')}}" class="text-mute d-inline-block">{{trans('Dashboard\notification_massage.Clear_all')}}</a>
+                                            </div>
+                                            <!-- End Dropdown Header -->
+
+                                        @foreach(auth()->guard('scanner')->user()->unreadNotifications as $notification)
+                                            <!-- Dropdown Body -->
+                                                @isset($notification->data['title_track'])
+                                                    <div class="dropdown-body">
+                                                        <!-- Item Single -->
+                                                        <a href="" class="item-single d-flex align-items-center">
+                                                            <div class="content">
+                                                                <div class="mb-2">
+                                                                    <p class="time">{{ $notification->created_at->diffForhumans() }}</p>
+                                                                </div>
+                                                                <p class="main-text">{{ $notification->data['title_track'] }}</p>
+                                                            </div>
+                                                        </a>
+                                                        <!-- End Item Single -->
+
+                                                    </div>
+                                            @endisset
+                                        @endforeach
+
+
+                                        <!-- End Dropdown Body -->
+                                        </div>
+                                    </div>
+
+                            @endif
+                            <!-- End Main Header Notification -->
+                            </li>
 
 
 
 
+
+
+
+
+
+
+
+
+
+                            <li>
 
                                 <!-- Main Header Notification Price-order -->
                                 @if(auth()->guard('admin')->user())
@@ -305,7 +360,7 @@
                                             <!-- Dropdown Header -->
                                             <div class="dropdown-header d-flex align-items-center justify-content-between">
                                                 <h5>{{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_OrderPrice')->count()}} {{trans('Dashboard\notification_massage.Unread_messages')}}</h5>
-                                                <a href="{{route('mark_read_priceOrder')}}" class="text-mute d-inline-block">Clear all</a>
+                                                <a href="{{route('mark_read_priceOrder')}}" class="text-mute d-inline-block">{{trans('Dashboard\notification_massage.Clear_all')}}</a>
 
                                             </div>
                                             <!-- End Dropdown Header -->

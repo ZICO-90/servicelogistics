@@ -12,6 +12,9 @@ return [
     'accept_Price_Order'=>'The request for quotation has been approved',
     'Request_Quote'=>'Request A Quote',
     'thx'=>'Thank you for using our application!',
-    'Hallo'=>'Hallo'
+    'Hallo'=>'Hallo',
+    'Track_Your_Shipment'=>'Track Your Shipment',
+    'title_scanner'=>'Scanner stage completed successfully',
+
 
 ];

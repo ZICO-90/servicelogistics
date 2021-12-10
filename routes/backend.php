@@ -113,12 +113,11 @@ Route::group(
         Route::get('contact/{id}','contactController@show')->name('contact.show');
         Route::get('contacts/{id}','contactController@destroy')->name('contact.destroy');
 
-        Route::get('show_shipment/{id}','MarkallController@show')->name('show_shipment');
-
 
     Route::get('mark_all_contact','MarkallController@MarkAsRead_contact')->name('mark_read_contact');
     Route::get('mark_all_shipments','MarkallController@MarkAsRead_shipments')->name('mark_read_shipments');
     Route::get('mark_all_priceOrder','MarkallController@MarkAsRead_priceOrder')->name('mark_read_priceOrder');
+    Route::get('mark_all_scanner','MarkallController@MarkAsRead_scanner')->name('mark_read_scanner');
 
 
 
