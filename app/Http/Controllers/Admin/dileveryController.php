@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreDileveryRequest;
 use App\Http\Requests\UpdateRecordsDileveryRequest;
 use App\Http\Requests\UpdateDileveryRequest ;
+use App\Http\Requests\storeServicesSectionRequest;
+use App\Http\Requests\updateServicesSectionRequest;
 class dileveryController extends Controller
 {
     private $dilevery;
@@ -66,4 +68,37 @@ class dileveryController extends Controller
             return $this->dilevery->destroy($id);
 
         }
+
+        public function CreateServicesSection(){
+        
+            return $this->dilevery->CreateServicesSection();
+
+          }
+
+          public function storeServicesSection(storeServicesSectionRequest $request){
+        
+            return $this->dilevery->storeServicesSection($request);
+
+          }
+
+          public function editeServicesSection($id){
+      
+            return $this->dilevery->editeServicesSection($id);
+            }
+
+            public function updateServicesSection(updateServicesSectionRequest $request){
+                return $this->dilevery->updateServicesSection($request);
+            
+                }
+
+                public function IsDisplayActive($id , $bool){
+
+                  
+                    return $this->dilevery->IsDisplayActive($id , $bool);
+                }
+
+                public function  deleteServicesSection($id){
+                    return $this->dilevery->deleteServicesSection($id);
+
+                }
 }

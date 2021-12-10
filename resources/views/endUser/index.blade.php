@@ -155,88 +155,41 @@
                 </section>
                 <section id="services" class="section services-section has-background-primary-light is-clearfix">
                     <div class="container">
+                        @isset($ServicesSection)
                         <div class="columns is-variable is-multiline is-4">
                             <div class="column is-5-desktop is-12-tablet">
-                                <p class="heading-title-top">logistics services</p>
-                                <h1 class="heading-title style-3 has-text-left">our special services</h1>
+                                <p class="heading-title-top">{{$ServicesSection->heading_title_top_P}}</p>
+                                <h1 class="heading-title style-3 has-text-left">{{$ServicesSection->heading_title_H}}</h1>
                             </div>
                             <div class="column is-7-desktop is-12-tablet">
-                                <p class="heading-title-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla chronocrator accumsan, metus ultrices eleifend gravi.</p>
+                                <p class="heading-title-bottom">{{$ServicesSection->heading_title_bottom_P}}</p>
                             </div>
                         </div>
+                        @endisset
                         <br>
+
+                      
                         <div class="columns is-variable is-4 is-multiline boxes-style-2">
+                        @isset($logisticslimit)
+                        @foreach($logisticslimit as $model)
                             <div class="column is-4" data-aos="fade">
                                 <div class="box-item">
                                     <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/4.png"> </a>
+                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{asset('Dashboard/img/delivery/'.$model-> icon_url)}}"> </a>
                                     <h3>
-                                        <a href="./pages/services.html">land transport</a>
+                                        <a href="#">{{$model->name}}</a>
                                     </h3>
-                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
-                                    <a href="./pages/services.html" class="button"></a>
+                                    <p>{{$model->details}}</p>
+                                  {{--  <a href="./pages/services.html" class="button"></a> --}}
                                 </div>
+                              
                                 <!-- .box-item -->
                             </div>
-                            <div class="column is-4" data-aos="fade">
-                                <div class="box-item">
-                                    <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/3.png"> </a>
-                                    <h3>
-                                        <a href="./pages/services.html">ocean freight</a>
-                                    </h3>
-                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
-                                    <a href="./pages/services.html" class="button"></a>
-                                </div>
-                                <!-- .box-item -->
-                            </div>
-                            <div class="column is-4" data-aos="fade">
-                                <div class="box-item">
-                                    <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/1.png"> </a>
-                                    <h3>
-                                        <a href="./pages/services.html">warehousing</a>
-                                    </h3>
-                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
-                                    <a href="./pages/services.html" class="button"></a>
-                                </div>
-                                <!-- .box-item -->
-                            </div>
-                            <div class="column is-4" data-aos="fade">
-                                <div class="box-item">
-                                    <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/3.png"> </a>
-                                    <h3>
-                                        <a href="./pages/services.html">ocean freight</a>
-                                    </h3>
-                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
-                                    <a href="./pages/services.html" class="button"></a>
-                                </div>
-                                <!-- .box-item -->
-                            </div>
-                            <div class="column is-4" data-aos="fade">
-                                <div class="box-item">
-                                    <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/4.png"> </a>
-                                    <h3>
-                                        <a href="./pages/services.html">land transport</a>
-                                    </h3>
-                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
-                                    <a href="./pages/services.html" class="button"></a>
-                                </div>
-                                <!-- .box-item -->
-                            </div>
-                            <div class="column is-4" data-aos="fade">
-                                <div class="box-item">
-                                    <a href="./pages/services.html">
-                                        <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/icons/2.png"> </a>
-                                    <h3>
-                                        <a href="./pages/services.html">air freight</a>
-                                    </h3>
-                                    <p>Climatology chronocrator puppysnatch leacher unrived tomentum.</p>
-                                    <a href="./pages/services.html" class="button"></a>
-                                </div>
-                                <!-- .box-item -->
+                           
+                        @endforeach
+                        @endisset
+           
+                            
                             </div>
                         </div>
                     </div>
