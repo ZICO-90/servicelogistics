@@ -27,4 +27,5 @@ class UpdatePriceOrderRequest extends FormRequest
             'message_id' => 'required|exists:price_orders,id'
         ];
     }
+
 }

@@ -5,9 +5,9 @@ return [
 // main-sidebar logistice Services (Dilivery)
 
  'logisticeServices' => 'الخدمات اللوجستية',
-// Content card-body logistice Services (Dilivery) 
+// Content card-body logistice Services (Dilivery)
 
- 'h4title'        => 'الخدمات اللوجستية' , 
+ 'h4title'        => 'الخدمات اللوجستية' ,
  'linkCreate'     => 'إضافة خدمه جديده' ,
  'linkViewRecord' => 'التحكم في عرض الخدمات' ,
 
@@ -27,7 +27,7 @@ return [
  'actions'       => 'العمليات' ,
  'actionsEdit'   => 'تعديل',
  'actionsDelete' => 'حذف',
-  // Content New Add logistice Service page(create , edit) (Dilivery) 
+  // Content New Add logistice Service page(create , edit) (Dilivery)
 'updateTitle' => 'تحديث الخدمات اللوجستية' ,
  'arname'     => 'الاسم بالعربي' ,
  'enname'     => 'الاسم بالانجليزي',
@@ -51,13 +51,14 @@ return [
 
   //records.blade.php Trans messages
 
-  
+
  'Title' => 'التحكم في عدد عرض العناصر',
  'alert' => 'الرجوع الي  الرائيسية',
  'label_theme_input_style' => 'العدد العناصر الحالية التي يتم عرضها',
  'label_theme_input_style_Errors' => 'لا توجد بيانات لعرضها. الرجاء إدخال البيانات المراد عرضها ',
  'submitRecord'=> 'تفعيل' ,
- 'labelmb-2' => 'أدخل الرقم عدد العناصر التي سوف يتم عرضها'
+ 'labelmb-2' => 'أدخل الرقم عدد العناصر التي سوف يتم عرضها',
+    'get_a_quote'=>'طلب عرض السعر'
 
 ];
 

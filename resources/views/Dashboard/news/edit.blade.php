@@ -3,7 +3,7 @@
 
 <head>
    <!-- Page Title -->
-   <title>Dashmin </title>
+   <title>edite </title>
 
    <!-- Meta Data -->
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +44,7 @@
 
 
         <div class="form-element py-30 mb-30">
-            <h4 class="font-20 mb-4">Default Form Validation</h4>
+            <h4 class="font-20 mb-4">{{trans('dashboard\news.edit news')}}</h4>
 
             <!-- Form -->
             <form class="form-validate-jquery" action="{{route('news.update',[$news->id])}}" method="POST"  enctype="multipart/form-data">
@@ -62,41 +62,45 @@
             @endif
                 <!-- Form Row -->
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">الاسم باللغه العربيه</label>
-                    <input type="text" name="ar_title" class="theme-input-style is-invalid" value="{{$news->ar_title}}">
+                    <label class="font-14 bold">{{trans('Dashboard\news.name at arabic')}}</label>
+                    <input type="text" name="title[ar]" class="theme-input-style is-invalid"
+                           value="{{$news->getTranslation('title', 'ar')}}">
 
                 </div>
-                <input type="hidden" name="admin_id" value="{{('admin_id' ==Auth::id())}}">
+
 
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">name at english</label>
-                    <input type="text" name="en_title" class="theme-input-style is-invalid" value="{{$news->en_title}}">
+                    <label class="font-14 bold">{{trans('Dashboard\news.name at english')}}</label>
+                    <input type="text" name="title[en]" class="theme-input-style is-invalid"
+                           value="{{$news->getTranslation('title', 'en')}}">
 
                 </div>
                 <!-- End Form Row -->
 
                 <!-- Form Row -->
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">محتوى الخبر</label>
-                    <textarea type="long_text" name="ar_content" class="theme-input-style is-valid" >{{$news->ar_content}}</textarea>
+                    <label class="font-14 bold">{{trans('Dashboard\news.content news at arabic')}}</label>
+                    <textarea type="long_text" name="content[ar]" class="theme-input-style is-valid" >
+                        {{$news->getTranslation('content', 'ar')}}</textarea>
 
                 </div>
 
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">news content</label>
-                    <textarea type="text" name="en_content" class="theme-input-style is-valid" >{{$news->en_content}}</textarea>
+                    <label class="font-14 bold">{{trans('Dashboard\news.content news at english')}}</label>
+                    <textarea type="text" name="content[en]" class="theme-input-style is-valid" >
+                        {{$news->getTranslation('content' , 'en')}}</textarea>
 
                 </div>
                 <!-- End Form Row -->
                 <div class="form-row mb-5">
-                    <label class="font-14 bold">photo</label>
+                    <label class="font-14 bold">{{trans('Dashboard\news.photo')}}</label>
                     <input type="file" name="photo" class="theme-input-style " value="{{$news->photo}}">
 
                 </div>
                 <!-- Form Row -->
                 <div class="form-row">
                     <div class="col-12">
-                        <button type="submit" class="btn long">Submit</button>
+                        <button type="submit" class="btn long">{{trans('Dashboard\news.update')}}</button>
                     </div>
                 </div>
                 <!-- End Form Row -->

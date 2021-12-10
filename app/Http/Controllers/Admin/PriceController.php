@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Interfaces\Admin\PriceInterface;
 use Illuminate\Http\Request;
+use App\Http\Requests\PriceRequest;
 
 class PriceController extends Controller
 {
@@ -16,7 +17,7 @@ class PriceController extends Controller
     }
     public function index()
     {
-        return$this->price->all_prices();
+        return $this->price->all_prices();
     }
 
 
@@ -43,25 +44,13 @@ class PriceController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(PriceRequest $request)
     {
         return $this->price->update_price($request);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Request $request)
+    public function destroy(PriceRequest $request)
     {
         return $this->price->destroy_price($request);
 

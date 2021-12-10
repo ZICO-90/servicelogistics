@@ -5,12 +5,12 @@ return [
 // main-sidebar  (employes)
 
 'linkTitle' => 'employees',
-// Content card-body page index (employes) 
+// Content card-body page index (employes)
 
-'h4title'        => 'Display all employees' , 
+'h4title'        => 'Display all employees' ,
 'linkCreate'     => 'Add New employe' ,
 
- // Content  List Table  page(index) (employes) 
+ // Content  List Table  page(index) (employes)
 
 
 'imgaes'         => 'picture',
@@ -26,15 +26,15 @@ return [
 'actionsDelete' => 'delete',
 'Statusactviated' => 'actviated',
 'StatusUnactviated' => 'Unactviated',
- 
- // Content  employes attribute  page(edit,Create) (employes) 
+
+ // Content  employes attribute  page(edit,Create) (employes)
 'UpdateTitle' => 'Update this employes',
 'ar_name'     => 'The name in Arabic' ,
 'en_name'     => 'The name in English',
 'ar_Details'  => 'details in Arabic',
 'en_Details'  => 'details in English',
 'ar_Country'  => 'Country in Arabic' ,
-'ar_Country'  => 'Country in English' ,
+'eb_Country'  => 'Country in English' ,
 'ar_City'     => 'City in Arabic' ,
 'en_City'     => 'City in English' ,
 'birth_date'  => 'birth date',

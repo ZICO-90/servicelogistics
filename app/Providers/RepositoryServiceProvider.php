@@ -48,6 +48,12 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Http\Interfaces\Admin\TestimonialInterface',
             'App\Http\Repositories\Admin\TestimonialRepository'
         );
+
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\PartnerInterface',
+            'App\Http\Repositories\Admin\PartnerRepository'
+        );
+
         $this->app->bind(
             'App\Http\Interfaces\Admin\newsInterface',
             'App\Http\Repositories\Admin\newsRepository'
@@ -56,6 +62,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             'App\Http\Interfaces\Admin\conventionInterface',
             'App\Http\Repositories\Admin\conventionRepository'
+        );
+
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\contactInterface',
+            'App\Http\Repositories\Admin\contactRepository'
         );
 
         $this->app->bind(

@@ -3,26 +3,31 @@
 return [
 
 
-    'adding_price' => ' إضافة الأسعار',
-    'material_type_id'=>'نوع المادة المشحونة',
-    'whieght'=>'الوزن',
-    'unit_id'=>'الوحدة القياسية',
-    'service_type_id'=>'نوع الخدمة',
-    'currency_id'=>'العملة',
-    'distance'=>'المسافة',
+
+    'price.required' => 'حقل السعر مطلوب',
+    'material_type_id.required' => 'نوع المادة المشحونة مطلوب',
+    'service_type_id.required' => 'نوع الخدمة المقدمة مطلوبة',
+    'distance.required' => 'تحديد المسافة مطلوب',
+    'unit_id.required' =>'نوع الوحدة القياسية مطلوب',
+    'wheight.required' => 'تحديد الوزن مطلوب',
+    'currency_id.required' => 'تحديد العملة مطلوب',
+
+    'price' => ' السعر',
+    'material_type_id' => 'نوع المادة المشحونة',
+    'service_type_id' => 'نوع الخدمة المقدمة',
+    'distance' => 'المسافة',
+    'unit_id' =>'الوحدة القياسية',
+    'wheight' => 'الوزن',
+    'adding_price'=>'إضافة سعر',
     'price'=>'السعر',
-    'close'=>'اغلاق',
-    'submit'=>'حفظ',
-    'Processes'=>'العمليات',
-    'wheight'=>'الوزن',
-    'Delete'=>'حذف',
-    'Edit'=>'تعديل',
-    'submit'=>'حفظ',
     'close'=>'إغلاق',
-    'delete_price'=>'حذف السعر',
+    'whieght'=>'الوزن',
+    'currency_id'=>'العملة',
+    'submit'=>'إحفظ',
+
+    'Processes'=>'العمليات',
     'update_price'=>'تعديل السعر',
-    'price'=>'السعر'
-
-
+    'delete_price'=>'Delete Price',
+    'Delete'=>'Delete',
 
 ];

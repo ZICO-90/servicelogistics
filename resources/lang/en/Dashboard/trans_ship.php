@@ -2,22 +2,23 @@
 
 return [
 
-
-
     'email' => 'Email',
     'password'=>' Password',
-    'sender_mother_name'=>'sender mother name',
-    'sender_full_name'=>'sender full name',
-    'sender_national_id'=>'sender national id',
-    'sender_phone'=>'sender phone',
-    'address_sender'=>'address sender',
+    'sender_mother_name_en'=>'Sender Mother Name English',
+    'sender_full_name_en'=>'Sender Full Name English',
+    'sender_mother_name_ar'=>'Sender Mother Name Arabic',
+    'sender_full_name_ar'=>'Sender Full Name Arabic',
+    'sender_national_id'=>'Sender National Id',
+    'sender_phone'=>'Sender Phone',
+    'address_sender'=>'Address Sender',
 
-    'reciver_full_name'=>'reciver full name',
-    'reciver_mother_name'=>'reciver mother name',
-
-    'reciver_national_id'=>'reciver national id',
-    'reciver_phone'=>'reciver phone',
-    'address_reciver'=>'address_reciver',
+    'reciver_full_name_en'=>'Reciver Full Name English',
+    'reciver_mother_name_en'=>'Reciver Mother Name English',
+    'reciver_full_name_ar'=>'Reciver Full Name Arabic',
+    'reciver_mother_name_ar'=>'Reciver Mother Name Arabic',
+    'reciver_national_id'=>'Reciver National Id',
+    'reciver_phone'=>'Reciver Phone',
+    'address_reciver'=>'Address_Reciver',
 
     'Next'=>'Next',
     'Step1'=>'Customer Details',
@@ -28,7 +29,9 @@ return [
 
 
     'shipment_num'=>' Shipments Num',
-    'shipment_name'=>'Shipments Name',
+    'shipment_name_en'=>'Shipments Name English',
+    'shipment_name_ar'=>'Shipments Name Arabic',
+
     'amount'=>'Amount',
     'price'=>'Price',
     'sender_date'=>'Sender Date',
@@ -39,20 +42,33 @@ return [
     'Address'=>'Address',
     'finish'=>'Finish',
     'Choose'=>'  Choose From List',
-    'add_shipment'=>' Add a Shipment',
     'Edit'=>'Edit',
     'Processes'=>'Processes',
     'Delete'=>'Delete',
-    'shipment_process'=>'Shipment Process ',
-    'add_shipment'=>' Add a Shipment',
+    'shipment_process'=>'Shipments Process ',
+    'add_shipment'=>' Add a Shipments',
     'attachement'=>'Attachement',
     'currency_id'=>'Currency',
     'series_id'=>'Prefix',
-<<<<<<< HEAD
+    'waiting_to_initial_approve'=>'waiting to initial approve',
+
+
+
+
+
+    'shipment_name'=>'Shipment Nmae ',
+    'sender_full_name'=>'Sender Full Name',
+    'tracking_stage_id'=>'Tracking Stage',
+
+
+
 'service_type_id'=>'Service Typeٍ',
-    ''
-=======
->>>>>>> f00d4da9303321e3dc4ab3be7e3776dd4df9d6a1
+
+
+
+
+
+
 
 
 

@@ -45,7 +45,7 @@
 
 
         <div class="form-element py-30 mb-30">
-            <h4 class="font-20 mb-4">{{__('Dashboard.convention.Add convention')}}</h4>
+            <h4 class="font-20 mb-4">{{trans('Dashboard\convention.add convention')}}</h4>
 
             <!-- Form -->
             <form class="form-validate-jquery" action="{{route('convention.store')}}" method="POST" enctype="multipart/form-data">
@@ -62,45 +62,45 @@
             @endif
                 <!-- Form Row -->
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">name at arabic</label>
-                    <input type="text" name="ar_title" class="theme-input-style is-invalid" placeholder="Type Your Name">
+                    <label class="font-14 bold">{{trans('Dashboard\convention.name at arabic')}}</label>
+                    <input type="text" name="title[ar]" class="theme-input-style is-invalid" >
 
                 </div>
 
 
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">name at english</label>
-                    <input type="text" name="en_title" class="theme-input-style is-invalid" placeholder="Type Your Name">
+                    <label class="font-14 bold">{{trans('Dashboard\convention.name at english')}}</label>
+                    <input type="text" name="title[en]" class="theme-input-style is-invalid" >
 
                 </div>
                 <!-- End Form Row -->
                 <div class="form-row mb-20">
-                    <label class="font-14 bold">company </label>
-                    <input type="text" name="company" class="theme-input-style is-invalid" placeholder="Type Your Name">
+                    <label class="font-14 bold">{{trans('Dashboard\convention.company')}} </label>
+                    <input type="text" name="company" class="theme-input-style is-invalid" >
 
                 </div>
 
                 <div class="form-row mb-20">
-                    <label class="font-14 bold"> customer</label>
-                    <input type="text" name="customer" class="theme-input-style is-invalid" placeholder="Type Your Name">
+                    <label class="font-14 bold">{{trans('Dashboard\convention.customer')}} </label>
+                    <input type="text" name="customer" class="theme-input-style is-invalid" >
 
                 </div>
 
                 <!-- Form Row -->
                 <div class="form-row mb-20">
-                    <label class="font-14 bold"> convention content at arabic</label>
-                    <textarea type="text" name="ar_content" class="theme-input-style is-valid" placeholder="Company Name"></textarea>
+                    <label class="font-14 bold">{{trans('Dashboard\convention.convention content at arabic')}} </label>
+                    <textarea type="text" name="content[ar]" class="theme-input-style is-valid"></textarea>
 
                 </div>
 
                 <div class="form-row mb-20">
-                    <label class="font-14 bold"> convention content at english</label>
-                    <textarea type="text" name="en_content" class="theme-input-style is-valid" placeholder="Company Name"></textarea>
+                    <label class="font-14 bold"> {{trans('Dashboard\convention.convention content at english')}}</label>
+                    <textarea type="text" name="content[en]" class="theme-input-style is-valid" ></textarea>
 
                 </div>
                 <!-- End Form Row -->
                 <div class="form-row mb-5">
-                    <label class="font-14 bold">photo</label>
+                    <label class="font-14 bold">{{trans('Dashboard\convention.photo')}}</label>
                     <input type="file" name="photo" class="theme-input-style " >
 
 
@@ -108,7 +108,7 @@
                 <!-- Form Row -->
                 <div class="form-row">
                     <div class="col-12">
-                        <button type="submit" class="btn long">create</button>
+                        <button type="submit" class="btn long">{{trans('Dashboard\convention.create')}}</button>
                     </div>
                 </div>
                 <!-- End Form Row -->

@@ -15,7 +15,7 @@ class conventionRepository implements conventionInterface
     }
 
     public function index(){
-        $conv = convention::all();
+        $conv = convention::latest()->get();
         return view('Dashboard.convention.index',compact('conv'));
     }
 
@@ -24,14 +24,13 @@ class conventionRepository implements conventionInterface
     }
 
     public function store($request){
-
+        $data =$request->validated();
         if($request->photo != null)
         {
-            $data = $request->validated();
             $path = Storage::disk('public')->putFile('/convention',$request->photo);
             $data['photo']= $path;
         }
-            $conv = convention::create($data);
+             convention::create($data);
             return redirect()->route('convention.index');
     }
 

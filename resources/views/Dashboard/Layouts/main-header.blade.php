@@ -42,12 +42,42 @@
                                 <a href="#">My Profile</a>
                                 <a href="#">task</a>
                                 <a href="#">Settings</a>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <a href="route('logout')"
-                                       onclick="event.preventDefault();
-                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
 
+                                @if(Auth::guard('admin')->check())
+                                    <form method="POST" action="{{ route('logout.admin') }}">
+                                        @csrf
+                                        <a href="route('logout.admin')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+                                    </form>
+
+                                        @elseif(auth::guard('web')->check())
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <a href="route('logout')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+                                            </form>
+
+                                                @elseif(Auth::guard('driver')->check())
+                                                    <form method="POST" action="{{ route('logout.driver') }}">
+                                                        @csrf
+                                                        <a href="route('logout.driver')" onclick="event.preventDefault();
+
+                                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+
+                                                    </form>
+                                                        @elseif(Auth::guard('scanner')->check())
+                                                            <form method="POST" action="{{ route('logout.scanner') }}">
+                                                                @csrf
+                                                                <a href="route('logout.scanner')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+                                                            </form>
+
+                                                                @elseif(Auth::guard('warehousing_officer')->check())
+                                                                    <form method="POST" action="{{ route('logout.warehouse') }}">
+                                                                        @csrf
+                                                                        <a href="route('logout.warehouse')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">{{trans('Dashboard\trans_main_header.Log_Out')}}</a>
+                                                @endif
                                 </form>
 
                             </div>
@@ -138,157 +168,229 @@
                                     </form>
                                 </div>
                                 <!-- End Main Header Search -->
+
+
+
+
                             </li>
                             <li>
-                                <!-- Main Header Messages -->
+
+                                @if(auth()->guard('admin')->user())
+                                <!-- Main Header Messages Contact-->
                                 <div class="main-header-message">
-                                    <a href="#" class="header-icon" data-toggle="dropdown">
+                                    <a href="#" class="header-icon notification-icon" data-toggle="dropdown">
+
+                                        <span class="count" data-bg-img="{{URL::asset('Dashboard/img/count-bg.png')}}">
+
+                              {{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_contact')->count()}}
+
+                                        </span>
+
                                         <img src="{{URL::asset('Dashboard/img/svg/message-icon.svg')}}" alt="" class="svg">
                                     </a>
                                     <div class="dropdown-menu">
                                         <!-- Dropdown Header -->
                                         <div class="dropdown-header d-flex align-items-center justify-content-between">
-                                            <h5>3 Unread messages</h5>
-                                            <a href="#" class="text-mute d-inline-block">Clear all</a>
+                                            <h5>
+                                                {{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_contact')->count()}} {{trans('Dashboard\notification_massage.Unread_messages')}}</h5>
+                                            <a href="{{route('mark_read_contact')}}" class="text-mute d-inline-block">{{trans('Dashboard\notification_massage.Clear_all')}}</a>
                                         </div>
                                         <!-- End Dropdown Header -->
 
-                                        <!-- Dropdown Body -->
+                                        @foreach(auth()->guard('admin')->user()->unreadNotifications as $notification)
+                                       @isset($notification->data['id_contact'])
                                         <div class="dropdown-body">
                                             <!-- Item Single -->
-                                            <a href="#" class="item-single d-flex media align-items-center">
-                                                <div class="figure">
-                                                    <img src="{{URL::asset('Dashboard/img/avatar/m1.png')}}" alt="">
-                                                    <span class="avatar-status bg-teal"></span>
-                                                </div>
-                                                <div class="content media-body">
-                                                    <div class="d-flex align-items-center mb-2">
-                                                        <h6 class="name">Sender Name</h6>
-                                                        <p class="time">2 min ago</p>
-                                                    </div>
-                                                    <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
-                                            </a>
-                                            <!-- End Item Single -->
 
-                                            <!-- Item Single -->
-                                            <a href="#" class="item-single d-flex media align-items-center">
-                                                <div class="figure">
-                                                    <img src="{{URL::asset('Dashboard/img/avatar/m2.png')}}" alt="">
-                                                    <span class="avatar-status bg-teal"></span>
-                                                </div>
-                                                <div class="content media-body">
-                                                    <div class="d-flex align-items-center mb-2">
-                                                        <h6 class="name">Tonya Lee</h6>
-                                                        <p class="time">2 min ago</p>
-                                                    </div>
-                                                    <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
-                                            </a>
-                                            <!-- End Item Single -->
+                                            <a href="{{route('contact.show',$notification->data['id_contact'])}}" class="item-single d-flex media align-items-center">
 
-                                            <!-- Item Single -->
-                                            <a href="#" class="item-single d-flex media align-items-center">
-                                                <div class="figure">
-                                                    <img src="{{URL::asset('Dashboard/img/avatar/m3.png')}}" alt="">
-                                                    <span class="avatar-status bg-teal"></span>
-                                                </div>
                                                 <div class="content media-body">
                                                     <div class="d-flex align-items-center mb-2">
-                                                        <h6 class="name">Cathy Nichols</h6>
-                                                        <p class="time">2 min ago</p>
+                                                        <h6 class="name">{{ $notification->data['name_contact'] }}</h6>
+                                                        <p class="time">{{ $notification->created_at->diffForhumans() }}</p>
                                                     </div>
-                                                    <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
+                                                    <p class="main-text">{{ $notification->data['title_contact'] }}</p>
                                                 </div>
                                             </a>
-                                            <!-- End Item Single -->
 
-                                            <!-- Item Single -->
-                                            <a href="#" class="item-single d-flex media align-items-center">
-                                                <div class="figure">
-                                                    <img src="{{URL::asset('Dashboard/img/avatar/m4.png')}}" alt="">
-                                                    <span class="avatar-status bg-teal"></span>
-                                                </div>
-                                                <div class="content media-body">
-                                                    <div class="d-flex align-items-center mb-2">
-                                                        <h6 class="name">Hubert Griffith</h6>
-                                                        <p class="time">2 min ago</p>
-                                                    </div>
-                                                    <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
-                                            </a>
                                             <!-- End Item Single -->
                                         </div>
+                                        @endisset
+                                    @endforeach
+
+
+
                                         <!-- End Dropdown Body -->
                                     </div>
                                 </div>
+
+
+                                @endif
                                 <!-- End Main Header Messages -->
                             </li>
                             <li>
-                                <!-- Main Header Notification -->
-                                <div class="main-header-notification">
-                                    <a href="#" class="header-icon notification-icon" data-toggle="dropdown">
-                                        <span class="count" data-bg-img="{{URL::asset('Dashboard/img/count-bg.png')}}">22</span>
-                                        <img src="{{URL::asset('Dashboard/img/svg/notification-icon.svg')}}" alt="" class="svg">
-                                    </a>
-                                    <div class="dropdown-menu style--two">
-                                        <!-- Dropdown Header -->
-                                        <div class="dropdown-header d-flex align-items-center justify-content-between">
-                                            <h5>5 New notifications</h5>
-                                            <a href="#" class="text-mute d-inline-block">Clear all</a>
+
+                                <!-- Main Header Notification Shipments-->
+                            @if(auth()->guard('admin')->user())
+
+                                    <div class="main-header-notification">
+                                        <a href="#" class="header-icon notification-icon" data-toggle="dropdown">
+
+                                            <span class="count" data-bg-img="{{URL::asset('Dashboard/img/count-bg.png')}}">
+                                                {{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_shipment')->count()}}
+                                            </span>
+
+                                            <img src="{{URL::asset('Dashboard/img/svg/notification-icon.svg')}}" alt="" class="svg">
+                                        </a>
+                                        <div class="dropdown-menu style--two">
+                                            <!-- Dropdown Header -->
+                                            <div class="dropdown-header d-flex align-items-center justify-content-between">
+                                                <h5>{{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_shipment')->count()}} {{trans('Dashboard\notification_massage.Unread_messages')}}</h5>
+                                                <a href="{{route('mark_read_shipments')}}" class="text-mute d-inline-block">{{trans('Dashboard\notification_massage.Clear_all')}}</a>
+                                            </div>
+                                            <!-- End Dropdown Header -->
+
+                                        @foreach(auth()->guard('admin')->user()->unreadNotifications as $notification)
+                                            <!-- Dropdown Body -->
+                                                @isset($notification->data['title_shipment'])
+                                            <div class="dropdown-body">
+                                                <!-- Item Single -->
+                                                <a href="{{route('show_shipment', $notification->data['id_shipment'] )}}" class="item-single d-flex align-items-center">
+                                                    <div class="content">
+                                                        <div class="mb-2">
+                                                            <p class="time">{{ $notification->created_at->diffForhumans() }}</p>
+                                                        </div>
+                                                        <p class="main-text">{{ $notification->data['title_shipment'] }}</p>
+                                                    </div>
+                                                </a>
+                                                <!-- End Item Single -->
+
+                                            </div>
+                                            @endisset
+                                        @endforeach
+
+
+                                            <!-- End Dropdown Body -->
                                         </div>
-                                        <!-- End Dropdown Header -->
-
-                                        <!-- Dropdown Body -->
-                                        <div class="dropdown-body">
-                                            <!-- Item Single -->
-                                            <a href="#" class="item-single d-flex align-items-center">
-                                                <div class="content">
-                                                    <div class="mb-2">
-                                                        <p class="time">2 min ago</p>
-                                                    </div>
-                                                    <p class="main-text">Donec dapibus mauris id odio ornare tempus amet.</p>
-                                                </div>
-                                            </a>
-                                            <!-- End Item Single -->
-
-                                            <!-- Item Single -->
-                                            <a href="#" class="item-single d-flex align-items-center">
-                                                <div class="content">
-                                                    <div class="mb-2">
-                                                        <p class="time">2 min ago</p>
-                                                    </div>
-                                                    <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
-                                            </a>
-                                            <!-- End Item Single -->
-
-                                            <!-- Item Single -->
-                                            <a href="#" class="item-single d-flex align-items-center">
-                                                <div class="content">
-                                                    <div class="mb-2">
-                                                        <p class="time">2 min ago</p>
-                                                    </div>
-                                                    <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
-                                            </a>
-                                            <!-- End Item Single -->
-
-                                            <!-- Item Single -->
-                                            <a href="#" class="item-single d-flex align-items-center">
-                                                <div class="content">
-                                                    <div class="mb-2">
-                                                        <p class="time">2 min ago</p>
-                                                    </div>
-                                                    <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                                </div>
-                                            </a>
-                                            <!-- End Item Single -->
-                                        </div>
-                                        <!-- End Dropdown Body -->
                                     </div>
-                                </div>
+
+                            @endif
                                 <!-- End Main Header Notification -->
+                            </li>
+
+
+
+                            <li>
+
+                                <!-- Main Header Notification Shipments-Scanner-->
+                                @if(auth()->guard('scanner')->user())
+
+                                    <div class="main-header-notification">
+                                        <a href="#" class="header-icon notification-icon" data-toggle="dropdown">
+
+                                            <span class="count" data-bg-img="{{URL::asset('Dashboard/img/count-bg.png')}}">
+                                                {{auth()->guard('scanner')->user()->unreadNotifications->where('type','App\Notifications\send_scanner')->count()}}
+                                            </span>
+
+                                            <img src="{{URL::asset('Dashboard/img/svg/notification-icon.svg')}}" alt="" class="svg">
+                                        </a>
+                                        <div class="dropdown-menu style--two">
+                                            <!-- Dropdown Header -->
+                                            <div class="dropdown-header d-flex align-items-center justify-content-between">
+                                                <h5>{{auth()->guard('scanner')->user()->unreadNotifications->where('type','App\Notifications\send_scanner')->count()}} {{trans('Dashboard\notification_massage.Unread_messages')}}</h5>
+                                                <a href="{{route('mark_read_scanner')}}" class="text-mute d-inline-block">{{trans('Dashboard\notification_massage.Clear_all')}}</a>
+                                            </div>
+                                            <!-- End Dropdown Header -->
+
+                                        @foreach(auth()->guard('scanner')->user()->unreadNotifications as $notification)
+                                            <!-- Dropdown Body -->
+                                                @isset($notification->data['title_track'])
+                                                    <div class="dropdown-body">
+                                                        <!-- Item Single -->
+                                                        <a href="" class="item-single d-flex align-items-center">
+                                                            <div class="content">
+                                                                <div class="mb-2">
+                                                                    <p class="time">{{ $notification->created_at->diffForhumans() }}</p>
+                                                                </div>
+                                                                <p class="main-text">{{ $notification->data['title_track'] }}</p>
+                                                            </div>
+                                                        </a>
+                                                        <!-- End Item Single -->
+
+                                                    </div>
+                                            @endisset
+                                        @endforeach
+
+
+                                        <!-- End Dropdown Body -->
+                                        </div>
+                                    </div>
+
+                            @endif
+                            <!-- End Main Header Notification -->
+                            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <li>
+
+                                <!-- Main Header Notification Price-order -->
+                                @if(auth()->guard('admin')->user())
+
+                                    <div class="main-header-notification">
+                                        <a href="" class="header-icon notification-icon" data-toggle="dropdown">
+
+                                            <span class="count" data-bg-img="{{URL::asset('Dashboard/img/count-bg.png')}}">
+                                                {{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_OrderPrice')->count()}}
+                                            </span>
+
+                                            <img src="{{URL::asset('Dashboard/img/svg/mobile-payment.png')}}" alt="" class="svg">
+                                        </a>
+                                        <div class="dropdown-menu style--two">
+                                            <!-- Dropdown Header -->
+                                            <div class="dropdown-header d-flex align-items-center justify-content-between">
+                                                <h5>{{auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_OrderPrice')->count()}} {{trans('Dashboard\notification_massage.Unread_messages')}}</h5>
+                                                <a href="{{route('mark_read_priceOrder')}}" class="text-mute d-inline-block">{{trans('Dashboard\notification_massage.Clear_all')}}</a>
+
+                                            </div>
+                                            <!-- End Dropdown Header -->
+
+                                        @foreach(auth()->guard('admin')->user()->unreadNotifications as $notification)
+                                            <!-- Dropdown Body -->
+                                                @isset($notification->data['title_priceOrder'])
+                                                    <div class="dropdown-body">
+                                                        <!-- Item Single -->
+                                                        <a href="{{route('admin.priceOrder.show',  $notification->data['id_priceOrder'])}}" class="item-single d-flex align-items-center">
+                                                            <div class="content">
+                                                                <div class="mb-2">
+                                                                    <p class="time">{{ $notification->created_at->diffForhumans() }}</p>
+                                                                </div>
+                                                                <p class="main-text">{{ $notification->data['title_priceOrder'] }}</p>
+                                                            </div>
+                                                        </a>
+                                                        <!-- End Item Single -->
+
+                                                    </div>
+                                            @endisset
+                                        @endforeach
+
+
+                                        <!-- End Dropdown Body -->
+                                        </div>
+                                    </div>
+
+                            @endif
+                            <!-- End Main Header Notification -->
                             </li>
                         </ul>
                     </div>

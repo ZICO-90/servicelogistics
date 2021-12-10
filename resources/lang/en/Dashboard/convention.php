@@ -15,4 +15,6 @@ return[
     'create' => 'create',
     'update' => 'update',
     'add convention' => 'اadd convention',
+    'photo' => 'الصورة',
+    'time convention' => 'time convention',
 ];

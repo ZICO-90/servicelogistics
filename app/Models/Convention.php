@@ -4,15 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Convention extends Model
 {
     use HasFactory;
+    use HasTranslations;
+    public $translatable = ['title','content'];
     protected $fillable = [
-        'ar_title',
-        'en_title',
-        'ar_content',
-        'en_content',
+        'title',
+        'content',
         'customer',
         'company',
         'photo'

@@ -13,31 +13,33 @@ class PriceRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
     public function rules()
     {
+
         return [
-            'price' => 'required',
-            'material_type_id' => 'required',
-            'service_type_id' => 'required',
-            'distance' => 'required',
-            'unit_id' => 'required',
-            'wheight'=> 'required|number',
-            'currency_id'=>'required',
+            '$List_Prices.*.price' => 'required',
+            '$List_Prices.*.material_type_id' => 'required',
+            '$List_Prices.*.service_type_id' => 'required',
+            '$List_Prices.*.distance' => 'required',
+            '$List_Prices.*.unit_id' => 'required',
+            '$List_Prices.*.wheight'=> 'required|number',
+            '$List_Prices.*.currency_id'=>'required',
         ];
     }
 
     public function messages()
     {
         return [
-            'price.required' => trans('validation.required'),
-            'material_type_id.required' => trans('validation.required'),
-            'service_type_id.unique' => trans('validation.required'),
-            'distance.unique' => trans('validation.required'),
-            'unit_id.required' => trans('validation.required'),
-            'wheight.unique' => trans('validation.required'),
-            'distance.unique' => trans('validation.required'),
+            'price.required' => trans('Dashboard\trans_price.price.required'),
+            'material_type_id.required' => trans('Dashboard\trans_price.material_type_id.required'),
+            'currency_id.required' => trans('Dashboard\trans_price.currency_id.required'),
+            'service_type_id.required' => trans('Dashboard\trans_price.service_type_id.required'),
+            'distance.required' => trans('Dashboard\trans_price.distance.required'),
+            'unit_id.required' =>trans('Dashboard\trans_price.unit_id.required'),
+            'wheight.required' => trans('Dashboard\trans_price.wheight.required'),
+            'distance.required' => trans('Dashboard\trans_price.distance.required'),
         ];
     }
 }

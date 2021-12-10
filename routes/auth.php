@@ -7,33 +7,74 @@ use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\RegisterAdminController;
+use App\Http\Controllers\Auth\RegisterDriverController;
+use App\Http\Controllers\Auth\RegisterScannerController;
+use App\Http\Controllers\Auth\RegisterWarehouseController;
+
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Auth\AdminController;
+use App\Http\Controllers\Auth\DriverController;
+use App\Http\Controllers\Auth\ScannerController;
+use App\Http\Controllers\Auth\WarehousingOfficerController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/register', [RegisteredUserController::class, 'create'])
-                ->middleware('guest')
-                ->name('register');
-
-Route::post('/register', [RegisteredUserController::class, 'store'])
-                ->middleware('guest');
 
 ///////user authenticate route//////////
 
-Route::get('/user/login', [AuthenticatedSessionController::class, 'create'])
-                ->middleware('guest')
-                ->name('login');
+Route::get('/login/user', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
 
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-                ->middleware('guest')->name('login.user');
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest')->name('login.user');
+
+Route::get('/register', [RegisteredUserController::class, 'create'])->middleware('guest')->name('register');
+
+Route::post('/register', [RegisteredUserController::class, 'store'])->middleware('guest')->name('register.user');
+
+
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
 
 ///////admin authenticate route//////////
 
 
-Route::post('/login/admin', [AdminController::class, 'store'])
-    ->middleware('guest')->name('login.admin');
+Route::post('/login/admin', [AdminController::class, 'store'])->middleware('guest')->name('login.admin');
 
-////////////////
+Route::post('/register/admin', [RegisterAdminController::class, 'store'])->middleware('guest')->name('register.admin');
+
+
+
+Route::post('/logout/admin', [AdminController::class, 'destroy'])->middleware('auth:admin')->name('logout.admin');
+
+///////driver authenticate route//////////
+
+
+Route::post('/login/driver', [DriverController::class, 'store'])->middleware('guest')->name('login.driver');
+
+Route::post('/register/driver', [RegisterDriverController::class, 'store'])->middleware('guest')->name('register.driver');
+
+
+Route::post('/logout/driver', [DriverController::class, 'destroy'])->middleware('auth:driver')->name('logout.driver');
+
+
+///////scanner authenticate route//////////
+
+
+Route::post('/login/scanner', [ScannerController::class, 'store'])->middleware('guest')->name('login.scanner');
+
+Route::post('/register/scanner', [RegisterScannerController::class, 'store'])->middleware('guest')->name('register.scanner');
+
+
+Route::post('/logout/scanner', [ScannerController::class, 'destroy'])->middleware('auth:scanner')->name('logout.scanner');
+
+///////warehouse authenticate route//////////
+
+
+Route::post('/login/warehouse', [WarehousingOfficerController::class, 'store'])->middleware('guest')->name('login.warehouse');
+
+Route::post('/register/warehouse', [RegisterWarehouseController::class, 'store'])->middleware('guest')->name('register.warehouse');
+
+
+Route::post('/logout/warehouse', [WarehousingOfficerController::class, 'destroy'])->middleware('auth:warehousing_officer')->name('logout.warehouse');
+
 
 Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->middleware('guest')

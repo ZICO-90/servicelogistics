@@ -38,13 +38,15 @@ class PriceRepository implements PriceInterface
         ));
     }
 
-    public function store_price(PriceRequest $request)
+public function store_price(PriceRequest $request)
     {
+
         $List_Prices = $request->List_Classes;
 
+        try  {
 
-        try {
             $validated = $request->validated();
+
 
             foreach ($List_Prices as $List_Price) {
 
@@ -63,14 +65,14 @@ class PriceRepository implements PriceInterface
 
             }
 
-
-            toastr()->success(trans('messages.success'));
+            toastr()->success(trans('Dashboard\messages.success'));
             return redirect()->route('prices.index');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
 
     }
+
 
 
     public function show_price($id)
@@ -101,7 +103,7 @@ class PriceRepository implements PriceInterface
 
             $newPrice->save();
 
-            toastr()->success(trans('messages.success'));
+            toastr()->success(trans('Dashboard\messages.success'));
 
             return redirect()->route('prices.index');
         } catch (\Exception $e) {
@@ -118,7 +120,7 @@ class PriceRepository implements PriceInterface
 
             $Price = Price::FindOrFail($request->id);
             $Price->delete();
-            toastr()->error(trans('messages.Delete'));
+            toastr()->error(trans('Dashboard\messages.Delete'));
             return redirect()->route('prices.index');
         }
         catch (\Exception $e){

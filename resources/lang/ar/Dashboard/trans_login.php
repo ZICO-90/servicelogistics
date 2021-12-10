@@ -7,6 +7,9 @@ return [
     'Choose_Login_Method'=>'إختار طريقة الدخول',
     'loginAsUser'=>'التسجيل كمستخدم',
     'loginAsAdmin'=>'التسجيل كأدمن',
+    'loginAsDriver'=>'التسجيل مسؤول النقل',
+    'loginAsScanner'=>'التسجيل مسؤول المسح الضوئي',
+    'loginAsWarehouse'=>'التسجيل مسؤول تخزين الشحنات الواصلة',
     'Email_Address'=>'البريد الإلكتروني',
     'password'=>'كلمة السر',
     'Remember_Me'=>'تذكرني',
@@ -16,9 +19,12 @@ return [
     'LogIn'=>'تسجيل دخول',
     'SignUp'=>'تسجيل ',
     'If_you_have_no_account'=>'إذا لم يكن لديك حساب',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
+    'LoginAsUser'=>'تسجيل الدخول كمستخدم',
+    'LoginAsAdmin'=>'تسجيل الدخول كمدير',
+
+    'LoginAsScanner'=>'تسجيل الدخول كماسح ضوئي',
+    'LoginAsDriver'=>'تسجيل الدخول كناقل شحنة',
+    'LoginAsWarehouse'=>'تسجيل الدخول كمخزن الشحنة بعد وصولها',
+
 
 ];

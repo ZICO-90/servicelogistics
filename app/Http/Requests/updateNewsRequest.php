@@ -24,10 +24,8 @@ class updateNewsRequest extends FormRequest
     public function rules()
     {
         return [
-            'ar_title'=>'required|string|max:191',
-            'en_title'=>'required|string|max:191',
-            'ar_content'=>'required',
-            'en_content'=>'required',
+            'title.*'=>'required|string',
+            'content.*'=>'required',
             'photo'=>'nullable',
         ];
     }

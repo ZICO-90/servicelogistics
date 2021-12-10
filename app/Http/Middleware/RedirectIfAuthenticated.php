@@ -21,7 +21,15 @@ class RedirectIfAuthenticated
             if (auth('admin')->check()) {
                 return redirect(RouteServiceProvider::ADMIN);
             }
-
+            if (auth('driver')->check()) {
+                return redirect(RouteServiceProvider::DRIVER);
+            }
+            if (auth('scanner')->check()) {
+                return redirect(RouteServiceProvider::SCANNER);
+            }
+            if (auth('warehousing_officer')->check()) {
+                return redirect(RouteServiceProvider::WAREHOUSE);
+            }
 
 
         return $next($request);

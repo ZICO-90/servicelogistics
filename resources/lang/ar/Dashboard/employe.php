@@ -5,27 +5,26 @@ return [
 // main-sidebar  (employes)
 
 'linkTitle' => 'الموظفين',
-// Content card-body page index (employes) 
+// Content card-body page index (employes)
 
-'h4title'        => 'عرض جميع الموظفين' , 
+'h4title'        => 'عرض جميع الموظفين' ,
 'linkCreate'     => 'إضافة موظف جديد' ,
 
- // Content  List Table  page(index) (employes) 
+ // Content  List Table  page(index) (employes)
  'imgaes'          => 'الصورة',
  'name'            => 'اسم الموظف',
  'Country'         => 'البلد',
  'city'            => 'المدينة' ,
  'Year'            => 'العمر' ,
   'email'          => 'البريد الالكتروني' ,
-'phone'            => 'الهاتف المحمول',
 'Status'           => 'حالة الموظف للعرض',
-'Actions'          => 'العمليات', 
+'Actions'          => 'العمليات',
 'actionsEdit'   => 'تعديل',
 'actionsDelete' => 'حذف',
 'Statusactviated' => 'نشط',
 'StatusUnactviated' => 'غير نشط',
 
-// Content  employes attribute  page(edit,Create) (employes) 
+// Content  employes attribute  page(edit,Create) (employes)
 'UpdateTitle' => 'تحديث هذا الموظف',
 'ar_name'     => 'اسم الموظف بالعربية' ,
 'en_name'     => 'اسم الموظف بالانجليزية',

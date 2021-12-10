@@ -23,6 +23,11 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/dashboard/user';
 
     public const ADMIN = '/dashboard/admin';
+    public const DRIVER = '/dashboard/driver';
+
+    public const SCANNER = '/dashboard/scanner';
+    public const WAREHOUSE = '/dashboard/warehouse';
+
 
 
 
@@ -34,11 +39,12 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string|null
      */
-
-   // protected $namespace = 'App\\Http\\Controllers';
+//     protected $namespace = 'App\\Http\\Controllers';
+     protected $admin_namespace = 'App\\Http\\Controllers\\Admin';
 
      protected $namespace = 'App\\Http\\Controllers';
-     protected $admin_namespace = 'App\\Http\\Controllers\\admin';
+
+
 
 
 

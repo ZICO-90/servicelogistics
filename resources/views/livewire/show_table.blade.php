@@ -1,21 +1,19 @@
 
 <button class="btn btn-success btn-sm btn-md pull-right" wire:click="showformadd" type="button">{{ trans('Dashboard\trans_ship.add_shipment') }}</button><br><br><br>
-{{--<div class="container">--}}
-    {{--<div class="row">--}}
-<div class="container">
-    <div class="row">
+
         <table id="example" class="table table-striped table-bordered table-condensed table-responsive" style="width:100%">
             <thead>
             <tr>
 
 
                 <th>#</th>
+
                 <th>{{  trans('Dashboard\trans_ship.email') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.shipment_num') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.sender_full_name') }}</th>
+
                 <th>{{ trans('Dashboard\trans_ship.shipment_name') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.price') }}</th>
+                <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.Processes') }}</th>
 
 
@@ -32,11 +30,11 @@
                     <td> {{$i}}</td>
 
                     <td>{{ $ship->customers->email }}</td>
-                    <td>{{ $ship->customers->full_number }}</td>
+
                     <td>{{ $ship->customers->sender_full_name }}</td>
                     <td>{{ $ship->shipment_name }}</td>
-                    <td>{{ $ship->amount }}</td>
                     <td>{{ $ship->price }}</td>
+                    <td>{{ $ship->amount }}</td>
                     <td>
                         <button wire:click="edit({{ $ship->id }})" title="{{ trans('Dashboard\trans_ship.Edit') }}"
                                 class="btn btn-primary btn-sm">{{ trans('Dashboard\trans_ship.Edit') }}</button>
@@ -51,16 +49,21 @@
             <tfoot>
             <tr>
                 <th>#</th>
+
                 <th>{{  trans('Dashboard\trans_ship.email') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.shipment_num') }}</th>
+
+
                 <th>{{ trans('Dashboard\trans_ship.sender_full_name') }}</th>
+
+
+
                 <th>{{ trans('Dashboard\trans_ship.shipment_name') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.price') }}</th>
+                <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
+
                 <th>{{ trans('Dashboard\trans_ship.Processes') }}</th>
             </tr>
             </tfoot>
         </table>
 
-    </div>
-</div>
+

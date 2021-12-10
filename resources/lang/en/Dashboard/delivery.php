@@ -5,13 +5,13 @@ return [
 // main-sidebar logistice Services (Dilivery)
 
  'logisticeServices' => 'logistice Services',
-// Content card-body logistice Services (Dilivery) 
+// Content card-body logistice Services (Dilivery)
 
- 'h4title'        => 'logistice Services' , 
+ 'h4title'        => 'logistice Services' ,
  'linkCreate'     => 'New Add Service' ,
  'linkViewRecord' => 'Service Display Control' ,
 
- // Content  List Table logistice Services page(index) (Dilivery) 
+ // Content  List Table logistice Services page(index) (Dilivery)
  'icon'           => 'icon',
  'imgaes'         => 'picture',
  'nameServices'   => 'name service',
@@ -24,11 +24,11 @@ return [
  'IsActive'       => 'IsActive',
  'UnActive'       => 'UnActive',
  'activeSup'      => 'Sup active' ,
- 'actions'        => 'actions' , 
+ 'actions'        => 'actions' ,
  'actionsEdit'    => 'edit',
  'actionsDelete'  => 'delete',
 
- // Content  logistice Service page (create , edit) (Dilivery) 
+ // Content  logistice Service page (create , edit) (Dilivery)
  'updateTitle'   => 'Update logistice Service' ,
  'arname'        => 'name Arabic' ,
  'enname'        => 'name Engish',
@@ -56,7 +56,8 @@ return [
  'label_theme_input_style' => 'Item Count Current display',
  'label_theme_input_style_Errors' => 'There is no data to display. Please enter the data to be displayed',
  'submitRecord'=> 'Activate' ,
- 'labelmb-2' => 'Enter the number to display'
+ 'labelmb-2' => 'Enter the number to display',
+    'get_a_quote'=>'get a quote'
 
 
 ];

@@ -15,13 +15,12 @@ class CreateConventionsTable extends Migration
     {
         Schema::create('conventions', function (Blueprint $table) {
             $table->id();
-            $table->string('ar_title');
-            $table->string('en_title');
-            $table->longText('ar_content');
-            $table->longText('en_content');
+            $table->string('title');
+            $table->longText('content');
             $table->string('photo');
             $table->string('customer');
             $table->string('company');
+            $table->boolean('is_active')->default('0');
             $table->timestamps();
             $table->softDeletes();
         });

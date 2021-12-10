@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\AdminLoginRequest;
 use Illuminate\Http\Request;
 use App\providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class AdminController extends Controller
 {
@@ -55,8 +58,17 @@ class AdminController extends Controller
     }
 
 
-    public function destroy($id)
+
+
+        public function destroy(Request $request)
     {
-        //
+        Auth::guard('admin')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+
     }
 }
