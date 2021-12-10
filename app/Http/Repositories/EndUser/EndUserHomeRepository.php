@@ -61,7 +61,8 @@ class EndUserHomeRepository implements EndUserHomeInterface
         #==================StartAhmed==================#
         $logistics =  $this->dileveryModel::where('is_active_limit' , 1)->get();
         $limit =   $logistics->first();
-        $logisticslimit = $this->dileveryModel::skip(0)->take($limit->view_row)->get();
+        $limit = $limit !=null? $limit->view_row : 0 ;
+        $logisticslimit = $this->dileveryModel::skip(0)->take($limit)->get();
         $Welcome =  $this->dileveryModel::where('is_active_section' , 1)->get();
         $employe =   $this->employeModel::where('is_active' , 1)->first();
         $ServicesSection =  $this->servicesSection::where('is_active' , 1)->first();
