@@ -42,7 +42,6 @@ return [
     'Address'=>'Address',
     'finish'=>'Finish',
     'Choose'=>'  Choose From List',
-    'add_shipment'=>' Add a Shipments',
     'Edit'=>'Edit',
     'Processes'=>'Processes',
     'Delete'=>'Delete',
@@ -53,7 +52,7 @@ return [
     'series_id'=>'Prefix',
 
 
-'service_type_id'=>'servicetype',
+
 
 
 

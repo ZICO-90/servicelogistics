@@ -34,6 +34,7 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                     </div>
+                    weight
 
                     <div class="col col-4 mb-2">
                         <label for="title">{{trans('Dashboard/trans_ship.whieght')}}</label>
@@ -129,7 +130,7 @@
 
                     <div class="col col-4 mb-2">
 
-                        <label for="title">{{trans('Dashboard/trans_ship.tracking_stage_id')}}</label>
+                        <label for="title">{{trans('Dashboard/trans_track.tracking_stage_id')}}</label>
                         <select class="my-1 mr-sm-2 form-control" wire:model="tracking_stage_id">
                             <option selected>{{trans('Dashboard\trans_ship.Choose')}}</option>
 
@@ -144,7 +145,7 @@
 
                     <div class="col col-4 mb-2">
                         <div class="form-group">
-                            <label for="address_address">Address</label>
+                            <label for="address_address">{{trans('Dashboard\trans_ship.Address')}}</label>
                             <input type="text" id="address-input" wire:model="address_address"
                                    class="form-control map-input">
                             <input type="hidden" wire:model="address_latitude" id="address-latitude" value="0"/>

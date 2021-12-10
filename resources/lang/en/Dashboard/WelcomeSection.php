@@ -4,21 +4,21 @@
 return [
 
 // main-sidebar  (employes)
-'linkTitle' => 'Section Welcome-(HTML)',
-// Content card-body page index (employes) 
-'h4title'        => ' Display Section Welcome in Home Page - (HTML)' , 
+'linkTitle' => 'Section Welcome',
+// Content card-body page index (employes)
+'h4title'        => ' Display Section Welcome in Home Page - (HTML)' ,
 'linkCreate'     => 'Add new Section' ,
  // Content  List Table  page(index) (Section Welcome-(HTML)
  'name_P'          => 'A field of type paragraph <p> ',
  'name_h'            => 'A field of type heading <h>',
  'name_span'         => 'A field of type <span>',
  'status' => 'Status display Item' ,
- 'Actions'          => 'Actions', 
+ 'Actions'          => 'Actions',
  'actionsEdit'   => 'edit',
  'actionsDelete' => 'delete',
  'Statusactivated' => 'activated',
  'StatusUnactviated' => 'Unactivated',
- // Content  Section Welcome-(HTML) attribute  page(edit,Create) (Section-Welcome) 
+ // Content  Section Welcome-(HTML) attribute  page(edit,Create) (Section-Welcome)
 'UpdateTitle' => 'Update this Element',
 'ar_name_P'     => '<P> Paragraph name in Arabic' ,
 'en_name_P'     => '<P> Paragraph name in English',

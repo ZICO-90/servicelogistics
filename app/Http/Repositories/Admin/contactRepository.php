@@ -3,7 +3,10 @@
 namespace App\Http\Repositories\Admin;
 
 use App\Http\Interfaces\Admin\contactInterface;
+use App\Models\Admin;
 use App\Models\contact;
+use App\Notifications\Add_contact;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -24,14 +27,27 @@ class contactRepository implements contactInterface
     }
 
     public function store($request){
+
         $data =$request->validated();
 
         contact::create($data);
+
+        $Admin=Admin::get();
+        $contact = contact::latest()->first();
+
+
+       Notification::send($Admin,new Add_contact($contact));
+
+
+
+
         return redirect()->back();
     }
 
    public function show($id){
         $contact =contact::findorfail($id);
+       $userUnreadNotifications=auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_contact');
+       $userUnreadNotifications->markAsRead();
         return view('Dashboard.contact.show',compact ('contact'));
    }
 

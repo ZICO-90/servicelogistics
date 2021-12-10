@@ -15,53 +15,6 @@
                         <h1 class="heading-title style-1">Welcome to office</h1>
                         <br>
                         <br>
-                        <div class="columns is-variable is-4 is-multiline ">
-                            <div class="column is-4" data-aos="fade">
-                                <div class="box-item ">
-                                    <a href="../pages/contact.html">
-                        <span class="icon">
-                          <i class="ion-ios-pin-outline"></i>
-                        </span>
-                                    </a>
-                                    <h3>
-                                        <a href="../pages/contact.html">Address</a>
-                                    </h3>
-                                    <p>295 Witting Streets Suite 666,
-                                        <br> Melbourne, Australia</p>
-                                </div>
-                                <!-- .box-item -->
-                            </div>
-                            <div class="column is-4" data-aos="fade">
-                                <div class="box-item ">
-                                    <a href="../pages/contact.html">
-                        <span class="icon">
-                          <i class="ion-ios-call-outline"></i>
-                        </span>
-                                    </a>
-                                    <h3>
-                                        <a href="../pages/contact.html">Phone</a>
-                                    </h3>
-                                    <p>+ 123 5456 789 01
-                                        <br> + 123 5456 789 01</p>
-                                </div>
-                                <!-- .box-item -->
-                            </div>
-                            <div class="column is-4" data-aos="fade">
-                                <div class="box-item ">
-                                    <a href="../pages/contact.html">
-                        <span class="icon">
-                          <i class="ion-ios-mail-outline"></i>
-                        </span>
-                                    </a>
-                                    <h3>
-                                        <a href="../pages/contact.html">Email</a>
-                                    </h3>
-                                    <p>welcome@website.com
-                                        <br> hello@site.co</p>
-                                </div>
-                                <!-- .box-item -->
-                            </div>
-                        </div>
                         <!-- .columns -->
                         <br> </div>
                 </section>

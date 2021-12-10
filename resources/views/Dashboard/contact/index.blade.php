@@ -136,13 +136,21 @@
                         <td>{{$contact->message}}</td>
                         <td>{{$contact->created_at->diffForhumans()}}</td>
                         <td class="actions">
-                                            <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
-                                                <img src="/Dashboard/img/svg/c-edit.svg" alt="" class="svg">
-                                            </span>
-                            <span class="contact-close">
-                                                <img src="/Dashboard/img/svg/c-close.svg" alt="" class="svg">
-                                            </span>
-                        </td>
+                                   <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
+                                 <a href="{{route('contact.show',$contact->id)}}">
+                                    <img src="/Dashboard/img/svg/c-edit.svg" alt="" class="svg">
+                                 </a>
+                                   </span>
+                            <div class="delete_mail">
+
+                          <form action="{{route('contact.destroy',$contact->id)}}" method="POST"  >
+                          @csrf
+                           @method('DELETE')
+
+                        <button type="submit"><img src="/Dashboard/img/svg/delete.svg" alt="" class="svg"></button>
+                        </form>
+                         </div>
+</td>
                     </tr>
 @empty Not Message
 @endforelse

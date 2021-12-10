@@ -311,9 +311,12 @@
                         </div>
                     </div>
                 </section>
+
                 <section id="news" class="section news-section is-clearfix">
                     <div class="container">
+
                         <div class="blog-list style-2 columns is-variable is-4 is-multiline">
+                            @isset($news)
                             <div class="column is-4" data-aos="fade">
                                 <div class="blog-post-heading">
                                     <p class="heading-title-top">latest news</p>
@@ -329,11 +332,13 @@
                                 </div>
                                 <!-- .blog-post -->
                             </div>
+                            @endisset
+                            @isset($convention)
                             <div class="column is-4" data-aos="fade">
                                 <article class="blog-post">
                                     <figure class="post-image">
                                         <a href="./blog/single.html">
-                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{('/storage/'.$convention->photo)}}"> </a>
+                                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="{{$convention->photo}}"> </a>
                                     </figure>
                                     <div class="entry-header">
                                         <div class="post-meta">
@@ -358,6 +363,7 @@
                                 </article>
                                 <!-- .blog-post -->
                             </div>
+                            @endisset
                             <div class="column is-4" data-aos="fade">
                                 <article class="blog-post">
                                     <figure class="post-image">

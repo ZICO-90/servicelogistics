@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Http\Livewire;
+use App\Models\Admin;
 use App\Models\Customer;
 use App\Models\Price;
 use App\Models\Series;
 use App\Models\ShipmentAttachment;
 use App\Models\TrackingStage;
+use App\Notifications\Add_shipment;
+use Illuminate\Support\Facades\Notification;
 use Livewire\Component;
 use App\Models\Curency;
 use App\Models\Unit;
@@ -97,7 +100,7 @@ class Shipping extends Component
 //            'address_sender' => 'required'
 //
 //        ]);
-        $this->validate([
+     /*   $this->validate([
             'email' => 'required|unique:customers,email,' . $this->id,
             'password' => 'required',
             'sender_mother_name' => 'required',
@@ -112,7 +115,7 @@ class Shipping extends Component
             'address_reciver' => 'required',
             'address_sender' => 'required'
 
-        ]);
+        ]);*/
 
         $this->currentStep = 2;
 
@@ -122,7 +125,7 @@ class Shipping extends Component
     {
 
 
-        $this->validate([
+      /*  $this->validate([
             'shipment_name' => 'required',
             'amount' => 'required',
             'price' => 'required',
@@ -133,7 +136,7 @@ class Shipping extends Component
             'currency_id' => 'required',
             'service_type_id' => 'required',
             'expected_recived_date' => 'required',
-            'address_address' => 'required',
+            'address_address' => 'required',]);*/
 
 //        $this->validate([
 //            'shipment_name' => 'required',
@@ -162,7 +165,7 @@ class Shipping extends Component
 
     }
 
-
+//// store notfiy
     public function submitForm()
     {
 
@@ -192,7 +195,7 @@ class Shipping extends Component
                 $price = Price::where('material_type_id', '=', $this->type_id)
                     ->where('service_type_id', '=', $this->service_type_id)
                     ->where('wheight', '<=', $this->whieght)->pluck('price');
-                $Shipment = new Shipments();
+                $Shipment = new Shipment();
 
                 $Shipment->shipment_name = ['en' => $this->shipment_name_en, 'ar' => $this->shipment_name_ar];
 
@@ -212,6 +215,7 @@ class Shipping extends Component
 
 
                 $Shipment->save();
+
             }
 
 
@@ -220,24 +224,35 @@ class Shipping extends Component
                 foreach ($this->photos as $photo) {
                     $photo->storeAs($this->sender_national_id, $photo->getClientOriginalName(), $disk="shipping_attachment");
                     ShipmentAttachment::create([
-                        'shipment_id' => Shipments::latest()->first()->id,
+                        'shipment_id' => Shipment::latest()->first()->id,
                         'file_name' => $photo->getClientOriginalName(),
                     ]);
                 }
             }
-            $this->successMessage = trans('Dashboard\message.success');
+            $this->successMessage = trans('Dashboard\messages.success');
             $this->currentStep = 1;
+            $Admin=Admin::get();
+            $shipment=Shipment::latest()->first();
+            $customer=Customer::latest()->first();
+            Notification::send($Admin,new Add_shipment($shipment,$customer));
+            return redirect()->to('/Add_shipment');
+
+
+
         } catch (\Exception $e) {
             $this->catchError = $e->getMessage();
         }
 
     }
 
+
+
+
     public function edit($id)
     {
         $this->show_table = false;
         $this->updateMode = true;
-        $shipments = Shipments::where('id', $id)->first();
+        $shipments = Shipment::where('id', $id)->first();
         $customers = Customer::where('id', $shipments->costumer_id)->first();
 
         $this->email = $customers->email;
@@ -327,7 +342,7 @@ class Shipping extends Component
                     'sender_full_name' => $this->sender_full_name,
                 ]);
                 if (!empty($this->shipment_name)) {
-                    $shipment = Shipments::where('customer_id', $this->costumer_id);
+                    $shipment = Shipment::where('customer_id', $this->costumer_id);
                     $shipment->update([
                         'shipment_name' => $this->shipment_name,
                         'amount' => $this->amount,
@@ -395,7 +410,7 @@ class Shipping extends Component
     public function deleteForm($id)
     {
 
-        $shipments = Shipments::where('id', $id)->first();
+        $shipments = Shipment::where('id', $id)->first();
         $customers = Customer::where('id', $shipments->customer_id)->first();
         $shipments->delete();
         $customers->delete();

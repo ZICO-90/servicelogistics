@@ -14,7 +14,7 @@ class latest_news extends Model
     public $translatable = ['title','content'];
 
 
-    public $translatable = ['title', 'content'];
+
 
     protected $fillable = [
         'title',

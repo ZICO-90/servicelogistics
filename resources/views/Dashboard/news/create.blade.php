@@ -66,10 +66,8 @@
                 <div class="form-row mb-20">
 
                     <label class="font-14 bold">{{trans('Dashboard\news.name at arabic')}}</label>
-                    <input type="text" name="title[ar]" class="theme-input-style is-invalid" >
+                    <input type="text" name="title_ar" class="theme-input-style is-invalid" >
 
-                    <label class="font-14 bold">name at arabic</label>
-                    <input type="text" name="ar_title" class="theme-input-style is-invalid" placeholder="Type Your Name">
 
 
                 </div>
@@ -77,7 +75,7 @@
 
                 <div class="form-row mb-20">
                     <label class="font-14 bold">{{trans('Dashboard\news.name at english')}}</label>
-                    <input type="text" name="title[en]" class="theme-input-style is-invalid" >
+                    <input type="text" name="title_en" class="theme-input-style is-invalid" >
 
                 </div>
                 <!-- End Form Row -->
@@ -85,13 +83,13 @@
                 <!-- Form Row -->
                 <div class="form-row mb-20">
                     <label class="font-14 bold">{{trans('Dashboard\news.content news at arabic')}}</label>
-                    <textarea type="long_text" name="content[ar]" class="theme-input-style is-valid"></textarea>
+                    <textarea type="long_text" name="content_ar" class="theme-input-style is-valid"></textarea>
 
                 </div>
 
                 <div class="form-row mb-20">
                     <label class="font-14 bold">{{trans('Dashboard\news.content news at english')}}</label>
-                    <textarea type="text" name="content[en]" class="theme-input-style is-valid" ></textarea>
+                    <textarea type="text" name="content_en" class="theme-input-style is-valid" ></textarea>
 
                 </div>
                 <!-- End Form Row -->

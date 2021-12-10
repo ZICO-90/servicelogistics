@@ -1507,7 +1507,7 @@
                                     </ul>
                                 </li>
                                 <li class="mega-menu">
-                                    <a href="{{route('endUser.contact.create')}}">{{trans('front.home.contact')}}</a>
+                                    <a href="{{route('endUser.contact.create')}}">{{trans('front/home.contact')}}</a>
                                 </li>
                             </ul>
                         </nav>

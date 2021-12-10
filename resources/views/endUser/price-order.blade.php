@@ -21,7 +21,7 @@
                         <i class="ion-md-notifications"></i>
                       </span> Oops! Something went wrong, we couldn't send your message. </div>
                     <!-- ajax contact form -->
-                    <form accept-charset="UTF-8" action="{{route('admin.priceOrder.store')}}" method="POST">
+                    <form accept-charset="UTF-8" action="{{route('priceOrder.store')}}" method="POST">
                         @csrf
                         <div class="field is-horizontal">
                             <div class="field-body">

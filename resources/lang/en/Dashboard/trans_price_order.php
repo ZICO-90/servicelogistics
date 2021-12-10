@@ -16,7 +16,9 @@ return [
     'edit' => 'edit',
     'delete' => 'delete',
     'create' => 'create',
-    'update' => 'update'
+    'update' => 'update',
+    'Success'=>'Success',
+    'done'=>'Message Approved'
 
 
 ];

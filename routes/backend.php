@@ -22,8 +22,7 @@ use App\Http\Controllers\Admin\PriceController;
 Route::get('/Dashboard_Admin', [AdminHomeController::class,'index']);
 Route::get('/empty_page', [AdminHomeController::class,'index']);
 
-Route::get('/Dashboard_Admin', [DashboardController::class,'index']);
-//Route::get('/empty_page', [DashboardController::class,'index']);
+
 
 Route::group(
     [
@@ -61,12 +60,13 @@ Route::group(
 
 
 
-    Route::get('/users', [UserController::class, 'index']);
+    //Route::get('/users', [UserController::class, 'index']); error
 
         Route::group(['middleware' => 'auth:web'], function() {
             Route::view('Add_shipment','Livewire.show_shipping_form');
 
             Route::view('show_tracking','Livewire.show_tracking_form');
+
 
     });
 
@@ -112,6 +112,14 @@ Route::group(
         Route::get('contacts','contactController@index')->name('contact.index');
         Route::get('contact/{id}','contactController@show')->name('contact.show');
         Route::get('contacts/{id}','contactController@destroy')->name('contact.destroy');
+
+        Route::get('show_shipment/{id}','MarkallController@show')->name('show_shipment');
+
+
+    Route::get('mark_all_contact','MarkallController@MarkAsRead_contact')->name('mark_read_contact');
+    Route::get('mark_all_shipments','MarkallController@MarkAsRead_shipments')->name('mark_read_shipments');
+    Route::get('mark_all_priceOrder','MarkallController@MarkAsRead_priceOrder')->name('mark_read_priceOrder');
+
 
 
     ///////////////

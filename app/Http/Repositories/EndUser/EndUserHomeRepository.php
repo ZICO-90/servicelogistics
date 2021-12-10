@@ -21,6 +21,8 @@ use App\Models\Testimonial;
 class EndUserHomeRepository implements EndUserHomeInterface
 {
     use InfoSiteTrait;
+    use TestimonialsTrait;
+    use PartnerTrait;
 
     private $infoSiteModel;
     private $dileveryModel;
@@ -28,21 +30,12 @@ class EndUserHomeRepository implements EndUserHomeInterface
     private $sectionModel;
     private $latest_newsModel;
     private $convention;
+    private $testimonialModel;
+    private $partnerModel;
 
     public function __construct(InfoSite $infoSite, DeliveryType $delivery , SWelcomeTitle $section ,
-            employe $employe ,latest_news $latest_news ,convention $convention)
+                                employe $employe ,latest_news $latest_news ,convention $convention , Testimonial $testimonial, Partner $partner )
 
-    use TestimonialsTrait;
-    use PartnerTrait;
-    private
-            $infoSiteModel,
-            $dileveryModel,
-            $employeModel,
-            $sectionModel,
-            $testimonialModel,
-            $partnerModel;
-
-    public function __construct(InfoSite $infoSite, DeliveryType $delivery , SWelcomeTitle $section , employe $employe, Testimonial $testimonial, Partner $partner)
 
     {
         $this->infoSiteModel = $infoSite;
@@ -65,14 +58,15 @@ class EndUserHomeRepository implements EndUserHomeInterface
         $Welcome =  $this->dileveryModel::where('is_active_section' , 1)->get();
         $sectionTitle =   $this->sectionModel::where('is_active' , 1)->first();
         $employe =   $this->employeModel::where('is_active' , 1)->first();
-
         $news = $this->latest_newsModel::Where('is_active' , 1)->latest()->first();
         $convention =$this->convention::Where('is_active' , 1)->latest()->first();
-        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe' ,'news' ,'convention'));
-
         $testimonials = $this->show_all_testimonials()->where('status', 1);
         $partners = $this->show_all_partners();
-        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe', 'testimonials', 'partners'));
+
+
+        return view('endUser.index', compact('infos','logistics','sectionTitle','Welcome' ,'employe' ,'news' ,'convention','testimonials', 'partners'));
+
+
 
 
     }

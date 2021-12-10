@@ -4,7 +4,11 @@ namespace App\Http\Repositories\Admin;
 
 use App\Http\Interfaces\Admin\PriceOrderInterface;
 use App\Http\Traits\PriceOrderTrait;
+use App\Models\Admin;
 use App\Models\PriceOrder;
+use App\Notifications\Add_OrderPrice;
+use App\Notifications\send_OrderPrice;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Session;
 
 class PriceOrderRepository implements PriceOrderInterface
@@ -30,6 +34,7 @@ class PriceOrderRepository implements PriceOrderInterface
 
     public function store_new_order($request)
     {
+
         $this->priceOrderModel::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -37,20 +42,37 @@ class PriceOrderRepository implements PriceOrderInterface
             'message' => $request->message,
             'kind' => $request->select
         ]);
+
+        $Admin=Admin::get();
+        $priceOrder=PriceOrder::latest()->first();
+        Notification::send($Admin,new Add_OrderPrice($priceOrder));
+
+        return redirect()->back();
+
     }
 
     public function show_order($id)
     {
         $message = $this->get_message_by_id($id);
+        $userUnreadNotifications=auth()->guard('admin')->user()->unreadNotifications->where('type','App\Notifications\Add_OrderPrice');
+        $userUnreadNotifications->markAsRead();
         return view('Dashboard.PriceOrder.show', compact('message'));
     }
 
     public function update($request)
+
+
     {
+
         $message = $this->get_message_by_id($request->message_id);
         $message->is_read = 1;
         $message->save();
         Session::flash('done', 'Message Approved');
+       $user= PriceOrder::findorFail($request->message_id);
+
+        $PriceOrder=PriceOrder::latest()->first();
+
+        Notification::send($user,new send_OrderPrice($PriceOrder));
         return redirect((route('admin.priceOrder.index')));
     }
 

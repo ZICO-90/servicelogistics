@@ -32,8 +32,8 @@ class newsRepository implements newsInterface
             $path = Storage::disk('public')->putFile('/news',$request->photo);
         }
             latest_news::create([
-                'title' => ['en' => $request->en_title, 'ar' => $request->ar_title],
-                'content' => ['en' => $request->en_content, 'ar' => $request->ar_content],
+                'title' => ['en' => $request->title_en, 'ar' => $request->title_ar],
+                'content' => ['en' => $request->content_en, 'ar' => $request->content_ar],
                 'photo' => $path
             ]);
 

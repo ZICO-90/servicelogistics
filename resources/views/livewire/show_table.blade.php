@@ -8,7 +8,7 @@
 
                 <th>#</th>
                 <th>{{  trans('Dashboard\trans_ship.email') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.shipment_num') }}</th>
+
                 <th>{{ trans('Dashboard\trans_ship.sender_full_name') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.shipment_name') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
@@ -29,7 +29,7 @@
                     <td> {{$i}}</td>
 
                     <td>{{ $ship->customers->email }}</td>
-                    <td>{{ $ship->customers->full_number }}</td>
+
                     <td>{{ $ship->customers->sender_full_name }}</td>
                     <td>{{ $ship->shipment_name }}</td>
                     <td>{{ $ship->amount }}</td>
@@ -49,7 +49,7 @@
             <tr>
                 <th>#</th>
                 <th>{{  trans('Dashboard\trans_ship.email') }}</th>
-                <th>{{ trans('Dashboard\trans_ship.shipment_num') }}</th>
+
                 <th>{{ trans('Dashboard\trans_ship.sender_full_name') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.shipment_name') }}</th>
                 <th>{{ trans('Dashboard\trans_ship.amount') }}</th>
