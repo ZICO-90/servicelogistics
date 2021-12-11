@@ -74,6 +74,8 @@ records dispaly
                                             <button type="submit" class="btn long">{{trans('Dashboard\delivery.submitRecord')}}</button>
                                         </div>
                                     </div>
+                                   
+                                    
                                        @else
                                             <div class="form-group">
                                                 <label class="theme-input-style">{{trans('Dashboard\delivery.label_theme_input_style_Errors')}}</label>
@@ -85,5 +87,7 @@ records dispaly
                             </div>
                             <!-- End Horizontal Form With Icons -->
                         </div>
+
+                        @include('Dashboard.ServicesSections.index')
 
 @endsection

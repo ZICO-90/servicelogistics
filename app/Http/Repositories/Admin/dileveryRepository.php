@@ -5,6 +5,7 @@ namespace App\Http\Repositories\Admin;
 use Illuminate\Http\Request;
 use App\Http\Interfaces\Admin\dileveryInterface;
 use  App\Models\DeliveryType;
+use  App\Models\ServicesSection;
 use Illuminate\Database\Eloquent\Collection ;
 use Illuminate\Support\Facades\File;
 class dileveryRepository implements dileveryInterface
@@ -12,8 +13,11 @@ class dileveryRepository implements dileveryInterface
 
     private $dileveryModel;
 
-public function __construct(DeliveryType $model){
+    private $services_sectionsModel;
+
+public function __construct(DeliveryType $model,ServicesSection $SectionMode ){
     $this->dileveryModel  =  $model ;
+    $this->services_sectionsModel  = $SectionMode ;
 }
 
     public function index()
@@ -207,8 +211,9 @@ public function __construct(DeliveryType $model){
     public function record(){
 
         $select = $this->dileveryModel->select('view_row')->first();
-
-        return view('Dashboard.dilevery.records')->with('select' ,isset($select->view_row)? $select->view_row : null );
+       $sectionsModel =   $this->services_sectionsModel::get();
+    
+        return view('Dashboard.dilevery.records')->with('select' ,isset($select->view_row)? $select->view_row : null )->with(compact('sectionsModel'));
 
     }
 
@@ -223,9 +228,6 @@ public function __construct(DeliveryType $model){
         if( $paresInt <= count($model) ){
 
           $this->dileveryModel::where('view_row', '=', $Count->oldview)->update(['view_row'=> $Count->view_row]);
-     
-        
-        
       
         return redirect()->back()->with('succes' ,trans('Dashboard\delivery.methodRecordsSuccess')); 
 
@@ -241,5 +243,60 @@ public function __construct(DeliveryType $model){
         
     }
 
+    public function CreateServicesSection(){
+      return view('Dashboard.ServicesSections.create');
+    }
+
+    
+
+    public function storeServicesSection(Request $request){
+      
+      $this->services_sectionsModel::create($request->all());
+      return redirect()->back() ;
+    }
+
+    public function updateServicesSection(Request $request){
+    $update =   $this->services_sectionsModel::find($request->SectionId);
+    $update->update($request->all());
+     
+    return redirect()->route('admin.delivery.record');
+
+    }
+
+    public function editeServicesSection($id){
+      
+    $Section =   $this->services_sectionsModel::find($id);
+      return view('Dashboard.ServicesSections.edit',compact('Section'));
+    }
+
+    public function  deleteServicesSection($id){
+    $delete =   $this->services_sectionsModel::find($id);
+    $delete->delete();
+    return redirect()->back();
+    }
+    public function IsDisplayActive($id , $bool)
+    {
+        if($bool != 1){
+
+            $services_sections = $this->services_sectionsModel::get();
+
+            for($i=0 ; $i < count($services_sections) ;$i++ ){
+
+                if($services_sections[$i]->id == $id){
+
+                    $services_sections[$i]-> is_active = 1;
+                    $services_sections[$i]->save();
+                }elseif($services_sections[$i]->id != $id){
+
+                    $services_sections[$i]-> is_active = 0;
+                    $services_sections[$i]->save();
+                }  
+            }
+
+
+            
+        }
+        return redirect()->back();
+      }
 
 }

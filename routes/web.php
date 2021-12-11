@@ -33,7 +33,6 @@ Route::group(
     ], function(){
 
 
-
         Route::group(['prefix' => 'admin', 'as' => 'admin.','middleware' => 'auth:admin'], function() {
 
             Route::get('/', [AdminHomeController::class, 'index'])->name('index');
@@ -60,6 +59,16 @@ Route::group(
                 Route::get('/record', [dileveryController::class, 'record'])->name('record');
                 // Settings  control limited View records page (Home)
                 Route::put('/records', [dileveryController::class, 'records'])->name('records');
+
+            #========================Services Section Routes===============================#
+            Route::get('/CreateServicesSection', [dileveryController::class, 'CreateServicesSection'])->name('CreateServicesSection');
+
+            Route::post('/storeServicesSection', [dileveryController::class, 'storeServicesSection'])->name('storeServicesSection');
+            Route::get('/editeServicesSection/{id}', [dileveryController::class, 'editeServicesSection'])->name('editeServicesSection');
+            Route::put('/updateServicesSection', [dileveryController::class, 'updateServicesSection'])->name('updateServicesSection');
+            Route::get('/deleteServicesSection/{id}', [dileveryController::class, 'deleteServicesSection'])->name('deleteServicesSection');
+            Route::get('/displayServicesSection/{id}/{bool}', [dileveryController::class, 'IsDisplayActive'])->name('activatedServicesSection');
+
             }) ;
 
             //this  group route model employe
@@ -93,6 +102,7 @@ Route::group(
 
             #========================InfoSite Routes===============================#
             Route::group(['prefix' => 'info-site', 'as' => 'info-site.'], function () {
+
                 Route::get('/', [InfoSiteController::class, 'index'])->name('index');
                 Route::get('/create', [InfoSiteController::class, 'create'])->name('create');
                 Route::post('/store', [InfoSiteController::class, 'store'])->name('store');
@@ -101,27 +111,28 @@ Route::group(
                 Route::delete('/delete', [InfoSiteController::class, 'delete'])->name('delete');
             });
 
-            #========================PriceOrder Routes===============================#
-            Route::group(['prefix' => 'price-order', 'as' => 'priceOrder.'], function () {
-                Route::get('/', [PriceOrderController::class, 'index'])->name('index');
-                Route::get('/create', [PriceOrderController::class, 'create'])->name('create');
-                Route::post('/store', [PriceOrderController::class, 'store'])->name('store');
-                Route::get('/show/{id}', [PriceOrderController::class, 'show'])->name('show')->where(['id' => '[0-9]+']);
-                Route::put('/update', [PriceOrderController::class, 'update'])->name('update');
-                Route::delete('/delete', [PriceOrderController::class, 'delete'])->name('destroy');
-            });
 
-            #========================Testimonials Routes===============================#
-            Route::group(['prefix' => 'testimonials', 'as' => 'testimonial.'], function() {
-               Route::get('/', [TestimonialController::class, 'index'])->name('index');
-               Route::get('/unread', [TestimonialController::class, 'unread'])->name('unread');
-               Route::post('/store', [TestimonialController::class, 'store'])->name('store');
-               Route::get('/show/{id}', [TestimonialController::class, 'show'])->name('show')->where(['id' => '[0-9]+']);
-               Route::put('/update', [TestimonialController::class, 'update'])->name('update');
-               Route::Delete('/delete', [TestimonialController::class, 'destroy'])->name('destroy');
-            });
+         #========================PriceOrder Routes===============================#
+         Route::group(['prefix' => 'price-order', 'as' => 'priceOrder.'], function () {
+            Route::get('/', [PriceOrderController::class, 'index'])->name('index');
+            Route::get('/create', [PriceOrderController::class, 'create'])->name('create');
+            Route::post('/store', [PriceOrderController::class, 'store'])->name('store');
+            Route::get('/show/{id}', [PriceOrderController::class, 'show'])->name('show')->where(['id' => '[0-9]+']);
+            Route::put('/update', [PriceOrderController::class, 'update'])->name('update');
+            Route::delete('/delete', [PriceOrderController::class, 'delete'])->name('destroy');
+        });
 
-            #========================Partners Routes===============================#
+        #========================Testimonials Routes===============================#
+        Route::group(['prefix' => 'testimonials', 'as' => 'testimonial.'], function() {
+           Route::get('/', [TestimonialController::class, 'index'])->name('index');
+           Route::get('/unread', [TestimonialController::class, 'unread'])->name('unread');
+           Route::post('/store', [TestimonialController::class, 'store'])->name('store');
+           Route::get('/show/{id}', [TestimonialController::class, 'show'])->name('show')->where(['id' => '[0-9]+']);
+           Route::put('/update', [TestimonialController::class, 'update'])->name('update');
+           Route::Delete('/delete', [TestimonialController::class, 'destroy'])->name('destroy');
+
+        });
+             #========================Partners Routes===============================#
             Route::group(['prefix' => 'partner', 'as' => 'partner.'], function() {
                 Route::get('/', [PartnerController::class, 'index'])->name('index');
                 Route::get('/create', [PartnerController::class, 'create'])->name('create');
@@ -131,7 +142,12 @@ Route::group(
                 Route::Delete('/delete', [PartnerController::class, 'destroy'])->name('destroy');
             });
 
-        });
+    
+    });
+    Route::view('Add_shipment','Livewire.show_form');
+ 
+
+     
     });
 
 

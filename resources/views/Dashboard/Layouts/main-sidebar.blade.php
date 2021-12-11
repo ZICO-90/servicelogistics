@@ -43,8 +43,11 @@
 
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
+
+
                     <li><a href="{{route('convention.index')}}">{{trans('Dashboard\trans_main_sidebar.convention')}}</a></li>
                     <li><a href="{{route('convention.create')}}">{{trans('Dashboard\trans_main_sidebar.add convention')}}</a></li>
+
                 </ul>
             </li>
             <li>
@@ -99,12 +102,20 @@
                 </a>
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
+
+                    <li><a href="{{url('Add_shipment')}}">{{trans('Dashboard\trans_main_sidebar.Shipping_list')}}</a></li>
+                   {{--
+                    <li><a href="{{url('Add_shipment')}}">add_new_shipment</a></li>
+                   <li><a href="{{url('Add_shipment')}}">details</a></li>
+                   --}} 
+
                     <li>
                         <a href="{{route('admin.info-site.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All InfoSite')}}</a>
                     </li>
                     <li>
                         <a href="{{route('admin.info-site.create')}}">{{trans('Dashboard\trans_main_sidebar.Create InfoSite')}}</a>
                     </li>
+
                 </ul>
                 <!-- End Sub Menu -->
             </li>
@@ -125,13 +136,12 @@
                         <a href="{{route('admin.testimonial.unread')}}">{{trans('Dashboard\trans_main_sidebar.UnRead Testimonials')}}</a>
                     </li>
 
-                    <li><a href="{{route('admin.testimonial.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Testimonials')}}</a></li>
-                    <li><a href="{{route('admin.testimonial.unread')}}">{{trans('Dashboard\trans_main_sidebar.UnRead Testimonials')}}</a></li>
+                  
 
                 </ul>
                 <!-- End Sub Menu -->
             </li>
-
+       
             <li>
                 <a href="#">
                     <i class="icofont-contact-add"></i>
@@ -140,8 +150,18 @@
                 <!-- Sub Menu -->
                 <ul class="nav sub-menu">
 
+
+                    <li><a href="{{route('admin.testimonial.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Testimonials')}}</a></li>
+                    <li><a href="{{route('admin.testimonial.unread')}}">{{trans('Dashboard\trans_main_sidebar.UnRead Testimonials')}}</a></li>
+
+
                     <li><a href="{{route('admin.partner.index')}}">{{trans('Dashboard\trans_main_sidebar.Show All Partners')}}</a></li>
                     <li><a href="{{route('admin.partner.create')}}">{{trans('Dashboard\trans_main_sidebar.Add New Partner')}}</a></li>
+
+
+                    <li class="icofont-plus"><a href="{{route('prices.index')}}">{{trans('Dashboard\trans_main_sidebar.price_list')}}</a></li>
+                    <li class="icofont-plus"><a href="{{route('prices.create')}}">{{trans('Dashboard\trans_main_sidebar.add_price')}}</a></li>
+                
 
                 </ul>
                 <!-- End Sub Menu -->
