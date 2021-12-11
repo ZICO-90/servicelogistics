@@ -131,7 +131,8 @@ Route::group(
            Route::put('/update', [TestimonialController::class, 'update'])->name('update');
            Route::Delete('/delete', [TestimonialController::class, 'destroy'])->name('destroy');
 
-            #========================Partners Routes===============================#
+        });
+             #========================Partners Routes===============================#
             Route::group(['prefix' => 'partner', 'as' => 'partner.'], function() {
                 Route::get('/', [PartnerController::class, 'index'])->name('index');
                 Route::get('/create', [PartnerController::class, 'create'])->name('create');
@@ -140,9 +141,6 @@ Route::group(
                 Route::put('/update', [PartnerController::class, 'update'])->name('update');
                 Route::Delete('/delete', [PartnerController::class, 'destroy'])->name('destroy');
             });
-
-
-        });
 
     
     });
