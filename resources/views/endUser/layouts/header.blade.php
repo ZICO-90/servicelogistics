@@ -112,7 +112,7 @@
                                     <a href="{{route('endUser.index')}}">{{trans('front/home.home')}}</a>
                                 </li>
                                 <li>
-                                    <a href="./features/index.html">{{trans('Dashboard\delivery.logisticeServices')}}</a>
+                                    <a href="">{{trans('Dashboard\delivery.logisticeServices')}}</a>
                                     @isset($All_delivery)
 
                                     <ul>

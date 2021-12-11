@@ -87,19 +87,19 @@
                         <h3 class="widget-title ">services</h3>
                         <ul>
                             <li>
-                                <a href="./index.html">Air freight</a>
+                                <a href="#">Air freight</a>
                             </li>
                             <li>
-                                <a href="./index.html">sea freight</a>
+                                <a href="#">sea freight</a>
                             </li>
                             <li>
-                                <a href="./index.html">land transport</a>
+                                <a href="#">land transport</a>
                             </li>
                             <li>
-                                <a href="./index.html">groupage</a>
+                                <a href="#">groupage</a>
                             </li>
                             <li>
-                                <a href="./index.html">consultancy</a>
+                                <a href="#">consultancy</a>
                             </li>
                         </ul>
                     </div>
@@ -111,19 +111,16 @@
                         <h3 class="widget-title ">information</h3>
                         <ul>
                             <li>
-                                <a href="./index.html">Warehousing</a>
+                                <a href="#">Warehousing</a>
                             </li>
                             <li>
-                                <a href="./index.html">Ocean Freight</a>
+                                <a href="#">Ocean Freight</a>
                             </li>
                             <li>
-                                <a href="./index.html">Air freight</a>
+                                <a href="#">Air freight</a>
                             </li>
                             <li>
-                                <a href="./index.html">land transport</a>
-                            </li>
-                            <li>
-                                <a href="./index.html">groupage</a>
+                                <a href="#">land transport</a>
                             </li>
                         </ul>
                     </div>
@@ -151,32 +148,7 @@
                       <span class='current-year'></span> Logistics. All Rights Reserved. </span>
                         </div>
                         <!-- .level-left -->
-                        <div class="level-right">
-                            <div class="nav-wrap">
-                                <nav class="main-navigation right">
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="./pages/about.html">about</a>
-                                        </li>
-                                        <li>
-                                            <a href="./pages/services.html">services</a>
-                                        </li>
-                                        <li>
-                                            <a href="./pages/pricing.html">pricing</a>
-                                        </li>
-                                        <li>
-                                            <a href="./pages/sitemap.html">sitemap</a>
-                                        </li>
-                                        <li>
-                                            <a href="./pages/contact.html">contact</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <!-- #site-navigation -->
-                            </div>
-                            <!-- #nav-wrap -->
-                        </div>
-                        <!-- .level-right -->
+
                     </div>
                     <!-- .level -->
                 </div>
@@ -212,147 +184,7 @@
         </li>
     </ul>
 </div>
-<div id="quickviewDemos" class="quickview">
-    <div class="quickview-header">
-        <p class="title">Niche Templates</p>
-        <span class="delete" data-dismiss="quickview"></span>
-    </div>
-    <div class="quickview-body">
-        <div class="quickview-block">
-            <div class="image-hover effect-5">
-                <div class="columns is-variable is-multiline is-2">
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-1.png">
-                            <figcaption>
-                                <h5>Creative 01</h5>
-                                <a href="https://themes.jozoor.com/html/joo/creative/01/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-1.png">
-                            <figcaption>
-                                <h5>Corporate 01</h5>
-                                <a href="https://themes.jozoor.com/html/joo/corporate/01/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-2.png">
-                            <figcaption>
-                                <h5>Burger Restaurant</h5>
-                                <a href="https://themes.jozoor.com/html/joo/entertainment/02/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-1.png">
-                            <figcaption>
-                                <h5>Wedding</h5>
-                                <a href="https://themes.jozoor.com/html/joo/wedding/01/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-2.png">
-                            <figcaption>
-                                <h5>Corporate 02</h5>
-                                <a href="https://themes.jozoor.com/html/joo/corporate/02/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-3.png">
-                            <figcaption>
-                                <h5>Barber Shop</h5>
-                                <a href="https://themes.jozoor.com/html/joo/entertainment/03/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6 is-active">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-3.png">
-                            <span class="tag menu-mark is-primary">active</span>
-                            <figcaption>
-                                <h5>Logistics Cargo</h5>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/entertainment-1.png">
-                            <figcaption>
-                                <h5>Restaurant 01</h5>
-                                <a href="https://themes.jozoor.com/html/joo/entertainment/01/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-2.png">
-                            <figcaption>
-                                <h5>Wedding Planner</h5>
-                                <a href="https://themes.jozoor.com/html/joo/wedding/02/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/corporate-4.png">
-                            <figcaption>
-                                <h5>Logistics Cargo 02</h5>
-                                <a href="https://themes.jozoor.com/html/joo/corporate/04/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-2.png">
-                            <figcaption>
-                                <h5>Creative 02</h5>
-                                <a href="https://themes.jozoor.com/html/joo/creative/02/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/wedding-3.png">
-                            <figcaption>
-                                <h5>Bridal Dresses</h5>
-                                <a href="https://themes.jozoor.com/html/joo/wedding/03/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/specialty-1.png">
-                            <figcaption>
-                                <h5>Coming Soon </h5>
-                                <a href="https://themes.jozoor.com/html/joo/specialty/01/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="column is-6">
-                        <figure>
-                            <img alt="Joo - Niche Multi-Purpose HTML Template" src="./assets/images/portfolio//demos/creative-3.png">
-                            <figcaption>
-                                <h5>Creative 03</h5>
-                                <a href="https://themes.jozoor.com/html/joo/creative/03/" target="_blank">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+
 <!-- #site-wrap -->
 <script src="{{URL::asset('assetsEndUser/assets/js/vendor.min.js?v=1557446391092')}}"></script>
 <script src="{{URL::asset('assetsEndUser/assets/js/scripts.min.js?v=1557446391092')}}"></script>
